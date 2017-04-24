@@ -1,15 +1,123 @@
 \chapter{Meeting Logs}
-You should include in the Appendix a log of your meeting.
 \section{Temporal record of meetings}
 \subsection*{11.01.2016 - Bachelor Information Meeting}
-Discussion of the process and setup of the thesis.  Deadlines for submission of documentation.  Introduction to the process and the sessions to help with writing the thesis....
+Discussion of the process and setup of the thesis.  Deadlines for submission of documentation.  Introduction to the process and the sessions to help with writing the thesis.
 
-\subsection*{12.01.2016}
+\subsection*{24.01.2017}
 Met with supervisor to discuss the project. Actions:
 \begin{enumerate}
-	\item decide on a writing tool
-	\item install development environment
-	\item draft agreements by next week.
+	\item Decide on a writing tool
+	\item Install development environment
+	\item Finish project plan
 \end{enumerate}
 
+\subsection*{30.01.2017}
+First Sprint Planning Meeting for the project. Topics included:
+\begin{description} 
+    \item[Verify product backlog:]  The focus of the first sprint would be on project start up and docking kit architecture 
+    \item[Primary issues of sprint: ] \mbox{}
+    \begin{enumerate}
+        \item Main Menu lobby containing join/leave functionality
+        \item Docking kit architecture
+        \item Marksman kit
+    \end{enumerate}
+\end{description}
 
+\subsection*{09.02.2017}
+Second Sprint meeting consisting of review, retrospective and planning:
+\begin{itemize}
+    \item What did we do well?
+    \begin{itemize}
+        \item Scoped well for the first sprint.
+        \item Initial docking kit architecture is very robust
+        \item Meeting up for daily scrum stand up
+        \item Good use of Toggl
+        \item Lobby seems to be fairly robust so far
+    \end{itemize}
+    
+    \item What should we have done better?
+    \begin{itemize}
+        \item The start was a bit messy especially for Sondre and Martin as they struggled to parallellise the process of creating the first docking kit and architecture.
+        \item Everyone could get a bit better at using smart commits more often and properly
+    \end{itemize}
+    
+    \item Plan for next sprint:
+    \begin{itemize}
+        \item Primary focus on docking kits
+        \item Bomber, Tank and Brawler kits
+        \item Health management
+        \item Status effects
+    \end{itemize}
+\end{itemize}
+
+\subsection*{23.02.2017}
+Third Sprint meeting consisting of review, retrospective and planning.
+
+The scope for modifiers/status effects was a bit off so we had to spend a fair share of extra time to get it working properly. The Tank and Bomber kit were also unfinished by the end of the sprint so their completion has been put in the backlog for the next sprint.
+
+\begin{itemize}
+    \item What did we do well?
+    \begin{itemize}
+        \item Made a good and generic base architecture for our modifiers
+    \end{itemize}
+    
+    \item What should we have done better?
+    \begin{itemize}
+        \item Remembering to set Jira issues to "in progress" once work has started.
+        \item Sondre would have liked to start his work a bit earlier.
+        \item Andreas got a bit stuck trying to restructure brawler abilities. Should have taken some extra time to properly get into the new modifiers architecture.
+        \item Modifiers took longer to implement than expected
+    \end{itemize}
+    
+    \item Plan for next sprint:
+    \begin{itemize}
+        \item Finish the docking kits (Tank and Bomber) that were left over from the previous sprint
+        \item Trapper Kit.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{09.03.2017}
+Fourth Sprint meeting consisting of review, retrospective and planning.
+
+We got some decent progress during the previous sprint, but there are still some unfinished components for certain kits. We are kind of building the docking and ability architecture as we go. 
+This is mainly because it is really hard for us to predict what we are going to need in the future. Working in a agile manner like this adds some additional overhead to the issues when working in several of the sprints. This sprint in particular required us to do a fair share of architectural work in order to provide abilities with the tools they needed to function as intended. 
+
+\begin{itemize}
+    \item Plan for the next sprint:
+    \begin{itemize}
+        \item Finish and polish all current kits as well as adding a few new ones to prepare for the implementation of the standard game mode.
+        \item Sniper and Boomerang kits
+        \item Revamp of the Marksman kit
+        \item Getting familiar with ShareLaTeX
+    \end{itemize}
+\end{itemize}
+
+\subsection*{10.03.2017}
+Met with supervisor to discuss progress. Actions:
+\begin{enumerate}
+    \item Start thinking about thesis topics.
+\end{enumerate}
+
+\subsection*{23.03.2017}
+Fifth Sprint meeting consisting of review, retrospective and planning.
+
+The new kits developed during this sprint had pretty fun and interesting mechanics so we are fairly happy with their implementation. At this stage in development, the general workflow of creating docking kits has also been fairly solidified so efficiency slowly keeps increasing as we make more kits. We also performed a lot of code cleanup by trading virtual ability functions for interfaces which helps reduce boilerplate and improve code readability. 
+
+In hindsight, we probably should have started to use interfaces earlier to make the code more clear and remove redundancy. There was still a bit of underscope this sprint as well for some kits, but not by much this time. 
+
+The plan for the next sprint is to focus more on gameplay now that we have a decent amount of docking kits. We want to implement the standard game mode, ingame shop and start making sure that the various docking kits properly synchronise their behaviour based on teams rather than just local/non-local players. Since there are three of us on the group we decided to add another docking kit to the scope of this sprint so that everyone has something to work with as well. 
+
+\subsection*{24.03.2017}
+Met with supervisor to discuss progress. Actions:
+\begin{enumerate}
+    \item Transition more and more into thesis writing. Finish the most important functionality of the game that is required to be properly playable and write about the interesting challenges that we have encountered throughout the development of the game. 
+\end{enumerate}
+
+\subsection*{07.04.2017}
+Sixth Sprint meeting consisting of review, retrospective and planning.
+
+The shop functionality ended up being finished a bit earlier than expected. This allowed us to spend some extra time on writing the thesis, which can be thought of as a good thing.
+We should probably have split up the standard game mode rather than thinking of it as a singular large task that would take multiple sprints to finish as it would reflect the progress better on Jira. 
+
+The upcoming sprint takes place during Easter holidays so we don't expect too much progress taking place. What we would like to do is to move from Unity3D back to Unity2D as it cuts down a lot of data to synchronise across the network. We will end up saving one float for each Vector3 that we synchronise, which is a considerable amount. We believe that we are already close to hitting Unity's 4KB bandwidth limit so this is something we think might be worth spending some time to do. It might take some time to fix, but ultimately we think it might be worth it.
+We would also like to take some time to write more in the thesis. 

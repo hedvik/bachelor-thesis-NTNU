@@ -2,4 +2,42 @@
 \label{chap:testing}
 If you are developing software you must do some testing with users.  This chapter describes those tests and what you learnt from the tests.  This should include the selections of questions that you were intending to answer when you started the test.  
 
-\todo{talk about the different types of testing.  Bugs vs Features etc.}
+\section{Mathematical balancing}
+     - Full game functionality happening late into development time, so there isnt that much time for user testing. We are going to do some, but there isnt much time. 
+     
+     - But to actually present a proper test build to the playtesters we needed to do some initial balancing first.
+     
+     - Dockit League is an asymmetrical game so we used a mathematical model~\cite{schell2014art} for doing the first rough balance pass. Relevant columns for the balance table would be: Docking Kit, Health, Movement Speed, Damage, Utility. This table is primarily focused on providing a rough estimate of each docking kit. Cooldowns, damage values and modifier durations can be further tweaked during user testing. 
+     
+     - The Damage column will have a value assigned to it based on potential damage output of the kit. 
+     
+     - The Utility column will have a value assigned to it based on the overall utility the kit provides through its abilities. This includes abilities that apply modifiers and other effects without neccesarily focusing on damage. 
+     
+     - Information about the various docking kits and their abilities can be found in section~\ref{chap:technical}.
+     
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[tbph]
+\centering
+\caption{Initial balance table}
+\label{tab:initBalance}
+\begin{tabular}{@{}llllll@{}}
+\toprule
+\textbf{Docking Kit} & \textbf{Health} & \textbf{Movement Speed} & \textbf{Damage} & \textbf{Utility} & \textbf{Totals} \\ \midrule
+Boomerang Kit        & Low (1)         & High (3)                & High (3)        & Medium (2)       & 9               \\
+Brawler Kit          & High (3)        & Low (1)                 & Medium (2)      & Medium (2)       & 8               \\
+Bomber Kit           & Medium (2)      & Medium (2)              & High (3)        & Low (1)          & 8               \\
+Marksman Kit         & Medium (2)      & Medium (2)              & Medium (2)      & Medium (2)       & 8               \\
+Sniper Kit           & Medium (2)      & Medium (2)              & High (3)        & Medium (2)       & 9               \\
+Tank Kit             & High (3)        & Low (1)                 & Low (1)         & High (3)         & 8               \\
+Trapper Kit          & Medium (2)      & Medium (2)              & Low (1)         & High (3)         & 8               \\
+Support Kit          & Medium (2)      & Medium (2)              & Low (1)         & High (3)         & 8               \\ \bottomrule
+\end{tabular}
+\end{table}
+     
+    - As seen in table~\ref{tab:initBalance}, the sniper and boomerang kit come out as a little bit stronger than the rest of the kits. Now both of these kits have a high damage value assigned to them. This is due to the fact that the damage potential of both is very high while not playing well provides a rather low output instead. We believe that both kits are fairly challenging to play in order to achieve their full damage potential so the difficulty of playing the kits well offset them being a bit stronger than the rest. This way we provide some risk vs reward in relation to the two kits. 
+
+
+\todo{ In house testing, per implemented feature, per review meeting }
+\todo{ Actual testing with other users }
