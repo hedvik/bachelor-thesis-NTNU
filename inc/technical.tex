@@ -27,120 +27,86 @@ This chapter in the thesis would have the technical design of the project.  It w
 \subsection{Ability architecture, use of interfaces}
 
 \section{Docking Kits}
+\label{sec:dockingKits}
 \subsection{Bomber Kit}
 \subsection{Boomerang Kit}
-- Boomerang throw:
-    - Holding the ability button down displays a approximate travel path, releasing throws the boomerang
-    - Uses a cubic bezier curve to construct and display the approximate path using a linerenderer. The bezier curve is also used for interpolating the boomerang.
-    - Interpolation is handled by using a simple timer variable that gets incremented per update. This variable is then put into the evaluation function of the animation curve that controls the speed of the boomerang. This output is then used as the input parameter for the interpolation. 
-    
-    - There are also two additional boomerangs that are activated with the final ability in the kit. These have their own bezier curve control points and linerenderers.
-    - To perform the same operations on all boomerangs we have a array of structs containing the bezier control points and the stored positions of each boomerang. 
-    
-    - The main boomerang supports elemental modifiers so it is capable of transferring burns, electric stuns, etc using the elementalModifiers class. 
-    
-- Boomerang vision:
-    - A fairly simple ability that works as a self applied modifier. 
-    - Each boomerang has a FieldOfView script like like the ones the players use. Using this ability activates the FieldOfView component on each active boomerang and provides a large circle around each boomerang that allows for additional vision. The additional vision is only for the local player while other players will simply see a circle indicator showcasing the vision range that the player using the kit now has. Once the duration runs out the radius of the vision circle quickly interpolates back to 0 and disables the component again.
+The boomerang kit is a high speed, high damage kit with low health. The kit's abilities are primarily focused on augmenting the boomerangs that the player can throw. The boomerang itself has a small field of view circle around itself which allows the player to still see the boomerang if it has been thrown across a wall or other areas where vision is limited. 
 
-- Boomerang root:
-    - Ability that roots any enemy players within a certain range of the boomerang.
-    - Displays a range indicator around the boomerang for the local player whenever the ability is off cooldown.
+\begin{figure}[tbph]  %t top, b bottom, p page | you can also use h to try to get the figure to appear at the current location
+  \centering
+  \includegraphics[width=.75\textwidth]{images/boomerangKitLineRenderer}
+  \caption[Approximate travel path of the boomerang]{A screenshot from the game showing the approximate travel path of the boomerang when the ability button is held}
+  \label{fig:boomerangLineRenderer}
+\end{figure}
+
+The primary ability of the boomerang kit is the boomerang throw. It uses cubic bezier curves to construct and display the approximate path that the boomerang will travel using a LineRenderer component. Figure~\ref{fig:boomerangLineRenderer} shows how the approximate path looks like for the local player using the kit. 
+The bezier curvers are also used for interpolating the position of the boomerang as it is thrown by the player. The interpolation itself is handled using a timer variable that gets updated with Time.deltaTime per update loop. The timer variable is then used as input into an evaluation function used for controlling the speed of the animation and returns a smoothed version of its input. This output is then used as the input time for the bezier curve's interpolation. A more in-depth look at the interpolation of the boomerang throw can be found in section~\ref{sec:boomerangCurve}. 
     
-    - Activating the ability will play a short animation on all clients to showcase that it has been used. All enemy players within the range will get a root modifier applied. 
+There are also two additional boomerangs that are activated with the final ability in the kit. These have their own bezier curve control points and LineRenderers.
+In order to perform the same operations on all boomerangs we have a array of structs containing the bezier control points and the stored positions of each boomerang. This allows us to modify the positions of all the bezier control points directly in the editor which makes it easy to control the shape of the curves.  
+
+The second ability in the kit applies a root modifier to any enemy players within a certain range of the boomerang at the time of activation. It displays a range indicator for the local player whenever the ability is off cooldown making it easier to time the activation of the ability. Activating the ability will play a short ability animation around the boomerang on all clients and enables the collider component that checks for enemy players. The collider stays active for 0.5 seconds to make it a bit easier for the player using the ability to hit others as the boomerang moves at a fairly high speed. 
     
-- Initiate multirangs:
-    - The final ability of the boomerang kit is a self applied modifier that lasts for a few seconds and makes the next boomerang throw contain three boomerangs instead of just one. Throwing the boomerangs before the modifier duration wears off removes it prematurely. 
-    - Having the modifier active synchronises an animation on all clients displaying the two additional boomerangs on the player using the kit.
-    - The root and vision abilities also work with the two additional boomerangs. 
-    
-    - The boomerang throw script handles the interpolation of the two additional boomerangs while this ability manages the state of the buff and the additional visuals. 
+The next ability in the kit is a fairly simple ability that revolves around using a self applied modifier to control the state of its effects. Using the ability takes the field of view component of the boomerangs and quickly interpolates the radius of these to a higher value, giving the player a large circle of vision for a short duration. The additional vision is only something the local player can see while other players will see a circle indicator around the boomerang that showcases the new vision range. Once the duration of the modifier runs out the vision range quickly interpolates back to its default. 
+
+The final ability of the boomerang kit is another self applied modifier that lasts for a few seconds and makes the next boomerang throw contain three boomerangs instead of one. This is the key ability of the kit that allows for a truly massive damage output given that the player is able to hit with all of the boomerangs. The self applied modifier is removed prematurely once a boomerang throw is made, but can also wear of naturally if the player avoids throwing any boomerangs during its duration. 
+
+The additional boomerangs granted from this ability are also affected by the root and vision abilities, albeit with a lesser range. The boomerang throw script handles the interpolation of the two additional boomerangs while the script for this ability primarily manages the state of the buff. This includes self applying the modifier buff, managing the state of any extra visual elements and playing animations. 
     
 
 \subsection{Brawler Kit}
- - Basic Slash:
-    - Simple short cooldown ability that makes the player slash with the axe. 
-    - Supports elemental modifiers
-    - Uses OnTriggerStay instead of OnTriggerEnter for dealing out damage. 
-        - Stores a list of hit players that gets reset after the swing is over. This prevents being able to hit one player multiple times in one swing. 
-        
-        - The main reason for using OnTriggerStay over OnTriggerEnter is that by default OnTriggerEnter will only trigger for the collider of the player using the ability in the first few frames as they overlap. Due to the very quick animation this means that hitting other players close to the start position of the animation is impossible. This is not an issue when using OnTriggerStay as these callbacks happen more frequently, providing a more consistent player experience.
+The brawler kit is slow moving melee oriented kit, but has high health and multiple tools for dealing with enemies who fight at range. 
 
- - Lifesteal buff:
-    - Self applied modifier that lasts for a certain duration and makes the next colliding axe slash deal increased damage and heal a certain percentage of the damage done back. Works in a similar fashion to the multirang ability of the boomerang kit. The modifier can wear off naturally through its timer or prematurely by being removed after colliding with another player. 
-    
-    - Having the modifier active makes the ability script modify the visuals of the axe. 
-    
- - Projectile reflect:
-    - Self applied modifier that puts a temporary shield around the player for a short duration that reflects any colliding projectiles using the IReflectable interface.
-    
-    - Does not perform the reflection code itself, that is the job of the projectile implementing the IReflectable interface. 
-    
- - Flash grenade:
-    - Throws a flash grenade that explodes after a short while, giving a temporary circle of vision and applied a stun modifier to any players looking towards the explosion. 
-    - Uses two scripts, the ability script handles spawning of the flash grenade while the other script is attached to the grenade itself and handles the logic related to its explosion.
-    
-    - The grenade spawner script is very simple, it simply asks docking to spawn the prefab for the flash grenade. 
-    
-    - The grenade itself explodes after its set duration, the explosion activates its associated animations, colliders and other visuals.
-    - Has a collider that is the same size of the temporary vision range. The OnTriggerEnter callback checks for players and uses a raycast to make sure that the player is within range and that there are no obstructions between the player and the explosion. A dot product is then calculated between the player's facing direction and a vector between the player's and the explosion's position to check if the player is facing towards the bomb. A stun modifier is then applied if these requirements are fulfilled. 
+The first ability is a short cooldown slash with the brawler kit's axe. We are using OnTriggerStay instead of OnTriggerEnter as the collision callback for this ability. This is due to the fact that the animation for the slash is very quick and only lasts a few frames at its start position. Using OnTriggerEnter in this case would make the callback frequency too low at the start of the animation, essentially making it impossible to hit players nearby the start position of the axe. This happened because the first few frames would only trigger collision callbacks for the player's own overlapping collider instead of others. 
+This issue is alleviated by using OnTriggerStay instead with a stored list of hit players. The list is reset after each swing and makes sure that any damage is only applied to each player once. 
+
+The second ability in the kit is a self applied modifier that lasts for a certain duration, making the next axe slash deal increased damage and heal a certain percentage of the damage done. It works in a similar fashion to the final ability of the boomerang kit. The self applied modifier can wear of naturally or be removed after colliding with another player. Having the modifier active also changes the visuals of the axe to show that the ability has been used. 
+
+The third ability is a self applied modifier that reflects the velocity of any projectiles that hits the player while active. This is handled using C\# interfaces. Any projectile that is reflectable needs to implement a IReflectable interface. This in turn allows the ability to check whether the interface exists on any colliding projectiles and ask them to reflect their velocity. The ability itself does not perform any reflection directly as this is what the projectiles implementing the interface have to contain.
+
+\begin{figure}[tbph]  %t top, b bottom, p page | you can also use h to try to get the figure to appear at the current location
+  \centering
+  \includegraphics[width=.75\textwidth]{images/stunGrenade}
+  \caption[Screenshot of the brawler kit's stun grenade]{A screenshot from the game showcasing the additional vision range granted from an exploded stun grenade}
+  \label{fig:brawlerStunGrenade}
+\end{figure}
+
+The final ability makes the player throw a stun grenade that explodes after a short while, providing temporary vision for all players(see Figure~\ref{fig:brawlerStunGrenade}) and applying a stun modifier to anyone looking towards the explosion center. The grenade itself is a SpawnableObject and controls the application of modifiers, the temporary vision and any visual elements related to the grenade. The player on the other hand has a simple script that handles the spawning of the grenade. The grenade enables a large sphere collider on explosion which checks for any players within its range. A raycast is then used in conjunction with a dot product to check for players looking towards the center of the explosion. Players with obstacles between themselves and the explosion center will not get stunned as the raycast check will end up failing. 
 
 \subsection{Marksman Kit}
 \subsection{Sniper Kit}
 \subsection{Tank Kit}
 
 \subsection{Trapper Kit}
-- Flamethrower:
-    - Self applied modifier that controls the state of the flamethrower
-    - Pressing the ability button activates the modifier for a set duration, toggling the flamethrower to active.
-    
-    - Uses a large sphere collider when checking for objects to burn.
-            - Makes sure that it hits players and not itself/parent player
-            - Applied a burn modifier to players it hits
-            - Also checks if whatever it hits has the IElement interface.
-                - If it does, uses ApplyElement(Fire)
-            - This means that the flamethrower is capable of buffing applicable abilities of other players. 
+The Trapper Kit is a utility docking kit that focuses on using its three traps to provide various types of crowd control as well as being adequately capable of fighting enemies in close to mid range using the kit's flamethrower.  
 
-- Trap Spawner
-    - All the traps share a trap spawner script in their ability slot, each with its own trap prefab and a reference back to the spawned trap for syncing visuals and other things. 
-    
-    - Each trap also has an associated visual element on the docking kit, the alpha of this element is faded out as the trap is placed and faded back in once the trap is triggered. 
-        - Allows other players to see if the traps are placed or not by looking at the player using the kit.
-        
-    - Uses the ISpawnableReferenceProvider interface to acquire its reference to the placed trap. 
-    
-    - Can only place one of each trap at any given time. Replacing an existing trap simply destroys the old and places a new one at the current position. 
+The first ability in the kit is the flamethrower, a self applied modifier that activates a large sphere collider that checks for objects that it can burn. One of the limitations of working with Unity3D rather than Unity2D is that we don't have access to polygon colliders. Using polygon colliders would have made it possible to create a cone collider for this ability. We are instead using a large sphere collider for the flamethrower although its shape is not necessarily as fitting.
+The collision callback checks for any enemy players and applies a burn modifier to these. It also checks for game objects with the IElement interface and applies a fire element to any such objects if found. This means that abilities from other kits that support elemental modifiers can be buffed by the flamethrower.
 
-- Trap base class:
-    - All traps derive from a trap base class that handles the changes in visual state and playing animations when the trap is triggered. 
-    - The base class has a virtual function HandleTrigger() which allows the deriving classes to perform their own custom behaviour as the trap is triggered. 
-    
-    - Contains a reference to its owner and a list of players that it uses to make sure that any modifiers or additional effects only are applied once in the case that a player quickly moves in and out of the trap's range. 
-    - The reference back to the owner is used so that the trap can tell its owner that is has been destroyed, allowing the owner to change visually to reflect the fact that the trap is no longer placed.
-    
-    - Destroys itself after a given duration. 
-    
+The three other abilities use traps deriving from a base Trap class. A shared TrapSpawner script is used to spawn each of the three traps by providing it with different prefabs per ability. 
+The trap spawner script handles spawning its given trap prefab as well as updating the visuals of the docking kit to reflect that traps have been placed. Each trap has its own visual element on the docking kit that is modified to allow other players to know which traps the user currently has placed. Figure~\ref{fig:trapperKit} showcases these.
+The trap spawner script contains a reference to the spawned trap while the spawned trap is provided with a reference back to its owner. This allows the trap to only stay visible for its owner as well as communicating back to its owner whenever it has been triggered. 
 
-- Slow and Burn trap:
-    - Uses a script that simply applies a burn and slow modifier in its HandleTrigger() function
+Acquiring the reference to the traps is handled by implementing the ISpawnableReferenceProvider interface. Only one trap of each type can be placed at a time so trying to replace a trap that already is placed destroys the old trap and places a new one at the player's current position.  
 
-- Blind trap:
-    - Works like the Slow and Burn trap script, simply applies a blind modifier in its HandleTrigger()
+\begin{figure}[tbph]  %t top, b bottom, p page | you can also use h to try to get the figure to appear at the current location
+  \centering
+  \includegraphics[width=.75\textwidth]{images/TrapperKitWithTraps}
+  \caption[The trapper kit with its three traps]{The trapper kit has three traps. Placing one trap fades the color of its associated visual element on the docking kit}
+  \label{fig:trapperKit}
+\end{figure}
 
-- Capture trap:
-    - A bit more complex trap. It sucks in any nearby enemy players after its been triggered and places a temporary wall around the players who were sucked in, essentially "capturing" them for a short duration
-    
-    - Contains a lot of different visual elements that are enabled/disabled/animated as the trap's lifecycle goes on. 
-    
-    - Uses Player.TargetAddForce() to continuously apply force on all players within the trap range for a given duration before enabling the walls around it. 
-    
-    - Uses a Coroutine to spawn in the walls after a short duration of being pulled in.
-        - Starts pulling as its triggered. The Coroutine then disables the pull and sets up the walls once it continues. 
+The Trap base class handles generic functionality like changing the visual state of the trap to invisible for other players as well as playing animations whenever the trap is triggered. A virtual function is used to allow any children of the base class to provide custom behaviour as the trap is triggered. The base class also contains a list of players that triggered it to make sure that no modifiers are applied twice in the case that a player quickly moves in and out of the trap collider. 
+
+The two first traps have fairly simple behaviour. Both have modifiers that they apply to the list of players who triggered the trap. The first applies a burn and slow modifier while the second applies a blind modifier. 
+
+The third trap has more custom behaviour compared to the previous two. It pulls in any nearby enemy players after triggering and places a temporary wall around these players to "capture" them for a short duration. There are a lot of different visual elements like particle systems, animations and sprites that are enabled/disabled throughout the trap's lifecycle. 
+
+Applying the force for pulling players into the trap is done using a TargetRpc function located in the main player script while a C\# coroutine is used to enable the walls after a short duration. More information on adding consistent force to both the server and clients can be found in section **PLACE REFERENCE HERE PLS**. 
 
 \subsection{Support Kit}
 
 \section{Shop Architecture}
-\todo {How detailed should a section like this be?}
 - Single script IngameMenuHandler.cs handles interaction with the shop.
         - Loads all scriptable objects with item data. 
         - Adds these to a list that is sorted by price
@@ -170,7 +136,7 @@ This chapter in the thesis would have the technical design of the project.  It w
         - Simply asks the ingameMenuHandler to display the verification prompt
 
 \subsection{Using scriptable objects for shop items}
-- Easy to use interface for developers. Can simply go to the correct resource folder, right click and choose "new shop item"
+- Easy to use interface for developers.(INCLUDE IMAGE) Can simply go to the correct resource folder, right click and choose "new shop item"
 - ShopItemData is a scriptable object containing the name of the shop item, the sprite that will be displayed in the shop, the prefab for the docking kit that this shop item contains, its price and the enum ID of the docking kit needed for various functionality like docking/undocking the player on purchase. 
 - Also contains a list that is 5 elements long containing DockingKitDescriptions. One for general docking kit information and 4 for the abilities. 
 - The description struct contains the icon that will be used by the UI to represent the highlighted element, the name of the ability/kit and a string containing the description.

@@ -14,9 +14,10 @@ This has the description of how you actually went about implementing the project
 \section{Using Coroutines for interpolation}
 
 \section{Using Unity to control programmatic interpolations}
+\label{sec:boomerangCurve}
 Unity as a game engine already has fairly robust and powerful animation tools that allows the developer to create and manage animations directly in the editor. These animation tools have a lot of versatility, but there are times where the developer might want a bit of extra control and use a programmatic interpolation instead. 
 
-In our case we needed to produce a good looking curve for a boomerang to travel through while developing the boomerang kit. We decided to perform this interpolation through the use of a Cubic Bezier curve as these curves are flexible, very simple to control and can provide a nice squeezed arc for the boomerang to interpolate through. Another option would be to use a Hermite curve, but we ended up sticking with Bezier curves as it would make the code more readable for all group members due to everyone's preexisting familiarity with these. The formula for interpolating through Cubic Bezier curves is as follows:  
+In our case we needed to produce a curve for a boomerang to travel through while developing the boomerang kit. We decided to perform this interpolation through the use of a Cubic Bezier curve as these curves are flexible, very simple to control and can provide a nice squeezed arc for the boomerang to interpolate through. Another option would be to use a Hermite curve, but we ended up sticking with Bezier curves as it would make the code more readable for all group members due to everyone's preexisting familiarity with these. The formula for interpolating through Cubic Bezier curves is as follows:  
 $$
 B(t) = (1 - t)^3 P0 + 3(1 - t)^2 t * P1 + 3(1 - t)t^2 * P2 + t^3 P3 
 $$
@@ -49,14 +50,14 @@ In our case, we wanted the boomerang to accelerate from the start, decelerate to
 \begin{figure}[tbph]  %t top, b bottom, p page | you can also use h to try to get the figure to appear at the current location
   \centering
   \includegraphics[width=.5\textwidth]{images/BoomerangAnimationCurve}
-  \caption[The animation curve representing the change in \textbf{\textit{t}}]{This curve shows the change in \textbf{\textit{t}} as time goes from 0 to 1 on the x axis using Unity's AnimationCurve type.}
+  \caption[Boomerang animation curve using Unity's built in type]{This curve shows the change in \textbf{\textit{t}} as time goes from 0 to 1 on the x axis using Unity's AnimationCurve type.}
   \label{fig:boomerangcurve0}
 \end{figure}
 
 \begin{figure}[tbph]
     \centering
     \includegraphics[width=.5\textwidth]{images/BoomerangMathematicalCurve}
-    \caption[The mathematical curve representing the change in \textbf{\textit{t}}]{This curve shows the change in \textbf{\textit{t}} as time goes from 0 to 1 on the x axis using the mathematical curve $f(x) = x + sin(6.28x) / 9$}
+    \caption[Boomerang curve using a mathematical formula]{This curve shows the change in \textbf{\textit{t}} as time goes from 0 to 1 on the x axis using the mathematical curve $f(x) = x + sin(6.28x) / 9$}
     \label{fig:boomerangcurve1}
 \end{figure}
     
@@ -74,3 +75,32 @@ We also made sure to check the performance difference between the two approaches
 
 The time difference was calculated using Unity's Time.realTimeSinceStartup variable. The Time.realTimeSinceStartup float is measured in seconds so we multiplied the average time difference by $10^6$ and used a output precision of two decimals for these results. 
 The mathematical approach provides a small increase in performance as seen from the results, but in our case the difference is too small to warrant using it. The AnimationCurve approach is far easier to work with directly in the editor instead of using external graph tools to modify the curve to our needs. On the contrary, the mathematical approach is more generic and might see use in non Unity applications.
+
+\section{Balancing in preparation for user testing}
+The full game functionality required for proper user testing ended up being implemented rather late into the project's development. Due to this we had limited time for user testing and needed to provide the testers with a build that already had some initial balancing done. 
+Dockit League is an asymmetrical game due to the variety of available docking kits so we used a mathematical model~\cite{schell2014art} for the initial balance iteration. Doing so allowed us to have a overview over the different kits including their strengths and weaknesses.
+
+\begin{table}[tbph]
+\centering
+\caption{Initial balance table}
+\label{tab:initBalance}
+\begin{tabular}{@{}llllll@{}}
+\toprule
+\textbf{Docking Kit} & \textbf{Health} & \textbf{Movement Speed} & \textbf{Damage} & \textbf{Utility} & \textbf{Totals} \\ \midrule
+Boomerang Kit        & Low (1)         & High (3)                & High (3)        & Medium (2)       & 9               \\
+Brawler Kit          & High (3)        & Low (1)                 & Medium (2)      & Medium (2)       & 8               \\
+Bomber Kit           & Medium (2)      & Medium (2)              & High (3)        & Low (1)          & 8               \\
+Marksman Kit         & Medium (2)      & Medium (2)              & Medium (2)      & Medium (2)       & 8               \\
+Sniper Kit           & Medium (2)      & Medium (2)              & High (3)        & Medium (2)       & 9               \\
+Tank Kit             & High (3)        & Low (1)                 & Low (1)         & High (3)         & 8               \\
+Trapper Kit          & Medium (2)      & Medium (2)              & Low (1)         & High (3)         & 8               \\
+Support Kit          & Medium (2)      & Medium (2)              & Low (1)         & High (3)         & 8               \\ \bottomrule
+\end{tabular}
+\end{table}
+
+The balance table~\ref{tab:initBalance} contains columns for kit name, kit health, kit movement speed, damage and utility. The damage column has values assigned based on the potential damage output of the kit while the utility column has values assigned based on the overall the utility the kit provides through its abilities. This includes abilities that apply modifiers and other effects without necessarily focusing on damage. Further tweaking on cooldowns, damage values and modifier durations is the focus of the user testing section rather than the initial balancing as this section is supposed to give a rough estimate of each kit's capabilities. 
+Additional information on the various docking kits and their abilities can be found in section~\ref{sec:dockingKits}
+     
+As seen in table~\ref{tab:initBalance}, the sniper and boomerang kits end up with a slightly higher total than the other kits. This is a deliberate decision as both kits have a high damage potential if played well while having a low to medium damage potential otherwise. We believe that both kits are fairly challenging to play in order to achieve their full damage potential so the difficulty offsets the the fact that the two kits are a bit stronger than the rest. 
+The boomerang kit requires the player to hit with multiple boomerangs while they move forwards and then again once they move back for the maximum amount of damage. The sniper kit requires time and preparation before shooting and rewards a large amount of damage if the projectile actually connects.  
+These parts of the two kits allows us to provide a high risk, high reward ratio for playing well.

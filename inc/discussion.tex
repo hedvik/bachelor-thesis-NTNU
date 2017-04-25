@@ -1,9 +1,30 @@
 \chapter{Discussion}
 \label{chap:discussion}
 
-The results you have collected and the process you when through to develop the project have been presented earlier.  This Chapter is used to talk about your interpretations of results or the process.  It might be a discussion of the language you used.  A tool that you started to use but then stopped using for some reason.  It could give insight into the evolution of your process.
+The results you have collected and the process you went through to develop the project have been presented earlier.  This Chapter is used to talk about your interpretations of results or the process.  It might be a discussion of the language you used.  A tool that you started to use but then stopped using for some reason.  It could give insight into the evolution of your process.
 
 \section{Development decisions}
+\subsection{Using scriptable objects for modifiers and shop items}
+\subsection{Moving from Confluence to ShareLaTeX for writing the thesis}
+\subsection{Moving from virtual functions to interfaces for the Ability base class}
+\subsection{Providing ergonomic controls when using a twin stick scheme}
+\subsection{Whether to move from Unity3D to Unity2D after the release of Unity 5.6}
+
+\subsection{Potentially using the player's field of view as a means of visibility checking instead of ray casting}
+One idea that we thought of while developing was to use the field of view component for visibility checking rather than regular ray casting. This would allow abilities like the flash grenade in the brawler kit to only stun players who had the grenade in their field of view at the time of explosion rather than using a ray cast + dot product. We ultimately decided against implementing this due to a few reasons. 
+
+The first reason is that the field of view is fairly computationally expensive. The component uses many ray casts to generate a mesh that we use as a visibility mask for the players. It would not be possible to directly synchronise the generated meshes so we would have to synchronise the various variables for the component itself and reconstruct the field of view on the server. Doing so would allow us to have a player local field of view for the sake of responsiveness while using the server's version for any visibility checking. This could work if the server was ran as a dedicated server, but our project is primarily focused on trying to create a MOBA using peer to peer connectivity so a implementation like this would not work as it would place a lot of extra load on the host player. 
+
+A server authoritative visibility check like this would be far better for security reasons compared to local checking, but we currently have a middle ground where the server uses ray casts and dot products to check player face directions. This is independent of the field of view component so we have less control in regards to limiting the view angles and so on.
+
+Another issue is that keeping the field of view synchronised would take a fair share of additional bandwidth if we want the server to keep itself updated frequently. Unity has a 4KB/s per user limit~\cite{unityNetworkBandwidthLimit} and while it is not currently possible to measure the bandwidth usage using Unity we have had several disconnects during testing that might relate to the bandwidth limit based on the behaviour we have observed.
+
+
 \subsection{Sticking with dual stick controls}
-    - Mouse would be nice, has some issues(easier to aim etc), not in the scope of our project. Detail how it could be implemented
+Dockit League is primarily developed with a controller twin stick setup in mind. This is mostly due to the fact that other control options were outside of the scope for the project. One might think that providing similar controls through the use of a mouse would be simple, but it provides somewhat of a balancing issue. 
+Making the player face towards the direction of the mouse pointer is generally what we would think of as the simplest and most intuitive implementation of the mouse control scheme. The main problem with this implementation is that aiming becomes easier for players using a mouse. To give an example, two players standing still at different positions want to fire at each other with a projectile. One uses a mouse while the other uses a controller. The player using the mouse can simply hover the mouse cursor over the other player for accurate aim while the player using the controller needs to aim by approximately pointing the right stick in the correct direction.  
+
+To provide similar behaviour between the controller and mouse options we would need to make the mouse controls work more similarly to that of a controller stick. The mouse cursor could be hidden and reset to the center of the screen each frame while recording any changes in mouse movement as a direction vector. This vector could then be used to make the player point in the same direction that the mouse is moving. This would balance the two control schemes to some degree, but we believe that mouse controls like the ones we described might end up feeling too unintuitive for players. Due to this we ended up deciding to stick with the controller dual stick scheme for our project scope. 
+
 \section{Discussion around our opinions on the HLAPI of Unity}
+
