@@ -16,6 +16,8 @@
 
 \usepackage{csvsimple}
 \usepackage{booktabs}
+\usepackage{minted}
+\usepackage{pdfpages}
 
 \newcommand{\comment}[1]{\textcolor{blue}{\emph{#1}}}  %% use of the colour and you can see how to use commands with parts \comment{so what}
 
@@ -63,11 +65,11 @@
 
 
 \input{inc/introduction}
-\input{inc/requirements}
+%\input{inc/requirements}
 \input{inc/technical}
 \input{inc/process}
 \input{inc/implementation}
-\input{inc/deployment}
+%\input{inc/deployment}
 \input{inc/testing}
 \input{inc/discussion}
 \input{inc/conclusion}
@@ -76,11 +78,12 @@
 \bibliographystyle{ntnuthesis/ntnubachelorthesis}
 \bibliography{inc/BachelorExample}
 
-\appendix %after this line all chapters will have leters instead of numbers
-%\input{projectplan}
+\appendix %after this line all chapters will have letters instead of numbers
+\input{inc/projectplan}
 %\input{gantt}
 \input{inc/meetinglog}
 %\input{progressreviews}
 %\input{worklog}
+\input{inc/doxygen}
 
 \end{document}

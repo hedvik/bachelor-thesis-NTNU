@@ -1,15 +1,24 @@
 \chapter{Development Process}
 \label{chap:process}
-
-This chapter would contain the process by which you worked on your thesis.  This gives an indication of the way in which the working environment effected the final product or result.
-
 \section{Agile game development using Scrum}
-\section{Use of Confluence/Jira/Atlassian, smart commits, feature branching etc}
+When working on any project, choosing the right software development model can help a lot. For games in particular, agile software development is a near perfect match~\cite{keith2010agile}. The incremental nature of both allows developers to easily change the product based on feedback during development as well as providing workflows where clear and concise tasks can be set per increment. For this project we decided to use Scrum as our software development model due to its agile capabilities. We also wanted to grow more acquainted with professional tools like Jira and Confluence for project management as these integrate well with Scrum.   
+
+\subsection{Our configuration of Scrum}
+There are many different ways of using a software development model like Scrum. In our case we decided to stick with fortnightly sprints to provide incremental progress at a steady pace. We combined the retrospective, review and planning meetings into a single "Sprint Meeting" on the thursdays that the sprint ended as it would be easier to find the time for all group members to meet up and discuss the project's progress. 
+Given that we didn't have any product owner, the review session of the sprint meeting consistent of showing each other the things we had been working on throughout the sprint. We also used daily standup meetings from Mondays to Wednesdays as these days had no lectures and were primarily used to work on the project. 
+
+\section{Using the Atlassian toolkit}
+We used several of the Atlassian tools when developing Dockit League: 
+\begin{description}
+    \item[Bitbucket: ] Used to contain the source code
+    \item[Confluence: ] Used to store documentation from meetings.
+    \item[Jira: ] Used to manage the project. This includes managing sprints, playing planning poker and updating the product backlog. 
+\end{description}
+
+We integrated Bitbucket with Jira to allow for smart commits. This allowed us to link any commits to issues using the DOCKL-\# tag where \# is substituted with the issue number and track progress on individual issues. Any commits unrelated to issues were simply pushed to our development branch in the project. 
+    
+Feature branching for individual issues/product backlog items was also employed. Each feature branched out from the development branch and then merged back in through the use of pull requests as it allowed all group members to review the new code when it was finished. These branches were then closed as the pull request was merged. 
+
 \section{Code quality and conventions}
-
-
-
-
-
-
-
+We primarily used Microsoft's naming conventions~\cite{microsoftNamingGuidelines} and code guidelines~\cite{microsoftCodeGuidelines} while developing Dockit League. An exception to these naming conventions was that we used camelCase rather than PascalCase for member variables. In contrast with Microsoft's C\# code guidelines we used the One True Brace code convention~\cite{oneTrueBraceStyle} for formatting. 
+Doxygen documentation was required for functions and optional, but encouraged for classes depending on their complexity.

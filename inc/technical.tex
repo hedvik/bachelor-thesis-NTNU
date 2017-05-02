@@ -4,18 +4,50 @@
 This chapter in the thesis would have the technical design of the project.  It would contain the design details for the architecture of the solution, program flow, and the details of the components.
 
 \section{Architectures in Unity(Introduction, discusses the component based nature of Unity)}
+\subsection{Basic overview}
+Developing in Unity, or any existing game engine, the engine will heavily influence the basic architecture of the solution. Therefore, a basic understanding of the Unity engine can give a better understanding of the architecture in this solution.
+Every object in the game will be a GameObject. A GameObject is a container that contains components, and where you add scripts with custom behaviour.
+
+    - Component based (different thinking to OOP)
+
+\subsection{Networking overview}
+    - Basic overview of the unity networking UNET (NetworkBehaviours)
+    - Commands etc.
+    - SyncVars
 
 \section{Lobby/Main Menu}
+    - Using NetworkManager / MainMenuUI for it's functionality.
 
 \section{Ingame scene setup (Game managers and what not)}
 \subsection{Ingame UI}
 
 \section{Player architecture}
+
+\subsection{NetworkPlayer}
+    - Not destroyed on load (handles player representation in both lobby and in-game)
+\paragraph{LobbyPlayer}
+    - Representation in lobby
+\paragraph{Player}
+    - Representation in game
+    
 \subsection{Input}
+    - PlayerInput specifics
 \subsection{Field of View}
+    - FieldOfView specifics
 \subsection{Health and currency}
+    - Health and currency specifics
+    
+    - Currency component is fairly simple. 
+        - Uses a SyncVarHook for its currency value. 
+            - SyncVarHook called whenever the server changes the currency value. 
+            - Checks the difference between the new and old amount. 
+            - Updates the currency value and tells the UI to update.
+            - Also tells the UI to play an animation showing the difference in currency that was gained/lost.
+        - Has a command for adding currency, can also be used for removing currency. 
 \subsection{Player Status}
+    - Specifics about player status. How it handles modifiers
 \subsection{Docking}
+    - Specifics on how docking works. How it is central to networking in dockit league and so on. 
 
 \section{Modifiers architecture}
 \subsection{Using scriptable objects for modifier data}
@@ -100,46 +132,57 @@ The Trap base class handles generic functionality like changing the visual state
 
 The two first traps have fairly simple behaviour. Both have modifiers that they apply to the list of players who triggered the trap. The first applies a burn and slow modifier while the second applies a blind modifier. 
 
-The third trap has more custom behaviour compared to the previous two. It pulls in any nearby enemy players after triggering and places a temporary wall around these players to "capture" them for a short duration. There are a lot of different visual elements like particle systems, animations and sprites that are enabled/disabled throughout the trap's lifecycle. 
+The third trap has more custom behaviour compared to the previous two. It pulls in any nearby enemy players after triggering and places a temporary wall around these players to "capture" them for a short duration. There are a lot of different visual elements like particle systems, animations, colliders and sprites that are enabled/disabled throughout the trap's lifecycle. 
 
-Applying the force for pulling players into the trap is done using a TargetRpc function located in the main player script while a C\# coroutine is used to enable the walls after a short duration. More information on adding consistent force to both the server and clients can be found in section **PLACE REFERENCE HERE PLS**. 
+Applying the force for pulling players into the trap is done using a TargetRpc function located in the main player script while a C\# coroutine is used to enable the walls after a short duration. More information on adding consistent force to both the server and clients can be found in section~\ref{sec:conForce}. 
 
 \subsection{Support Kit}
 
 \section{Shop Architecture}
-- Single script IngameMenuHandler.cs handles interaction with the shop.
-        - Loads all scriptable objects with item data. 
-        - Adds these to a list that is sorted by price
-        - Instantiatiates ShopInstance's for each scriptable object with the grid layout object as parent. 
-        
-        - Takes input for two buttons that lets it increment/decrement a highlighted id.
-            - Limited to range (0, 4) so we cannot get any out of range errors.
-        - The script then updates the shop interface with all of the information about the given ability/description using the id as a index to the scriptable object's list of descriptions.  
+\subsection{Visual Layout}
+\begin{figure}[tbph]  %t top, b bottom, p page | you can also use h to try to get the figure to appear at the current location
+  \centering
+  \includegraphics[width=.75\textwidth]{images/shopOverview}
+  \caption[Screenshot showing off the in-game shop]{A screenshot showing off the in-game shop}
+  \label{fig:shopOverview}
+\end{figure}
 
-- PlayerInput handles opening/closing the shop
-- One Shop Menu gameobject with different children and components for Visuals and Buttons
-        - A purchase verification game object that appears when the player wants to purchase a kit
-        - The left most panel is a game object containing a content size fitter and grid layout group. This means that any child gameobjects with a layout element component will be placed in a grid like fashion by its parent.
-            - This is where we find the shopInstances
-            
-        - The right most panel displays information on the currently selected docking kit. 
-            - Contains the information gotten from the shopInstance.itemData scriptable object. 
-            - Has three text boxes: One for the name, one for additional stats like: cooldown, speed, etc and a desciption box for describing what the ability does or what the docking kit is about. 
-            - Currently viewed description is highlighted by a dark overlay in the logo panel. 
-            - The player can navigate through the descriptions using the displayed buttons.
-
-- ShopItemInstance(Prefab)
-    - One instance contains a scriptable object with shop data.
-    - Instantiated and initialised by the IngameMenuHandler
-    - Attached to a gameobject containing a couple of UI elements and visuals that allow it to display a icon for the shop item and its price. 
-    - Also contains a OnClick() button callback that is called whenever the player presses the shop item.
-        - Simply asks the ingameMenuHandler to display the verification prompt
+The visual layout of the shop can be seen in Figure~\ref{fig:shopOverview}. The layout itself is split into two halves. 
+The left half contains purchasable shop items while the right half contains individual information on the currently selected shop item. The currently equipped docking kit is signified by a "E" while any unpurchasable docking kits due to lack of currency are greyed out. 
+The information display on the right side contains several text boxes that scripts can use to display arbitrary information about the shop item like names, descriptions and additional stats. Each docking kit contains information on the kit and its abilities which is split into five different "tabs". The information tabs for each item can be cycled through by pressing the left and right shoulder buttons on the controller as displayed on the top of the panel.
 
 \subsection{Using scriptable objects for shop items}
-- Easy to use interface for developers.(INCLUDE IMAGE) Can simply go to the correct resource folder, right click and choose "new shop item"
-- ShopItemData is a scriptable object containing the name of the shop item, the sprite that will be displayed in the shop, the prefab for the docking kit that this shop item contains, its price and the enum ID of the docking kit needed for various functionality like docking/undocking the player on purchase. 
-- Also contains a list that is 5 elements long containing DockingKitDescriptions. One for general docking kit information and 4 for the abilities. 
-- The description struct contains the icon that will be used by the UI to represent the highlighted element, the name of the ability/kit and a string containing the description.
-- The menu handler will take care of the rest by instantiating all the ShopItemInstances.
+Scriptable objects provide an easy to use interface for developers, especially if used as described in section*INSERT REFERENCE HERE*. It allows us to simply go the the correct resource folder, right click and choose "New shop item". We can then directly fill in any data related to the new shop item in the inspector as seen in Figure~\ref{fig:scriptableObjectInspectorShop}. 
+The scriptable object for shop items contains several pieces of data:
+\begin{itemize}
+    \item The name of the docking kit.
+    \item The sprite that is displayed in the left panel of the shop.
+    \item The prefab for the related docking kit.
+    \item The price of the docking kit
+    \item An enum which we use as a ID to identify the docking kit.
+    \item A list of structures containing description data. These structures include the sprites used for the tabs on the right panel of the shop, the name of the ability/kit and a description. 
+\end{itemize}
+
+The scriptable object itself does not contain any code and is used as a data container. The data within the scriptable objects are then loaded by the menu handler and attached to instantiated shop item instances. 
+
+\begin{figure}[tbph]
+  \centering
+  \includegraphics[width=.6\textwidth]{images/scriptableObjectInspector}
+  \caption[Image of the Unity inspector showing scriptable objects from the shop]{An image of the Unity inspector that illustrates how one of the scriptable objects from the shop looks like}
+  \label{fig:scriptableObjectInspectorShop}
+\end{figure}
+
+\subsection{How the shop is managed internally}
+The shop architecture in Dockit League is split up into several components:
+\begin{itemize}
+    \item A script, IngameMenuHandler *APPENDIX LINK* manages the shop and any interaction with it.
+    \item Scriptable Objects are used to contain data related to the individual shop items. 
+    \item Each item instance in the shop contains the ShopItemInstance script *APPENDIX LINK* which stores a scriptable object and handles the data display for it. 
+\end{itemize}
+
+The IngameMenuHandler script starts by loading all scriptable objects within the project that contain item data. These scriptable objects are then placed in a list and sorted by price before the script starts instantiating ShopItemInstance's with a respective scriptable object. 
+The script also handles input for scrolling through the information tabs of the currently selected shop item. This is handled by incrementing and decrementing a range limited integer which is used as a index to access the correct descriptions from the scriptable object. 
+
+We use a prefab with uninitialised visual elements and a ShopItemInstance script to spawn in individual shop items. After being spawned, the instance is then initialised by passing a scriptable object over to it and updating all of its visual elements with the acquired data. The ShopItemInstance script also contains a callback for whenever it is pressed which displays a purchase verification prompt with a "yes" and "no" answer. Answering "yes" to the prompt tells IngameMenuHandler to complete the purchase and equips the new docking kit to the player.  
 
 \section{Standard Game Flow}
