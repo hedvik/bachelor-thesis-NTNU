@@ -1,0 +1,89 @@
+\hypertarget{class_trap_spawner}{}\section{Trap\+Spawner Class Reference}
+\label{class_trap_spawner}\index{Trap\+Spawner@{Trap\+Spawner}}
+Inheritance diagram for Trap\+Spawner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_trap_spawner}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_trap_spawner_ac214a69bf4c841b0c74bb159ceb912b9}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Callback for what the local client is supposed to do when this ability\textquotesingle{}s button is pressed \end{DoxyCompactList}\item 
+override void \hyperlink{class_trap_spawner_af9de8164ae685cef7e8f4349384f5e45}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Callback for synchronising visual state based on the given parameter \end{DoxyCompactList}\item 
+void \hyperlink{class_trap_spawner_a3ea9d0db92caae6b1a70903fbdfda3cf}{Display\+Trap\+State} (bool state)
+\begin{DoxyCompactList}\small\item\em A public function that allows traps to update the visual state of the docking kit\textquotesingle{}s placed trap indicator \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_trap_spawner_a5eac34736f4342a82fa647182e1dc1d6}{}\label{class_trap_spawner_a5eac34736f4342a82fa647182e1dc1d6} 
+Game\+Object {\bfseries trap\+Prefab}
+\item 
+\hypertarget{class_trap_spawner_a0cb75a63e22573dbfc1154afa826665e}{}\label{class_trap_spawner_a0cb75a63e22573dbfc1154afa826665e} 
+float {\bfseries trap\+Active\+Alpha} = 0.\+2f
+\item 
+\hypertarget{class_trap_spawner_aad871adea31e403a52d0ed58930541d7}{}\label{class_trap_spawner_aad871adea31e403a52d0ed58930541d7} 
+List$<$ Sprite\+Renderer $>$ {\bfseries trap\+Active\+Sprites} = new List$<$Sprite\+Renderer$>$()
+\item 
+\hypertarget{class_trap_spawner_abe7ad252927be3d467ad5ec6035936ae}{}\label{class_trap_spawner_abe7ad252927be3d467ad5ec6035936ae} 
+float {\bfseries lerp\+Speed} = 5f
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_trap_spawner_ac214a69bf4c841b0c74bb159ceb912b9}{}\label{class_trap_spawner_ac214a69bf4c841b0c74bb159ceb912b9} 
+\index{Trap\+Spawner@{Trap\+Spawner}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Trap\+Spawner@{Trap\+Spawner}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Trap\+Spawner.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what the local client is supposed to do when this ability\textquotesingle{}s button is pressed 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_trap_spawner_a3ea9d0db92caae6b1a70903fbdfda3cf}{}\label{class_trap_spawner_a3ea9d0db92caae6b1a70903fbdfda3cf} 
+\index{Trap\+Spawner@{Trap\+Spawner}!Display\+Trap\+State@{Display\+Trap\+State}}
+\index{Display\+Trap\+State@{Display\+Trap\+State}!Trap\+Spawner@{Trap\+Spawner}}
+\subsubsection{\texorpdfstring{Display\+Trap\+State()}{DisplayTrapState()}}
+{\footnotesize\ttfamily void Trap\+Spawner.\+Display\+Trap\+State (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+A public function that allows traps to update the visual state of the docking kit\textquotesingle{}s placed trap indicator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The display state\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_trap_spawner_af9de8164ae685cef7e8f4349384f5e45}{}\label{class_trap_spawner_af9de8164ae685cef7e8f4349384f5e45} 
+\index{Trap\+Spawner@{Trap\+Spawner}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Trap\+Spawner@{Trap\+Spawner}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Trap\+Spawner.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for synchronising visual state based on the given parameter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The state of the ability.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Trapper\+Kit/Trap\+Spawner.\+cs\end{DoxyCompactItemize}

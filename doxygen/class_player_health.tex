@@ -1,0 +1,155 @@
+\hypertarget{class_player_health}{}\section{Player\+Health Class Reference}
+\label{class_player_health}\index{Player\+Health@{Player\+Health}}
+
+
+Handles functionality related to the player health.  
+
+
+Inheritance diagram for Player\+Health\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_health}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_player_health_ad2740e9dc726d6ac4931a08514ec64ff}{On\+Start\+Client} ()
+\begin{DoxyCompactList}\small\item\em Called when this object is activated on a client. Sets up the initial state and references. \end{DoxyCompactList}\item 
+override void \hyperlink{class_player_health_aeff542368fc096a315d75a358055b058}{On\+Start\+Local\+Player} ()
+\begin{DoxyCompactList}\small\item\em Called when the local player object has been set up. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_health_a568025d9187065c164ef7946654e0504}{Cmd\+Set\+Max\+Health} (float new\+Max\+Health)
+\begin{DoxyCompactList}\small\item\em Command called when a \hyperlink{class_docking_kit}{Docking\+Kit} changes the max\+Health. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_health_a799bc1eb8d1a4bdb7be804d9e87d87fc}{Cmd\+Set\+Damage\+Multiplier} (float multiplier)
+\begin{DoxyCompactList}\small\item\em Command called when the player receives damage\+Multiplier change, multiplicative. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_health_a4572180d6148cb25bced17d5990927aa}{Take\+Damage} (float damage, Vector3 knockback\+Force)
+\begin{DoxyCompactList}\small\item\em Server\+Callback called when the player takes damage, and a knockback is required. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_health_a92faabb0dfe53cdbdd4ba7ab2b51b6dc}{Take\+Damage} (float damage)
+\begin{DoxyCompactList}\small\item\em Server\+Callback called when the player takes damage. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_health_aae2aa8c904faf746f30ea39c5a9e76ae}{Heal} (float healing)
+\begin{DoxyCompactList}\small\item\em Server\+Callback called when the player receives health. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_player_health_a0090aa3042421f076f73abf8811a1988}{}\label{class_player_health_a0090aa3042421f076f73abf8811a1988} 
+float {\bfseries max\+Health} = 100f
+\item 
+\hypertarget{class_player_health_a2661b9620b2abda2208c53565b27d7b4}{}\label{class_player_health_a2661b9620b2abda2208c53565b27d7b4} 
+float {\bfseries damage\+Multiplier} = 1f
+\item 
+\hypertarget{class_player_health_ab4effc18709ed58d440d58c0cf7d0f4c}{}\label{class_player_health_ab4effc18709ed58d440d58c0cf7d0f4c} 
+Sprite\+Renderer {\bfseries damage\+Health\+Object}
+\item 
+\hypertarget{class_player_health_ae656b18d0b2640ac1c6e5d1b0c003da4}{}\label{class_player_health_ae656b18d0b2640ac1c6e5d1b0c003da4} 
+float {\bfseries flash\+Speed} = 8f
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles functionality related to the player health. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_player_health_a799bc1eb8d1a4bdb7be804d9e87d87fc}{}\label{class_player_health_a799bc1eb8d1a4bdb7be804d9e87d87fc} 
+\index{Player\+Health@{Player\+Health}!Cmd\+Set\+Damage\+Multiplier@{Cmd\+Set\+Damage\+Multiplier}}
+\index{Cmd\+Set\+Damage\+Multiplier@{Cmd\+Set\+Damage\+Multiplier}!Player\+Health@{Player\+Health}}
+\subsubsection{\texorpdfstring{Cmd\+Set\+Damage\+Multiplier()}{CmdSetDamageMultiplier()}}
+{\footnotesize\ttfamily void Player\+Health.\+Cmd\+Set\+Damage\+Multiplier (\begin{DoxyParamCaption}\item[{float}]{multiplier }\end{DoxyParamCaption})}
+
+
+
+Command called when the player receives damage\+Multiplier change, multiplicative. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em multiplier} & change to multiplier\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_health_a568025d9187065c164ef7946654e0504}{}\label{class_player_health_a568025d9187065c164ef7946654e0504} 
+\index{Player\+Health@{Player\+Health}!Cmd\+Set\+Max\+Health@{Cmd\+Set\+Max\+Health}}
+\index{Cmd\+Set\+Max\+Health@{Cmd\+Set\+Max\+Health}!Player\+Health@{Player\+Health}}
+\subsubsection{\texorpdfstring{Cmd\+Set\+Max\+Health()}{CmdSetMaxHealth()}}
+{\footnotesize\ttfamily void Player\+Health.\+Cmd\+Set\+Max\+Health (\begin{DoxyParamCaption}\item[{float}]{new\+Max\+Health }\end{DoxyParamCaption})}
+
+
+
+Command called when a \hyperlink{class_docking_kit}{Docking\+Kit} changes the max\+Health. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Max\+Health} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_health_aae2aa8c904faf746f30ea39c5a9e76ae}{}\label{class_player_health_aae2aa8c904faf746f30ea39c5a9e76ae} 
+\index{Player\+Health@{Player\+Health}!Heal@{Heal}}
+\index{Heal@{Heal}!Player\+Health@{Player\+Health}}
+\subsubsection{\texorpdfstring{Heal()}{Heal()}}
+{\footnotesize\ttfamily void Player\+Health.\+Heal (\begin{DoxyParamCaption}\item[{float}]{healing }\end{DoxyParamCaption})}
+
+
+
+Server\+Callback called when the player receives health. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em healing} & The amount of health received.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_health_ad2740e9dc726d6ac4931a08514ec64ff}{}\label{class_player_health_ad2740e9dc726d6ac4931a08514ec64ff} 
+\index{Player\+Health@{Player\+Health}!On\+Start\+Client@{On\+Start\+Client}}
+\index{On\+Start\+Client@{On\+Start\+Client}!Player\+Health@{Player\+Health}}
+\subsubsection{\texorpdfstring{On\+Start\+Client()}{OnStartClient()}}
+{\footnotesize\ttfamily override void Player\+Health.\+On\+Start\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when this object is activated on a client. Sets up the initial state and references. 
+
+\hypertarget{class_player_health_aeff542368fc096a315d75a358055b058}{}\label{class_player_health_aeff542368fc096a315d75a358055b058} 
+\index{Player\+Health@{Player\+Health}!On\+Start\+Local\+Player@{On\+Start\+Local\+Player}}
+\index{On\+Start\+Local\+Player@{On\+Start\+Local\+Player}!Player\+Health@{Player\+Health}}
+\subsubsection{\texorpdfstring{On\+Start\+Local\+Player()}{OnStartLocalPlayer()}}
+{\footnotesize\ttfamily override void Player\+Health.\+On\+Start\+Local\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when the local player object has been set up. 
+
+\hypertarget{class_player_health_a4572180d6148cb25bced17d5990927aa}{}\label{class_player_health_a4572180d6148cb25bced17d5990927aa} 
+\index{Player\+Health@{Player\+Health}!Take\+Damage@{Take\+Damage}}
+\index{Take\+Damage@{Take\+Damage}!Player\+Health@{Player\+Health}}
+\subsubsection{\texorpdfstring{Take\+Damage()}{TakeDamage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Player\+Health.\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage,  }\item[{Vector3}]{knockback\+Force }\end{DoxyParamCaption})}
+
+
+
+Server\+Callback called when the player takes damage, and a knockback is required. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & The amount of damage taken.\\
+\hline
+{\em knockback\+Force} & The force applied to the player rigidbody.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_health_a92faabb0dfe53cdbdd4ba7ab2b51b6dc}{}\label{class_player_health_a92faabb0dfe53cdbdd4ba7ab2b51b6dc} 
+\index{Player\+Health@{Player\+Health}!Take\+Damage@{Take\+Damage}}
+\index{Take\+Damage@{Take\+Damage}!Player\+Health@{Player\+Health}}
+\subsubsection{\texorpdfstring{Take\+Damage()}{TakeDamage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Player\+Health.\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage }\end{DoxyParamCaption})}
+
+
+
+Server\+Callback called when the player takes damage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & The amount of damage taken.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Player/Player\+Health.\+cs\end{DoxyCompactItemize}

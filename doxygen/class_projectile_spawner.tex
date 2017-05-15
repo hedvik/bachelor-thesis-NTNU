@@ -1,0 +1,69 @@
+\hypertarget{class_projectile_spawner}{}\section{Projectile\+Spawner Class Reference}
+\label{class_projectile_spawner}\index{Projectile\+Spawner@{Projectile\+Spawner}}
+Inheritance diagram for Projectile\+Spawner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_projectile_spawner}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_projectile_spawner_a9495a0da1b27877198ccd1d7f7153743}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_projectile_spawner_a9896d21e1871b84380b473e90e1c8640}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_projectile_spawner_a87264233cf9333b7bc2337e4e15412e1}{}\label{class_projectile_spawner_a87264233cf9333b7bc2337e4e15412e1} 
+Game\+Object {\bfseries projectile\+Prefab}
+\item 
+\hypertarget{class_projectile_spawner_afbcc3c39a72da8cdc78a4dda0eaa954a}{}\label{class_projectile_spawner_afbcc3c39a72da8cdc78a4dda0eaa954a} 
+float {\bfseries spawn\+Offset}
+\item 
+\hypertarget{class_projectile_spawner_adb033d1949dc77512f096fc195cc415a}{}\label{class_projectile_spawner_adb033d1949dc77512f096fc195cc415a} 
+\hyperlink{class_stealth}{Stealth} {\bfseries stealth\+Buff}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_projectile_spawner_a9495a0da1b27877198ccd1d7f7153743}{}\label{class_projectile_spawner_a9495a0da1b27877198ccd1d7f7153743} 
+\index{Projectile\+Spawner@{Projectile\+Spawner}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Projectile\+Spawner@{Projectile\+Spawner}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Projectile\+Spawner.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_projectile_spawner_a9896d21e1871b84380b473e90e1c8640}{}\label{class_projectile_spawner_a9896d21e1871b84380b473e90e1c8640} 
+\index{Projectile\+Spawner@{Projectile\+Spawner}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Projectile\+Spawner@{Projectile\+Spawner}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Projectile\+Spawner.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Marksman\+Kit/Projectile\+Spawner.\+cs\end{DoxyCompactItemize}

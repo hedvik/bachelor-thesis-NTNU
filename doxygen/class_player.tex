@@ -1,0 +1,137 @@
+\hypertarget{class_player}{}\section{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+Handles the initialization for the local and remote events for each \hyperlink{class_player}{Player}.  
+
+
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_player_a585d67554725b321ac1ea8ac59c1d996}{}\label{class_player_a585d67554725b321ac1ea8ac59c1d996} 
+\hyperlink{class_player_camera}{Player\+Camera} {\bfseries Get\+Player\+Camera} ()
+\item 
+\hypertarget{class_player_af06bd71da0900cd98ebff8747b7bd213}{}\label{class_player_af06bd71da0900cd98ebff8747b7bd213} 
+\hyperlink{class_field_of_view}{Field\+Of\+View} {\bfseries Get\+Player\+F\+OV} ()
+\item 
+\hypertarget{class_player_aa521f4478333ad9b5138200b65d3e72e}{}\label{class_player_aa521f4478333ad9b5138200b65d3e72e} 
+Game\+Object {\bfseries Get\+Player\+Mask} ()
+\item 
+\hypertarget{class_player_aa8a94c91b9d650ab2a84a474c268c06e}{}\label{class_player_aa8a94c91b9d650ab2a84a474c268c06e} 
+int {\bfseries Get\+Player\+Team\+Id} ()
+\item 
+void \hyperlink{class_player_a280fba8a60370ab21efc7d628b91106f}{Target\+Add\+Force} (Network\+Connection connection, float strength, Force\+Mode mode, Vector3 towards\+Position)
+\begin{DoxyCompactList}\small\item\em Target\+Rpc for adding force to the player rigidbody. Needed because the local player has authority, and needs to be the one adding force. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_ae4ab7842376ea3aad0970c2ba0266279}{Target\+Add\+Force2} (Network\+Connection connection, float strength, Force\+Mode mode, Vector3 force\+Origin)
+\begin{DoxyCompactList}\small\item\em Target\+Rpc for adding force to the player rigidbody where the force origin relative to the player matters \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a07aadf55bd27c3165d4c4e699b95f396}{Target\+Add\+Explosion\+Force} (Network\+Connection connection, float explosion\+Force, Vector3 explosion\+Origin, float explosion\+Radius)
+\begin{DoxyCompactList}\small\item\em Target\+Rpc for adding explosion force to the player rigidbody. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a53cf43e4835276f4a24c3004b36265c7}{Cmd\+Interact} (Game\+Object interactable\+Object)
+\begin{DoxyCompactList}\small\item\em Command called from \hyperlink{class_player_input}{Player\+Input} when interacting with networked interactable objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_player_aa9a22d06500ffa2bbbf4551ec2607fda}{}\label{class_player_aa9a22d06500ffa2bbbf4551ec2607fda} 
+\hyperlink{class_toggle_event}{Toggle\+Event} {\bfseries on\+Toggle\+Shared}
+\item 
+\hypertarget{class_player_a13b28f1c720ce94e6538073b1f7ba76f}{}\label{class_player_a13b28f1c720ce94e6538073b1f7ba76f} 
+\hyperlink{class_toggle_event}{Toggle\+Event} {\bfseries on\+Toggle\+Local}
+\item 
+\hypertarget{class_player_a4c1150a5f09858ef98c5ff05e0e82d14}{}\label{class_player_a4c1150a5f09858ef98c5ff05e0e82d14} 
+\hyperlink{class_toggle_event}{Toggle\+Event} {\bfseries on\+Toggle\+Remote}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles the initialization for the local and remote events for each \hyperlink{class_player}{Player}. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_player_a53cf43e4835276f4a24c3004b36265c7}{}\label{class_player_a53cf43e4835276f4a24c3004b36265c7} 
+\index{Player@{Player}!Cmd\+Interact@{Cmd\+Interact}}
+\index{Cmd\+Interact@{Cmd\+Interact}!Player@{Player}}
+\subsubsection{\texorpdfstring{Cmd\+Interact()}{CmdInteract()}}
+{\footnotesize\ttfamily void Player.\+Cmd\+Interact (\begin{DoxyParamCaption}\item[{Game\+Object}]{interactable\+Object }\end{DoxyParamCaption})}
+
+
+
+Command called from \hyperlink{class_player_input}{Player\+Input} when interacting with networked interactable objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interactable\+Object} & The networked gameobject interacted with.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_a07aadf55bd27c3165d4c4e699b95f396}{}\label{class_player_a07aadf55bd27c3165d4c4e699b95f396} 
+\index{Player@{Player}!Target\+Add\+Explosion\+Force@{Target\+Add\+Explosion\+Force}}
+\index{Target\+Add\+Explosion\+Force@{Target\+Add\+Explosion\+Force}!Player@{Player}}
+\subsubsection{\texorpdfstring{Target\+Add\+Explosion\+Force()}{TargetAddExplosionForce()}}
+{\footnotesize\ttfamily void Player.\+Target\+Add\+Explosion\+Force (\begin{DoxyParamCaption}\item[{Network\+Connection}]{connection,  }\item[{float}]{explosion\+Force,  }\item[{Vector3}]{explosion\+Origin,  }\item[{float}]{explosion\+Radius }\end{DoxyParamCaption})}
+
+
+
+Target\+Rpc for adding explosion force to the player rigidbody. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & Needed so Target\+Rpc finds the correct client.\\
+\hline
+{\em explosion\+Force} & Amount of force in the explosion\\
+\hline
+{\em explosion\+Origin} & Center of the explosion\\
+\hline
+{\em explosion\+Radius} & Radius of the explosion\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_a280fba8a60370ab21efc7d628b91106f}{}\label{class_player_a280fba8a60370ab21efc7d628b91106f} 
+\index{Player@{Player}!Target\+Add\+Force@{Target\+Add\+Force}}
+\index{Target\+Add\+Force@{Target\+Add\+Force}!Player@{Player}}
+\subsubsection{\texorpdfstring{Target\+Add\+Force()}{TargetAddForce()}}
+{\footnotesize\ttfamily void Player.\+Target\+Add\+Force (\begin{DoxyParamCaption}\item[{Network\+Connection}]{connection,  }\item[{float}]{strength,  }\item[{Force\+Mode}]{mode,  }\item[{Vector3}]{towards\+Position }\end{DoxyParamCaption})}
+
+
+
+Target\+Rpc for adding force to the player rigidbody. Needed because the local player has authority, and needs to be the one adding force. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & Needed so Target\+Rpc finds the correct client.\\
+\hline
+{\em strength} & The force applied.\\
+\hline
+{\em mode} & The force mode used.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_ae4ab7842376ea3aad0970c2ba0266279}{}\label{class_player_ae4ab7842376ea3aad0970c2ba0266279} 
+\index{Player@{Player}!Target\+Add\+Force2@{Target\+Add\+Force2}}
+\index{Target\+Add\+Force2@{Target\+Add\+Force2}!Player@{Player}}
+\subsubsection{\texorpdfstring{Target\+Add\+Force2()}{TargetAddForce2()}}
+{\footnotesize\ttfamily void Player.\+Target\+Add\+Force2 (\begin{DoxyParamCaption}\item[{Network\+Connection}]{connection,  }\item[{float}]{strength,  }\item[{Force\+Mode}]{mode,  }\item[{Vector3}]{force\+Origin }\end{DoxyParamCaption})}
+
+
+
+Target\+Rpc for adding force to the player rigidbody where the force origin relative to the player matters 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & Needed so Target\+Rpc finds the correct client.\\
+\hline
+{\em strength} & Amount of force applied.\\
+\hline
+{\em mode} & The force mode used.\\
+\hline
+{\em force\+Origin} & Origin of the force.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Player/Player.\+cs\end{DoxyCompactItemize}

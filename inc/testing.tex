@@ -1,6 +1,81 @@
 \chapter{Testing and User Feedback}
 \label{chap:testing}
-If you are developing software you must do some testing with users.  This chapter describes those tests and what you learned from the tests.  This should include the selections of questions that you were intending to answer when you started the test.  
 
-\todo{ In house testing, per implemented feature, per review meeting }
-\todo{ Actual testing with other users }
+\section{Internal testing}
+One of the important parts of working with a networked game like \emph{Dockit League} is making sure that all synchronized behaviour acts correctly through testing. We would individually test our docking kits as we worked on them and their abilities. In order to properly check that behaviours were properly synchronized we generated builds of the game that we used in conjunction with the editor to play as multiple players on the local network. Doing so allowed us to test kits and abilities from the perspective of both the server and client as well as debugging each side individually by using the editor to host or join games.
+
+We also spent some of the review part during sprint meetings to perform integration testing between the newly developed kits and components as everyone were present at the same location with easy access to the source code. Doing so made it easier for each group member to test their newly implemented features with the others and make sure that everything worked well together. 
+
+
+\section{User testing}
+We performed user testing towards the end of development to acquire some general feedback on particular areas that needed improvement. We had two different playtesting sessions consisting of three playtesters and one of our developers. The testers tried the team and regular deathmatch modes and were given a survey made with \emph{Google Forms} on completion where they could provide feedback from their playtest experience. This Section will take a look at the questions we asked in the survey, the answers the testers provided and reflect upon the feedback we were given. The full questions and answers, including answer charts and statistics can be found in Appendix~\ref{app:testFeedback}.
+
+We asked the testers the following questions in the survey:
+\begin{enumerate}
+    \item How did the controls feel?
+    \item How would you rate the in-game UI?
+    \item How would you rate the in-game shop?
+    \item Which Docking Kit(s) did you try?
+    \item How easy/hard was it to understand the game mechanics
+    \item Do you have any additional feedback?
+\end{enumerate}
+ 
+Each of the questions also had an additional field where the testers could provide additional thoughts and input. 
+
+\subsection{Feedback on the feel of controls}
+The testers gave an average score of 3/5 in relation to the feel of the controls. Testers particularly familiar with twin stick control schemes felt that the controls were fluid while testers less familiar with the scheme felt that some additional help text or a section that displays all of the controls would have been very beneficial. 
+
+\subsection{Feedback on the in-game UI}
+The in-game UI received an average score of 2.67/5 and was one of the major sticking points that testers wanted improvement on. The testers felt that the UI in general was pretty poor due to the large amount of placeholder text and icons for a variety of docking kits, making it hard to understand what each ability button does. On the contrary, the docking kits without any placeholder text or icons were praised for having icons that communicated how the abilities worked without having to use them. 
+
+One of the testers brought up the fact that there is a inconsistency in relation to which button the primary damage ability of each kit is mapped to. The tester suggested that these all should be mapped to the same button regardless of kit. 
+
+Another tester noted that it was somewhat confusing that the left/right shoulder buttons and the left/right triggers were paired with each other on the UI. The tester suggested that pairing the left button with the left trigger and similarly for the right button and trigger would make the UI more intuitive given that the pairing is more logical in relation to the physical placement of the buttons. 
+
+The input from the testers in general from this question suggested a lack of visual feedback in the UI which is something that certainly could be improved upon. This was one of the questions that we expected most of the testers to give a low score since we were aware of the lack of visual polish. 
+
+\subsection{Feedback on the in-game shop}
+The in-game shop received an average score of 3.67/5 from the testers. The general feedback of the testers was that the shop was easy to navigate although given some of the answers it seems like a few testers were unaware of the fact that the shop provided descriptions for each docking kit and its abilities. This could possibly be more clearly stated by using the same button icons from the in-game UI to communicate which buttons were used to navigate the description tabs. A fair few number of docking kits also had placeholder text and icons for their shop descriptions, making it hard to understand what each kit was capable of. 
+
+Some testers also wished for there to be somewhat of an introduction to how the shop worked so they could clearly understand how to use it. One of the testers were particularly confused with the highlighting of the verification prompt options as the highlighting had a darker color than the original and the tester was used to having a brighter color used for highlighting the "yes" option. 
+
+\subsection{Docking Kit feedback}
+Among the docking kits that the testers tried, the brawler kit ended up being the most tried one while the support kit was the least tried one. 
+
+The testers seemed to like the different abilities of each kit and felt that they were intuitive and interesting to use. Still, as mentioned by most testers earlier they would really have liked to have less placeholder icons to properly understand what each ability did and which button it was mapped to.  
+
+In the case of the kits that the testers liked best, the boomerang and brawler kits were the most favoured ones while the tank and marksman kits came in second place. A thing to note with these results is the fact that both the boomerang and brawler kits were without any placeholder icons. 
+
+\subsection{Feedback on understanding the game mechanics}
+The testers provided an average score of 3/5 in relation to how easy it was to understand the game mechanics. The primary point of improvement that the testers wanted was better visual feedback on things like player death, player damage taken and some basic information on the start of the game that explains the game mode. 
+
+\subsection{Additional feedback from the playtesters}
+The testers who provided additional feedback wrote that they found the overall game experience to be fun, albeit somewhat confusing due to their earlier mentions of placeholder icons on the UI as well as lack of visual feedback. 
+ 
+\subsection{Reflection on the feedback of the playtesters}
+In general, the user testing sessions provided us with a good amount of valuable feedback. The primary concern of testers being the lack of visual polish is something we are aware of and want to improve. In our case we had deprioritized the visual polish of the game as it was less important than making sure that the core components of the game worked properly for the thesis. We will not be doing any additional visual polishing by the time this thesis is handed in, but we have planned to spend some time polishing the visuals in preparation for the coming thesis presentations. Our current plan for improving the game is as follows:
+
+\begin{itemize}
+    \item Improve visual feedback.
+    \begin{itemize}
+        \item More pronounced feedback for players taking damage.
+        \item More pronounced feedback for when traps and mines are triggered. 
+        \item Players fade out on death rather than simply disappearing.
+    \end{itemize}
+    
+    \item Providing more visual information. 
+    \begin{itemize}
+        \item Displaying the rules of the game mode in short at round start rather than only on the "Create Game" part of the main menu.
+        \item Provide UI icons that display the controller mappings for the shop and pause menu.
+        \item Include controller mapping information in the pause menu. 
+    \end{itemize}
+    
+    \item Fixing inconsistency and improving the intuitiveness.
+    \begin{itemize}
+        \item Switch the ability pairings on the UI to pair the buttons with their respective triggers.
+        \item Highlighting the "yes" option of the purchase verification in the shop with a brighter color, rather than a darker one. 
+        \item Consistent button mapping of abilities with similar functionality across all docking kits. 
+    \end{itemize}
+    
+    \item Remove all placeholder text and information, replacing them with finalized versions. 
+\end{itemize}

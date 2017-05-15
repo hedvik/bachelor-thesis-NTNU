@@ -1,0 +1,112 @@
+\hypertarget{class_ability_u_i}{}\section{Ability\+UI Class Reference}
+\label{class_ability_u_i}\index{Ability\+UI@{Ability\+UI}}
+
+
+Handles the update of the abilitys UI.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_ability_u_i_aaf2088cb076c1e2139d33c543104db82}{Initialize} (\hyperlink{class_player_u_i_handler}{Player\+U\+I\+Handler} ui\+Handler)
+\begin{DoxyCompactList}\small\item\em Initialize the ability UI. \end{DoxyCompactList}\item 
+void \hyperlink{class_ability_u_i_a710422c1bba0de889a758cffbc20659a}{Activate} ()
+\begin{DoxyCompactList}\small\item\em Called on ability activation. Activates cooldown. \end{DoxyCompactList}\item 
+void \hyperlink{class_ability_u_i_a64f213c19ca4bb23414f0b8c532b98c7}{Update\+Cooldown} (float new\+Time\+Left)
+\begin{DoxyCompactList}\small\item\em Updates the current cooldown time with the new time. \end{DoxyCompactList}\item 
+void \hyperlink{class_ability_u_i_aa92482fc1ded5c2c07b9fcfd7298bcf9}{Set\+Ability} (\hyperlink{class_ability}{Ability} new\+Ability)
+\begin{DoxyCompactList}\small\item\em Changes sprites and cooldown to the new ability. \end{DoxyCompactList}\item 
+void \hyperlink{class_ability_u_i_aff8d54091c080f741980220b59277a30}{Clear\+Ability} (Sprite empty\+Slot)
+\begin{DoxyCompactList}\small\item\em Stops the update loop and resets the UI to its original empty state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ability_u_i_ae8fec97370c2aa7bf4d64bc8c5100d6a}{}\label{class_ability_u_i_ae8fec97370c2aa7bf4d64bc8c5100d6a} 
+Image {\bfseries ability\+Icon}
+\item 
+\hypertarget{class_ability_u_i_a563603df768e793fa98d605f71f9caea}{}\label{class_ability_u_i_a563603df768e793fa98d605f71f9caea} 
+Image {\bfseries dark\+Mask}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles the update of the abilitys UI. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_ability_u_i_a710422c1bba0de889a758cffbc20659a}{}\label{class_ability_u_i_a710422c1bba0de889a758cffbc20659a} 
+\index{Ability\+UI@{Ability\+UI}!Activate@{Activate}}
+\index{Activate@{Activate}!Ability\+UI@{Ability\+UI}}
+\subsubsection{\texorpdfstring{Activate()}{Activate()}}
+{\footnotesize\ttfamily void Ability\+U\+I.\+Activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called on ability activation. Activates cooldown. 
+
+\hypertarget{class_ability_u_i_aff8d54091c080f741980220b59277a30}{}\label{class_ability_u_i_aff8d54091c080f741980220b59277a30} 
+\index{Ability\+UI@{Ability\+UI}!Clear\+Ability@{Clear\+Ability}}
+\index{Clear\+Ability@{Clear\+Ability}!Ability\+UI@{Ability\+UI}}
+\subsubsection{\texorpdfstring{Clear\+Ability()}{ClearAbility()}}
+{\footnotesize\ttfamily void Ability\+U\+I.\+Clear\+Ability (\begin{DoxyParamCaption}\item[{Sprite}]{empty\+Slot }\end{DoxyParamCaption})}
+
+
+
+Stops the update loop and resets the UI to its original empty state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em empty\+Slot} & Sprite used in an empty slot.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ability_u_i_aaf2088cb076c1e2139d33c543104db82}{}\label{class_ability_u_i_aaf2088cb076c1e2139d33c543104db82} 
+\index{Ability\+UI@{Ability\+UI}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Ability\+UI@{Ability\+UI}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Ability\+U\+I.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_player_u_i_handler}{Player\+U\+I\+Handler}}]{ui\+Handler }\end{DoxyParamCaption})}
+
+
+
+Initialize the ability UI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui\+Handler} & Reference to associated \hyperlink{class_player_u_i_handler}{Player\+U\+I\+Handler}.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ability_u_i_aa92482fc1ded5c2c07b9fcfd7298bcf9}{}\label{class_ability_u_i_aa92482fc1ded5c2c07b9fcfd7298bcf9} 
+\index{Ability\+UI@{Ability\+UI}!Set\+Ability@{Set\+Ability}}
+\index{Set\+Ability@{Set\+Ability}!Ability\+UI@{Ability\+UI}}
+\subsubsection{\texorpdfstring{Set\+Ability()}{SetAbility()}}
+{\footnotesize\ttfamily void Ability\+U\+I.\+Set\+Ability (\begin{DoxyParamCaption}\item[{\hyperlink{class_ability}{Ability}}]{new\+Ability }\end{DoxyParamCaption})}
+
+
+
+Changes sprites and cooldown to the new ability. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Ability} & Reference to the new ability.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ability_u_i_a64f213c19ca4bb23414f0b8c532b98c7}{}\label{class_ability_u_i_a64f213c19ca4bb23414f0b8c532b98c7} 
+\index{Ability\+UI@{Ability\+UI}!Update\+Cooldown@{Update\+Cooldown}}
+\index{Update\+Cooldown@{Update\+Cooldown}!Ability\+UI@{Ability\+UI}}
+\subsubsection{\texorpdfstring{Update\+Cooldown()}{UpdateCooldown()}}
+{\footnotesize\ttfamily void Ability\+U\+I.\+Update\+Cooldown (\begin{DoxyParamCaption}\item[{float}]{new\+Time\+Left }\end{DoxyParamCaption})}
+
+
+
+Updates the current cooldown time with the new time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Time\+Left} & The new current cooldown time.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+U\+I/Ability\+U\+I.\+cs\end{DoxyCompactItemize}

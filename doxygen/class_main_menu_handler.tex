@@ -1,0 +1,99 @@
+\hypertarget{class_main_menu_handler}{}\section{Main\+Menu\+Handler Class Reference}
+\label{class_main_menu_handler}\index{Main\+Menu\+Handler@{Main\+Menu\+Handler}}
+Inheritance diagram for Main\+Menu\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_main_menu_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_main_menu_handler_acfea2da02c568977d41b7401d6ce8a9b}{Navigate\+To} (Game\+Object next\+Menu)
+\begin{DoxyCompactList}\small\item\em Navigates to a given menu game\+Object and places the current one in the stack \end{DoxyCompactList}\item 
+void \hyperlink{class_main_menu_handler_ad04a18db3433e914aae5646267bf07ed}{Navigate\+Back} ()
+\begin{DoxyCompactList}\small\item\em Pops all menus from back stack until it hits a stop\+Pop menu and navigates to that. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_menu_handler_a47d8fcef1366d4c7f4979bea63dcb95f}{Add\+Property\+To\+Stack\+Top} (int enum\+Id)
+\begin{DoxyCompactList}\small\item\em Adds a property to the previous menu that is in the stack. This is mostly used as a workaround to the fact that the Unity Inspector\textquotesingle{}s On\+Click interface only supports none/single parameter functions \end{DoxyCompactList}\item 
+void \hyperlink{class_main_menu_handler_adf1c89669b528be6a27f7ac9f7fb0696}{Create\+Online\+Match} ()
+\begin{DoxyCompactList}\small\item\em Uses the Unity match maker to create a new online match \end{DoxyCompactList}\item 
+void \hyperlink{class_main_menu_handler_a7729dec8dd126e78db4d7fd857aeb14b}{Start\+Match\+Maker} ()
+\begin{DoxyCompactList}\small\item\em Starts the Unity match maker \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_main_menu_handler_a880ef39aa8b035e5831e3858c8acc72a}{}\label{class_main_menu_handler_a880ef39aa8b035e5831e3858c8acc72a} 
+Text {\bfseries host\+Room\+Name\+Text}
+\item 
+\hypertarget{class_main_menu_handler_abfcf91e2d60be21d7e392192943b899d}{}\label{class_main_menu_handler_abfcf91e2d60be21d7e392192943b899d} 
+\hyperlink{class_lobby_handler}{Lobby\+Handler} {\bfseries lobby\+Handler}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_main_menu_handler_a47d8fcef1366d4c7f4979bea63dcb95f}{}\label{class_main_menu_handler_a47d8fcef1366d4c7f4979bea63dcb95f} 
+\index{Main\+Menu\+Handler@{Main\+Menu\+Handler}!Add\+Property\+To\+Stack\+Top@{Add\+Property\+To\+Stack\+Top}}
+\index{Add\+Property\+To\+Stack\+Top@{Add\+Property\+To\+Stack\+Top}!Main\+Menu\+Handler@{Main\+Menu\+Handler}}
+\subsubsection{\texorpdfstring{Add\+Property\+To\+Stack\+Top()}{AddPropertyToStackTop()}}
+{\footnotesize\ttfamily void Main\+Menu\+Handler.\+Add\+Property\+To\+Stack\+Top (\begin{DoxyParamCaption}\item[{int}]{enum\+Id }\end{DoxyParamCaption})}
+
+
+
+Adds a property to the previous menu that is in the stack. This is mostly used as a workaround to the fact that the Unity Inspector\textquotesingle{}s On\+Click interface only supports none/single parameter functions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enum\+Id} & The id of the property we are adding\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_menu_handler_adf1c89669b528be6a27f7ac9f7fb0696}{}\label{class_main_menu_handler_adf1c89669b528be6a27f7ac9f7fb0696} 
+\index{Main\+Menu\+Handler@{Main\+Menu\+Handler}!Create\+Online\+Match@{Create\+Online\+Match}}
+\index{Create\+Online\+Match@{Create\+Online\+Match}!Main\+Menu\+Handler@{Main\+Menu\+Handler}}
+\subsubsection{\texorpdfstring{Create\+Online\+Match()}{CreateOnlineMatch()}}
+{\footnotesize\ttfamily void Main\+Menu\+Handler.\+Create\+Online\+Match (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Uses the Unity match maker to create a new online match 
+
+\hypertarget{class_main_menu_handler_ad04a18db3433e914aae5646267bf07ed}{}\label{class_main_menu_handler_ad04a18db3433e914aae5646267bf07ed} 
+\index{Main\+Menu\+Handler@{Main\+Menu\+Handler}!Navigate\+Back@{Navigate\+Back}}
+\index{Navigate\+Back@{Navigate\+Back}!Main\+Menu\+Handler@{Main\+Menu\+Handler}}
+\subsubsection{\texorpdfstring{Navigate\+Back()}{NavigateBack()}}
+{\footnotesize\ttfamily void Main\+Menu\+Handler.\+Navigate\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pops all menus from back stack until it hits a stop\+Pop menu and navigates to that. 
+
+\hypertarget{class_main_menu_handler_acfea2da02c568977d41b7401d6ce8a9b}{}\label{class_main_menu_handler_acfea2da02c568977d41b7401d6ce8a9b} 
+\index{Main\+Menu\+Handler@{Main\+Menu\+Handler}!Navigate\+To@{Navigate\+To}}
+\index{Navigate\+To@{Navigate\+To}!Main\+Menu\+Handler@{Main\+Menu\+Handler}}
+\subsubsection{\texorpdfstring{Navigate\+To()}{NavigateTo()}}
+{\footnotesize\ttfamily void Main\+Menu\+Handler.\+Navigate\+To (\begin{DoxyParamCaption}\item[{Game\+Object}]{next\+Menu }\end{DoxyParamCaption})}
+
+
+
+Navigates to a given menu game\+Object and places the current one in the stack 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+Menu} & The menu we are navigating to\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_menu_handler_a7729dec8dd126e78db4d7fd857aeb14b}{}\label{class_main_menu_handler_a7729dec8dd126e78db4d7fd857aeb14b} 
+\index{Main\+Menu\+Handler@{Main\+Menu\+Handler}!Start\+Match\+Maker@{Start\+Match\+Maker}}
+\index{Start\+Match\+Maker@{Start\+Match\+Maker}!Main\+Menu\+Handler@{Main\+Menu\+Handler}}
+\subsubsection{\texorpdfstring{Start\+Match\+Maker()}{StartMatchMaker()}}
+{\footnotesize\ttfamily void Main\+Menu\+Handler.\+Start\+Match\+Maker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the Unity match maker 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+U\+I/Main\+Menu\+Handler.\+cs\end{DoxyCompactItemize}

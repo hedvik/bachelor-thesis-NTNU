@@ -1,0 +1,121 @@
+\hypertarget{class_trap}{}\section{Trap Class Reference}
+\label{class_trap}\index{Trap@{Trap}}
+Inheritance diagram for Trap\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_trap}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_trap_a216acede3b7c562aaed5255bb33f6f98}{Initialize} (\hyperlink{class_trap_spawner}{Trap\+Spawner} owner)
+\begin{DoxyCompactList}\small\item\em An initialisation function for caching the script reference to this trap\textquotesingle{}s owner \end{DoxyCompactList}\item 
+void \hyperlink{class_trap_a432fa6ae980bb74cac0c7b95eb9b1d7e}{Set\+Visual\+State} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets the visual state of this trap \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_trap_a2e92a6f420a5d21a132108d8dd3ca5de}{Handle\+Trigger} (\hyperlink{class_player_status}{Player\+Status} player\+Status)
+\begin{DoxyCompactList}\small\item\em A virtual function that allows children of this class to handle what they want to do when a trap is triggered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_trap_a7ac93c16d13c44d05c3bea6ebd7bb1d6}{}\label{class_trap_a7ac93c16d13c44d05c3bea6ebd7bb1d6} 
+Game\+Object {\bfseries visuals}
+\item 
+\hypertarget{class_trap_a1ba57f23229527b9d36a4ceaf4cbb41c}{}\label{class_trap_a1ba57f23229527b9d36a4ceaf4cbb41c} 
+Game\+Object {\bfseries extra\+Visuals}
+\item 
+\hypertarget{class_trap_a4273a05002bf9c79b044ed44b32e4095}{}\label{class_trap_a4273a05002bf9c79b044ed44b32e4095} 
+float {\bfseries time\+After\+Trigger\+Destroy} = 1
+\item 
+\hypertarget{class_trap_a165a38325fbd63be54d90ecc3158679a}{}\label{class_trap_a165a38325fbd63be54d90ecc3158679a} 
+string {\bfseries animator\+Trigger}
+\item 
+\hypertarget{class_trap_ae5c79e9ffe16d99a44f526ffa6694039}{}\label{class_trap_ae5c79e9ffe16d99a44f526ffa6694039} 
+Animator {\bfseries animator}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_trap_acd3eda72aa05132de5ae7907f277261f}{Rpc\+Set\+Extra\+Visuals\+State} (bool state)
+\begin{DoxyCompactList}\small\item\em Client\+Rpc used for synchronising the visual state of the trap \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_trap_a78b383644b715f4ef834ab4ec42d7b01}{}\label{class_trap_a78b383644b715f4ef834ab4ec42d7b01} 
+List$<$ \hyperlink{class_player}{Player} $>$ {\bfseries applied\+To\+List} = new List$<$\hyperlink{class_player}{Player}$>$()
+\item 
+\hypertarget{class_trap_a0d33b89483eb7aafdbdae4e4c8600799}{}\label{class_trap_a0d33b89483eb7aafdbdae4e4c8600799} 
+List$<$ Rigidbody $>$ {\bfseries applied\+To\+List\+Rbodies} = new List$<$Rigidbody$>$()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_trap_a2e92a6f420a5d21a132108d8dd3ca5de}{}\label{class_trap_a2e92a6f420a5d21a132108d8dd3ca5de} 
+\index{Trap@{Trap}!Handle\+Trigger@{Handle\+Trigger}}
+\index{Handle\+Trigger@{Handle\+Trigger}!Trap@{Trap}}
+\subsubsection{\texorpdfstring{Handle\+Trigger()}{HandleTrigger()}}
+{\footnotesize\ttfamily virtual void Trap.\+Handle\+Trigger (\begin{DoxyParamCaption}\item[{\hyperlink{class_player_status}{Player\+Status}}]{player\+Status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+A virtual function that allows children of this class to handle what they want to do when a trap is triggered. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Status} & The \hyperlink{class_player_status}{Player\+Status} component of the triggered player\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_capture_trap_ac770502ec2d9a7e1fbc2ed4ce7f0ec8f}{Capture\+Trap}, \hyperlink{class_dot_trap_a40e21aaaf98d98cbf006a4c70d5d3809}{Dot\+Trap}, and \hyperlink{class_blind_trap_ac4e3be7b712921ae6510aca3be3ef428}{Blind\+Trap}.
+
+\hypertarget{class_trap_a216acede3b7c562aaed5255bb33f6f98}{}\label{class_trap_a216acede3b7c562aaed5255bb33f6f98} 
+\index{Trap@{Trap}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Trap@{Trap}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Trap.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_trap_spawner}{Trap\+Spawner}}]{owner }\end{DoxyParamCaption})}
+
+
+
+An initialisation function for caching the script reference to this trap\textquotesingle{}s owner 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_trap_acd3eda72aa05132de5ae7907f277261f}{}\label{class_trap_acd3eda72aa05132de5ae7907f277261f} 
+\index{Trap@{Trap}!Rpc\+Set\+Extra\+Visuals\+State@{Rpc\+Set\+Extra\+Visuals\+State}}
+\index{Rpc\+Set\+Extra\+Visuals\+State@{Rpc\+Set\+Extra\+Visuals\+State}!Trap@{Trap}}
+\subsubsection{\texorpdfstring{Rpc\+Set\+Extra\+Visuals\+State()}{RpcSetExtraVisualsState()}}
+{\footnotesize\ttfamily void Trap.\+Rpc\+Set\+Extra\+Visuals\+State (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Client\+Rpc used for synchronising the visual state of the trap 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The state of the visuals\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_trap_a432fa6ae980bb74cac0c7b95eb9b1d7e}{}\label{class_trap_a432fa6ae980bb74cac0c7b95eb9b1d7e} 
+\index{Trap@{Trap}!Set\+Visual\+State@{Set\+Visual\+State}}
+\index{Set\+Visual\+State@{Set\+Visual\+State}!Trap@{Trap}}
+\subsubsection{\texorpdfstring{Set\+Visual\+State()}{SetVisualState()}}
+{\footnotesize\ttfamily void Trap.\+Set\+Visual\+State (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Sets the visual state of this trap 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The visual state of this trap\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Trapper\+Kit/Trap.\+cs\end{DoxyCompactItemize}

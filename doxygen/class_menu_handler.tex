@@ -1,0 +1,80 @@
+\hypertarget{class_menu_handler}{}\section{Menu\+Handler Class Reference}
+\label{class_menu_handler}\index{Menu\+Handler@{Menu\+Handler}}
+Inheritance diagram for Menu\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_menu_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_menu_handler_a9273b435b2f88cd308fc1bd8120f733d}{Set\+Current\+Menu\+Verification\+Prompt} (Game\+Object verif\+Prompt)
+\begin{DoxyCompactList}\small\item\em Takes a verification prompt as parameter and connects it to the current menu. \end{DoxyCompactList}\item 
+void \hyperlink{class_menu_handler_a94e4c33184497dd1ec9d1088f8b29d6f}{On\+Click\+Set\+First\+Selected} ()
+\begin{DoxyCompactList}\small\item\em Allows On\+Click interfaces to use \hyperlink{class_menu_handler_a9a847d363279e4b969a3584ee4134e50}{Set\+First\+Selected\+Game\+Object()}. Useful when a menu has submenus or verification prompts and you need to return control to the user after using these \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_menu_handler_a9a847d363279e4b969a3584ee4134e50}{Set\+First\+Selected\+Game\+Object} (Game\+Object specific)
+\begin{DoxyCompactList}\small\item\em Sets a button as selected the next frame after it has been called. If null is passed it sets the first selected button it finds. If a specific game\+Object is passed it will look for buttons on that one instead \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_menu_handler_a55166fdef8198e2d624f6178f19a5d57}{}\label{class_menu_handler_a55166fdef8198e2d624f6178f19a5d57} 
+\hyperlink{class_menu_stack_component}{Menu\+Stack\+Component} {\bfseries current\+Active\+Menu}
+\item 
+\hypertarget{class_menu_handler_ab3b3d0dd363a6147bf6cfb35b7e540f6}{}\label{class_menu_handler_ab3b3d0dd363a6147bf6cfb35b7e540f6} 
+Game\+Object {\bfseries menu\+Root}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_menu_handler_a7acc1c0116dcb9e578892eff4077e08d}{}\label{class_menu_handler_a7acc1c0116dcb9e578892eff4077e08d} 
+void {\bfseries Start} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_menu_handler_a94e4c33184497dd1ec9d1088f8b29d6f}{}\label{class_menu_handler_a94e4c33184497dd1ec9d1088f8b29d6f} 
+\index{Menu\+Handler@{Menu\+Handler}!On\+Click\+Set\+First\+Selected@{On\+Click\+Set\+First\+Selected}}
+\index{On\+Click\+Set\+First\+Selected@{On\+Click\+Set\+First\+Selected}!Menu\+Handler@{Menu\+Handler}}
+\subsubsection{\texorpdfstring{On\+Click\+Set\+First\+Selected()}{OnClickSetFirstSelected()}}
+{\footnotesize\ttfamily void Menu\+Handler.\+On\+Click\+Set\+First\+Selected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Allows On\+Click interfaces to use \hyperlink{class_menu_handler_a9a847d363279e4b969a3584ee4134e50}{Set\+First\+Selected\+Game\+Object()}. Useful when a menu has submenus or verification prompts and you need to return control to the user after using these 
+
+\hypertarget{class_menu_handler_a9273b435b2f88cd308fc1bd8120f733d}{}\label{class_menu_handler_a9273b435b2f88cd308fc1bd8120f733d} 
+\index{Menu\+Handler@{Menu\+Handler}!Set\+Current\+Menu\+Verification\+Prompt@{Set\+Current\+Menu\+Verification\+Prompt}}
+\index{Set\+Current\+Menu\+Verification\+Prompt@{Set\+Current\+Menu\+Verification\+Prompt}!Menu\+Handler@{Menu\+Handler}}
+\subsubsection{\texorpdfstring{Set\+Current\+Menu\+Verification\+Prompt()}{SetCurrentMenuVerificationPrompt()}}
+{\footnotesize\ttfamily void Menu\+Handler.\+Set\+Current\+Menu\+Verification\+Prompt (\begin{DoxyParamCaption}\item[{Game\+Object}]{verif\+Prompt }\end{DoxyParamCaption})}
+
+
+
+Takes a verification prompt as parameter and connects it to the current menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em verif\+Prompt} & The game\+Object of the verification prompt\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_menu_handler_a9a847d363279e4b969a3584ee4134e50}{}\label{class_menu_handler_a9a847d363279e4b969a3584ee4134e50} 
+\index{Menu\+Handler@{Menu\+Handler}!Set\+First\+Selected\+Game\+Object@{Set\+First\+Selected\+Game\+Object}}
+\index{Set\+First\+Selected\+Game\+Object@{Set\+First\+Selected\+Game\+Object}!Menu\+Handler@{Menu\+Handler}}
+\subsubsection{\texorpdfstring{Set\+First\+Selected\+Game\+Object()}{SetFirstSelectedGameObject()}}
+{\footnotesize\ttfamily I\+Enumerator Menu\+Handler.\+Set\+First\+Selected\+Game\+Object (\begin{DoxyParamCaption}\item[{Game\+Object}]{specific }\end{DoxyParamCaption})}
+
+
+
+Sets a button as selected the next frame after it has been called. If null is passed it sets the first selected button it finds. If a specific game\+Object is passed it will look for buttons on that one instead 
+
+
+\begin{DoxyParams}{Parameters}
+{\em specific} & A game\+Object containing buttons\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+U\+I/Menu\+Handler.\+cs\end{DoxyCompactItemize}

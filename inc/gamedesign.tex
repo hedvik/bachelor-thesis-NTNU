@@ -1,0 +1,107 @@
+\chapter{Game Design}
+\label{chap:gamedesign}
+The early design of a game is a solid foundation to start working with, although everything is subject to change as development progresses. This Chapter will take a look at the initial design of \emph{Dockit League} and how the designs changed in the final versions of the game. 
+
+\section{Initial game design}
+The ideas contained within the initial game design is what we would have liked to implement in a full game and were written down during the first few weeks of the project. We were unsure of how much we would get implemented so we kept the scope relatively loose by having a simple base design that could quantitatively be expanded with more game modes, docking kits and other features if the time was available. 
+
+\subsection{Design overview}
+We wanted to create a competitive online game using peer to peer connectivity as a base for networking. The game would let players control small robots that fight each other by "docking" into different types of docking kits that each provide different statistics and abilities. The plan for each docking kit was to have around two to four abilities and give them different prices in an in-game shop based on their strength. 
+
+Other planned features include:
+\begin{itemize}
+    \item Maps based around fog of war to limit visibility and possibly contain extra objectives from time to time.
+    \item A variety of game modes ranging from deathmatch to more objective based modes. 
+    \item Player bots which could fill in for other players in team based play if the amount of players were uneven. 
+    \item A replay AI that records the highlights of each match and plays them back at the end of the game.
+\end{itemize}
+    
+\subsection{Game modes}
+The initial design of the game included three different game modes: 
+
+\begin{enumerate}
+    \item The standard game mode.
+    \item King of the hill.
+    \item 1vX. 
+\end{enumerate}
+
+The standard game mode would be inspired by Counter-Strike: Global Offensive~\cite{csGO} and alternate two teams between defending and attacking objectives. The teams would play 10 rounds with each round taking a maximum of 4 minutes before switching positions and playing 10 new rounds. Docking kits would be available for purchase at the start of each round. Docking kits would end up being dropped on death while surviving players keep their kit for the next round.
+
+The king of the hill mode would only include one objective that all teams fought over. Holding the objective would tick a team timer downwards and letting the timer tick to zero meant victory. Docking kits would not be purchasable contrary to the standard game mode, but rather spawn randomly on different map locations. 
+    
+The 1vX game mode would revolve around having one player play against all the others using an empowered docking kit. This game mode would use a timer that gradually adds non-beneficial effects to any players not engaging in combat to prevent stalling on both sides. Similarly to the king of the hill, docking kits would spawn randomly around the map rather than be purchasable.  
+
+\subsection{Docking Kit ideas}
+The initial design included some rough ideas for eight different docking kits:
+
+\begin{itemize}
+    \item The Marksman Kit:
+    \begin{itemize}
+        \item A kit with low health and decent speed.
+        \item Employs a mix of ranged abilities as well as an ability that allows the player to quickly dash in any direction to either avoid damage or close in on enemies. 
+    \end{itemize}
+    
+    \item The Tank Kit:
+    \begin{itemize}
+        \item A kit with high health and low speed. 
+        \item Focuses on melee attacks with abilities that allows the player to soak damage, use crowd control and protect team mates.
+    \end{itemize}
+    
+    \item The Support Kit:
+    \begin{itemize}
+        \item Undecided health and speed. This would depend on the strength of the final implemented abilities. 
+        \item A kit that deals little damage by itself and is based around supporting teammates with healing, crowd control, shields and other types of buffs. 
+    \end{itemize}
+    
+    \item The Trapper Kit:
+    \begin{itemize}
+        \item A kit with low health and high speed. 
+        \item This kit is designed to be particularly effective against melee players through the use of its multiple traps that provide a variety of negative status effects. 
+        \item Should only be able to have one of each trap active at any time. 
+    \end{itemize}
+    
+    \item The Brawler Kit:
+    \begin{itemize}
+        \item A kit with decent health and decent speed.
+        \item This kit is primarily melee based and has abilities that allows the player to fight ranged attackers by reflecting projectiles and using crowd control.  
+    \end{itemize}
+    
+    \item The Sniper Kit:
+    \begin{itemize}
+        \item A kit with low health and high speed. 
+        \item Has a larger line of sight compared to other kits and uses long ranged attacks to take advantage of this. 
+    \end{itemize}
+    
+    \item The Scout Kit:
+    \begin{itemize}
+        \item A kit with medium or low health and very high speed. 
+        \item A melee kit that focuses on a hit and run playstyle where the player is able to quickly get into skirmishes, do damage and then escape. 
+    \end{itemize}
+    
+    \item The Bomber Kit:
+    \begin{itemize}
+        \item A kit with medium health and low speed.
+        \item Uses a variety of explosives that deal large amounts of damage.
+    \end{itemize}
+\end{itemize}
+
+\section{Changes from the initial design}
+\subsection{General changes}
+This Section will take a look at the general changes from the initial design. 
+
+One of the major differences was that we ended up implementing two simpler game modes compared to the original ones we designed. We implemented a "free for all" as well as a team based deathmatch game mode due to limited time towards the end of the development period. In the case of the "free for all" deathmatch mode, the last remaining player is the winner of the round while on the team deathmatch mode, one team wins whenever all players of the opposing team have been defeated. 
+
+Player bots and replay AI functionalities were cut, but weren't necessary features for the scope of our project as we primarily wanted to focus on players playing against each other. We also ended up deciding to use four abilities per docking kit as mentioned in Section~\ref{sec:ergonomicControls} because it provided us with the most ergonomic control scheme.
+    
+\subsection{Docking kit changes}
+Several of the kits ended up receiving redesigns during the development of \emph{Dockit League}. The finalized design for each docking kit can be found in Section~\ref{sec:dockingKits} while this Section will take a look at how the current docking kits differ from their original designs. 
+
+The marksman and sniper kits ended up being somewhat similar in design as we worked on them so we tried to differentiate their abilities. The marksman kit ended up more stealth oriented while the sniper kit had far less mobility in general with a playstyle that requires the player to slowly focus and aim before firing. Looking at the current abilities of the marksman kit it would probably be better to rename it to the "Rogue" kit given its current tools. 
+
+The tank kit was originally planned to be melee oriented, but we wanted to make it less similar to the brawler kit so we introduced the ranged saw blades to the tank kit. The brawler and tank kits still share some similarities as both are capable of reflecting projectiles. 
+
+The support, trapper, bomb and brawler kit generally stayed fairly close to their original designs although there were some changes. The trapper kit was given a flamethrower ability to provide some other means of doing damage rather than having four traps. The original plan for the bomber kit was to have more trap like bombs/mines, but given that the trapper kit already focused on this we tried to differentiate the two by giving the bomber kit a remote controlled mine that had to be triggered manually.
+
+The crowd control ability of the brawler kit also ended up being somewhat different as we had originally planned for it to be a close range ability. We realized throughout development that the kit would struggle fighting the others as the majority are ranged attackers so we gave the brawler kit a ranged stun grenade as a means of coping with this. 
+    
+The scout kit was completely redesigned into the boomerang kit. It still retains the low health and high speed with a hit and run playstyle, but we changed the kit from being melee oriented to using the ranged boomerangs instead. The reason for this is that the low health of the kit made it very hard to stay alive as a melee attacker and the idea of using boomerangs felt more novel. 

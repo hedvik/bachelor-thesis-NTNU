@@ -1,0 +1,161 @@
+\hypertarget{class_docking_kit}{}\section{Docking\+Kit Class Reference}
+\label{class_docking_kit}\index{Docking\+Kit@{Docking\+Kit}}
+
+
+Handles the interaction between the \hyperlink{class_docking}{Docking} and the abilities.  
+
+
+Inheritance diagram for Docking\+Kit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_docking_kit}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_docking_kit_ada18b95ce1ccac502a31a468381aab7c}{Initialize} (\hyperlink{class_docking}{Docking} dock)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_kit_a1498b50f1fe0b8e54e69c637306c61b6}{On\+Local\+Player\+Initialization} (\hyperlink{class_player_u_i_handler}{Player\+U\+I\+Handler} player\+U\+I\+Handler)
+\begin{DoxyCompactList}\small\item\em Initialization that only happens for the local player (\hyperlink{class_player}{Player} controlling this docking kit). \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_kit_a30aaa34339d35b52a59af9a871fa0182}{On\+Local\+Player\+Docking} (float docking\+Time, \hyperlink{class_player_u_i_handler}{Player\+U\+I\+Handler} player\+U\+I\+Handler)
+\begin{DoxyCompactList}\small\item\em Initialization called for the local player (\hyperlink{class_player}{Player} controlling this docking kit) on docking. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_kit_a7e7c524ffdc103a3ecc5736333641792}{On\+Undocking} (float docking\+Duration, Docking\+Kit\+Id spawn\+Pickup\+Id, bool spawn\+Pickup=true)
+\begin{DoxyCompactList}\small\item\em Called for every client when undocking. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_kit_a7768323bf115988fc5465746eddefec6}{On\+Ability\+Button\+Change} (int ability\+Id, bool down)
+\begin{DoxyCompactList}\small\item\em Called when the ability button is initially pressed or released. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_kit_a1eb12e2d59fce858a1cd5bc72b89ce11}{Cancel\+Abilities} ()
+\begin{DoxyCompactList}\small\item\em Cancels all the abilities in this docking kit. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_kit_a139a8cf5ba76e6a2237ddce824459d0c}{Set\+Ability\+Lock} (bool state, params int\mbox{[}$\,$\mbox{]} ability\+Numbers)
+\begin{DoxyCompactList}\small\item\em Used by Abilities to lock abilities in this docking kit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_docking_kit_a57f83bb5493e4599b257916f9014655f}{}\label{class_docking_kit_a57f83bb5493e4599b257916f9014655f} 
+float {\bfseries move\+Speed} = 60f
+\item 
+\hypertarget{class_docking_kit_a2dd32a4d393d3be9e8df692e170ce895}{}\label{class_docking_kit_a2dd32a4d393d3be9e8df692e170ce895} 
+float {\bfseries rotation\+Speed} = 6f
+\item 
+\hypertarget{class_docking_kit_a547f22eff8e00d7da8fb9e2805d2ee2a}{}\label{class_docking_kit_a547f22eff8e00d7da8fb9e2805d2ee2a} 
+float {\bfseries max\+Health} = 100f
+\item 
+\hypertarget{class_docking_kit_af1f2489e4400f757d90058ef706f738e}{}\label{class_docking_kit_af1f2489e4400f757d90058ef706f738e} 
+List$<$ \hyperlink{class_ability}{Ability} $>$ {\bfseries abilities}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles the interaction between the \hyperlink{class_docking}{Docking} and the abilities. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_docking_kit_a1eb12e2d59fce858a1cd5bc72b89ce11}{}\label{class_docking_kit_a1eb12e2d59fce858a1cd5bc72b89ce11} 
+\index{Docking\+Kit@{Docking\+Kit}!Cancel\+Abilities@{Cancel\+Abilities}}
+\index{Cancel\+Abilities@{Cancel\+Abilities}!Docking\+Kit@{Docking\+Kit}}
+\subsubsection{\texorpdfstring{Cancel\+Abilities()}{CancelAbilities()}}
+{\footnotesize\ttfamily void Docking\+Kit.\+Cancel\+Abilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cancels all the abilities in this docking kit. 
+
+\hypertarget{class_docking_kit_ada18b95ce1ccac502a31a468381aab7c}{}\label{class_docking_kit_ada18b95ce1ccac502a31a468381aab7c} 
+\index{Docking\+Kit@{Docking\+Kit}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Docking\+Kit@{Docking\+Kit}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Docking\+Kit.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock }\end{DoxyParamCaption})}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_kit_a7768323bf115988fc5465746eddefec6}{}\label{class_docking_kit_a7768323bf115988fc5465746eddefec6} 
+\index{Docking\+Kit@{Docking\+Kit}!On\+Ability\+Button\+Change@{On\+Ability\+Button\+Change}}
+\index{On\+Ability\+Button\+Change@{On\+Ability\+Button\+Change}!Docking\+Kit@{Docking\+Kit}}
+\subsubsection{\texorpdfstring{On\+Ability\+Button\+Change()}{OnAbilityButtonChange()}}
+{\footnotesize\ttfamily void Docking\+Kit.\+On\+Ability\+Button\+Change (\begin{DoxyParamCaption}\item[{int}]{ability\+Id,  }\item[{bool}]{down }\end{DoxyParamCaption})}
+
+
+
+Called when the ability button is initially pressed or released. 
+
+Button\+Down may be called without Button\+Up running afterwards, handle this in \hyperlink{class_ability_ab0eaf1ad670e0624a5534c50b10c002f}{Ability.\+Cancel\+Ability} (if the ability is locked in between). Button\+Up may be called without Button\+Down running first (if the ability is unlocked in between). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ability\+Id} & Index of the ability where the button state changed.\\
+\hline
+{\em down} & If this was the initial press.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_kit_a30aaa34339d35b52a59af9a871fa0182}{}\label{class_docking_kit_a30aaa34339d35b52a59af9a871fa0182} 
+\index{Docking\+Kit@{Docking\+Kit}!On\+Local\+Player\+Docking@{On\+Local\+Player\+Docking}}
+\index{On\+Local\+Player\+Docking@{On\+Local\+Player\+Docking}!Docking\+Kit@{Docking\+Kit}}
+\subsubsection{\texorpdfstring{On\+Local\+Player\+Docking()}{OnLocalPlayerDocking()}}
+{\footnotesize\ttfamily void Docking\+Kit.\+On\+Local\+Player\+Docking (\begin{DoxyParamCaption}\item[{float}]{docking\+Time,  }\item[{\hyperlink{class_player_u_i_handler}{Player\+U\+I\+Handler}}]{player\+U\+I\+Handler }\end{DoxyParamCaption})}
+
+
+
+Initialization called for the local player (\hyperlink{class_player}{Player} controlling this docking kit) on docking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em docking\+Time} & The time used to dock. (Immobile duration)\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_kit_a1498b50f1fe0b8e54e69c637306c61b6}{}\label{class_docking_kit_a1498b50f1fe0b8e54e69c637306c61b6} 
+\index{Docking\+Kit@{Docking\+Kit}!On\+Local\+Player\+Initialization@{On\+Local\+Player\+Initialization}}
+\index{On\+Local\+Player\+Initialization@{On\+Local\+Player\+Initialization}!Docking\+Kit@{Docking\+Kit}}
+\subsubsection{\texorpdfstring{On\+Local\+Player\+Initialization()}{OnLocalPlayerInitialization()}}
+{\footnotesize\ttfamily void Docking\+Kit.\+On\+Local\+Player\+Initialization (\begin{DoxyParamCaption}\item[{\hyperlink{class_player_u_i_handler}{Player\+U\+I\+Handler}}]{player\+U\+I\+Handler }\end{DoxyParamCaption})}
+
+
+
+Initialization that only happens for the local player (\hyperlink{class_player}{Player} controlling this docking kit). 
+
+\hypertarget{class_docking_kit_a7e7c524ffdc103a3ecc5736333641792}{}\label{class_docking_kit_a7e7c524ffdc103a3ecc5736333641792} 
+\index{Docking\+Kit@{Docking\+Kit}!On\+Undocking@{On\+Undocking}}
+\index{On\+Undocking@{On\+Undocking}!Docking\+Kit@{Docking\+Kit}}
+\subsubsection{\texorpdfstring{On\+Undocking()}{OnUndocking()}}
+{\footnotesize\ttfamily void Docking\+Kit.\+On\+Undocking (\begin{DoxyParamCaption}\item[{float}]{docking\+Duration,  }\item[{Docking\+Kit\+Id}]{spawn\+Pickup\+Id,  }\item[{bool}]{spawn\+Pickup = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Called for every client when undocking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em docking\+Duration} & The time used to undock. (Immobile duration)\\
+\hline
+{\em spawn\+Pickup\+Id} & The Docking\+Kit\+Id of the pickup to be spawned on undocking.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_kit_a139a8cf5ba76e6a2237ddce824459d0c}{}\label{class_docking_kit_a139a8cf5ba76e6a2237ddce824459d0c} 
+\index{Docking\+Kit@{Docking\+Kit}!Set\+Ability\+Lock@{Set\+Ability\+Lock}}
+\index{Set\+Ability\+Lock@{Set\+Ability\+Lock}!Docking\+Kit@{Docking\+Kit}}
+\subsubsection{\texorpdfstring{Set\+Ability\+Lock()}{SetAbilityLock()}}
+{\footnotesize\ttfamily void Docking\+Kit.\+Set\+Ability\+Lock (\begin{DoxyParamCaption}\item[{bool}]{state,  }\item[{params int \mbox{[}$\,$\mbox{]}}]{ability\+Numbers }\end{DoxyParamCaption})}
+
+
+
+Used by Abilities to lock abilities in this docking kit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & To lock or unlock.\\
+\hline
+{\em ability\+Numbers} & Toggles lock for these abilities.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/Docking\+Kit.\+cs\end{DoxyCompactItemize}

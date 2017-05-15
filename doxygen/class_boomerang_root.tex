@@ -1,0 +1,100 @@
+\hypertarget{class_boomerang_root}{}\section{Boomerang\+Root Class Reference}
+\label{class_boomerang_root}\index{Boomerang\+Root@{Boomerang\+Root}}
+Inheritance diagram for Boomerang\+Root\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_boomerang_root}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_boomerang_root_a24efe6d7fc4691ad985c05c649a8b7d8}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Callback for what this ability does locally when its associated button is pressed \end{DoxyCompactList}\item 
+override void \hyperlink{class_boomerang_root_ada0fc97c2ae52051df846fe6434f33aa}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Callback for what this ability is supposed to do locally on all clients when the ability state is changed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_boomerang_root_a02e720eee940d03eecbb57f643ea6a56}{}\label{class_boomerang_root_a02e720eee940d03eecbb57f643ea6a56} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries root\+Info}
+\item 
+\hypertarget{class_boomerang_root_a3bb863a38b0e4b411a17efdff9595685}{}\label{class_boomerang_root_a3bb863a38b0e4b411a17efdff9595685} 
+Sprite\+Renderer \mbox{[}$\,$\mbox{]} {\bfseries root\+Indicators}
+\item 
+\hypertarget{class_boomerang_root_a7b45e9cefc338ce7f61a8d820f2b93ee}{}\label{class_boomerang_root_a7b45e9cefc338ce7f61a8d820f2b93ee} 
+Animator {\bfseries animation\+Controller}
+\item 
+\hypertarget{class_boomerang_root_a4730a710b48626086e7a52d509b4274f}{}\label{class_boomerang_root_a4730a710b48626086e7a52d509b4274f} 
+float {\bfseries active\+Duration} = 0.\+5f
+\item 
+\hypertarget{class_boomerang_root_ac2168a45ea9d06ff91b729b7ea1dcbbd}{}\label{class_boomerang_root_ac2168a45ea9d06ff91b729b7ea1dcbbd} 
+string {\bfseries animation\+Trigger} = \char`\"{}Root\char`\"{}
+\item 
+\hypertarget{class_boomerang_root_a581c26825eab5fb5e6a58555c08f9f34}{}\label{class_boomerang_root_a581c26825eab5fb5e6a58555c08f9f34} 
+Color {\bfseries active\+Color}
+\item 
+\hypertarget{class_boomerang_root_a0bee154a42174d7007834ce1236f55f7}{}\label{class_boomerang_root_a0bee154a42174d7007834ce1236f55f7} 
+bool {\bfseries root\+Active} = false
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_boomerang_root_ae237190bc2d4dbddcf21a25ee3c96dc9}{Update} ()
+\begin{DoxyCompactList}\small\item\em Runs on every client, but only the local player has cooldown initialized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_boomerang_root_a24efe6d7fc4691ad985c05c649a8b7d8}{}\label{class_boomerang_root_a24efe6d7fc4691ad985c05c649a8b7d8} 
+\index{Boomerang\+Root@{Boomerang\+Root}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Boomerang\+Root@{Boomerang\+Root}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Boomerang\+Root.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability does locally when its associated button is pressed 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_boomerang_root_ada0fc97c2ae52051df846fe6434f33aa}{}\label{class_boomerang_root_ada0fc97c2ae52051df846fe6434f33aa} 
+\index{Boomerang\+Root@{Boomerang\+Root}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Boomerang\+Root@{Boomerang\+Root}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Boomerang\+Root.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability is supposed to do locally on all clients when the ability state is changed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new ability state\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+\hypertarget{class_boomerang_root_ae237190bc2d4dbddcf21a25ee3c96dc9}{}\label{class_boomerang_root_ae237190bc2d4dbddcf21a25ee3c96dc9} 
+\index{Boomerang\+Root@{Boomerang\+Root}!Update@{Update}}
+\index{Update@{Update}!Boomerang\+Root@{Boomerang\+Root}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily override void Boomerang\+Root.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Runs on every client, but only the local player has cooldown initialized. 
+
+
+
+Reimplemented from \hyperlink{class_ability_a88d799f38be464be5f0a9a315efb2d0b}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Boomerang\+Kit/Boomerang\+Root.\+cs\end{DoxyCompactItemize}

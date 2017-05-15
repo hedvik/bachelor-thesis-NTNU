@@ -1,0 +1,174 @@
+\hypertarget{class_player_camera}{}\section{Player\+Camera Class Reference}
+\label{class_player_camera}\index{Player\+Camera@{Player\+Camera}}
+
+
+Handles all Camera interactions.  
+
+
+Inheritance diagram for Player\+Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_camera}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_player_camera_ab00e29987f641e819d30afd424905a83}{Set\+Player\+Transform} (Transform new\+Player\+Target, bool return\+To\+Player=false, bool smooth\+Return=false)
+\begin{DoxyCompactList}\small\item\em Sets the associated player transform. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_camera_a2fb61ce3ec200d7776f412ff76189f0d}{Set\+Target} (Transform new\+Target, bool smoothing=false)
+\begin{DoxyCompactList}\small\item\em Set temporary target to follow, which will override the player transform. This will use the default move speed. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_camera_a237a72911a7603bb452a2d6fd4490a86}{Set\+Target} (Transform t, bool smoothing, float speed)
+\begin{DoxyCompactList}\small\item\em Set temporary target to follow using custom move speed, which will override the player transform. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_camera_aac9819ce130c6466e191c967836245b6}{Set\+Ortho\+Size\+Target} (float target\+Size)
+\begin{DoxyCompactList}\small\item\em Set the orthographic\+Size for the cameras, will lerp between current and target\+Size using the default speed. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_camera_a5044d1e08bab8950660ceaea431d26b9}{Set\+Ortho\+Size\+Target} (float target\+Size, float speed)
+\begin{DoxyCompactList}\small\item\em Set the orthographic\+Size for the cameras, will lerp between current and target\+Size using the given speed. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_camera_a49c0f95881cb45fdcf57647990d9b7c9}{Return\+To\+Player} (bool smooth)
+\begin{DoxyCompactList}\small\item\em Call for returning to the player transform using the default speed. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_camera_a6dd3d2b6ed065f144db8070ed7f07ba0}{Return\+To\+Player} (bool smooth, float speed)
+\begin{DoxyCompactList}\small\item\em Call for returning to the player transform using the given speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_player_camera_a00b2e5e772f3d02a0f3cbc42728d43f9}{}\label{class_player_camera_a00b2e5e772f3d02a0f3cbc42728d43f9} 
+float {\bfseries height} = 25f
+\item 
+\hypertarget{class_player_camera_a78bf9e6d21438d45b27263baff36f6a0}{}\label{class_player_camera_a78bf9e6d21438d45b27263baff36f6a0} 
+float {\bfseries default\+Move\+Speed} = 20f
+\item 
+\hypertarget{class_player_camera_a8aa51f11e7fc88c5c347ab498d58753c}{}\label{class_player_camera_a8aa51f11e7fc88c5c347ab498d58753c} 
+float {\bfseries default\+Scale\+Speed} = 2.\+5f
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles all Camera interactions. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_player_camera_a49c0f95881cb45fdcf57647990d9b7c9}{}\label{class_player_camera_a49c0f95881cb45fdcf57647990d9b7c9} 
+\index{Player\+Camera@{Player\+Camera}!Return\+To\+Player@{Return\+To\+Player}}
+\index{Return\+To\+Player@{Return\+To\+Player}!Player\+Camera@{Player\+Camera}}
+\subsubsection{\texorpdfstring{Return\+To\+Player()}{ReturnToPlayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Player\+Camera.\+Return\+To\+Player (\begin{DoxyParamCaption}\item[{bool}]{smooth }\end{DoxyParamCaption})}
+
+
+
+Call for returning to the player transform using the default speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em smooth} & Whether the return is smooth or instant.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_camera_a6dd3d2b6ed065f144db8070ed7f07ba0}{}\label{class_player_camera_a6dd3d2b6ed065f144db8070ed7f07ba0} 
+\index{Player\+Camera@{Player\+Camera}!Return\+To\+Player@{Return\+To\+Player}}
+\index{Return\+To\+Player@{Return\+To\+Player}!Player\+Camera@{Player\+Camera}}
+\subsubsection{\texorpdfstring{Return\+To\+Player()}{ReturnToPlayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Player\+Camera.\+Return\+To\+Player (\begin{DoxyParamCaption}\item[{bool}]{smooth,  }\item[{float}]{speed }\end{DoxyParamCaption})}
+
+
+
+Call for returning to the player transform using the given speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em smooth} & Whether the return is smooth or instant.\\
+\hline
+{\em speed} & The move speed utilized.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_camera_aac9819ce130c6466e191c967836245b6}{}\label{class_player_camera_aac9819ce130c6466e191c967836245b6} 
+\index{Player\+Camera@{Player\+Camera}!Set\+Ortho\+Size\+Target@{Set\+Ortho\+Size\+Target}}
+\index{Set\+Ortho\+Size\+Target@{Set\+Ortho\+Size\+Target}!Player\+Camera@{Player\+Camera}}
+\subsubsection{\texorpdfstring{Set\+Ortho\+Size\+Target()}{SetOrthoSizeTarget()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Player\+Camera.\+Set\+Ortho\+Size\+Target (\begin{DoxyParamCaption}\item[{float}]{target\+Size }\end{DoxyParamCaption})}
+
+
+
+Set the orthographic\+Size for the cameras, will lerp between current and target\+Size using the default speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Size} & The new orthographic\+Size.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_camera_a5044d1e08bab8950660ceaea431d26b9}{}\label{class_player_camera_a5044d1e08bab8950660ceaea431d26b9} 
+\index{Player\+Camera@{Player\+Camera}!Set\+Ortho\+Size\+Target@{Set\+Ortho\+Size\+Target}}
+\index{Set\+Ortho\+Size\+Target@{Set\+Ortho\+Size\+Target}!Player\+Camera@{Player\+Camera}}
+\subsubsection{\texorpdfstring{Set\+Ortho\+Size\+Target()}{SetOrthoSizeTarget()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Player\+Camera.\+Set\+Ortho\+Size\+Target (\begin{DoxyParamCaption}\item[{float}]{target\+Size,  }\item[{float}]{speed }\end{DoxyParamCaption})}
+
+
+
+Set the orthographic\+Size for the cameras, will lerp between current and target\+Size using the given speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Size} & The new orthographic\+Size.\\
+\hline
+{\em speed} & The lerp speed utilized.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_camera_ab00e29987f641e819d30afd424905a83}{}\label{class_player_camera_ab00e29987f641e819d30afd424905a83} 
+\index{Player\+Camera@{Player\+Camera}!Set\+Player\+Transform@{Set\+Player\+Transform}}
+\index{Set\+Player\+Transform@{Set\+Player\+Transform}!Player\+Camera@{Player\+Camera}}
+\subsubsection{\texorpdfstring{Set\+Player\+Transform()}{SetPlayerTransform()}}
+{\footnotesize\ttfamily void Player\+Camera.\+Set\+Player\+Transform (\begin{DoxyParamCaption}\item[{Transform}]{new\+Player\+Target,  }\item[{bool}]{return\+To\+Player = {\ttfamily false},  }\item[{bool}]{smooth\+Return = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Sets the associated player transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Player\+Target} & The new player transform.\\
+\hline
+{\em return\+To\+Player} & Whether to move the camera to this transform.\\
+\hline
+{\em smooth\+Return} & Whether the return is smooth or instant.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_camera_a2fb61ce3ec200d7776f412ff76189f0d}{}\label{class_player_camera_a2fb61ce3ec200d7776f412ff76189f0d} 
+\index{Player\+Camera@{Player\+Camera}!Set\+Target@{Set\+Target}}
+\index{Set\+Target@{Set\+Target}!Player\+Camera@{Player\+Camera}}
+\subsubsection{\texorpdfstring{Set\+Target()}{SetTarget()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Player\+Camera.\+Set\+Target (\begin{DoxyParamCaption}\item[{Transform}]{new\+Target,  }\item[{bool}]{smoothing = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Set temporary target to follow, which will override the player transform. This will use the default move speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Target} & The new transform to follow.\\
+\hline
+{\em smoothing} & Whether to smoothly follow target.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_camera_a237a72911a7603bb452a2d6fd4490a86}{}\label{class_player_camera_a237a72911a7603bb452a2d6fd4490a86} 
+\index{Player\+Camera@{Player\+Camera}!Set\+Target@{Set\+Target}}
+\index{Set\+Target@{Set\+Target}!Player\+Camera@{Player\+Camera}}
+\subsubsection{\texorpdfstring{Set\+Target()}{SetTarget()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Player\+Camera.\+Set\+Target (\begin{DoxyParamCaption}\item[{Transform}]{t,  }\item[{bool}]{smoothing,  }\item[{float}]{speed }\end{DoxyParamCaption})}
+
+
+
+Set temporary target to follow using custom move speed, which will override the player transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Target} & The new transform to follow.\\
+\hline
+{\em smoothing} & Whether to smoothly follow target.\\
+\hline
+{\em speed} & The move speed utilized.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Player/Player\+Camera.\+cs\end{DoxyCompactItemize}

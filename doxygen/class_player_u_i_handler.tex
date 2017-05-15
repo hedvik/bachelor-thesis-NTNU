@@ -1,0 +1,163 @@
+\hypertarget{class_player_u_i_handler}{}\section{Player\+U\+I\+Handler Class Reference}
+\label{class_player_u_i_handler}\index{Player\+U\+I\+Handler@{Player\+U\+I\+Handler}}
+
+
+Handler for the player UI (Abilities, status modifiers, health).  
+
+
+Inheritance diagram for Player\+U\+I\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_u_i_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_player_u_i_handler_abac7fc9da80f3f52602e789bf7d7d786}{Set\+Docking\+Kit\+UI} (\hyperlink{class_docking_kit}{Docking\+Kit} new\+Docking\+Kit)
+\begin{DoxyCompactList}\small\item\em Initialize the \hyperlink{class_ability_u_i}{Ability\+UI} with the new \hyperlink{class_docking_kit}{Docking\+Kit} abilities. \end{DoxyCompactList}\item 
+\hyperlink{class_status_u_i}{Status\+UI} \hyperlink{class_player_u_i_handler_a76e0a2223390a5578cd6c885f8ff9e1c}{Add\+Status\+Modifier} (\hyperlink{class_modifier}{Modifier} modifier, float duration)
+\begin{DoxyCompactList}\small\item\em Adds a \hyperlink{class_status_u_i}{Status\+UI} element to the Player\+UI. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_u_i_handler_a0c18f57891bb979fe8377af65c6c4729}{Remove\+Status\+Modifier} (\hyperlink{class_status_u_i}{Status\+UI} status\+Modifier)
+\begin{DoxyCompactList}\small\item\em Removed the status modifier from the list of elements. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_u_i_handler_ae527bfe70834ce8fe459d956f25e1607}{Set\+Current\+Health} (float health, float max\+Health)
+\begin{DoxyCompactList}\small\item\em Updates the Health\+UI based on health and max\+Health. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_u_i_handler_a86672aa016a9bdec4b8eebd3ece87f87}{Play\+Currency\+Change\+Animation} (float currency\+Difference)
+\begin{DoxyCompactList}\small\item\em Starts a coroutine that interpolates text containing the amount of currency earned/spent \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_player_u_i_handler_a4bc9e9860cb03012c82ae8656fb2e5c8}{}\label{class_player_u_i_handler_a4bc9e9860cb03012c82ae8656fb2e5c8} 
+\hyperlink{class_ability_u_i}{Ability\+UI} \mbox{[}$\,$\mbox{]} {\bfseries abilities}
+\item 
+\hypertarget{class_player_u_i_handler_a1189e07ab9556fc37b46fb3aa9dccb15}{}\label{class_player_u_i_handler_a1189e07ab9556fc37b46fb3aa9dccb15} 
+Sprite {\bfseries empty\+Slot}
+\item 
+\hypertarget{class_player_u_i_handler_a56db3aa273489817765108ffd61692c4}{}\label{class_player_u_i_handler_a56db3aa273489817765108ffd61692c4} 
+Transform \mbox{[}$\,$\mbox{]} {\bfseries status\+Bars}
+\item 
+\hypertarget{class_player_u_i_handler_a292d21acba79bdb6db3b29f16f67a0d2}{}\label{class_player_u_i_handler_a292d21acba79bdb6db3b29f16f67a0d2} 
+Game\+Object {\bfseries status\+Prefab}
+\item 
+\hypertarget{class_player_u_i_handler_aa6f2304ca377448e626155e99e61ad63}{}\label{class_player_u_i_handler_aa6f2304ca377448e626155e99e61ad63} 
+Text {\bfseries currency\+Text}
+\item 
+\hypertarget{class_player_u_i_handler_a322def4649ecb771bd711e5bd891d11b}{}\label{class_player_u_i_handler_a322def4649ecb771bd711e5bd891d11b} 
+Text {\bfseries animated\+Currency\+Text}
+\item 
+\hypertarget{class_player_u_i_handler_ab59ef9eebc301c3d8ac460062f9b8eff}{}\label{class_player_u_i_handler_ab59ef9eebc301c3d8ac460062f9b8eff} 
+Text {\bfseries health\+Percentage\+Text}
+\item 
+\hypertarget{class_player_u_i_handler_a540ff13681f7c61ec79f93dad132d879}{}\label{class_player_u_i_handler_a540ff13681f7c61ec79f93dad132d879} 
+Text {\bfseries health\+Ratio\+Text}
+\item 
+\hypertarget{class_player_u_i_handler_a68ce46dc759ad902038f03393c3db099}{}\label{class_player_u_i_handler_a68ce46dc759ad902038f03393c3db099} 
+Image {\bfseries health\+Mask}
+\item 
+\hypertarget{class_player_u_i_handler_abdbcd5eff2ce8efe782765c0a4890db4}{}\label{class_player_u_i_handler_abdbcd5eff2ce8efe782765c0a4890db4} 
+Color {\bfseries currency\+Add\+Color}
+\item 
+\hypertarget{class_player_u_i_handler_a9aa2ea066c755fc2329f62bae6656ee3}{}\label{class_player_u_i_handler_a9aa2ea066c755fc2329f62bae6656ee3} 
+Color {\bfseries currency\+Remove\+Color}
+\item 
+\hypertarget{class_player_u_i_handler_af4aa2997a916f774ca111a96bfea79c0}{}\label{class_player_u_i_handler_af4aa2997a916f774ca111a96bfea79c0} 
+float {\bfseries animated\+Text\+Target\+Offset} = 75f
+\item 
+\hypertarget{class_player_u_i_handler_a14e8ec7ef539894842681c1831566c1f}{}\label{class_player_u_i_handler_a14e8ec7ef539894842681c1831566c1f} 
+\hyperlink{class_ingame_menu_handler}{Ingame\+Menu\+Handler} {\bfseries ingame\+Menu\+Handler}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handler for the player UI (Abilities, status modifiers, health). 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_player_u_i_handler_a76e0a2223390a5578cd6c885f8ff9e1c}{}\label{class_player_u_i_handler_a76e0a2223390a5578cd6c885f8ff9e1c} 
+\index{Player\+U\+I\+Handler@{Player\+U\+I\+Handler}!Add\+Status\+Modifier@{Add\+Status\+Modifier}}
+\index{Add\+Status\+Modifier@{Add\+Status\+Modifier}!Player\+U\+I\+Handler@{Player\+U\+I\+Handler}}
+\subsubsection{\texorpdfstring{Add\+Status\+Modifier()}{AddStatusModifier()}}
+{\footnotesize\ttfamily \hyperlink{class_status_u_i}{Status\+UI} Player\+U\+I\+Handler.\+Add\+Status\+Modifier (\begin{DoxyParamCaption}\item[{\hyperlink{class_modifier}{Modifier}}]{modifier,  }\item[{float}]{duration }\end{DoxyParamCaption})}
+
+
+
+Adds a \hyperlink{class_status_u_i}{Status\+UI} element to the Player\+UI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modifier} & The modifier to be added.\\
+\hline
+{\em duration} & The initial duration of the status modifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The instantiated status\+UI element.
+\end{DoxyReturn}
+\hypertarget{class_player_u_i_handler_a86672aa016a9bdec4b8eebd3ece87f87}{}\label{class_player_u_i_handler_a86672aa016a9bdec4b8eebd3ece87f87} 
+\index{Player\+U\+I\+Handler@{Player\+U\+I\+Handler}!Play\+Currency\+Change\+Animation@{Play\+Currency\+Change\+Animation}}
+\index{Play\+Currency\+Change\+Animation@{Play\+Currency\+Change\+Animation}!Player\+U\+I\+Handler@{Player\+U\+I\+Handler}}
+\subsubsection{\texorpdfstring{Play\+Currency\+Change\+Animation()}{PlayCurrencyChangeAnimation()}}
+{\footnotesize\ttfamily void Player\+U\+I\+Handler.\+Play\+Currency\+Change\+Animation (\begin{DoxyParamCaption}\item[{float}]{currency\+Difference }\end{DoxyParamCaption})}
+
+
+
+Starts a coroutine that interpolates text containing the amount of currency earned/spent 
+
+
+\begin{DoxyParams}{Parameters}
+{\em currency\+Difference} & The currency difference from the old total\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_u_i_handler_a0c18f57891bb979fe8377af65c6c4729}{}\label{class_player_u_i_handler_a0c18f57891bb979fe8377af65c6c4729} 
+\index{Player\+U\+I\+Handler@{Player\+U\+I\+Handler}!Remove\+Status\+Modifier@{Remove\+Status\+Modifier}}
+\index{Remove\+Status\+Modifier@{Remove\+Status\+Modifier}!Player\+U\+I\+Handler@{Player\+U\+I\+Handler}}
+\subsubsection{\texorpdfstring{Remove\+Status\+Modifier()}{RemoveStatusModifier()}}
+{\footnotesize\ttfamily void Player\+U\+I\+Handler.\+Remove\+Status\+Modifier (\begin{DoxyParamCaption}\item[{\hyperlink{class_status_u_i}{Status\+UI}}]{status\+Modifier }\end{DoxyParamCaption})}
+
+
+
+Removed the status modifier from the list of elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status\+Modifier} & The status\+UI removed.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_u_i_handler_ae527bfe70834ce8fe459d956f25e1607}{}\label{class_player_u_i_handler_ae527bfe70834ce8fe459d956f25e1607} 
+\index{Player\+U\+I\+Handler@{Player\+U\+I\+Handler}!Set\+Current\+Health@{Set\+Current\+Health}}
+\index{Set\+Current\+Health@{Set\+Current\+Health}!Player\+U\+I\+Handler@{Player\+U\+I\+Handler}}
+\subsubsection{\texorpdfstring{Set\+Current\+Health()}{SetCurrentHealth()}}
+{\footnotesize\ttfamily void Player\+U\+I\+Handler.\+Set\+Current\+Health (\begin{DoxyParamCaption}\item[{float}]{health,  }\item[{float}]{max\+Health }\end{DoxyParamCaption})}
+
+
+
+Updates the Health\+UI based on health and max\+Health. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em health} & The current health.\\
+\hline
+{\em max\+Health} & The current max health.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_u_i_handler_abac7fc9da80f3f52602e789bf7d7d786}{}\label{class_player_u_i_handler_abac7fc9da80f3f52602e789bf7d7d786} 
+\index{Player\+U\+I\+Handler@{Player\+U\+I\+Handler}!Set\+Docking\+Kit\+UI@{Set\+Docking\+Kit\+UI}}
+\index{Set\+Docking\+Kit\+UI@{Set\+Docking\+Kit\+UI}!Player\+U\+I\+Handler@{Player\+U\+I\+Handler}}
+\subsubsection{\texorpdfstring{Set\+Docking\+Kit\+U\+I()}{SetDockingKitUI()}}
+{\footnotesize\ttfamily void Player\+U\+I\+Handler.\+Set\+Docking\+Kit\+UI (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking_kit}{Docking\+Kit}}]{new\+Docking\+Kit }\end{DoxyParamCaption})}
+
+
+
+Initialize the \hyperlink{class_ability_u_i}{Ability\+UI} with the new \hyperlink{class_docking_kit}{Docking\+Kit} abilities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Docking\+Kit} & Reference to the new \hyperlink{class_docking_kit}{Docking\+Kit}.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+U\+I/Player\+U\+I\+Handler.\+cs\end{DoxyCompactItemize}

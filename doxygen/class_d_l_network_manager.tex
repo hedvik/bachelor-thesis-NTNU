@@ -1,0 +1,108 @@
+\hypertarget{class_d_l_network_manager}{}\section{D\+L\+Network\+Manager Class Reference}
+\label{class_d_l_network_manager}\index{D\+L\+Network\+Manager@{D\+L\+Network\+Manager}}
+Inheritance diagram for D\+L\+Network\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_d_l_network_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_d_l_network_manager_afc0830b22829b7f7ace8e11528f4753b}{On\+Player\+Number\+Modified} (int count)
+\begin{DoxyCompactList}\small\item\em Updates the player\+Count variable by adding the parameter \end{DoxyCompactList}\item 
+override bool \hyperlink{class_d_l_network_manager_a011d87a7aa13ad654975c86e61ae1f97}{On\+Lobby\+Server\+Scene\+Loaded\+For\+Player} (Game\+Object lobby\+Player, Game\+Object game\+Player)
+\begin{DoxyCompactList}\small\item\em A callback for when all players are ready and the game is about to start. It takes each lobby player and applies the saved data of those to the actual game players \end{DoxyCompactList}\item 
+\hypertarget{class_d_l_network_manager_a2fd59c49e773c56b40fa58e88994272b}{}\label{class_d_l_network_manager_a2fd59c49e773c56b40fa58e88994272b} 
+override void {\bfseries On\+Lobby\+Server\+Disconnect} (Network\+Connection conn)
+\item 
+override Game\+Object \hyperlink{class_d_l_network_manager_a0b8e454879f6d7cae15e71d2bce54816}{On\+Lobby\+Server\+Create\+Lobby\+Player} (Network\+Connection conn, short player\+Controller\+Id)
+\begin{DoxyCompactList}\small\item\em Callback what the server has to do once it creates a lobby player The server instantiates the player and toggles relevant UI for all players \end{DoxyCompactList}\item 
+override void \hyperlink{class_d_l_network_manager_a30212d32bdb0338d43148e8a65ef77a2}{On\+Client\+Error} (Network\+Connection conn, int error\+Code)
+\begin{DoxyCompactList}\small\item\em Callback for handling client errors. It currently only sends the player out of the lobby. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l_network_manager_a5749ce538520b4d00d44853e7c24673f}{}\label{class_d_l_network_manager_a5749ce538520b4d00d44853e7c24673f} 
+int {\bfseries player\+Count} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_l_network_manager_a30212d32bdb0338d43148e8a65ef77a2}{}\label{class_d_l_network_manager_a30212d32bdb0338d43148e8a65ef77a2} 
+\index{D\+L\+Network\+Manager@{D\+L\+Network\+Manager}!On\+Client\+Error@{On\+Client\+Error}}
+\index{On\+Client\+Error@{On\+Client\+Error}!D\+L\+Network\+Manager@{D\+L\+Network\+Manager}}
+\subsubsection{\texorpdfstring{On\+Client\+Error()}{OnClientError()}}
+{\footnotesize\ttfamily override void D\+L\+Network\+Manager.\+On\+Client\+Error (\begin{DoxyParamCaption}\item[{Network\+Connection}]{conn,  }\item[{int}]{error\+Code }\end{DoxyParamCaption})}
+
+
+
+Callback for handling client errors. It currently only sends the player out of the lobby. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & The network connection\\
+\hline
+{\em error\+Code} & The error code\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_d_l_network_manager_a0b8e454879f6d7cae15e71d2bce54816}{}\label{class_d_l_network_manager_a0b8e454879f6d7cae15e71d2bce54816} 
+\index{D\+L\+Network\+Manager@{D\+L\+Network\+Manager}!On\+Lobby\+Server\+Create\+Lobby\+Player@{On\+Lobby\+Server\+Create\+Lobby\+Player}}
+\index{On\+Lobby\+Server\+Create\+Lobby\+Player@{On\+Lobby\+Server\+Create\+Lobby\+Player}!D\+L\+Network\+Manager@{D\+L\+Network\+Manager}}
+\subsubsection{\texorpdfstring{On\+Lobby\+Server\+Create\+Lobby\+Player()}{OnLobbyServerCreateLobbyPlayer()}}
+{\footnotesize\ttfamily override Game\+Object D\+L\+Network\+Manager.\+On\+Lobby\+Server\+Create\+Lobby\+Player (\begin{DoxyParamCaption}\item[{Network\+Connection}]{conn,  }\item[{short}]{player\+Controller\+Id }\end{DoxyParamCaption})}
+
+
+
+Callback what the server has to do once it creates a lobby player The server instantiates the player and toggles relevant UI for all players 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & The network connection. Currently not used\\
+\hline
+{\em player\+Controller\+Id} & The local player contoller Id. Currently not used\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The instantiated lobby player object
+\end{DoxyReturn}
+\hypertarget{class_d_l_network_manager_a011d87a7aa13ad654975c86e61ae1f97}{}\label{class_d_l_network_manager_a011d87a7aa13ad654975c86e61ae1f97} 
+\index{D\+L\+Network\+Manager@{D\+L\+Network\+Manager}!On\+Lobby\+Server\+Scene\+Loaded\+For\+Player@{On\+Lobby\+Server\+Scene\+Loaded\+For\+Player}}
+\index{On\+Lobby\+Server\+Scene\+Loaded\+For\+Player@{On\+Lobby\+Server\+Scene\+Loaded\+For\+Player}!D\+L\+Network\+Manager@{D\+L\+Network\+Manager}}
+\subsubsection{\texorpdfstring{On\+Lobby\+Server\+Scene\+Loaded\+For\+Player()}{OnLobbyServerSceneLoadedForPlayer()}}
+{\footnotesize\ttfamily override bool D\+L\+Network\+Manager.\+On\+Lobby\+Server\+Scene\+Loaded\+For\+Player (\begin{DoxyParamCaption}\item[{Game\+Object}]{lobby\+Player,  }\item[{Game\+Object}]{game\+Player }\end{DoxyParamCaption})}
+
+
+
+A callback for when all players are ready and the game is about to start. It takes each lobby player and applies the saved data of those to the actual game players 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lobby\+Player} & The lobby player\\
+\hline
+{\em game\+Player} & The game player that we are transferring data to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_d_l_network_manager_afc0830b22829b7f7ace8e11528f4753b}{}\label{class_d_l_network_manager_afc0830b22829b7f7ace8e11528f4753b} 
+\index{D\+L\+Network\+Manager@{D\+L\+Network\+Manager}!On\+Player\+Number\+Modified@{On\+Player\+Number\+Modified}}
+\index{On\+Player\+Number\+Modified@{On\+Player\+Number\+Modified}!D\+L\+Network\+Manager@{D\+L\+Network\+Manager}}
+\subsubsection{\texorpdfstring{On\+Player\+Number\+Modified()}{OnPlayerNumberModified()}}
+{\footnotesize\ttfamily void D\+L\+Network\+Manager.\+On\+Player\+Number\+Modified (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Updates the player\+Count variable by adding the parameter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & The amount of new players\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Networking/D\+L\+Network\+Manager.\+cs\end{DoxyCompactItemize}

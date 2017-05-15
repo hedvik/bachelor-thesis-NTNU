@@ -1,0 +1,159 @@
+\hypertarget{class_modifier_instance_server}{}\section{Modifier\+Instance\+Server Class Reference}
+\label{class_modifier_instance_server}\index{Modifier\+Instance\+Server@{Modifier\+Instance\+Server}}
+
+
+The instance used when a modifier is active. Only exists on the server.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_modifier_instance_server_aac7cc3c3b5356e69334ba23463f80003}{Modifier\+Instance\+Server} (\hyperlink{struct_modifier_info}{Modifier\+Info} info, \hyperlink{class_player_status}{Player\+Status} pl\+Status, int mod\+Id, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Constructor which starts the correct update loop as a Coroutine on the player\+Status Mono\+Behaviour. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_modifier_instance_server_ab5c89db441a05d7fd43b627696ac1a65}{Duration\+Loop} ()
+\begin{DoxyCompactList}\small\item\em Update loop when the duration is used. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_modifier_instance_server_ab912c1a035383dc7d396701309ea6e6c}{Tick\+Loop} ()
+\begin{DoxyCompactList}\small\item\em Update loop when the ticks are used. \end{DoxyCompactList}\item 
+void \hyperlink{class_modifier_instance_server_ae96d1f30204b227178e4da20d8b17f84}{On\+End} ()
+\begin{DoxyCompactList}\small\item\em Called when the modifier effect has ended. \end{DoxyCompactList}\item 
+void \hyperlink{class_modifier_instance_server_a2057c55beeaae1d267f1a331ba89a093}{On\+Cancel} ()
+\begin{DoxyCompactList}\small\item\em Called when the ability modifier effect is cancelled (e.\+g. undocking). \end{DoxyCompactList}\item 
+void \hyperlink{class_modifier_instance_server_abfb9cfedabb0659f8fb9c47a23fba19c}{Max\+Duration} (float new\+Duration)
+\begin{DoxyCompactList}\small\item\em Used for unique modifiers that doesn\textquotesingle{}t stack. Uses the largest of the given durations. \end{DoxyCompactList}\item 
+\hyperlink{class_modifier}{Modifier} \hyperlink{class_modifier_instance_server_a60d143f26963aec0a777ec248de46d99}{Get\+Modifier} ()
+\begin{DoxyCompactList}\small\item\em Returns the modifier used by this instance. \end{DoxyCompactList}\item 
+int \hyperlink{class_modifier_instance_server_a7ee38df01e1b762680b7e07379cfe14f}{Get\+Ability\+Id} ()
+\begin{DoxyCompactList}\small\item\em Returns the ability ID in this instance, equal to or above 0 means this modifier was applied by an ability, -\/1 otherwise. \end{DoxyCompactList}\item 
+int \hyperlink{class_modifier_instance_server_aac2b7d540a4a053d8b76f85b4e626a7e}{Get\+Modifier\+Id} ()
+\begin{DoxyCompactList}\small\item\em Returns the unique modifier ID for this instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The instance used when a modifier is active. Only exists on the server. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_modifier_instance_server_aac7cc3c3b5356e69334ba23463f80003}{}\label{class_modifier_instance_server_aac7cc3c3b5356e69334ba23463f80003} 
+\index{Modifier\+Instance\+Server@{Modifier\+Instance\+Server}!Modifier\+Instance\+Server@{Modifier\+Instance\+Server}}
+\index{Modifier\+Instance\+Server@{Modifier\+Instance\+Server}!Modifier\+Instance\+Server@{Modifier\+Instance\+Server}}
+\subsubsection{\texorpdfstring{Modifier\+Instance\+Server()}{ModifierInstanceServer()}}
+{\footnotesize\ttfamily Modifier\+Instance\+Server.\+Modifier\+Instance\+Server (\begin{DoxyParamCaption}\item[{\hyperlink{struct_modifier_info}{Modifier\+Info}}]{info,  }\item[{\hyperlink{class_player_status}{Player\+Status}}]{pl\+Status,  }\item[{int}]{mod\+Id,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})}
+
+
+
+Constructor which starts the correct update loop as a Coroutine on the player\+Status Mono\+Behaviour. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & Information about this modifier.\\
+\hline
+{\em pl\+Status} & The player\+Status the modifier is applied to.\\
+\hline
+{\em mod\+Id} & Unique identifier for this modifier instance.\\
+\hline
+{\em ab\+Id} & The Id of the ability that applied the modifier if any, -\/1 otherwise.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_modifier_instance_server_ab5c89db441a05d7fd43b627696ac1a65}{}\label{class_modifier_instance_server_ab5c89db441a05d7fd43b627696ac1a65} 
+\index{Modifier\+Instance\+Server@{Modifier\+Instance\+Server}!Duration\+Loop@{Duration\+Loop}}
+\index{Duration\+Loop@{Duration\+Loop}!Modifier\+Instance\+Server@{Modifier\+Instance\+Server}}
+\subsubsection{\texorpdfstring{Duration\+Loop()}{DurationLoop()}}
+{\footnotesize\ttfamily I\+Enumerator Modifier\+Instance\+Server.\+Duration\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update loop when the duration is used. 
+
+\hypertarget{class_modifier_instance_server_a7ee38df01e1b762680b7e07379cfe14f}{}\label{class_modifier_instance_server_a7ee38df01e1b762680b7e07379cfe14f} 
+\index{Modifier\+Instance\+Server@{Modifier\+Instance\+Server}!Get\+Ability\+Id@{Get\+Ability\+Id}}
+\index{Get\+Ability\+Id@{Get\+Ability\+Id}!Modifier\+Instance\+Server@{Modifier\+Instance\+Server}}
+\subsubsection{\texorpdfstring{Get\+Ability\+Id()}{GetAbilityId()}}
+{\footnotesize\ttfamily int Modifier\+Instance\+Server.\+Get\+Ability\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the ability ID in this instance, equal to or above 0 means this modifier was applied by an ability, -\/1 otherwise. 
+
+\begin{DoxyReturn}{Returns}
+The ability ID.
+\end{DoxyReturn}
+\hypertarget{class_modifier_instance_server_a60d143f26963aec0a777ec248de46d99}{}\label{class_modifier_instance_server_a60d143f26963aec0a777ec248de46d99} 
+\index{Modifier\+Instance\+Server@{Modifier\+Instance\+Server}!Get\+Modifier@{Get\+Modifier}}
+\index{Get\+Modifier@{Get\+Modifier}!Modifier\+Instance\+Server@{Modifier\+Instance\+Server}}
+\subsubsection{\texorpdfstring{Get\+Modifier()}{GetModifier()}}
+{\footnotesize\ttfamily \hyperlink{class_modifier}{Modifier} Modifier\+Instance\+Server.\+Get\+Modifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the modifier used by this instance. 
+
+\begin{DoxyReturn}{Returns}
+The active modifier.
+\end{DoxyReturn}
+\hypertarget{class_modifier_instance_server_aac2b7d540a4a053d8b76f85b4e626a7e}{}\label{class_modifier_instance_server_aac2b7d540a4a053d8b76f85b4e626a7e} 
+\index{Modifier\+Instance\+Server@{Modifier\+Instance\+Server}!Get\+Modifier\+Id@{Get\+Modifier\+Id}}
+\index{Get\+Modifier\+Id@{Get\+Modifier\+Id}!Modifier\+Instance\+Server@{Modifier\+Instance\+Server}}
+\subsubsection{\texorpdfstring{Get\+Modifier\+Id()}{GetModifierId()}}
+{\footnotesize\ttfamily int Modifier\+Instance\+Server.\+Get\+Modifier\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the unique modifier ID for this instance. 
+
+\begin{DoxyReturn}{Returns}
+The modifier ID.
+\end{DoxyReturn}
+\hypertarget{class_modifier_instance_server_abfb9cfedabb0659f8fb9c47a23fba19c}{}\label{class_modifier_instance_server_abfb9cfedabb0659f8fb9c47a23fba19c} 
+\index{Modifier\+Instance\+Server@{Modifier\+Instance\+Server}!Max\+Duration@{Max\+Duration}}
+\index{Max\+Duration@{Max\+Duration}!Modifier\+Instance\+Server@{Modifier\+Instance\+Server}}
+\subsubsection{\texorpdfstring{Max\+Duration()}{MaxDuration()}}
+{\footnotesize\ttfamily void Modifier\+Instance\+Server.\+Max\+Duration (\begin{DoxyParamCaption}\item[{float}]{new\+Duration }\end{DoxyParamCaption})}
+
+
+
+Used for unique modifiers that doesn\textquotesingle{}t stack. Uses the largest of the given durations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Duration} & The duration to compare the current duration with.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_modifier_instance_server_a2057c55beeaae1d267f1a331ba89a093}{}\label{class_modifier_instance_server_a2057c55beeaae1d267f1a331ba89a093} 
+\index{Modifier\+Instance\+Server@{Modifier\+Instance\+Server}!On\+Cancel@{On\+Cancel}}
+\index{On\+Cancel@{On\+Cancel}!Modifier\+Instance\+Server@{Modifier\+Instance\+Server}}
+\subsubsection{\texorpdfstring{On\+Cancel()}{OnCancel()}}
+{\footnotesize\ttfamily void Modifier\+Instance\+Server.\+On\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when the ability modifier effect is cancelled (e.\+g. undocking). 
+
+\hypertarget{class_modifier_instance_server_ae96d1f30204b227178e4da20d8b17f84}{}\label{class_modifier_instance_server_ae96d1f30204b227178e4da20d8b17f84} 
+\index{Modifier\+Instance\+Server@{Modifier\+Instance\+Server}!On\+End@{On\+End}}
+\index{On\+End@{On\+End}!Modifier\+Instance\+Server@{Modifier\+Instance\+Server}}
+\subsubsection{\texorpdfstring{On\+End()}{OnEnd()}}
+{\footnotesize\ttfamily void Modifier\+Instance\+Server.\+On\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when the modifier effect has ended. 
+
+\hypertarget{class_modifier_instance_server_ab912c1a035383dc7d396701309ea6e6c}{}\label{class_modifier_instance_server_ab912c1a035383dc7d396701309ea6e6c} 
+\index{Modifier\+Instance\+Server@{Modifier\+Instance\+Server}!Tick\+Loop@{Tick\+Loop}}
+\index{Tick\+Loop@{Tick\+Loop}!Modifier\+Instance\+Server@{Modifier\+Instance\+Server}}
+\subsubsection{\texorpdfstring{Tick\+Loop()}{TickLoop()}}
+{\footnotesize\ttfamily I\+Enumerator Modifier\+Instance\+Server.\+Tick\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update loop when the ticks are used. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Modifiers/Modifier\+Instance\+Server.\+cs\end{DoxyCompactItemize}

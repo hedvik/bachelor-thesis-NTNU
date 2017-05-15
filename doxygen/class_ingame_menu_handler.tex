@@ -1,0 +1,144 @@
+\hypertarget{class_ingame_menu_handler}{}\section{Ingame\+Menu\+Handler Class Reference}
+\label{class_ingame_menu_handler}\index{Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}}
+
+
+Handles ingame menus like the Shop and \char`\"{}\+Pause\char`\"{} menu  
+
+
+Inheritance diagram for Ingame\+Menu\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_ingame_menu_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_ingame_menu_handler_ab5a914a3577e1864e87a51015dcdf8c0}{On\+Shop\+Display} ()
+\begin{DoxyCompactList}\small\item\em Gets called whenever the player activates the Shop UI. Caches references to the local player if not already cached. \end{DoxyCompactList}\item 
+void \hyperlink{class_ingame_menu_handler_a2581d0e185a8fe9ca54d7add14b9db93}{On\+Shop\+Selection\+Change} ()
+\begin{DoxyCompactList}\small\item\em Handles the updating of the shop UI as different docking kits are selected \end{DoxyCompactList}\item 
+void \hyperlink{class_ingame_menu_handler_ae7468318a2c601be76aed42256465706}{Display\+Verification\+Prompt} ()
+\begin{DoxyCompactList}\small\item\em Displays the verification prompt for shop purchases \end{DoxyCompactList}\item 
+void \hyperlink{class_ingame_menu_handler_a421bf1a3b39bb441f2ab41d8262bda75}{Complete\+Shop\+Purchase} ()
+\begin{DoxyCompactList}\small\item\em Completes a shop purchase and tells docking to switch kit \end{DoxyCompactList}\item 
+void \hyperlink{class_ingame_menu_handler_af52e74182c996325dea46ef3ff1ae411}{Set\+First\+Selected\+Shop\+Object} ()
+\begin{DoxyCompactList}\small\item\em Makes sure to set the selection of the first element in the shop as the menu is opened \end{DoxyCompactList}\item 
+void \hyperlink{class_ingame_menu_handler_a3568838c7f2c58aaf31e1522e81f2019}{Set\+Last\+Selected\+Shop\+Object} ()
+\begin{DoxyCompactList}\small\item\em Can be used when going back from menus like the verification prompt to set the last highlighted shop item as selected again \end{DoxyCompactList}\item 
+void \hyperlink{class_ingame_menu_handler_a887353360c22365c0114e93963cc5062}{Stop\+Host} ()
+\begin{DoxyCompactList}\small\item\em Simple function that calls the Network\+Manager to disconnect from the game. Can be called from UI buttons using their On\+Click interface in the editor \end{DoxyCompactList}\item 
+void \hyperlink{class_ingame_menu_handler_adc655857f2b8a36bd4271a0a7dc3f0d2}{Check\+Price\+And\+Equip\+Availability} ()
+\begin{DoxyCompactList}\small\item\em Checks all shop item prices and adds a dark overlay to items that the player is unable to purchase. Also displays a \char`\"{}e\char`\"{} on the currently equipped docking kit \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ingame_menu_handler_a248674f4cb5c5affe7c402ac7e7145bd}{}\label{class_ingame_menu_handler_a248674f4cb5c5affe7c402ac7e7145bd} 
+Game\+Object {\bfseries pause\+Menu}
+\item 
+\hypertarget{class_ingame_menu_handler_a91980b94dd97d3ba3e19e9c39073ba9c}{}\label{class_ingame_menu_handler_a91980b94dd97d3ba3e19e9c39073ba9c} 
+Game\+Object {\bfseries shop\+Menu}
+\item 
+\hypertarget{class_ingame_menu_handler_abc6c180e09310fe5498015ca34bf2dae}{}\label{class_ingame_menu_handler_abc6c180e09310fe5498015ca34bf2dae} 
+Game\+Object {\bfseries shop\+Descriptions\+Container}
+\item 
+\hypertarget{class_ingame_menu_handler_ab3615505ae544b1a71b4e25e4c0fb122}{}\label{class_ingame_menu_handler_ab3615505ae544b1a71b4e25e4c0fb122} 
+Game\+Object {\bfseries shop\+Item\+Prefab}
+\item 
+\hypertarget{class_ingame_menu_handler_a67e85300e5dd73bcaede3c6bea58cf21}{}\label{class_ingame_menu_handler_a67e85300e5dd73bcaede3c6bea58cf21} 
+Game\+Object {\bfseries purchase\+Verification\+Prompt}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Handles ingame menus like the Shop and \char`\"{}\+Pause\char`\"{} menu 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_ingame_menu_handler_adc655857f2b8a36bd4271a0a7dc3f0d2}{}\label{class_ingame_menu_handler_adc655857f2b8a36bd4271a0a7dc3f0d2} 
+\index{Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}!Check\+Price\+And\+Equip\+Availability@{Check\+Price\+And\+Equip\+Availability}}
+\index{Check\+Price\+And\+Equip\+Availability@{Check\+Price\+And\+Equip\+Availability}!Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}}
+\subsubsection{\texorpdfstring{Check\+Price\+And\+Equip\+Availability()}{CheckPriceAndEquipAvailability()}}
+{\footnotesize\ttfamily void Ingame\+Menu\+Handler.\+Check\+Price\+And\+Equip\+Availability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks all shop item prices and adds a dark overlay to items that the player is unable to purchase. Also displays a \char`\"{}e\char`\"{} on the currently equipped docking kit 
+
+\hypertarget{class_ingame_menu_handler_a421bf1a3b39bb441f2ab41d8262bda75}{}\label{class_ingame_menu_handler_a421bf1a3b39bb441f2ab41d8262bda75} 
+\index{Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}!Complete\+Shop\+Purchase@{Complete\+Shop\+Purchase}}
+\index{Complete\+Shop\+Purchase@{Complete\+Shop\+Purchase}!Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}}
+\subsubsection{\texorpdfstring{Complete\+Shop\+Purchase()}{CompleteShopPurchase()}}
+{\footnotesize\ttfamily void Ingame\+Menu\+Handler.\+Complete\+Shop\+Purchase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Completes a shop purchase and tells docking to switch kit 
+
+\hypertarget{class_ingame_menu_handler_ae7468318a2c601be76aed42256465706}{}\label{class_ingame_menu_handler_ae7468318a2c601be76aed42256465706} 
+\index{Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}!Display\+Verification\+Prompt@{Display\+Verification\+Prompt}}
+\index{Display\+Verification\+Prompt@{Display\+Verification\+Prompt}!Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}}
+\subsubsection{\texorpdfstring{Display\+Verification\+Prompt()}{DisplayVerificationPrompt()}}
+{\footnotesize\ttfamily void Ingame\+Menu\+Handler.\+Display\+Verification\+Prompt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the verification prompt for shop purchases 
+
+\hypertarget{class_ingame_menu_handler_ab5a914a3577e1864e87a51015dcdf8c0}{}\label{class_ingame_menu_handler_ab5a914a3577e1864e87a51015dcdf8c0} 
+\index{Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}!On\+Shop\+Display@{On\+Shop\+Display}}
+\index{On\+Shop\+Display@{On\+Shop\+Display}!Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}}
+\subsubsection{\texorpdfstring{On\+Shop\+Display()}{OnShopDisplay()}}
+{\footnotesize\ttfamily void Ingame\+Menu\+Handler.\+On\+Shop\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets called whenever the player activates the Shop UI. Caches references to the local player if not already cached. 
+
+\hypertarget{class_ingame_menu_handler_a2581d0e185a8fe9ca54d7add14b9db93}{}\label{class_ingame_menu_handler_a2581d0e185a8fe9ca54d7add14b9db93} 
+\index{Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}!On\+Shop\+Selection\+Change@{On\+Shop\+Selection\+Change}}
+\index{On\+Shop\+Selection\+Change@{On\+Shop\+Selection\+Change}!Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}}
+\subsubsection{\texorpdfstring{On\+Shop\+Selection\+Change()}{OnShopSelectionChange()}}
+{\footnotesize\ttfamily void Ingame\+Menu\+Handler.\+On\+Shop\+Selection\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the updating of the shop UI as different docking kits are selected 
+
+\hypertarget{class_ingame_menu_handler_af52e74182c996325dea46ef3ff1ae411}{}\label{class_ingame_menu_handler_af52e74182c996325dea46ef3ff1ae411} 
+\index{Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}!Set\+First\+Selected\+Shop\+Object@{Set\+First\+Selected\+Shop\+Object}}
+\index{Set\+First\+Selected\+Shop\+Object@{Set\+First\+Selected\+Shop\+Object}!Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}}
+\subsubsection{\texorpdfstring{Set\+First\+Selected\+Shop\+Object()}{SetFirstSelectedShopObject()}}
+{\footnotesize\ttfamily void Ingame\+Menu\+Handler.\+Set\+First\+Selected\+Shop\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Makes sure to set the selection of the first element in the shop as the menu is opened 
+
+\hypertarget{class_ingame_menu_handler_a3568838c7f2c58aaf31e1522e81f2019}{}\label{class_ingame_menu_handler_a3568838c7f2c58aaf31e1522e81f2019} 
+\index{Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}!Set\+Last\+Selected\+Shop\+Object@{Set\+Last\+Selected\+Shop\+Object}}
+\index{Set\+Last\+Selected\+Shop\+Object@{Set\+Last\+Selected\+Shop\+Object}!Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}}
+\subsubsection{\texorpdfstring{Set\+Last\+Selected\+Shop\+Object()}{SetLastSelectedShopObject()}}
+{\footnotesize\ttfamily void Ingame\+Menu\+Handler.\+Set\+Last\+Selected\+Shop\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Can be used when going back from menus like the verification prompt to set the last highlighted shop item as selected again 
+
+\hypertarget{class_ingame_menu_handler_a887353360c22365c0114e93963cc5062}{}\label{class_ingame_menu_handler_a887353360c22365c0114e93963cc5062} 
+\index{Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}!Stop\+Host@{Stop\+Host}}
+\index{Stop\+Host@{Stop\+Host}!Ingame\+Menu\+Handler@{Ingame\+Menu\+Handler}}
+\subsubsection{\texorpdfstring{Stop\+Host()}{StopHost()}}
+{\footnotesize\ttfamily void Ingame\+Menu\+Handler.\+Stop\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Simple function that calls the Network\+Manager to disconnect from the game. Can be called from UI buttons using their On\+Click interface in the editor 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+U\+I/Ingame\+Menu\+Handler.\+cs\end{DoxyCompactItemize}

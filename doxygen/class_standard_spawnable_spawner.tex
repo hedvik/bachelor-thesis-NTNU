@@ -1,0 +1,93 @@
+\hypertarget{class_standard_spawnable_spawner}{}\section{Standard\+Spawnable\+Spawner Class Reference}
+\label{class_standard_spawnable_spawner}\index{Standard\+Spawnable\+Spawner@{Standard\+Spawnable\+Spawner}}
+Inheritance diagram for Standard\+Spawnable\+Spawner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_standard_spawnable_spawner}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_standard_spawnable_spawner_a1762d2f6a8bf3264b7316462648729a1}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Callback for what this ability should do once its associated button has been pressed \end{DoxyCompactList}\item 
+override void \hyperlink{class_standard_spawnable_spawner_a1c26d78c619871c3edb8d3febeb16e5f}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\item 
+Game\+Object \hyperlink{class_standard_spawnable_spawner_afaadd0fd0cb2d16b40f979249747e9b1}{Get\+Spawnable\+Prefab} (int spawnable\+Id)
+\begin{DoxyCompactList}\small\item\em Used by the \hyperlink{class_docking}{Docking} to get the correct prefab to spawn from the abilities. Parameter only used if the ability has a list of prefabs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_standard_spawnable_spawner_a6962859e16681ee6db6050c507e42e3a}{}\label{class_standard_spawnable_spawner_a6962859e16681ee6db6050c507e42e3a} 
+string {\bfseries animator\+Trigger}
+\item 
+\hypertarget{class_standard_spawnable_spawner_a1199a034e39d1048e483df2ee1092468}{}\label{class_standard_spawnable_spawner_a1199a034e39d1048e483df2ee1092468} 
+Game\+Object {\bfseries spawnable\+Prefab}
+\item 
+\hypertarget{class_standard_spawnable_spawner_a2ba38ff764b01f11808307a38c134a6d}{}\label{class_standard_spawnable_spawner_a2ba38ff764b01f11808307a38c134a6d} 
+Transform {\bfseries spawn\+Point}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_standard_spawnable_spawner_a1762d2f6a8bf3264b7316462648729a1}{}\label{class_standard_spawnable_spawner_a1762d2f6a8bf3264b7316462648729a1} 
+\index{Standard\+Spawnable\+Spawner@{Standard\+Spawnable\+Spawner}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Standard\+Spawnable\+Spawner@{Standard\+Spawnable\+Spawner}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Standard\+Spawnable\+Spawner.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability should do once its associated button has been pressed 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_standard_spawnable_spawner_afaadd0fd0cb2d16b40f979249747e9b1}{}\label{class_standard_spawnable_spawner_afaadd0fd0cb2d16b40f979249747e9b1} 
+\index{Standard\+Spawnable\+Spawner@{Standard\+Spawnable\+Spawner}!Get\+Spawnable\+Prefab@{Get\+Spawnable\+Prefab}}
+\index{Get\+Spawnable\+Prefab@{Get\+Spawnable\+Prefab}!Standard\+Spawnable\+Spawner@{Standard\+Spawnable\+Spawner}}
+\subsubsection{\texorpdfstring{Get\+Spawnable\+Prefab()}{GetSpawnablePrefab()}}
+{\footnotesize\ttfamily Game\+Object Standard\+Spawnable\+Spawner.\+Get\+Spawnable\+Prefab (\begin{DoxyParamCaption}\item[{int}]{spawnable\+Id }\end{DoxyParamCaption})}
+
+
+
+Used by the \hyperlink{class_docking}{Docking} to get the correct prefab to spawn from the abilities. Parameter only used if the ability has a list of prefabs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spawnable\+Id} & The Id of the spawnable object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the prefab Game\+Object.
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_i_spawnable_provider_a42e8d986066b6c2e736e1f909f422dc9}{I\+Spawnable\+Provider}.
+
+\hypertarget{class_standard_spawnable_spawner_a1c26d78c619871c3edb8d3febeb16e5f}{}\label{class_standard_spawnable_spawner_a1c26d78c619871c3edb8d3febeb16e5f} 
+\index{Standard\+Spawnable\+Spawner@{Standard\+Spawnable\+Spawner}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Standard\+Spawnable\+Spawner@{Standard\+Spawnable\+Spawner}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Standard\+Spawnable\+Spawner.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/Standard\+Spawnable\+Spawner.\+cs\end{DoxyCompactItemize}

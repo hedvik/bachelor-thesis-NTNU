@@ -1,0 +1,101 @@
+\hypertarget{class_player_input_test_ability}{}\section{Player\+Input\+Test\+Ability Class Reference}
+\label{class_player_input_test_ability}\index{Player\+Input\+Test\+Ability@{Player\+Input\+Test\+Ability}}
+Inheritance diagram for Player\+Input\+Test\+Ability\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_player_input_test_ability}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_player_input_test_ability_a8ac71832a1fd267f30881d969767ca16}{Initialize\+Local\+Player} (\hyperlink{class_ability_u_i}{Ability\+UI} ability\+UI)
+\begin{DoxyCompactList}\small\item\em Initialization that only happens for the local player (\hyperlink{class_player}{Player} controlling this ability). Called after Initialize, so the references are already set up. \end{DoxyCompactList}\item 
+override void \hyperlink{class_player_input_test_ability_a061fe838c77962560b24ff59f2a3dab8}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_player_input_test_ability_adc59dfeabbb2e1cdff7b81797c9f3946}{Cancel\+Ability} ()
+\begin{DoxyCompactList}\small\item\em Call for cancelling abilities. Override in abilities that may be interrupted. \end{DoxyCompactList}\item 
+override void \hyperlink{class_player_input_test_ability_a41b2128e36247c96b00df0c1052873f3}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_player_input_test_ability_a1b2293256407643db311faf5d5940dd9}{}\label{class_player_input_test_ability_a1b2293256407643db311faf5d5940dd9} 
+Transform {\bfseries target}
+\item 
+\hypertarget{class_player_input_test_ability_a959dc56e547abb97c402021861bc228d}{}\label{class_player_input_test_ability_a959dc56e547abb97c402021861bc228d} 
+float {\bfseries move\+Speed} = 4f
+\item 
+\hypertarget{class_player_input_test_ability_ae5db00fdcb49bc09fa10b07a3ee09ee9}{}\label{class_player_input_test_ability_ae5db00fdcb49bc09fa10b07a3ee09ee9} 
+float {\bfseries max\+Distance} = 10f
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_player_input_test_ability_a061fe838c77962560b24ff59f2a3dab8}{}\label{class_player_input_test_ability_a061fe838c77962560b24ff59f2a3dab8} 
+\index{Player\+Input\+Test\+Ability@{Player\+Input\+Test\+Ability}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Player\+Input\+Test\+Ability@{Player\+Input\+Test\+Ability}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Player\+Input\+Test\+Ability.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_player_input_test_ability_adc59dfeabbb2e1cdff7b81797c9f3946}{}\label{class_player_input_test_ability_adc59dfeabbb2e1cdff7b81797c9f3946} 
+\index{Player\+Input\+Test\+Ability@{Player\+Input\+Test\+Ability}!Cancel\+Ability@{Cancel\+Ability}}
+\index{Cancel\+Ability@{Cancel\+Ability}!Player\+Input\+Test\+Ability@{Player\+Input\+Test\+Ability}}
+\subsubsection{\texorpdfstring{Cancel\+Ability()}{CancelAbility()}}
+{\footnotesize\ttfamily override void Player\+Input\+Test\+Ability.\+Cancel\+Ability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Call for cancelling abilities. Override in abilities that may be interrupted. 
+
+
+
+Reimplemented from \hyperlink{class_ability_ab0eaf1ad670e0624a5534c50b10c002f}{Ability}.
+
+\hypertarget{class_player_input_test_ability_a8ac71832a1fd267f30881d969767ca16}{}\label{class_player_input_test_ability_a8ac71832a1fd267f30881d969767ca16} 
+\index{Player\+Input\+Test\+Ability@{Player\+Input\+Test\+Ability}!Initialize\+Local\+Player@{Initialize\+Local\+Player}}
+\index{Initialize\+Local\+Player@{Initialize\+Local\+Player}!Player\+Input\+Test\+Ability@{Player\+Input\+Test\+Ability}}
+\subsubsection{\texorpdfstring{Initialize\+Local\+Player()}{InitializeLocalPlayer()}}
+{\footnotesize\ttfamily override void Player\+Input\+Test\+Ability.\+Initialize\+Local\+Player (\begin{DoxyParamCaption}\item[{\hyperlink{class_ability_u_i}{Ability\+UI}}]{ability\+UI }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that only happens for the local player (\hyperlink{class_player}{Player} controlling this ability). Called after Initialize, so the references are already set up. 
+
+
+
+Reimplemented from \hyperlink{class_ability_ae8217a23a940c9ce450e827856d7020b}{Ability}.
+
+\hypertarget{class_player_input_test_ability_a41b2128e36247c96b00df0c1052873f3}{}\label{class_player_input_test_ability_a41b2128e36247c96b00df0c1052873f3} 
+\index{Player\+Input\+Test\+Ability@{Player\+Input\+Test\+Ability}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Player\+Input\+Test\+Ability@{Player\+Input\+Test\+Ability}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Player\+Input\+Test\+Ability.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Test\+Abilities/Player\+Input\+Test\+Ability.\+cs\end{DoxyCompactItemize}

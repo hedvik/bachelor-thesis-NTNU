@@ -1,0 +1,220 @@
+\hypertarget{class_modifier}{}\section{Modifier Class Reference}
+\label{class_modifier}\index{Modifier@{Modifier}}
+
+
+Base class for every modifier.  
+
+
+Inheritance diagram for Modifier\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.000000cm]{class_modifier}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_modifier_ae54219588440fc4e2edfdb59c283c9b2}{On\+Server\+Start} (\hyperlink{class_player_status}{Player\+Status} player\+Status, int ability\+Id)
+\begin{DoxyCompactList}\small\item\em Called on the server when the modifiers starts. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_modifier_a90f173bd4674843a683769f46520273b}{On\+Client\+Start} (\hyperlink{class_player_status}{Player\+Status} player\+Status, int ability\+Id)
+\begin{DoxyCompactList}\small\item\em Called on every client when the modifiers starts. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_modifier_a5cce7ec6a5a595265a6bf5a6f7e40eb9}{On\+Local\+Client\+Start} (\hyperlink{class_player_status}{Player\+Status} player\+Status)
+\begin{DoxyCompactList}\small\item\em Called on the local client (the client the modifier is applied to) when the modifiers starts. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_modifier_ac14e32bd10e59e29c63c01cc52db7ace}{On\+Server\+End} (\hyperlink{class_player_status}{Player\+Status} player\+Status, int ability\+Id)
+\begin{DoxyCompactList}\small\item\em Called on the server when the modifiers ends. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_modifier_af9a32f8313b83253dac318eed1ebd7ac}{On\+Client\+End} (\hyperlink{class_player_status}{Player\+Status} player\+Status, int ability\+Id)
+\begin{DoxyCompactList}\small\item\em Called on every client when the modifiers ends. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_modifier_a1ea2aa04b05628c1965570396e390281}{On\+Local\+Client\+End} (\hyperlink{class_player_status}{Player\+Status} player\+Status)
+\begin{DoxyCompactList}\small\item\em Called on the local client (the client the modifier is applied to) when the modifiers ends. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_modifier_ac084768937c10fbcc456c37ec9f634fb}{On\+Server\+Tick} (\hyperlink{class_player_status}{Player\+Status} player\+Status)
+\begin{DoxyCompactList}\small\item\em Called on the server whenever the modifier applies a tick. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_modifier}{Modifier} \hyperlink{class_modifier_a3112ab2082670bba7c86d2c77a3344fb}{Get\+Modifier\+Asset} (string modifier\+Name)
+\begin{DoxyCompactList}\small\item\em Looks up the \hyperlink{class_modifier}{Modifier} with modifier\+Name from the Resource/\+Player\+Modifiers folder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_modifier_a6e8161ccb82c398759fbe8d1e9b5d587}{}\label{class_modifier_a6e8161ccb82c398759fbe8d1e9b5d587} 
+string {\bfseries modifier\+Name}
+\item 
+\hypertarget{class_modifier_a3edfd9ee4688a25351033f0d659f27a4}{}\label{class_modifier_a3edfd9ee4688a25351033f0d659f27a4} 
+Sprite {\bfseries icon}
+\item 
+\hypertarget{class_modifier_af690cc49a109ea255a3172d8e6e20988}{}\label{class_modifier_af690cc49a109ea255a3172d8e6e20988} 
+Game\+Object {\bfseries player\+Effect\+Object}
+\item 
+\hypertarget{class_modifier_af8920e799640ce9e8280a6068497b873}{}\label{class_modifier_af8920e799640ce9e8280a6068497b873} 
+Game\+Object {\bfseries local\+Player\+Effect\+Object}
+\item 
+\hypertarget{class_modifier_aba371857276313505c3c364d28baf26f}{}\label{class_modifier_aba371857276313505c3c364d28baf26f} 
+bool {\bfseries unique}
+\item 
+\hypertarget{class_modifier_ae775f9604c1f0e7f46573a8b5eb35e78}{}\label{class_modifier_ae775f9604c1f0e7f46573a8b5eb35e78} 
+Status\+Type {\bfseries status\+Type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for every modifier. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_modifier_a3112ab2082670bba7c86d2c77a3344fb}{}\label{class_modifier_a3112ab2082670bba7c86d2c77a3344fb} 
+\index{Modifier@{Modifier}!Get\+Modifier\+Asset@{Get\+Modifier\+Asset}}
+\index{Get\+Modifier\+Asset@{Get\+Modifier\+Asset}!Modifier@{Modifier}}
+\subsubsection{\texorpdfstring{Get\+Modifier\+Asset()}{GetModifierAsset()}}
+{\footnotesize\ttfamily static \hyperlink{class_modifier}{Modifier} Modifier.\+Get\+Modifier\+Asset (\begin{DoxyParamCaption}\item[{string}]{modifier\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Looks up the \hyperlink{class_modifier}{Modifier} with modifier\+Name from the Resource/\+Player\+Modifiers folder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modifier\+Name} & The modifier file name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modifier at path if found, otherwise null.
+\end{DoxyReturn}
+\hypertarget{class_modifier_af9a32f8313b83253dac318eed1ebd7ac}{}\label{class_modifier_af9a32f8313b83253dac318eed1ebd7ac} 
+\index{Modifier@{Modifier}!On\+Client\+End@{On\+Client\+End}}
+\index{On\+Client\+End@{On\+Client\+End}!Modifier@{Modifier}}
+\subsubsection{\texorpdfstring{On\+Client\+End()}{OnClientEnd()}}
+{\footnotesize\ttfamily virtual void Modifier.\+On\+Client\+End (\begin{DoxyParamCaption}\item[{\hyperlink{class_player_status}{Player\+Status}}]{player\+Status,  }\item[{int}]{ability\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called on every client when the modifiers ends. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Status} & Reference to the associated \hyperlink{class_player_status}{Player\+Status}.\\
+\hline
+{\em ability\+Id} & The Id of the ability that applied the modifier if any, -\/1 otherwise.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_modifier_blind_a4423072654e3eeafc3f12475e3d6c56d}{Modifier\+Blind}, and \hyperlink{class_modifier_standard_ability_a46000f6d2262a1436d1826774d7a0f59}{Modifier\+Standard\+Ability}.
+
+\hypertarget{class_modifier_a90f173bd4674843a683769f46520273b}{}\label{class_modifier_a90f173bd4674843a683769f46520273b} 
+\index{Modifier@{Modifier}!On\+Client\+Start@{On\+Client\+Start}}
+\index{On\+Client\+Start@{On\+Client\+Start}!Modifier@{Modifier}}
+\subsubsection{\texorpdfstring{On\+Client\+Start()}{OnClientStart()}}
+{\footnotesize\ttfamily virtual void Modifier.\+On\+Client\+Start (\begin{DoxyParamCaption}\item[{\hyperlink{class_player_status}{Player\+Status}}]{player\+Status,  }\item[{int}]{ability\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called on every client when the modifiers starts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Status} & Reference to the associated \hyperlink{class_player_status}{Player\+Status}.\\
+\hline
+{\em ability\+Id} & The Id of the ability that applied the modifier if any, -\/1 otherwise.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_modifier_blind_a8cfcbe75907fe9a029b76fedb581ddae}{Modifier\+Blind}, and \hyperlink{class_modifier_standard_ability_a92fa22504144748d8f3fc6df932da9c1}{Modifier\+Standard\+Ability}.
+
+\hypertarget{class_modifier_a1ea2aa04b05628c1965570396e390281}{}\label{class_modifier_a1ea2aa04b05628c1965570396e390281} 
+\index{Modifier@{Modifier}!On\+Local\+Client\+End@{On\+Local\+Client\+End}}
+\index{On\+Local\+Client\+End@{On\+Local\+Client\+End}!Modifier@{Modifier}}
+\subsubsection{\texorpdfstring{On\+Local\+Client\+End()}{OnLocalClientEnd()}}
+{\footnotesize\ttfamily virtual void Modifier.\+On\+Local\+Client\+End (\begin{DoxyParamCaption}\item[{\hyperlink{class_player_status}{Player\+Status}}]{player\+Status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called on the local client (the client the modifier is applied to) when the modifiers ends. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Status} & Reference to the associated \hyperlink{class_player_status}{Player\+Status}.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_modifier_slow_a0682d3da4434ef281fbffccf34501eb3}{Modifier\+Slow}, \hyperlink{class_modifier_track_a3a5af2acdd67953efd467e10591a21d4}{Modifier\+Track}, \hyperlink{class_modifier_silence_a51051e6002b6eb984df8aa9c9c22ee7b}{Modifier\+Silence}, \hyperlink{class_modifier_stun_acb8d45decc6446515b0492ae57684092}{Modifier\+Stun}, and \hyperlink{class_modifier_root_a2310d2c479ff8a6a8d371b931c7a03ce}{Modifier\+Root}.
+
+\hypertarget{class_modifier_a5cce7ec6a5a595265a6bf5a6f7e40eb9}{}\label{class_modifier_a5cce7ec6a5a595265a6bf5a6f7e40eb9} 
+\index{Modifier@{Modifier}!On\+Local\+Client\+Start@{On\+Local\+Client\+Start}}
+\index{On\+Local\+Client\+Start@{On\+Local\+Client\+Start}!Modifier@{Modifier}}
+\subsubsection{\texorpdfstring{On\+Local\+Client\+Start()}{OnLocalClientStart()}}
+{\footnotesize\ttfamily virtual void Modifier.\+On\+Local\+Client\+Start (\begin{DoxyParamCaption}\item[{\hyperlink{class_player_status}{Player\+Status}}]{player\+Status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called on the local client (the client the modifier is applied to) when the modifiers starts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Status} & Reference to the associated \hyperlink{class_player_status}{Player\+Status}.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_modifier_flash_stun_a27c1f1560db77c6ea9f32655113392b7}{Modifier\+Flash\+Stun}, \hyperlink{class_modifier_slow_a1eef9ea247bc45bf06b4c56c1a4803d0}{Modifier\+Slow}, \hyperlink{class_modifier_track_ab3fb34a4d5f468634ab90837fd4cc3ad}{Modifier\+Track}, \hyperlink{class_modifier_root_a4905c6533e50d82cb9ffad1eda6c076e}{Modifier\+Root}, \hyperlink{class_modifier_silence_a46d7fc89d95ab9e45013d79949254288}{Modifier\+Silence}, and \hyperlink{class_modifier_stun_a2798f3de724e40e72bbc203b6aece7e5}{Modifier\+Stun}.
+
+\hypertarget{class_modifier_ac14e32bd10e59e29c63c01cc52db7ace}{}\label{class_modifier_ac14e32bd10e59e29c63c01cc52db7ace} 
+\index{Modifier@{Modifier}!On\+Server\+End@{On\+Server\+End}}
+\index{On\+Server\+End@{On\+Server\+End}!Modifier@{Modifier}}
+\subsubsection{\texorpdfstring{On\+Server\+End()}{OnServerEnd()}}
+{\footnotesize\ttfamily virtual void Modifier.\+On\+Server\+End (\begin{DoxyParamCaption}\item[{\hyperlink{class_player_status}{Player\+Status}}]{player\+Status,  }\item[{int}]{ability\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called on the server when the modifiers ends. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Status} & Reference to the associated \hyperlink{class_player_status}{Player\+Status}.\\
+\hline
+{\em ability\+Id} & The Id of the ability that applied the modifier if any, -\/1 otherwise.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_modifier_ae54219588440fc4e2edfdb59c283c9b2}{}\label{class_modifier_ae54219588440fc4e2edfdb59c283c9b2} 
+\index{Modifier@{Modifier}!On\+Server\+Start@{On\+Server\+Start}}
+\index{On\+Server\+Start@{On\+Server\+Start}!Modifier@{Modifier}}
+\subsubsection{\texorpdfstring{On\+Server\+Start()}{OnServerStart()}}
+{\footnotesize\ttfamily virtual void Modifier.\+On\+Server\+Start (\begin{DoxyParamCaption}\item[{\hyperlink{class_player_status}{Player\+Status}}]{player\+Status,  }\item[{int}]{ability\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called on the server when the modifiers starts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Status} & Reference to the associated \hyperlink{class_player_status}{Player\+Status}.\\
+\hline
+{\em ability\+Id} & The Id of the ability that applied the modifier if any, -\/1 otherwise.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_modifier_ac084768937c10fbcc456c37ec9f634fb}{}\label{class_modifier_ac084768937c10fbcc456c37ec9f634fb} 
+\index{Modifier@{Modifier}!On\+Server\+Tick@{On\+Server\+Tick}}
+\index{On\+Server\+Tick@{On\+Server\+Tick}!Modifier@{Modifier}}
+\subsubsection{\texorpdfstring{On\+Server\+Tick()}{OnServerTick()}}
+{\footnotesize\ttfamily virtual void Modifier.\+On\+Server\+Tick (\begin{DoxyParamCaption}\item[{\hyperlink{class_player_status}{Player\+Status}}]{player\+Status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called on the server whenever the modifier applies a tick. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Status} & Reference to the associated \hyperlink{class_player_status}{Player\+Status}.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_modifier_do_t_ae743a2ff9e1a200e2b1308e38386adcf}{Modifier\+DoT}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Modifiers/Modifier.\+cs\end{DoxyCompactItemize}

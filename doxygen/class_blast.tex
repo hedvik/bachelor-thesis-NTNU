@@ -1,0 +1,94 @@
+\hypertarget{class_blast}{}\section{Blast Class Reference}
+\label{class_blast}\index{Blast@{Blast}}
+Inheritance diagram for Blast\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_blast}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_blast_a1c0b1bd2d101c05fdbe09d32a5c5c44a}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+override void \hyperlink{class_blast_ab6e8d7899a858bc2da1978d40d266a63}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_blast_a65e2759005f4f28df38ab5a5287ff548}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\item 
+\hypertarget{class_blast_a2c1f5c534fe75d73a8a33c4338fb1062}{}\label{class_blast_a2c1f5c534fe75d73a8a33c4338fb1062} 
+void {\bfseries On\+Trigger\+Enter} (Collider other)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blast_af4eeda89a029eef37008a80e3200ee47}{}\label{class_blast_af4eeda89a029eef37008a80e3200ee47} 
+float {\bfseries blast\+Force}
+\item 
+\hypertarget{class_blast_a5c073e6a97eff03cc1404778ab33aff6}{}\label{class_blast_a5c073e6a97eff03cc1404778ab33aff6} 
+string {\bfseries animator\+Trigger}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_blast_ab6e8d7899a858bc2da1978d40d266a63}{}\label{class_blast_ab6e8d7899a858bc2da1978d40d266a63} 
+\index{Blast@{Blast}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Blast@{Blast}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Blast.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_blast_a1c0b1bd2d101c05fdbe09d32a5c5c44a}{}\label{class_blast_a1c0b1bd2d101c05fdbe09d32a5c5c44a} 
+\index{Blast@{Blast}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Blast@{Blast}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Blast.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Ability}.
+
+\hypertarget{class_blast_a65e2759005f4f28df38ab5a5287ff548}{}\label{class_blast_a65e2759005f4f28df38ab5a5287ff548} 
+\index{Blast@{Blast}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Blast@{Blast}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Blast.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Bomber\+Kit/Blast.\+cs\end{DoxyCompactItemize}

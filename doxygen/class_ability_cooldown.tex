@@ -1,0 +1,111 @@
+\hypertarget{class_ability_cooldown}{}\section{Ability\+Cooldown Class Reference}
+\label{class_ability_cooldown}\index{Ability\+Cooldown@{Ability\+Cooldown}}
+
+
+Handles the cooldown for abilities. Runs on the local player.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ability_cooldown_a1ca2a7d717770a00d713f60c98213511}{Ability\+Cooldown} (\hyperlink{class_ability}{Ability} ab, float duration, \hyperlink{class_ability_u_i}{Ability\+UI} ab\+UI)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_ability_cooldown_abba8f163068aa6d9029a4138cacdacde}{Reduce\+Cooldown} (float reduction\+Amount)
+\begin{DoxyCompactList}\small\item\em Reduces the current cooldown for the ability. \end{DoxyCompactList}\item 
+void \hyperlink{class_ability_cooldown_a0a1223f783a3c342413172a5797fa597}{Update} ()
+\begin{DoxyCompactList}\small\item\em Update loop. Handles timer and ability ui update. \end{DoxyCompactList}\item 
+void \hyperlink{class_ability_cooldown_acd67a3f56a47bc9c226a359d24a276eb}{Activate} ()
+\begin{DoxyCompactList}\small\item\em Called on ability activation. Activates cooldown. \end{DoxyCompactList}\item 
+void \hyperlink{class_ability_cooldown_a7423fa48fe64540ee2d08b16154673c0}{Activate\+Hidden\+Cooldown} (float hidden\+Cooldown)
+\begin{DoxyCompactList}\small\item\em Can be called from abilities whenever they need a hidden cooldown, a simple short cooldown in addition to the standard cooldown for instance. \end{DoxyCompactList}\item 
+bool \hyperlink{class_ability_cooldown_a873d580a5eff83aaa450b8ffbd388f6d}{Is\+Ready} ()
+\begin{DoxyCompactList}\small\item\em Used for checking if the ability is on cooldown. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles the cooldown for abilities. Runs on the local player. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_ability_cooldown_a1ca2a7d717770a00d713f60c98213511}{}\label{class_ability_cooldown_a1ca2a7d717770a00d713f60c98213511} 
+\index{Ability\+Cooldown@{Ability\+Cooldown}!Ability\+Cooldown@{Ability\+Cooldown}}
+\index{Ability\+Cooldown@{Ability\+Cooldown}!Ability\+Cooldown@{Ability\+Cooldown}}
+\subsubsection{\texorpdfstring{Ability\+Cooldown()}{AbilityCooldown()}}
+{\footnotesize\ttfamily Ability\+Cooldown.\+Ability\+Cooldown (\begin{DoxyParamCaption}\item[{\hyperlink{class_ability}{Ability}}]{ab,  }\item[{float}]{duration,  }\item[{\hyperlink{class_ability_u_i}{Ability\+UI}}]{ab\+UI }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & Length of cooldown.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_ability_cooldown_acd67a3f56a47bc9c226a359d24a276eb}{}\label{class_ability_cooldown_acd67a3f56a47bc9c226a359d24a276eb} 
+\index{Ability\+Cooldown@{Ability\+Cooldown}!Activate@{Activate}}
+\index{Activate@{Activate}!Ability\+Cooldown@{Ability\+Cooldown}}
+\subsubsection{\texorpdfstring{Activate()}{Activate()}}
+{\footnotesize\ttfamily void Ability\+Cooldown.\+Activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called on ability activation. Activates cooldown. 
+
+\hypertarget{class_ability_cooldown_a7423fa48fe64540ee2d08b16154673c0}{}\label{class_ability_cooldown_a7423fa48fe64540ee2d08b16154673c0} 
+\index{Ability\+Cooldown@{Ability\+Cooldown}!Activate\+Hidden\+Cooldown@{Activate\+Hidden\+Cooldown}}
+\index{Activate\+Hidden\+Cooldown@{Activate\+Hidden\+Cooldown}!Ability\+Cooldown@{Ability\+Cooldown}}
+\subsubsection{\texorpdfstring{Activate\+Hidden\+Cooldown()}{ActivateHiddenCooldown()}}
+{\footnotesize\ttfamily void Ability\+Cooldown.\+Activate\+Hidden\+Cooldown (\begin{DoxyParamCaption}\item[{float}]{hidden\+Cooldown }\end{DoxyParamCaption})}
+
+
+
+Can be called from abilities whenever they need a hidden cooldown, a simple short cooldown in addition to the standard cooldown for instance. 
+
+\hypertarget{class_ability_cooldown_a873d580a5eff83aaa450b8ffbd388f6d}{}\label{class_ability_cooldown_a873d580a5eff83aaa450b8ffbd388f6d} 
+\index{Ability\+Cooldown@{Ability\+Cooldown}!Is\+Ready@{Is\+Ready}}
+\index{Is\+Ready@{Is\+Ready}!Ability\+Cooldown@{Ability\+Cooldown}}
+\subsubsection{\texorpdfstring{Is\+Ready()}{IsReady()}}
+{\footnotesize\ttfamily bool Ability\+Cooldown.\+Is\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used for checking if the ability is on cooldown. 
+
+\begin{DoxyReturn}{Returns}
+Whether the ability is on cooldown or not.
+\end{DoxyReturn}
+\hypertarget{class_ability_cooldown_abba8f163068aa6d9029a4138cacdacde}{}\label{class_ability_cooldown_abba8f163068aa6d9029a4138cacdacde} 
+\index{Ability\+Cooldown@{Ability\+Cooldown}!Reduce\+Cooldown@{Reduce\+Cooldown}}
+\index{Reduce\+Cooldown@{Reduce\+Cooldown}!Ability\+Cooldown@{Ability\+Cooldown}}
+\subsubsection{\texorpdfstring{Reduce\+Cooldown()}{ReduceCooldown()}}
+{\footnotesize\ttfamily void Ability\+Cooldown.\+Reduce\+Cooldown (\begin{DoxyParamCaption}\item[{float}]{reduction\+Amount }\end{DoxyParamCaption})}
+
+
+
+Reduces the current cooldown for the ability. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reduction\+Amount} & The amount deducted for the current cooldown.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ability_cooldown_a0a1223f783a3c342413172a5797fa597}{}\label{class_ability_cooldown_a0a1223f783a3c342413172a5797fa597} 
+\index{Ability\+Cooldown@{Ability\+Cooldown}!Update@{Update}}
+\index{Update@{Update}!Ability\+Cooldown@{Ability\+Cooldown}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Ability\+Cooldown.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update loop. Handles timer and ability ui update. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/Ability\+Cooldown.\+cs\end{DoxyCompactItemize}

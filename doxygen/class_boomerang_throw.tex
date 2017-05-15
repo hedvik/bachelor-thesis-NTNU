@@ -1,0 +1,201 @@
+\hypertarget{class_boomerang_throw}{}\section{Boomerang\+Throw Class Reference}
+\label{class_boomerang_throw}\index{Boomerang\+Throw@{Boomerang\+Throw}}
+Inheritance diagram for Boomerang\+Throw\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_boomerang_throw}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_boomerang_throw_a757453f2578bc791773b5767eb80f39d}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+override void \hyperlink{class_boomerang_throw_a69416792bf4c3cb495d6d99ef4341fd3}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Callback for what this ability does locally when its associated button is pressed \end{DoxyCompactList}\item 
+override void \hyperlink{class_boomerang_throw_a058894b26dc8d46886d79faefa4e36aa}{Button\+Up} ()
+\begin{DoxyCompactList}\small\item\em Callback for what this ability does locally when its associated button is released \end{DoxyCompactList}\item 
+override void \hyperlink{class_boomerang_throw_a29ac29357a95847a547321b091b2c8b3}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Callback for what this ability is supposed to do locally on all clients when the ability state is changed \end{DoxyCompactList}\item 
+override void \hyperlink{class_boomerang_throw_abd3070a4e57ae10d7578d6de618b5c2e}{Set\+Modifier} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Callback for what this ability is supposed to do when a modifier state changes \end{DoxyCompactList}\item 
+override void \hyperlink{class_boomerang_throw_aec0765805c6cbbb18eb8ab37395b52f5}{Set\+Element} (Elemental\+Container.\+Comboable\+Elements element)
+\begin{DoxyCompactList}\small\item\em Callback for what this ability is supposed to do locally when applying a element \end{DoxyCompactList}\item 
+\hypertarget{class_boomerang_throw_a53fac9ec7f1e88e35fefc4bfee79dba2}{}\label{class_boomerang_throw_a53fac9ec7f1e88e35fefc4bfee79dba2} 
+void {\bfseries Reflect\+Velocity} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_boomerang_throw_ad1653fe26b5503dfd1aa4dcff3bd29af}{}\label{class_boomerang_throw_ad1653fe26b5503dfd1aa4dcff3bd29af} 
+List$<$ Line\+Renderer $>$ {\bfseries approximate\+Path\+Renderers} = new List$<$Line\+Renderer$>$()
+\item 
+\hypertarget{class_boomerang_throw_afeb7e6f47220ade75d5c59d339f493f6}{}\label{class_boomerang_throw_afeb7e6f47220ade75d5c59d339f493f6} 
+\hyperlink{class_boomerang_data_container}{Boomerang\+Data\+Container} \mbox{[}$\,$\mbox{]} {\bfseries boomerang\+Data} = new \hyperlink{class_boomerang_data_container}{Boomerang\+Data\+Container}\mbox{[}N\+U\+M\+\_\+\+B\+O\+O\+M\+E\+R\+A\+N\+GS\mbox{]}
+\item 
+\hypertarget{class_boomerang_throw_a28000e67ed58a8cf5243570e04ac264d}{}\label{class_boomerang_throw_a28000e67ed58a8cf5243570e04ac264d} 
+List$<$ Trail\+Renderer $>$ {\bfseries trail\+Renderers} = new List$<$Trail\+Renderer$>$()
+\item 
+\hypertarget{class_boomerang_throw_a60c37de066e4c9ef0af360fb8972be69}{}\label{class_boomerang_throw_a60c37de066e4c9ef0af360fb8972be69} 
+Game\+Object \mbox{[}$\,$\mbox{]} {\bfseries boomerang\+Objs} = new Game\+Object\mbox{[}N\+U\+M\+\_\+\+B\+O\+O\+M\+E\+R\+A\+N\+GS\mbox{]}
+\item 
+\hypertarget{class_boomerang_throw_a6b868248c71f07e200c4a5a7f7a3bd28}{}\label{class_boomerang_throw_a6b868248c71f07e200c4a5a7f7a3bd28} 
+\hyperlink{class_boomerang_root}{Boomerang\+Root} {\bfseries boomerang\+Root\+Script}
+\item 
+\hypertarget{class_boomerang_throw_a1937f8e1e4bc7a05ee9a1ca54b158722}{}\label{class_boomerang_throw_a1937f8e1e4bc7a05ee9a1ca54b158722} 
+\hyperlink{class_multi_boomerang_buff}{Multi\+Boomerang\+Buff} {\bfseries boomerang\+Buff\+Script}
+\item 
+\hypertarget{class_boomerang_throw_a8624b249cf9d2d4007c553d53189e416}{}\label{class_boomerang_throw_a8624b249cf9d2d4007c553d53189e416} 
+Animation\+Curve {\bfseries velocity\+Curve}
+\item 
+\hypertarget{class_boomerang_throw_a4aefc802c1465c09df970f5f935fcb35}{}\label{class_boomerang_throw_a4aefc802c1465c09df970f5f935fcb35} 
+float {\bfseries damage\+Dealt} = 10f
+\item 
+\hypertarget{class_boomerang_throw_a55e9146e2124aa33c971537fc3a2803b}{}\label{class_boomerang_throw_a55e9146e2124aa33c971537fc3a2803b} 
+float {\bfseries boomerang\+Speed} = 5f
+\item 
+\hypertarget{class_boomerang_throw_a6ed0633866a38af89cc6050f6665c30b}{}\label{class_boomerang_throw_a6ed0633866a38af89cc6050f6665c30b} 
+float {\bfseries spin\+Multiplier\+While\+Active} = 4f
+\item 
+\hypertarget{class_boomerang_throw_a671435e2d6fda58264f9acb1c24cb9b4}{}\label{class_boomerang_throw_a671435e2d6fda58264f9acb1c24cb9b4} 
+const int {\bfseries N\+U\+M\+\_\+\+B\+O\+O\+M\+E\+R\+A\+N\+GS} = 3
+\item 
+\hypertarget{class_boomerang_throw_a407d3d318f1f8491bbc95e8763c5e987}{}\label{class_boomerang_throw_a407d3d318f1f8491bbc95e8763c5e987} 
+\hyperlink{class_elemental_modifiers}{Elemental\+Modifiers} {\bfseries elemental\+Modifiers} = new \hyperlink{class_elemental_modifiers}{Elemental\+Modifiers}()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_boomerang_throw_a2388db1d5710a58189134f8359da2bc1}{Update} ()
+\begin{DoxyCompactList}\small\item\em Runs on every client, but only the local player has cooldown initialized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_boomerang_throw_a69416792bf4c3cb495d6d99ef4341fd3}{}\label{class_boomerang_throw_a69416792bf4c3cb495d6d99ef4341fd3} 
+\index{Boomerang\+Throw@{Boomerang\+Throw}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Boomerang\+Throw@{Boomerang\+Throw}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Boomerang\+Throw.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability does locally when its associated button is pressed 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_boomerang_throw_a058894b26dc8d46886d79faefa4e36aa}{}\label{class_boomerang_throw_a058894b26dc8d46886d79faefa4e36aa} 
+\index{Boomerang\+Throw@{Boomerang\+Throw}!Button\+Up@{Button\+Up}}
+\index{Button\+Up@{Button\+Up}!Boomerang\+Throw@{Boomerang\+Throw}}
+\subsubsection{\texorpdfstring{Button\+Up()}{ButtonUp()}}
+{\footnotesize\ttfamily override void Boomerang\+Throw.\+Button\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability does locally when its associated button is released 
+
+
+
+Reimplemented from \hyperlink{class_ability_ad13b45ac8d2205494b2c12d16677fe26}{Ability}.
+
+\hypertarget{class_boomerang_throw_a757453f2578bc791773b5767eb80f39d}{}\label{class_boomerang_throw_a757453f2578bc791773b5767eb80f39d} 
+\index{Boomerang\+Throw@{Boomerang\+Throw}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Boomerang\+Throw@{Boomerang\+Throw}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Boomerang\+Throw.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Ability}.
+
+\hypertarget{class_boomerang_throw_a29ac29357a95847a547321b091b2c8b3}{}\label{class_boomerang_throw_a29ac29357a95847a547321b091b2c8b3} 
+\index{Boomerang\+Throw@{Boomerang\+Throw}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Boomerang\+Throw@{Boomerang\+Throw}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Boomerang\+Throw.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability is supposed to do locally on all clients when the ability state is changed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new ability state\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+\hypertarget{class_boomerang_throw_aec0765805c6cbbb18eb8ab37395b52f5}{}\label{class_boomerang_throw_aec0765805c6cbbb18eb8ab37395b52f5} 
+\index{Boomerang\+Throw@{Boomerang\+Throw}!Set\+Element@{Set\+Element}}
+\index{Set\+Element@{Set\+Element}!Boomerang\+Throw@{Boomerang\+Throw}}
+\subsubsection{\texorpdfstring{Set\+Element()}{SetElement()}}
+{\footnotesize\ttfamily override void Boomerang\+Throw.\+Set\+Element (\begin{DoxyParamCaption}\item[{Elemental\+Container.\+Comboable\+Elements}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability is supposed to do locally when applying a element 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ad01c565b443fdca24556f1d7c054da3f}{Ability}.
+
+\hypertarget{class_boomerang_throw_abd3070a4e57ae10d7578d6de618b5c2e}{}\label{class_boomerang_throw_abd3070a4e57ae10d7578d6de618b5c2e} 
+\index{Boomerang\+Throw@{Boomerang\+Throw}!Set\+Modifier@{Set\+Modifier}}
+\index{Set\+Modifier@{Set\+Modifier}!Boomerang\+Throw@{Boomerang\+Throw}}
+\subsubsection{\texorpdfstring{Set\+Modifier()}{SetModifier()}}
+{\footnotesize\ttfamily override void Boomerang\+Throw.\+Set\+Modifier (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability is supposed to do when a modifier state changes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new modifier state\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_a18f5361c45dc334b541892880382c098}{Ability}.
+
+\hypertarget{class_boomerang_throw_a2388db1d5710a58189134f8359da2bc1}{}\label{class_boomerang_throw_a2388db1d5710a58189134f8359da2bc1} 
+\index{Boomerang\+Throw@{Boomerang\+Throw}!Update@{Update}}
+\index{Update@{Update}!Boomerang\+Throw@{Boomerang\+Throw}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily override void Boomerang\+Throw.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Runs on every client, but only the local player has cooldown initialized. 
+
+
+
+Reimplemented from \hyperlink{class_ability_a88d799f38be464be5f0a9a315efb2d0b}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Boomerang\+Kit/Boomerang\+Throw.\+cs\end{DoxyCompactItemize}

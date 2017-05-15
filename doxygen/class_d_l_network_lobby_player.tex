@@ -1,0 +1,266 @@
+\hypertarget{class_d_l_network_lobby_player}{}\section{D\+L\+Network\+Lobby\+Player Class Reference}
+\label{class_d_l_network_lobby_player}\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+Inheritance diagram for D\+L\+Network\+Lobby\+Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_d_l_network_lobby_player}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_d_l_network_lobby_player_a0037d8d1e0f67839133610663a1d206f}{On\+Client\+Enter\+Lobby} ()
+\begin{DoxyCompactList}\small\item\em Callback that initialises all necessary data for when a player enters the lobby. This includes player name, player color, adding the player to a team and telling the network manager that a new player has joined \end{DoxyCompactList}\item 
+override void \hyperlink{class_d_l_network_lobby_player_a1e0fa979ad95efaf24055632940fd2fb}{On\+Start\+Authority} ()
+\begin{DoxyCompactList}\small\item\em Callback that simply sets up the client side parts of a lobby for the connecting player \end{DoxyCompactList}\item 
+override void \hyperlink{class_d_l_network_lobby_player_a683da40a1af9342049f4221637e38356}{On\+Client\+Ready} (bool ready\+State)
+\begin{DoxyCompactList}\small\item\em Makes the local UI uninteractable once the player has chosen to be ready \end{DoxyCompactList}\item 
+void \hyperlink{class_d_l_network_lobby_player_af59e1193d1aea8384751952f693302c2}{On\+Name\+Change} (string new\+Name)
+\begin{DoxyCompactList}\small\item\em Sync\+Var\+Hook for handling name changes \end{DoxyCompactList}\item 
+void \hyperlink{class_d_l_network_lobby_player_a3af013212302d6d95a0defcc9e1e33a8}{On\+Color\+Change} (Color new\+Color)
+\begin{DoxyCompactList}\small\item\em Sync\+Var\+Hook for handling color changes \end{DoxyCompactList}\item 
+void \hyperlink{class_d_l_network_lobby_player_af960bcf62b831a8d546bc3623152f882}{On\+Ready\+State\+Change} (bool state)
+\begin{DoxyCompactList}\small\item\em Sync\+Var\+Hook for handling ready states \end{DoxyCompactList}\item 
+void \hyperlink{class_d_l_network_lobby_player_aab20faf1b2912c913363f9664c5f57f4}{On\+Color\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em A function that simply calls the \hyperlink{class_d_l_network_lobby_player_a53746df370122d632c01e627d97e2d4c}{Cmd\+Color\+Change()} command \end{DoxyCompactList}\item 
+void \hyperlink{class_d_l_network_lobby_player_a5703c8531b9d4fd7c6987a9f26c43c5c}{On\+Ready\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em A simple function that tells the network that this player is ready to begin \end{DoxyCompactList}\item 
+void \hyperlink{class_d_l_network_lobby_player_a3620f9df4e0e691e82287f5bdf12fff4}{On\+Name\+Changed} (string str)
+\begin{DoxyCompactList}\small\item\em A simple function that calls the Cmd\+Name\+Changed(str) command \end{DoxyCompactList}\item 
+void \hyperlink{class_d_l_network_lobby_player_a1b4e00a130627290eb4e7b281037b07b}{Toggle\+Ready\+Button} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Sets the state of the ready button on the UI to the parameter one \end{DoxyCompactList}\item 
+Game\+Object \hyperlink{class_d_l_network_lobby_player_a1302ddd493dfe54e7a90780320ff5c92}{Get\+Visuals} ()
+\begin{DoxyCompactList}\small\item\em Returns the UI elements of a player \end{DoxyCompactList}\item 
+void \hyperlink{class_d_l_network_lobby_player_a53746df370122d632c01e627d97e2d4c}{Cmd\+Color\+Change} ()
+\begin{DoxyCompactList}\small\item\em Updates the server when a player has chosen a new team/color \end{DoxyCompactList}\item 
+void \hyperlink{class_d_l_network_lobby_player_a86e0dcdd5a6888bf43f1f9238d7ff3a1}{Cmd\+Name\+Changed} (string name)
+\begin{DoxyCompactList}\small\item\em Updates the server when a player has chosen a new name \end{DoxyCompactList}\item 
+void \hyperlink{class_d_l_network_lobby_player_a9b88470749df360bb66ba670e3de7be1}{Cmd\+Update\+Ready\+State} (bool state)
+\begin{DoxyCompactList}\small\item\em Updates the server when a player is ready \end{DoxyCompactList}\item 
+void \hyperlink{class_d_l_network_lobby_player_a63135a20581f45c883b629debf4e70ef}{On\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em Callback for when a lobby player leaves the lobby and gets destroyed It tells the lobby\+Handler to remove this player and tells the network\+Manager that a player has left. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l_network_lobby_player_a24d30b2841a5e3c22ebde5b796373a29}{}\label{class_d_l_network_lobby_player_a24d30b2841a5e3c22ebde5b796373a29} 
+Button {\bfseries color\+Button}
+\item 
+\hypertarget{class_d_l_network_lobby_player_ab835c869ac4aec1c15c40ef0434874bd}{}\label{class_d_l_network_lobby_player_ab835c869ac4aec1c15c40ef0434874bd} 
+Input\+Field {\bfseries name\+Input}
+\item 
+\hypertarget{class_d_l_network_lobby_player_a478068b6d646940877ac11e573dbd404}{}\label{class_d_l_network_lobby_player_a478068b6d646940877ac11e573dbd404} 
+Button {\bfseries ready\+Button}
+\item 
+\hypertarget{class_d_l_network_lobby_player_aa762174a81002ec9eef52099cb69685c}{}\label{class_d_l_network_lobby_player_aa762174a81002ec9eef52099cb69685c} 
+Game\+Object {\bfseries visuals}
+\item 
+\hypertarget{class_d_l_network_lobby_player_a04b2586e10b137401a5ea09333b22657}{}\label{class_d_l_network_lobby_player_a04b2586e10b137401a5ea09333b22657} 
+string {\bfseries player\+Name} = \char`\"{}\char`\"{}
+\item 
+\hypertarget{class_d_l_network_lobby_player_a9af28fac64b03bd6e1fb404158af6b35}{}\label{class_d_l_network_lobby_player_a9af28fac64b03bd6e1fb404158af6b35} 
+Color {\bfseries player\+Color} = Color.\+white
+\item 
+\hypertarget{class_d_l_network_lobby_player_ac39421132ecd7348be4970b2792ea061}{}\label{class_d_l_network_lobby_player_ac39421132ecd7348be4970b2792ea061} 
+bool {\bfseries is\+Ready} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_l_network_lobby_player_a53746df370122d632c01e627d97e2d4c}{}\label{class_d_l_network_lobby_player_a53746df370122d632c01e627d97e2d4c} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!Cmd\+Color\+Change@{Cmd\+Color\+Change}}
+\index{Cmd\+Color\+Change@{Cmd\+Color\+Change}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{Cmd\+Color\+Change()}{CmdColorChange()}}
+{\footnotesize\ttfamily void D\+L\+Network\+Lobby\+Player.\+Cmd\+Color\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the server when a player has chosen a new team/color 
+
+\hypertarget{class_d_l_network_lobby_player_a86e0dcdd5a6888bf43f1f9238d7ff3a1}{}\label{class_d_l_network_lobby_player_a86e0dcdd5a6888bf43f1f9238d7ff3a1} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!Cmd\+Name\+Changed@{Cmd\+Name\+Changed}}
+\index{Cmd\+Name\+Changed@{Cmd\+Name\+Changed}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{Cmd\+Name\+Changed()}{CmdNameChanged()}}
+{\footnotesize\ttfamily void D\+L\+Network\+Lobby\+Player.\+Cmd\+Name\+Changed (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Updates the server when a player has chosen a new name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The new player name\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_d_l_network_lobby_player_a9b88470749df360bb66ba670e3de7be1}{}\label{class_d_l_network_lobby_player_a9b88470749df360bb66ba670e3de7be1} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!Cmd\+Update\+Ready\+State@{Cmd\+Update\+Ready\+State}}
+\index{Cmd\+Update\+Ready\+State@{Cmd\+Update\+Ready\+State}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{Cmd\+Update\+Ready\+State()}{CmdUpdateReadyState()}}
+{\footnotesize\ttfamily void D\+L\+Network\+Lobby\+Player.\+Cmd\+Update\+Ready\+State (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Updates the server when a player is ready 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The ready state\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_d_l_network_lobby_player_a1302ddd493dfe54e7a90780320ff5c92}{}\label{class_d_l_network_lobby_player_a1302ddd493dfe54e7a90780320ff5c92} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!Get\+Visuals@{Get\+Visuals}}
+\index{Get\+Visuals@{Get\+Visuals}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{Get\+Visuals()}{GetVisuals()}}
+{\footnotesize\ttfamily Game\+Object D\+L\+Network\+Lobby\+Player.\+Get\+Visuals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the UI elements of a player 
+
+\begin{DoxyReturn}{Returns}
+The player visuals
+\end{DoxyReturn}
+\hypertarget{class_d_l_network_lobby_player_a0037d8d1e0f67839133610663a1d206f}{}\label{class_d_l_network_lobby_player_a0037d8d1e0f67839133610663a1d206f} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!On\+Client\+Enter\+Lobby@{On\+Client\+Enter\+Lobby}}
+\index{On\+Client\+Enter\+Lobby@{On\+Client\+Enter\+Lobby}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{On\+Client\+Enter\+Lobby()}{OnClientEnterLobby()}}
+{\footnotesize\ttfamily override void D\+L\+Network\+Lobby\+Player.\+On\+Client\+Enter\+Lobby (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Callback that initialises all necessary data for when a player enters the lobby. This includes player name, player color, adding the player to a team and telling the network manager that a new player has joined 
+
+\hypertarget{class_d_l_network_lobby_player_a683da40a1af9342049f4221637e38356}{}\label{class_d_l_network_lobby_player_a683da40a1af9342049f4221637e38356} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!On\+Client\+Ready@{On\+Client\+Ready}}
+\index{On\+Client\+Ready@{On\+Client\+Ready}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{On\+Client\+Ready()}{OnClientReady()}}
+{\footnotesize\ttfamily override void D\+L\+Network\+Lobby\+Player.\+On\+Client\+Ready (\begin{DoxyParamCaption}\item[{bool}]{ready\+State }\end{DoxyParamCaption})}
+
+
+
+Makes the local UI uninteractable once the player has chosen to be ready 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ready\+State} & Whether the client is ready or not\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_d_l_network_lobby_player_a3af013212302d6d95a0defcc9e1e33a8}{}\label{class_d_l_network_lobby_player_a3af013212302d6d95a0defcc9e1e33a8} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!On\+Color\+Change@{On\+Color\+Change}}
+\index{On\+Color\+Change@{On\+Color\+Change}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{On\+Color\+Change()}{OnColorChange()}}
+{\footnotesize\ttfamily void D\+L\+Network\+Lobby\+Player.\+On\+Color\+Change (\begin{DoxyParamCaption}\item[{Color}]{new\+Color }\end{DoxyParamCaption})}
+
+
+
+Sync\+Var\+Hook for handling color changes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Color} & The new team color\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_d_l_network_lobby_player_aab20faf1b2912c913363f9664c5f57f4}{}\label{class_d_l_network_lobby_player_aab20faf1b2912c913363f9664c5f57f4} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!On\+Color\+Clicked@{On\+Color\+Clicked}}
+\index{On\+Color\+Clicked@{On\+Color\+Clicked}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{On\+Color\+Clicked()}{OnColorClicked()}}
+{\footnotesize\ttfamily void D\+L\+Network\+Lobby\+Player.\+On\+Color\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function that simply calls the \hyperlink{class_d_l_network_lobby_player_a53746df370122d632c01e627d97e2d4c}{Cmd\+Color\+Change()} command 
+
+\hypertarget{class_d_l_network_lobby_player_a63135a20581f45c883b629debf4e70ef}{}\label{class_d_l_network_lobby_player_a63135a20581f45c883b629debf4e70ef} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!On\+Destroy@{On\+Destroy}}
+\index{On\+Destroy@{On\+Destroy}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{On\+Destroy()}{OnDestroy()}}
+{\footnotesize\ttfamily void D\+L\+Network\+Lobby\+Player.\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Callback for when a lobby player leaves the lobby and gets destroyed It tells the lobby\+Handler to remove this player and tells the network\+Manager that a player has left. 
+
+\hypertarget{class_d_l_network_lobby_player_af59e1193d1aea8384751952f693302c2}{}\label{class_d_l_network_lobby_player_af59e1193d1aea8384751952f693302c2} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!On\+Name\+Change@{On\+Name\+Change}}
+\index{On\+Name\+Change@{On\+Name\+Change}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{On\+Name\+Change()}{OnNameChange()}}
+{\footnotesize\ttfamily void D\+L\+Network\+Lobby\+Player.\+On\+Name\+Change (\begin{DoxyParamCaption}\item[{string}]{new\+Name }\end{DoxyParamCaption})}
+
+
+
+Sync\+Var\+Hook for handling name changes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & The new player name\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_d_l_network_lobby_player_a3620f9df4e0e691e82287f5bdf12fff4}{}\label{class_d_l_network_lobby_player_a3620f9df4e0e691e82287f5bdf12fff4} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!On\+Name\+Changed@{On\+Name\+Changed}}
+\index{On\+Name\+Changed@{On\+Name\+Changed}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{On\+Name\+Changed()}{OnNameChanged()}}
+{\footnotesize\ttfamily void D\+L\+Network\+Lobby\+Player.\+On\+Name\+Changed (\begin{DoxyParamCaption}\item[{string}]{str }\end{DoxyParamCaption})}
+
+
+
+A simple function that calls the Cmd\+Name\+Changed(str) command 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The new player name\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_d_l_network_lobby_player_a5703c8531b9d4fd7c6987a9f26c43c5c}{}\label{class_d_l_network_lobby_player_a5703c8531b9d4fd7c6987a9f26c43c5c} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!On\+Ready\+Clicked@{On\+Ready\+Clicked}}
+\index{On\+Ready\+Clicked@{On\+Ready\+Clicked}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{On\+Ready\+Clicked()}{OnReadyClicked()}}
+{\footnotesize\ttfamily void D\+L\+Network\+Lobby\+Player.\+On\+Ready\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A simple function that tells the network that this player is ready to begin 
+
+\hypertarget{class_d_l_network_lobby_player_af960bcf62b831a8d546bc3623152f882}{}\label{class_d_l_network_lobby_player_af960bcf62b831a8d546bc3623152f882} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!On\+Ready\+State\+Change@{On\+Ready\+State\+Change}}
+\index{On\+Ready\+State\+Change@{On\+Ready\+State\+Change}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{On\+Ready\+State\+Change()}{OnReadyStateChange()}}
+{\footnotesize\ttfamily void D\+L\+Network\+Lobby\+Player.\+On\+Ready\+State\+Change (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Sync\+Var\+Hook for handling ready states 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the is player ready or not\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_d_l_network_lobby_player_a1e0fa979ad95efaf24055632940fd2fb}{}\label{class_d_l_network_lobby_player_a1e0fa979ad95efaf24055632940fd2fb} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!On\+Start\+Authority@{On\+Start\+Authority}}
+\index{On\+Start\+Authority@{On\+Start\+Authority}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{On\+Start\+Authority()}{OnStartAuthority()}}
+{\footnotesize\ttfamily override void D\+L\+Network\+Lobby\+Player.\+On\+Start\+Authority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Callback that simply sets up the client side parts of a lobby for the connecting player 
+
+\hypertarget{class_d_l_network_lobby_player_a1b4e00a130627290eb4e7b281037b07b}{}\label{class_d_l_network_lobby_player_a1b4e00a130627290eb4e7b281037b07b} 
+\index{D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}!Toggle\+Ready\+Button@{Toggle\+Ready\+Button}}
+\index{Toggle\+Ready\+Button@{Toggle\+Ready\+Button}!D\+L\+Network\+Lobby\+Player@{D\+L\+Network\+Lobby\+Player}}
+\subsubsection{\texorpdfstring{Toggle\+Ready\+Button()}{ToggleReadyButton()}}
+{\footnotesize\ttfamily void D\+L\+Network\+Lobby\+Player.\+Toggle\+Ready\+Button (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Sets the state of the ready button on the UI to the parameter one 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & The state of the button\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Networking/D\+L\+Network\+Lobby\+Player.\+cs\end{DoxyCompactItemize}

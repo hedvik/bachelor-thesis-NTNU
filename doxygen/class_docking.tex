@@ -1,0 +1,548 @@
+\hypertarget{class_docking}{}\section{Docking Class Reference}
+\label{class_docking}\index{Docking@{Docking}}
+
+
+Handles the \hyperlink{class_docking_kit}{Docking\+Kit} interactions for each \hyperlink{class_player}{Player}.  
+
+
+Inheritance diagram for Docking\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_docking}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_docking_aa14ecfa7a3221dd327d0a4aa32ecdf38}{On\+Start\+Client} ()
+\begin{DoxyCompactList}\small\item\em Called when this object is activated on a client. Sets up the initial state and references. \end{DoxyCompactList}\item 
+override void \hyperlink{class_docking_a056ea40ea6f2afb8ba492970f042fc17}{On\+Start\+Local\+Player} ()
+\begin{DoxyCompactList}\small\item\em Called when the local player object has been set up. Sets up local references. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_a44a8510bc605c3195df5e30e4ef9df10}{Cmd\+Set\+Docking\+Kit\+Id} (Docking\+Kit\+Id new\+Kit)
+\begin{DoxyCompactList}\small\item\em Command which sets the Sync\+Var \char`\"{}docking\+Kit\+Id\char`\"{}. This is synchronized to all clients. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_adbe205bfd5f26e74b6d746669d15a117}{Cmd\+Set\+Switch\+State} (bool state)
+\begin{DoxyCompactList}\small\item\em Command for setting the state of the switching\+Kit member. switching\+Kit determines whether we want to spawn a pickup on undocking or not \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_a70fe421a545e05d6c696f7ea3f371156}{Rpc\+Set\+Switch\+State} (bool state)
+\begin{DoxyCompactList}\small\item\em Client\+Rpc for synchronizing the switching\+Kit state \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_ace7395b879afe6788c7095fdf6c404a1}{Set\+Docking\+Kit} (Docking\+Kit\+Id new\+Kit\+Id)
+\begin{DoxyCompactList}\small\item\em Spawns in the \hyperlink{class_docking_kit}{Docking\+Kit} locally for the given new Docking\+Kit\+Id. Updates UI when called for local player. \end{DoxyCompactList}\item 
+\hyperlink{class_docking_kit}{Docking\+Kit} \hyperlink{class_docking_a162b008bbd0d9fda84fe489e571502cd}{Get\+Docking\+Kit} ()
+\begin{DoxyCompactList}\small\item\em Get the active \hyperlink{class_docking_kit}{Docking\+Kit} for this \hyperlink{class_docking}{Docking}. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_ae17ab0c0fc119ad63467036d90c9369b}{Set\+Docking\+Kit\+Stats} (\hyperlink{class_docking_kit}{Docking\+Kit} kit)
+\begin{DoxyCompactList}\small\item\em Updates the stats given by the current \hyperlink{class_docking_kit}{Docking\+Kit}. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_af4528d1af51f10ab75d161095f6eb7f3}{Set\+Player\+Input\+Restriction} (bool state, params Input\+Type\mbox{[}$\,$\mbox{]} input\+Types)
+\begin{DoxyCompactList}\small\item\em Passes the parameters along to the \hyperlink{class_player_input}{Player\+Input} if called by the local player. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_ace85f096874db1f744af753a2f9e44ce}{On\+Docking\+Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the dock button is pressed. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_af3c0779cf0d84911417822b5ec2c671f}{Cmd\+On\+Player\+Docking} (Game\+Object pickup)
+\begin{DoxyCompactList}\small\item\em Command called when the local player wants to dock to a \hyperlink{class_docking_kit_pickup}{Docking\+Kit\+Pickup}. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_aaeaafb7445f24b6f8ca47d75f58e6e88}{On\+Undocking\+Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the undock button is pressed. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_a3a17da1f77bcf2789a159a1489481bec}{On\+Ability\+Button\+Change} (int ability\+Id, bool down)
+\begin{DoxyCompactList}\small\item\em Called when the ability button is initially pressed or released. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_a8732fdddd1a146c1de3491d3981e68b6}{Cancel\+Abilities} ()
+\begin{DoxyCompactList}\small\item\em Cancels all the abilities in the current docking kit. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_af1a41524e65fb8d56334e76090d3a23e}{Cmd\+Set\+Active} (int ability\+Id, bool state)
+\begin{DoxyCompactList}\small\item\em Command for activating an ability. Synchronizes activation to all clients. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_af9eb2fc63cb3035d9931fe5ec9f244aa}{Rpc\+Set\+Active} (int ability\+Id, bool state)
+\begin{DoxyCompactList}\small\item\em Client\+Rpc for activating an ability. Runs locally on every client. Returns immediately for the local player, as the activation already happened locally. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_a1ba4c6b41e3155890c4f3996214fdf7d}{Cmd\+Spawn\+Object} (int ability\+Id, int prefab\+Id, Vector3 position, Vector3 rotation)
+\begin{DoxyCompactList}\small\item\em Command for spawning prefab objects. Used by the abilities. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_a68278f152756e9f77c3523455fa65cee}{Cmd\+Spawn\+Object\+Reference} (int ability\+Id, int prefab\+Id, Vector3 position, Vector3 rotation)
+\begin{DoxyCompactList}\small\item\em Command for spawning prefab objects. Used by the abilities. Returns a reference to the spawned Game\+Object to the client/ability that called the Command. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_a7880a7127467ba0912691f1995899177}{Target\+Set\+Spawn\+Object\+Reference} (Network\+Connection connection, Game\+Object spawned\+Object, int ability\+Id)
+\begin{DoxyCompactList}\small\item\em Target\+Rpc for getting the reference to a spawned object. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_ab0ce11f5480cfae24f0ffd9f2735d22e}{Cmd\+Destroy\+Object} (Game\+Object destroy\+Game\+Object)
+\begin{DoxyCompactList}\small\item\em Command used to destroy objects by objects that don\textquotesingle{}t have authority to Command themselves. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_a5a98e6a60b7d03ab023bbb21c97f4ff4}{Cmd\+Spawn\+Docking\+Kit\+Pickup} (Docking\+Kit\+Id kit\+Id)
+\begin{DoxyCompactList}\small\item\em Command for spawning docking kit pickup on undocking. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_a34f8c9d62c42cb6ab4df7e874e55ca55}{Cmd\+Set\+Modifier} (int ability\+Id, int modifier\+Id, bool apply)
+\begin{DoxyCompactList}\small\item\em Command called by abilities by the local player to apply or remove a modifier. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_ad9f7c2688aca9e6b91c6b07082041eb4}{Set\+Modifier} (int ability\+Id, bool state)
+\begin{DoxyCompactList}\small\item\em Called by Modifiers On\+Client functions to change the state of the modifier on each client. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_a3c06359cbaa3683d3934674641328776}{Cmd\+Server\+Callback} (int ability\+Id, int function\+Id)
+\begin{DoxyCompactList}\small\item\em Command used by abilities to run code on the server, as they\textquotesingle{}re not Network\+Behaviour (or has authority) to call commands. \end{DoxyCompactList}\item 
+\hypertarget{class_docking_af6367a4d9b1cfb7153e616e6a6ee45e8}{}\label{class_docking_af6367a4d9b1cfb7153e616e6a6ee45e8} 
+void {\bfseries Cmd\+Server\+Callback\+Two\+Vector3} (int ability\+Id, int function\+Id, Vector3 first\+Vec3, Vector3 second\+Vec3)
+\item 
+\hypertarget{class_docking_a1a73fc7bf4e9dafa8a69f1eb1d95b878}{}\label{class_docking_a1a73fc7bf4e9dafa8a69f1eb1d95b878} 
+void {\bfseries Cmd\+Server\+Callback\+Game\+Object} (int ability\+Id, int function\+Id, Game\+Object go)
+\item 
+\hypertarget{class_docking_a91b7225b18ce7cfba1ca0868e3d6bfff}{}\label{class_docking_a91b7225b18ce7cfba1ca0868e3d6bfff} 
+void {\bfseries Cmd\+Server\+Callback\+Float} (int ability\+Id, int function\+Id, float param)
+\item 
+\hypertarget{class_docking_a54f8ea828b57cb70cb086ae626281e91}{}\label{class_docking_a54f8ea828b57cb70cb086ae626281e91} 
+void {\bfseries Cmd\+Server\+Callback\+Game\+Object\+Float} (int ability\+Id, int function\+Id, Game\+Object param1, float param2)
+\item 
+void \hyperlink{class_docking_af5968322d054d0ed72908ffcd323fc65}{Rpc\+Client\+Callback} (int ability\+Id, int function\+Id)
+\begin{DoxyCompactList}\small\item\em Client\+Rpc used by abilities to run code on every client, as they\textquotesingle{}re not Network\+Behaviour (or has authority) to call client rpcs. \end{DoxyCompactList}\item 
+\hypertarget{class_docking_aad2c6156a2cf99dfe5f5bcaf197d6ef8}{}\label{class_docking_aad2c6156a2cf99dfe5f5bcaf197d6ef8} 
+void {\bfseries Rpc\+Client\+Callback\+Vector3} (int ability\+Id, int function\+Id, Vector3 first\+Vec3)
+\item 
+\hypertarget{class_docking_ab91eeb98f1f4f2d2f5e57ace8017f2bd}{}\label{class_docking_ab91eeb98f1f4f2d2f5e57ace8017f2bd} 
+void {\bfseries Rpc\+Client\+Callback\+Two\+Vector3} (int ability\+Id, int function\+Id, Vector3 first\+Vec3, Vector3 second\+Vec3)
+\item 
+\hypertarget{class_docking_a342f1eab0502869052ce0362959996b8}{}\label{class_docking_a342f1eab0502869052ce0362959996b8} 
+void {\bfseries Rpc\+Client\+Callback\+Game\+Object} (int ability\+Id, int function\+Id, Game\+Object go)
+\item 
+\hypertarget{class_docking_a2b1f58a67ae1d560c4901cba7779fe1c}{}\label{class_docking_a2b1f58a67ae1d560c4901cba7779fe1c} 
+void {\bfseries Rpc\+Client\+Callback\+Float} (int ability\+Id, int function\+Id, float param)
+\item 
+void \hyperlink{class_docking_ad341303ed88d02d37ccd165ab5bef8bb}{Target\+Client\+Callback} (Network\+Connection connection, int ability\+Id, int function\+Id)
+\begin{DoxyCompactList}\small\item\em Target\+Rpc used by abilities to run code on a target client, as they\textquotesingle{}re not Network\+Behaviour (or has authority) to call target rpcs. \end{DoxyCompactList}\item 
+void \hyperlink{class_docking_a9416a6bbad0e1fff0a238191db445a8b}{Target\+Reduce\+Cooldown} (Network\+Connection connection, int ability\+Id, float reduction\+Amount)
+\begin{DoxyCompactList}\small\item\em Target\+Rpc for reducing the cooldown an ability by a certain amount. \end{DoxyCompactList}\item 
+\hypertarget{class_docking_a48b37263f82d0a5950999808923767dc}{}\label{class_docking_a48b37263f82d0a5950999808923767dc} 
+void {\bfseries Cmd\+Set\+Element} (Elemental\+Container.\+Comboable\+Elements element, int ability\+Id)
+\item 
+\hypertarget{class_docking_a6ba3b9c3f54851c9f05934b5ea50955f}{}\label{class_docking_a6ba3b9c3f54851c9f05934b5ea50955f} 
+void {\bfseries Rpc\+Set\+Element} (Elemental\+Container.\+Comboable\+Elements element, int ability\+Id)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_docking_a3702734a6bede75d477024c9a4ee57f2}{}\label{class_docking_a3702734a6bede75d477024c9a4ee57f2} 
+Game\+Object {\bfseries docking\+Kit\+Pickup\+Prefab}
+\item 
+\hypertarget{class_docking_a8990a0a8a8493ebeb3d4768f5dfdfc82}{}\label{class_docking_a8990a0a8a8493ebeb3d4768f5dfdfc82} 
+\hyperlink{class_docking_kit}{Docking\+Kit} {\bfseries basic\+Docking\+Kit}
+\item 
+\hypertarget{class_docking_a3f0b93343fef983edfec04c7323c9126}{}\label{class_docking_a3f0b93343fef983edfec04c7323c9126} 
+float {\bfseries docking\+Time} = 2f
+\item 
+\hypertarget{class_docking_a853239b43039089072f1546493fdc62b}{}\label{class_docking_a853239b43039089072f1546493fdc62b} 
+Docking\+Kit\+Id {\bfseries docking\+Kit\+Id} = Docking\+Kit\+Id.\+Empty
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles the \hyperlink{class_docking_kit}{Docking\+Kit} interactions for each \hyperlink{class_player}{Player}. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_docking_a8732fdddd1a146c1de3491d3981e68b6}{}\label{class_docking_a8732fdddd1a146c1de3491d3981e68b6} 
+\index{Docking@{Docking}!Cancel\+Abilities@{Cancel\+Abilities}}
+\index{Cancel\+Abilities@{Cancel\+Abilities}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Cancel\+Abilities()}{CancelAbilities()}}
+{\footnotesize\ttfamily void Docking.\+Cancel\+Abilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cancels all the abilities in the current docking kit. 
+
+\hypertarget{class_docking_ab0ce11f5480cfae24f0ffd9f2735d22e}{}\label{class_docking_ab0ce11f5480cfae24f0ffd9f2735d22e} 
+\index{Docking@{Docking}!Cmd\+Destroy\+Object@{Cmd\+Destroy\+Object}}
+\index{Cmd\+Destroy\+Object@{Cmd\+Destroy\+Object}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Cmd\+Destroy\+Object()}{CmdDestroyObject()}}
+{\footnotesize\ttfamily void Docking.\+Cmd\+Destroy\+Object (\begin{DoxyParamCaption}\item[{Game\+Object}]{destroy\+Game\+Object }\end{DoxyParamCaption})}
+
+
+
+Command used to destroy objects by objects that don\textquotesingle{}t have authority to Command themselves. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destroy\+Game\+Object} & The reference to the object to be destroyed.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_af3c0779cf0d84911417822b5ec2c671f}{}\label{class_docking_af3c0779cf0d84911417822b5ec2c671f} 
+\index{Docking@{Docking}!Cmd\+On\+Player\+Docking@{Cmd\+On\+Player\+Docking}}
+\index{Cmd\+On\+Player\+Docking@{Cmd\+On\+Player\+Docking}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Cmd\+On\+Player\+Docking()}{CmdOnPlayerDocking()}}
+{\footnotesize\ttfamily void Docking.\+Cmd\+On\+Player\+Docking (\begin{DoxyParamCaption}\item[{Game\+Object}]{pickup }\end{DoxyParamCaption})}
+
+
+
+Command called when the local player wants to dock to a \hyperlink{class_docking_kit_pickup}{Docking\+Kit\+Pickup}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pickup} & Reference to the networked pickup object.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_a3c06359cbaa3683d3934674641328776}{}\label{class_docking_a3c06359cbaa3683d3934674641328776} 
+\index{Docking@{Docking}!Cmd\+Server\+Callback@{Cmd\+Server\+Callback}}
+\index{Cmd\+Server\+Callback@{Cmd\+Server\+Callback}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Cmd\+Server\+Callback()}{CmdServerCallback()}}
+{\footnotesize\ttfamily void Docking.\+Cmd\+Server\+Callback (\begin{DoxyParamCaption}\item[{int}]{ability\+Id,  }\item[{int}]{function\+Id }\end{DoxyParamCaption})}
+
+
+
+Command used by abilities to run code on the server, as they\textquotesingle{}re not Network\+Behaviour (or has authority) to call commands. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ability\+Id} & The id of the ability calling the command.\\
+\hline
+{\em function\+Id} & The id of the function to be run on the server.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_af1a41524e65fb8d56334e76090d3a23e}{}\label{class_docking_af1a41524e65fb8d56334e76090d3a23e} 
+\index{Docking@{Docking}!Cmd\+Set\+Active@{Cmd\+Set\+Active}}
+\index{Cmd\+Set\+Active@{Cmd\+Set\+Active}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Cmd\+Set\+Active()}{CmdSetActive()}}
+{\footnotesize\ttfamily void Docking.\+Cmd\+Set\+Active (\begin{DoxyParamCaption}\item[{int}]{ability\+Id,  }\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Command for activating an ability. Synchronizes activation to all clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ability\+Id} & Index of the ability to activate.\\
+\hline
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_a44a8510bc605c3195df5e30e4ef9df10}{}\label{class_docking_a44a8510bc605c3195df5e30e4ef9df10} 
+\index{Docking@{Docking}!Cmd\+Set\+Docking\+Kit\+Id@{Cmd\+Set\+Docking\+Kit\+Id}}
+\index{Cmd\+Set\+Docking\+Kit\+Id@{Cmd\+Set\+Docking\+Kit\+Id}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Cmd\+Set\+Docking\+Kit\+Id()}{CmdSetDockingKitId()}}
+{\footnotesize\ttfamily void Docking.\+Cmd\+Set\+Docking\+Kit\+Id (\begin{DoxyParamCaption}\item[{Docking\+Kit\+Id}]{new\+Kit }\end{DoxyParamCaption})}
+
+
+
+Command which sets the Sync\+Var \char`\"{}docking\+Kit\+Id\char`\"{}. This is synchronized to all clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Kit} & The new Docking\+Kit\+Id.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_a34f8c9d62c42cb6ab4df7e874e55ca55}{}\label{class_docking_a34f8c9d62c42cb6ab4df7e874e55ca55} 
+\index{Docking@{Docking}!Cmd\+Set\+Modifier@{Cmd\+Set\+Modifier}}
+\index{Cmd\+Set\+Modifier@{Cmd\+Set\+Modifier}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Cmd\+Set\+Modifier()}{CmdSetModifier()}}
+{\footnotesize\ttfamily void Docking.\+Cmd\+Set\+Modifier (\begin{DoxyParamCaption}\item[{int}]{ability\+Id,  }\item[{int}]{modifier\+Id,  }\item[{bool}]{apply }\end{DoxyParamCaption})}
+
+
+
+Command called by abilities by the local player to apply or remove a modifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ability\+Id} & The id of the ability that applied the modifier.\\
+\hline
+{\em modifier\+Index} & The index of the modifier.\\
+\hline
+{\em apply} & If the modifier should be applied or removed.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_adbe205bfd5f26e74b6d746669d15a117}{}\label{class_docking_adbe205bfd5f26e74b6d746669d15a117} 
+\index{Docking@{Docking}!Cmd\+Set\+Switch\+State@{Cmd\+Set\+Switch\+State}}
+\index{Cmd\+Set\+Switch\+State@{Cmd\+Set\+Switch\+State}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Cmd\+Set\+Switch\+State()}{CmdSetSwitchState()}}
+{\footnotesize\ttfamily void Docking.\+Cmd\+Set\+Switch\+State (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Command for setting the state of the switching\+Kit member. switching\+Kit determines whether we want to spawn a pickup on undocking or not 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state of the bool\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_a5a98e6a60b7d03ab023bbb21c97f4ff4}{}\label{class_docking_a5a98e6a60b7d03ab023bbb21c97f4ff4} 
+\index{Docking@{Docking}!Cmd\+Spawn\+Docking\+Kit\+Pickup@{Cmd\+Spawn\+Docking\+Kit\+Pickup}}
+\index{Cmd\+Spawn\+Docking\+Kit\+Pickup@{Cmd\+Spawn\+Docking\+Kit\+Pickup}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Cmd\+Spawn\+Docking\+Kit\+Pickup()}{CmdSpawnDockingKitPickup()}}
+{\footnotesize\ttfamily void Docking.\+Cmd\+Spawn\+Docking\+Kit\+Pickup (\begin{DoxyParamCaption}\item[{Docking\+Kit\+Id}]{kit\+Id }\end{DoxyParamCaption})}
+
+
+
+Command for spawning docking kit pickup on undocking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kit\+Id} & Which docking kit to spawn.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_a1ba4c6b41e3155890c4f3996214fdf7d}{}\label{class_docking_a1ba4c6b41e3155890c4f3996214fdf7d} 
+\index{Docking@{Docking}!Cmd\+Spawn\+Object@{Cmd\+Spawn\+Object}}
+\index{Cmd\+Spawn\+Object@{Cmd\+Spawn\+Object}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Cmd\+Spawn\+Object()}{CmdSpawnObject()}}
+{\footnotesize\ttfamily void Docking.\+Cmd\+Spawn\+Object (\begin{DoxyParamCaption}\item[{int}]{ability\+Id,  }\item[{int}]{prefab\+Id,  }\item[{Vector3}]{position,  }\item[{Vector3}]{rotation }\end{DoxyParamCaption})}
+
+
+
+Command for spawning prefab objects. Used by the abilities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ability\+Id} & Index of the ability calling the Command.\\
+\hline
+{\em prefab\+Id} & Index of the prefab to spawn from the ability.\\
+\hline
+{\em position} & Position of the new object.\\
+\hline
+{\em rotation} & Orientation of the new object (in euler\+Angles).\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_a68278f152756e9f77c3523455fa65cee}{}\label{class_docking_a68278f152756e9f77c3523455fa65cee} 
+\index{Docking@{Docking}!Cmd\+Spawn\+Object\+Reference@{Cmd\+Spawn\+Object\+Reference}}
+\index{Cmd\+Spawn\+Object\+Reference@{Cmd\+Spawn\+Object\+Reference}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Cmd\+Spawn\+Object\+Reference()}{CmdSpawnObjectReference()}}
+{\footnotesize\ttfamily void Docking.\+Cmd\+Spawn\+Object\+Reference (\begin{DoxyParamCaption}\item[{int}]{ability\+Id,  }\item[{int}]{prefab\+Id,  }\item[{Vector3}]{position,  }\item[{Vector3}]{rotation }\end{DoxyParamCaption})}
+
+
+
+Command for spawning prefab objects. Used by the abilities. Returns a reference to the spawned Game\+Object to the client/ability that called the Command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ability\+Id} & Index of the ability calling the Command.\\
+\hline
+{\em prefab\+Id} & Index of the prefab to spawn from the ability.\\
+\hline
+{\em position} & Position of the new object.\\
+\hline
+{\em rotation} & Orientation of the new object (in euler\+Angles).\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_a162b008bbd0d9fda84fe489e571502cd}{}\label{class_docking_a162b008bbd0d9fda84fe489e571502cd} 
+\index{Docking@{Docking}!Get\+Docking\+Kit@{Get\+Docking\+Kit}}
+\index{Get\+Docking\+Kit@{Get\+Docking\+Kit}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Get\+Docking\+Kit()}{GetDockingKit()}}
+{\footnotesize\ttfamily \hyperlink{class_docking_kit}{Docking\+Kit} Docking.\+Get\+Docking\+Kit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the active \hyperlink{class_docking_kit}{Docking\+Kit} for this \hyperlink{class_docking}{Docking}. 
+
+\begin{DoxyReturn}{Returns}
+The current \hyperlink{class_docking_kit}{Docking\+Kit}.
+\end{DoxyReturn}
+\hypertarget{class_docking_a3a17da1f77bcf2789a159a1489481bec}{}\label{class_docking_a3a17da1f77bcf2789a159a1489481bec} 
+\index{Docking@{Docking}!On\+Ability\+Button\+Change@{On\+Ability\+Button\+Change}}
+\index{On\+Ability\+Button\+Change@{On\+Ability\+Button\+Change}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{On\+Ability\+Button\+Change()}{OnAbilityButtonChange()}}
+{\footnotesize\ttfamily void Docking.\+On\+Ability\+Button\+Change (\begin{DoxyParamCaption}\item[{int}]{ability\+Id,  }\item[{bool}]{down }\end{DoxyParamCaption})}
+
+
+
+Called when the ability button is initially pressed or released. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ability\+Id} & Index of the ability where the button state changed.\\
+\hline
+{\em down} & If this was the initial press.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_ace85f096874db1f744af753a2f9e44ce}{}\label{class_docking_ace85f096874db1f744af753a2f9e44ce} 
+\index{Docking@{Docking}!On\+Docking\+Button\+Down@{On\+Docking\+Button\+Down}}
+\index{On\+Docking\+Button\+Down@{On\+Docking\+Button\+Down}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{On\+Docking\+Button\+Down()}{OnDockingButtonDown()}}
+{\footnotesize\ttfamily void Docking.\+On\+Docking\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when the dock button is pressed. 
+
+\hypertarget{class_docking_aa14ecfa7a3221dd327d0a4aa32ecdf38}{}\label{class_docking_aa14ecfa7a3221dd327d0a4aa32ecdf38} 
+\index{Docking@{Docking}!On\+Start\+Client@{On\+Start\+Client}}
+\index{On\+Start\+Client@{On\+Start\+Client}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{On\+Start\+Client()}{OnStartClient()}}
+{\footnotesize\ttfamily override void Docking.\+On\+Start\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when this object is activated on a client. Sets up the initial state and references. 
+
+\hypertarget{class_docking_a056ea40ea6f2afb8ba492970f042fc17}{}\label{class_docking_a056ea40ea6f2afb8ba492970f042fc17} 
+\index{Docking@{Docking}!On\+Start\+Local\+Player@{On\+Start\+Local\+Player}}
+\index{On\+Start\+Local\+Player@{On\+Start\+Local\+Player}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{On\+Start\+Local\+Player()}{OnStartLocalPlayer()}}
+{\footnotesize\ttfamily override void Docking.\+On\+Start\+Local\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when the local player object has been set up. Sets up local references. 
+
+\hypertarget{class_docking_aaeaafb7445f24b6f8ca47d75f58e6e88}{}\label{class_docking_aaeaafb7445f24b6f8ca47d75f58e6e88} 
+\index{Docking@{Docking}!On\+Undocking\+Button\+Down@{On\+Undocking\+Button\+Down}}
+\index{On\+Undocking\+Button\+Down@{On\+Undocking\+Button\+Down}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{On\+Undocking\+Button\+Down()}{OnUndockingButtonDown()}}
+{\footnotesize\ttfamily void Docking.\+On\+Undocking\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when the undock button is pressed. 
+
+\hypertarget{class_docking_af5968322d054d0ed72908ffcd323fc65}{}\label{class_docking_af5968322d054d0ed72908ffcd323fc65} 
+\index{Docking@{Docking}!Rpc\+Client\+Callback@{Rpc\+Client\+Callback}}
+\index{Rpc\+Client\+Callback@{Rpc\+Client\+Callback}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Rpc\+Client\+Callback()}{RpcClientCallback()}}
+{\footnotesize\ttfamily void Docking.\+Rpc\+Client\+Callback (\begin{DoxyParamCaption}\item[{int}]{ability\+Id,  }\item[{int}]{function\+Id }\end{DoxyParamCaption})}
+
+
+
+Client\+Rpc used by abilities to run code on every client, as they\textquotesingle{}re not Network\+Behaviour (or has authority) to call client rpcs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ability\+Id} & The id of the ability calling the rpc.\\
+\hline
+{\em function\+Id} & The id of the function to be run on every client.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_af9eb2fc63cb3035d9931fe5ec9f244aa}{}\label{class_docking_af9eb2fc63cb3035d9931fe5ec9f244aa} 
+\index{Docking@{Docking}!Rpc\+Set\+Active@{Rpc\+Set\+Active}}
+\index{Rpc\+Set\+Active@{Rpc\+Set\+Active}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Rpc\+Set\+Active()}{RpcSetActive()}}
+{\footnotesize\ttfamily void Docking.\+Rpc\+Set\+Active (\begin{DoxyParamCaption}\item[{int}]{ability\+Id,  }\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Client\+Rpc for activating an ability. Runs locally on every client. Returns immediately for the local player, as the activation already happened locally. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ability\+Id} & Index of the ability to activate.\\
+\hline
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_a70fe421a545e05d6c696f7ea3f371156}{}\label{class_docking_a70fe421a545e05d6c696f7ea3f371156} 
+\index{Docking@{Docking}!Rpc\+Set\+Switch\+State@{Rpc\+Set\+Switch\+State}}
+\index{Rpc\+Set\+Switch\+State@{Rpc\+Set\+Switch\+State}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Rpc\+Set\+Switch\+State()}{RpcSetSwitchState()}}
+{\footnotesize\ttfamily void Docking.\+Rpc\+Set\+Switch\+State (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Client\+Rpc for synchronizing the switching\+Kit state 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state of the bool\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_ace7395b879afe6788c7095fdf6c404a1}{}\label{class_docking_ace7395b879afe6788c7095fdf6c404a1} 
+\index{Docking@{Docking}!Set\+Docking\+Kit@{Set\+Docking\+Kit}}
+\index{Set\+Docking\+Kit@{Set\+Docking\+Kit}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Set\+Docking\+Kit()}{SetDockingKit()}}
+{\footnotesize\ttfamily void Docking.\+Set\+Docking\+Kit (\begin{DoxyParamCaption}\item[{Docking\+Kit\+Id}]{new\+Kit\+Id }\end{DoxyParamCaption})}
+
+
+
+Spawns in the \hyperlink{class_docking_kit}{Docking\+Kit} locally for the given new Docking\+Kit\+Id. Updates UI when called for local player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Kit\+Id} & The new Docking\+Kit\+Id.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_ae17ab0c0fc119ad63467036d90c9369b}{}\label{class_docking_ae17ab0c0fc119ad63467036d90c9369b} 
+\index{Docking@{Docking}!Set\+Docking\+Kit\+Stats@{Set\+Docking\+Kit\+Stats}}
+\index{Set\+Docking\+Kit\+Stats@{Set\+Docking\+Kit\+Stats}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Set\+Docking\+Kit\+Stats()}{SetDockingKitStats()}}
+{\footnotesize\ttfamily void Docking.\+Set\+Docking\+Kit\+Stats (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking_kit}{Docking\+Kit}}]{kit }\end{DoxyParamCaption})}
+
+
+
+Updates the stats given by the current \hyperlink{class_docking_kit}{Docking\+Kit}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kit} & Which \hyperlink{class_docking_kit}{Docking\+Kit} to retrieve the stats from.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_ad9f7c2688aca9e6b91c6b07082041eb4}{}\label{class_docking_ad9f7c2688aca9e6b91c6b07082041eb4} 
+\index{Docking@{Docking}!Set\+Modifier@{Set\+Modifier}}
+\index{Set\+Modifier@{Set\+Modifier}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Set\+Modifier()}{SetModifier()}}
+{\footnotesize\ttfamily void Docking.\+Set\+Modifier (\begin{DoxyParamCaption}\item[{int}]{ability\+Id,  }\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Called by Modifiers On\+Client functions to change the state of the modifier on each client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ability\+Id} & The id of the ability that applied the modifier.\\
+\hline
+{\em state} & The active state of the modifier.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_af4528d1af51f10ab75d161095f6eb7f3}{}\label{class_docking_af4528d1af51f10ab75d161095f6eb7f3} 
+\index{Docking@{Docking}!Set\+Player\+Input\+Restriction@{Set\+Player\+Input\+Restriction}}
+\index{Set\+Player\+Input\+Restriction@{Set\+Player\+Input\+Restriction}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Set\+Player\+Input\+Restriction()}{SetPlayerInputRestriction()}}
+{\footnotesize\ttfamily void Docking.\+Set\+Player\+Input\+Restriction (\begin{DoxyParamCaption}\item[{bool}]{state,  }\item[{params Input\+Type \mbox{[}$\,$\mbox{]}}]{input\+Types }\end{DoxyParamCaption})}
+
+
+
+Passes the parameters along to the \hyperlink{class_player_input}{Player\+Input} if called by the local player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state of the input restriction.\\
+\hline
+{\em input\+Types} & The types to set restriction for.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_ad341303ed88d02d37ccd165ab5bef8bb}{}\label{class_docking_ad341303ed88d02d37ccd165ab5bef8bb} 
+\index{Docking@{Docking}!Target\+Client\+Callback@{Target\+Client\+Callback}}
+\index{Target\+Client\+Callback@{Target\+Client\+Callback}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Target\+Client\+Callback()}{TargetClientCallback()}}
+{\footnotesize\ttfamily void Docking.\+Target\+Client\+Callback (\begin{DoxyParamCaption}\item[{Network\+Connection}]{connection,  }\item[{int}]{ability\+Id,  }\item[{int}]{function\+Id }\end{DoxyParamCaption})}
+
+
+
+Target\+Rpc used by abilities to run code on a target client, as they\textquotesingle{}re not Network\+Behaviour (or has authority) to call target rpcs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & Needed so Target\+Rpc finds the correct client.\\
+\hline
+{\em ability\+Id} & The id of the ability calling the target rpc.\\
+\hline
+{\em function\+Id} & The id of the function to be run on the targeted client.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_a9416a6bbad0e1fff0a238191db445a8b}{}\label{class_docking_a9416a6bbad0e1fff0a238191db445a8b} 
+\index{Docking@{Docking}!Target\+Reduce\+Cooldown@{Target\+Reduce\+Cooldown}}
+\index{Target\+Reduce\+Cooldown@{Target\+Reduce\+Cooldown}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Target\+Reduce\+Cooldown()}{TargetReduceCooldown()}}
+{\footnotesize\ttfamily void Docking.\+Target\+Reduce\+Cooldown (\begin{DoxyParamCaption}\item[{Network\+Connection}]{connection,  }\item[{int}]{ability\+Id,  }\item[{float}]{reduction\+Amount }\end{DoxyParamCaption})}
+
+
+
+Target\+Rpc for reducing the cooldown an ability by a certain amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & The Network\+Connection associated with the player given the reduction.\\
+\hline
+{\em ability\+Id} & The id of the ability to get cooldown reduction.\\
+\hline
+{\em reduction\+Amount} & The amount deducted for the current cooldown.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_docking_a7880a7127467ba0912691f1995899177}{}\label{class_docking_a7880a7127467ba0912691f1995899177} 
+\index{Docking@{Docking}!Target\+Set\+Spawn\+Object\+Reference@{Target\+Set\+Spawn\+Object\+Reference}}
+\index{Target\+Set\+Spawn\+Object\+Reference@{Target\+Set\+Spawn\+Object\+Reference}!Docking@{Docking}}
+\subsubsection{\texorpdfstring{Target\+Set\+Spawn\+Object\+Reference()}{TargetSetSpawnObjectReference()}}
+{\footnotesize\ttfamily void Docking.\+Target\+Set\+Spawn\+Object\+Reference (\begin{DoxyParamCaption}\item[{Network\+Connection}]{connection,  }\item[{Game\+Object}]{spawned\+Object,  }\item[{int}]{ability\+Id }\end{DoxyParamCaption})}
+
+
+
+Target\+Rpc for getting the reference to a spawned object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & Needed so Target\+Rpc finds the correct client.\\
+\hline
+{\em spawned\+Object} & Reference to the Game\+Object spawned.\\
+\hline
+{\em ability\+Id} & The id of the ability that called the spawn command.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Player/Docking.\+cs\end{DoxyCompactItemize}

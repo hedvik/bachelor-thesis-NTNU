@@ -1,0 +1,59 @@
+\hypertarget{class_capture_trap}{}\section{Capture\+Trap Class Reference}
+\label{class_capture_trap}\index{Capture\+Trap@{Capture\+Trap}}
+Inheritance diagram for Capture\+Trap\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_capture_trap}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_capture_trap_ac770502ec2d9a7e1fbc2ed4ce7f0ec8f}{Handle\+Trigger} (\hyperlink{class_player_status}{Player\+Status} player\+Status)
+\begin{DoxyCompactList}\small\item\em Callback for when the trap is triggered. Sets relevant gameobjects as active to display visuals and starts a coroutine for spawning the walls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_capture_trap_aa28f725f18c5a9c481f0e5713bce7832}{}\label{class_capture_trap_aa28f725f18c5a9c481f0e5713bce7832} 
+Game\+Object {\bfseries walls}
+\item 
+\hypertarget{class_capture_trap_a9f4445e87b30cd8bf75b03579c8aff20}{}\label{class_capture_trap_a9f4445e87b30cd8bf75b03579c8aff20} 
+float {\bfseries time\+Before\+Walls\+Spawn} = 1f
+\item 
+\hypertarget{class_capture_trap_a8c92d697cae971b9acec5ac5fff9e148}{}\label{class_capture_trap_a8c92d697cae971b9acec5ac5fff9e148} 
+float {\bfseries pull\+Force} = 10f
+\item 
+\hypertarget{class_capture_trap_a42d1ab53ce3774e26c1db906292bb339}{}\label{class_capture_trap_a42d1ab53ce3774e26c1db906292bb339} 
+float {\bfseries fade\+Speed} = 10f
+\item 
+\hypertarget{class_capture_trap_a21ae2cdd4bd27cd6801fde7b750d1cb9}{}\label{class_capture_trap_a21ae2cdd4bd27cd6801fde7b750d1cb9} 
+float {\bfseries fade\+Time\+Offset\+Multiplier} = 1.\+5f
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_capture_trap_ac770502ec2d9a7e1fbc2ed4ce7f0ec8f}{}\label{class_capture_trap_ac770502ec2d9a7e1fbc2ed4ce7f0ec8f} 
+\index{Capture\+Trap@{Capture\+Trap}!Handle\+Trigger@{Handle\+Trigger}}
+\index{Handle\+Trigger@{Handle\+Trigger}!Capture\+Trap@{Capture\+Trap}}
+\subsubsection{\texorpdfstring{Handle\+Trigger()}{HandleTrigger()}}
+{\footnotesize\ttfamily override void Capture\+Trap.\+Handle\+Trigger (\begin{DoxyParamCaption}\item[{\hyperlink{class_player_status}{Player\+Status}}]{player\+Status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for when the trap is triggered. Sets relevant gameobjects as active to display visuals and starts a coroutine for spawning the walls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Status} & The \hyperlink{class_player_status}{Player\+Status} component of the player that is in the trap\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_trap_a2e92a6f420a5d21a132108d8dd3ca5de}{Trap}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Trapper\+Kit/Capture\+Trap.\+cs\end{DoxyCompactItemize}

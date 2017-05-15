@@ -1,0 +1,127 @@
+\hypertarget{class_boomerang_vision}{}\section{Boomerang\+Vision Class Reference}
+\label{class_boomerang_vision}\index{Boomerang\+Vision@{Boomerang\+Vision}}
+Inheritance diagram for Boomerang\+Vision\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_boomerang_vision}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_boomerang_vision_ab7ad2e1f439267cfdb0aeedcc749c06e}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+override void \hyperlink{class_boomerang_vision_ad267dac2d41e6069e922cf35cd3a0814}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Callback for what this ability does locally when its associated button is pressed \end{DoxyCompactList}\item 
+override void \hyperlink{class_boomerang_vision_a57466383cc537a290ddc4e4fcf7a4c35}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\item 
+override void \hyperlink{class_boomerang_vision_a3fff30008efe643eeee867fad5c68b06}{Set\+Modifier} (bool state)
+\begin{DoxyCompactList}\small\item\em Callback for what this ability is supposed to do when a modifier state changes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_boomerang_vision_a51261f6e0e2f9179f58c6d85bec27d66}{}\label{class_boomerang_vision_a51261f6e0e2f9179f58c6d85bec27d66} 
+\hyperlink{class_boomerang_throw}{Boomerang\+Throw} {\bfseries boomerang\+Throw\+Script}
+\item 
+\hypertarget{class_boomerang_vision_ab952b57b1e7c2081de6661a6e1cc6c0b}{}\label{class_boomerang_vision_ab952b57b1e7c2081de6661a6e1cc6c0b} 
+\hyperlink{class_multi_boomerang_buff}{Multi\+Boomerang\+Buff} {\bfseries boomerang\+Buff\+Script}
+\item 
+\hypertarget{class_boomerang_vision_aba01921fd3dd17281a00b7ca14fbe5de}{}\label{class_boomerang_vision_aba01921fd3dd17281a00b7ca14fbe5de} 
+Game\+Object {\bfseries vision\+Indicator}
+\item 
+\hypertarget{class_boomerang_vision_aa8a3432ee8344e7ddc5216be95fef3e5}{}\label{class_boomerang_vision_aa8a3432ee8344e7ddc5216be95fef3e5} 
+float {\bfseries vision\+Radius\+While\+Active} = 10f
+\item 
+\hypertarget{class_boomerang_vision_a5bc4f9c92e5cf405571c7c37e1e53d89}{}\label{class_boomerang_vision_a5bc4f9c92e5cf405571c7c37e1e53d89} 
+float {\bfseries vision\+Radius\+Extra\+Boomerangs} = 5f
+\item 
+\hypertarget{class_boomerang_vision_aa6143b9a5ae2f9a6e8ab6c88aeab003f}{}\label{class_boomerang_vision_aa6143b9a5ae2f9a6e8ab6c88aeab003f} 
+float {\bfseries vision\+Lerp\+Speed} = 5f
+\item 
+\hypertarget{class_boomerang_vision_a1785d194d125b9b4b0925559514fa5fc}{}\label{class_boomerang_vision_a1785d194d125b9b4b0925559514fa5fc} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries vision\+Modifier}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_boomerang_vision_ad267dac2d41e6069e922cf35cd3a0814}{}\label{class_boomerang_vision_ad267dac2d41e6069e922cf35cd3a0814} 
+\index{Boomerang\+Vision@{Boomerang\+Vision}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Boomerang\+Vision@{Boomerang\+Vision}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Boomerang\+Vision.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability does locally when its associated button is pressed 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_boomerang_vision_ab7ad2e1f439267cfdb0aeedcc749c06e}{}\label{class_boomerang_vision_ab7ad2e1f439267cfdb0aeedcc749c06e} 
+\index{Boomerang\+Vision@{Boomerang\+Vision}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Boomerang\+Vision@{Boomerang\+Vision}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Boomerang\+Vision.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Ability}.
+
+\hypertarget{class_boomerang_vision_a57466383cc537a290ddc4e4fcf7a4c35}{}\label{class_boomerang_vision_a57466383cc537a290ddc4e4fcf7a4c35} 
+\index{Boomerang\+Vision@{Boomerang\+Vision}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Boomerang\+Vision@{Boomerang\+Vision}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Boomerang\+Vision.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+\hypertarget{class_boomerang_vision_a3fff30008efe643eeee867fad5c68b06}{}\label{class_boomerang_vision_a3fff30008efe643eeee867fad5c68b06} 
+\index{Boomerang\+Vision@{Boomerang\+Vision}!Set\+Modifier@{Set\+Modifier}}
+\index{Set\+Modifier@{Set\+Modifier}!Boomerang\+Vision@{Boomerang\+Vision}}
+\subsubsection{\texorpdfstring{Set\+Modifier()}{SetModifier()}}
+{\footnotesize\ttfamily override void Boomerang\+Vision.\+Set\+Modifier (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability is supposed to do when a modifier state changes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new modifier state\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_a18f5361c45dc334b541892880382c098}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Boomerang\+Kit/Boomerang\+Vision.\+cs\end{DoxyCompactItemize}

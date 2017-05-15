@@ -46,10 +46,6 @@
 % \O{}   \AA{}   \AE{}   you can also just leave a space and latex will remove it
 %    eg, NTNU i Gj\o vik  or NTNU i Gj\o{}vik
 
-
-
-
-
 \begin{document}
 
 \input{inc/BachelorThesisData} % this is the file which contains all the details about your thesis
@@ -66,10 +62,11 @@
 
 \input{inc/introduction}
 %\input{inc/requirements}
+\input{inc/gamedesign}
 \input{inc/technical}
 \input{inc/process}
 \input{inc/implementation}
-%\input{inc/deployment}
+\input{inc/deployment}
 \input{inc/testing}
 \input{inc/discussion}
 \input{inc/conclusion}
@@ -80,10 +77,8 @@
 
 \appendix %after this line all chapters will have letters instead of numbers
 \input{inc/projectplan}
-%\input{gantt}
 \input{inc/meetinglog}
-%\input{progressreviews}
-%\input{worklog}
+\input{inc/playtesterfeedback}
 \input{inc/doxygen}
 
 \end{document}

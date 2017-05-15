@@ -1,0 +1,98 @@
+\hypertarget{class_explosive_mine_spawner}{}\section{Explosive\+Mine\+Spawner Class Reference}
+\label{class_explosive_mine_spawner}\index{Explosive\+Mine\+Spawner@{Explosive\+Mine\+Spawner}}
+Inheritance diagram for Explosive\+Mine\+Spawner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_explosive_mine_spawner}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_explosive_mine_spawner_a564b8d5b2b851dd2de186d4375c579fb}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_explosive_mine_spawner_acef27903b71a80e7dffb8262b92b0b69}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\item 
+void \hyperlink{class_explosive_mine_spawner_a8c988e5aad957749f9d990cf9bb4f169}{Remove\+Mine} (int mine\+Id)
+\begin{DoxyCompactList}\small\item\em Removes the mine that got triggered \end{DoxyCompactList}\item 
+void \hyperlink{class_explosive_mine_spawner_a241dd83d808eea6450f490907d42bf51}{On\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em Clean up mines when docking kit is not equipped anymore. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_explosive_mine_spawner_ab65eee7acfea90cd7281e698595deb30}{}\label{class_explosive_mine_spawner_ab65eee7acfea90cd7281e698595deb30} 
+string {\bfseries animator\+Trigger}
+\item 
+\hypertarget{class_explosive_mine_spawner_ae9ac930ef4e6abb738af8ebd70591d29}{}\label{class_explosive_mine_spawner_ae9ac930ef4e6abb738af8ebd70591d29} 
+Game\+Object \mbox{[}$\,$\mbox{]} {\bfseries mine\+Prefab}
+\item 
+\hypertarget{class_explosive_mine_spawner_a54c422f87024b65917b7df13b19c5fd7}{}\label{class_explosive_mine_spawner_a54c422f87024b65917b7df13b19c5fd7} 
+int {\bfseries max\+Mine\+Amount}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_explosive_mine_spawner_a564b8d5b2b851dd2de186d4375c579fb}{}\label{class_explosive_mine_spawner_a564b8d5b2b851dd2de186d4375c579fb} 
+\index{Explosive\+Mine\+Spawner@{Explosive\+Mine\+Spawner}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Explosive\+Mine\+Spawner@{Explosive\+Mine\+Spawner}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Explosive\+Mine\+Spawner.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_explosive_mine_spawner_a241dd83d808eea6450f490907d42bf51}{}\label{class_explosive_mine_spawner_a241dd83d808eea6450f490907d42bf51} 
+\index{Explosive\+Mine\+Spawner@{Explosive\+Mine\+Spawner}!On\+Destroy@{On\+Destroy}}
+\index{On\+Destroy@{On\+Destroy}!Explosive\+Mine\+Spawner@{Explosive\+Mine\+Spawner}}
+\subsubsection{\texorpdfstring{On\+Destroy()}{OnDestroy()}}
+{\footnotesize\ttfamily void Explosive\+Mine\+Spawner.\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clean up mines when docking kit is not equipped anymore. 
+
+\hypertarget{class_explosive_mine_spawner_a8c988e5aad957749f9d990cf9bb4f169}{}\label{class_explosive_mine_spawner_a8c988e5aad957749f9d990cf9bb4f169} 
+\index{Explosive\+Mine\+Spawner@{Explosive\+Mine\+Spawner}!Remove\+Mine@{Remove\+Mine}}
+\index{Remove\+Mine@{Remove\+Mine}!Explosive\+Mine\+Spawner@{Explosive\+Mine\+Spawner}}
+\subsubsection{\texorpdfstring{Remove\+Mine()}{RemoveMine()}}
+{\footnotesize\ttfamily void Explosive\+Mine\+Spawner.\+Remove\+Mine (\begin{DoxyParamCaption}\item[{int}]{mine\+Id }\end{DoxyParamCaption})}
+
+
+
+Removes the mine that got triggered 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mine\+Id} & The ID of the mine.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_explosive_mine_spawner_acef27903b71a80e7dffb8262b92b0b69}{}\label{class_explosive_mine_spawner_acef27903b71a80e7dffb8262b92b0b69} 
+\index{Explosive\+Mine\+Spawner@{Explosive\+Mine\+Spawner}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Explosive\+Mine\+Spawner@{Explosive\+Mine\+Spawner}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Explosive\+Mine\+Spawner.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Bomber\+Kit/Explosive\+Mine\+Spawner.\+cs\end{DoxyCompactItemize}

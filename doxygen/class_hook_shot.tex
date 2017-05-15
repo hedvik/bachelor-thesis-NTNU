@@ -1,0 +1,90 @@
+\hypertarget{class_hook_shot}{}\section{Hook\+Shot Class Reference}
+\label{class_hook_shot}\index{Hook\+Shot@{Hook\+Shot}}
+Inheritance diagram for Hook\+Shot\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.435897cm]{class_hook_shot}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_hook_shot_a73e3191ef5ef7910106a40e2fa508503}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_hook_shot_a0b3f1e1b2b5bd9e75ba533c5a477fe7f}{Set\+Active} (bool state)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_hook_shot_ae9ac13a73ca90b9f6fa42205e5a6384c}{}\label{class_hook_shot_ae9ac13a73ca90b9f6fa42205e5a6384c} 
+string {\bfseries animator\+Bool}
+\item 
+\hypertarget{class_hook_shot_abbdcd456c3dfaf178aba9b0b28f5035a}{}\label{class_hook_shot_abbdcd456c3dfaf178aba9b0b28f5035a} 
+Transform {\bfseries hook\+Spawn\+Point}
+\item 
+\hypertarget{class_hook_shot_ae3911a362910bddb3c0c0ff55b015b2f}{}\label{class_hook_shot_ae3911a362910bddb3c0c0ff55b015b2f} 
+Collider {\bfseries hook}
+\item 
+\hypertarget{class_hook_shot_af890f587247522dc3cde3ac762f421ad}{}\label{class_hook_shot_af890f587247522dc3cde3ac762f421ad} 
+Line\+Renderer {\bfseries line\+Renderer}
+\item 
+\hypertarget{class_hook_shot_abe6e4e66acb3217bc95f3d329a13aea1}{}\label{class_hook_shot_abe6e4e66acb3217bc95f3d329a13aea1} 
+float {\bfseries hook\+Speed} = 40f
+\item 
+\hypertarget{class_hook_shot_af8ef93dc6e30a6955adfd7499d900f6f}{}\label{class_hook_shot_af8ef93dc6e30a6955adfd7499d900f6f} 
+float {\bfseries hook\+Return\+Speed} = 30f
+\item 
+\hypertarget{class_hook_shot_a3c14c478e354e6028190a6452f79fa53}{}\label{class_hook_shot_a3c14c478e354e6028190a6452f79fa53} 
+float {\bfseries hook\+Range} = 80f
+\item 
+\hypertarget{class_hook_shot_a76002356db6979d2c81715ebf97c4906}{}\label{class_hook_shot_a76002356db6979d2c81715ebf97c4906} 
+float {\bfseries hook\+Pull\+Force} = 5.\+8f
+\item 
+\hypertarget{class_hook_shot_a0c5717c9f853815da76d80f8f2a3ccf4}{}\label{class_hook_shot_a0c5717c9f853815da76d80f8f2a3ccf4} 
+float {\bfseries hook\+On\+Hit\+Hold\+Time} = 0.\+5f
+\item 
+\hypertarget{class_hook_shot_a2c20a29ca05361e57443ae158b2508b7}{}\label{class_hook_shot_a2c20a29ca05361e57443ae158b2508b7} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries hook\+Modifier}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_hook_shot_a73e3191ef5ef7910106a40e2fa508503}{}\label{class_hook_shot_a73e3191ef5ef7910106a40e2fa508503} 
+\index{Hook\+Shot@{Hook\+Shot}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Hook\+Shot@{Hook\+Shot}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Hook\+Shot.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_hook_shot_a0b3f1e1b2b5bd9e75ba533c5a477fe7f}{}\label{class_hook_shot_a0b3f1e1b2b5bd9e75ba533c5a477fe7f} 
+\index{Hook\+Shot@{Hook\+Shot}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Hook\+Shot@{Hook\+Shot}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Hook\+Shot.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Tank\+Kit/Hook\+Shot.\+cs\end{DoxyCompactItemize}

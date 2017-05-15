@@ -4,21 +4,50 @@
 When working on any project, choosing the right software development model can help a lot. For games in particular, agile software development is a near perfect match~\cite{keith2010agile}. The incremental nature of both allows developers to easily change the product based on feedback during development as well as providing workflows where clear and concise tasks can be set per increment. For this project we decided to use Scrum as our software development model due to its agile capabilities. We also wanted to grow more acquainted with professional tools like Jira and Confluence for project management as these integrate well with Scrum.   
 
 \subsection{Our configuration of Scrum}
-There are many different ways of using a software development model like Scrum. In our case we decided to stick with fortnightly sprints to provide incremental progress at a steady pace. We combined the retrospective, review and planning meetings into a single "Sprint Meeting" on the thursdays that the sprint ended as it would be easier to find the time for all group members to meet up and discuss the project's progress. 
+There are many different ways of using a software development model like Scrum. In our case we decided to stick with fortnightly sprints to provide incremental progress at a steady pace. We combined the retrospective, review and planning meetings into a single "Sprint Meeting" on the Thursdays that the sprint ended as it would be easier to find the time for all group members to meet up and discuss the project's progress. 
 Given that we didn't have any product owner, the review session of the sprint meeting consistent of showing each other the things we had been working on throughout the sprint. We also used daily standup meetings from Mondays to Wednesdays as these days had no lectures and were primarily used to work on the project. 
 
-\section{Using the Atlassian toolkit}
-We used several of the Atlassian tools when developing Dockit League: 
+\section{Development Tools}
+\subsection{Using the Atlassian toolkit}
+We used several of the Atlassian tools when developing Dockit League as they integrate nicely with each other: 
 \begin{description}
     \item[Bitbucket: ] Used to contain the source code
     \item[Confluence: ] Used to store documentation from meetings.
-    \item[Jira: ] Used to manage the project. This includes managing sprints, playing planning poker and updating the product backlog. 
+    \item[Jira: ] Used to manage the project. This includes managing sprints, playing planning poker, managing issues and updating the product backlog. 
 \end{description}
 
 We integrated Bitbucket with Jira to allow for smart commits. This allowed us to link any commits to issues using the DOCKL-\# tag where \# is substituted with the issue number and track progress on individual issues. Any commits unrelated to issues were simply pushed to our development branch in the project. 
     
 Feature branching for individual issues/product backlog items was also employed. Each feature branched out from the development branch and then merged back in through the use of pull requests as it allowed all group members to review the new code when it was finished. These branches were then closed as the pull request was merged. 
 
-\section{Code quality and conventions}
+\subsection{Improving compatibility between Unity and Git}
+\label{sec:unityGit}
+In the case of source code, Unity projects generally have a tendency to not perfectly mesh with version control systems like Git. This is due to the fact that commits generally contain a large amount of binary files for prefabs, assets and other non-source code files, but there are some tricks that can be pulled to improve the situation~\cite{unityGit}. It is possible to turn these binary files into YAML text format by tweaking a setting in the Unity Editor which allows the developer to actually properly solve merge conflicts. This in turn introduces another problem where commit messages are bloated with huge changes to these files, making it somewhat harder to have an overview over the actual source code changes. We would like to think that this trade-off still is better than not being able to handle merge conflicts on prefabs and assets. 
+
+\subsection{Code quality and conventions}
 We primarily used Microsoft's naming conventions~\cite{microsoftNamingGuidelines} and code guidelines~\cite{microsoftCodeGuidelines} while developing Dockit League. An exception to these naming conventions was that we used camelCase rather than PascalCase for member variables. In contrast with Microsoft's C\# code guidelines we used the One True Brace code convention~\cite{oneTrueBraceStyle} for formatting. 
-Doxygen documentation was required for functions and optional, but encouraged for classes depending on their complexity.
+Doxygen documentation was required for functions and optional, but encouraged, for classes depending on their complexity. The documentation was then later generated using the doxygen tools and added to the thesis as a PDF document. This means that any hyper-linking was lost in the documentation and while doxygen generates LaTeX files, these are unfeasible to directly add to the thesis as they use different style sheets with their own commands and dependencies. This would alter the style of the whole thesis which is unwanted behaviour. The full doxygen documentation can be found in Appendix~\ref{app:doxygen}. 
+
+\subsection{Game Engine}
+Using a game engine can help developers work more efficiently on a project due to not having to implement the lower level functionality like physics, rendering and core architectures. Given the three months long development period of the project, using a game engine was necessary to consistently implement the core functionality of the game that was needed. Unity is one of the most widespread game engines used in the industry to this date~\cite{unityUsageStatistics} and while other engines like Unreal also could be seen as an alternative, all of our group members already had worked with Unity before and wished gain more knowledge on engine functionalities like networking. This means that less time would be spent on learning the basics of the tools and allow for faster progression on the project.
+
+We generally stayed up to date with the latest versions of Unity whenever released and fixed any deprecated functionality as it appeared. The reason for this is that the Unity network functionality is constantly in a state of development and the updates include important bug fixes and optimizations related to networked components. 
+    
+\subsection{Integrated Development Environment}
+Unity offers two IDE's on installation:
+\begin{description}
+    \item[MonoDevelop: ] A cross platform IDE for C\# that has been packaged with previous versions of Unity as standard. 
+    \item[Visual Studio 2015: ] Newer versions of Unity have also begun packaging Visual Studio as an alternative to MonoDevelop. 
+\end{description}
+
+In the case of our project we chose to use Visual Studio over MonoDevelop. This is due to the fact that Visual Studio provides a wide array of quality of life functionality like automatic formatting and body generation of doxygen comments and better editor customization, including dark themes that ease development when there is limited light. 
+Visual Studio also has Unity plugins that allow for step by step debugging and full use of the Visual Studio debugger which is a powerful tool for testing purposes. 
+
+\subsection{Communication Tools}
+Our group members used Discord as primary means of communication. This includes using the provided chat functionality for discussing the project and asking each other for help as well as using the voice chat for daily scrum meetings. One of the advantages of Discord is that it supports printing of code blocks so whenever one of the group members wanted to provide code for questions, this was directly supported with syntax highlighting and formatting.   
+
+\subsection{Miscellaneous Tools}
+Other miscellaneous tools were also used throughout development. This section will detail these and how they were used. 
+Asset creation was generally handled through a variety of tools like Photoshop, GIMP, Clip Studio Paint and Blender. GIMP in particular worked well as an intermediary tool for centering sprites, which is useful for making sure that the pivot for sprite rotations is properly centered. 
+We used Microsoft Visio as a tool for creating the Gantt chart in the initial project plan, which can be found in Appendix~\ref{app:projectPlan}. Flow charts and similar types of diagrams were created using draw.io and then imported as either images or .svg files directly into the thesis.
+We also used Toggl as a means of time tracking our individual time usage on the project. 

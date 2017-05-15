@@ -1,0 +1,130 @@
+\hypertarget{class_multi_boomerang_buff}{}\section{Multi\+Boomerang\+Buff Class Reference}
+\label{class_multi_boomerang_buff}\index{Multi\+Boomerang\+Buff@{Multi\+Boomerang\+Buff}}
+Inheritance diagram for Multi\+Boomerang\+Buff\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_multi_boomerang_buff}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_multi_boomerang_buff_a01d1d7b7254386f436b559d1a7086e0a}{}\label{class_multi_boomerang_buff_a01d1d7b7254386f436b559d1a7086e0a} 
+enum {\bfseries Client\+Callback} \{ {\bfseries Buff\+Applied}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_multi_boomerang_buff_ae7f8d7ceb8511f4a0c4af037f7f126ef}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Callback for what this ability does locally when its associated button is pressed \end{DoxyCompactList}\item 
+override void \hyperlink{class_multi_boomerang_buff_a40111507e750be94b8f48acd57878d60}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\item 
+override void \hyperlink{class_multi_boomerang_buff_a0c48dc1b79b214c087a53c2114b18c50}{Set\+Modifier} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Callback for what this ability is supposed to do when a modifier state changes \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_multi_boomerang_buff_aee200dc6740f74b977090e63cd0c44da}{Reset\+Buff} ()
+\begin{DoxyCompactList}\small\item\em Coroutine used for resetting any visuals to default state. It waits for the end of the deactivation animation before doing anything. \end{DoxyCompactList}\item 
+\hypertarget{class_multi_boomerang_buff_a9150ccf13ce98e195ad53690b25830cf}{}\label{class_multi_boomerang_buff_a9150ccf13ce98e195ad53690b25830cf} 
+int {\bfseries Get\+Ability\+Id} ()
+\item 
+\hypertarget{class_multi_boomerang_buff_a4e57a1d56ef1bcd2c1d525eb7415da32}{}\label{class_multi_boomerang_buff_a4e57a1d56ef1bcd2c1d525eb7415da32} 
+int {\bfseries Get\+Buff\+Modifier\+Id} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_multi_boomerang_buff_ab7f489528f239fb815184ce54d1738ab}{}\label{class_multi_boomerang_buff_ab7f489528f239fb815184ce54d1738ab} 
+\hyperlink{class_boomerang_throw}{Boomerang\+Throw} {\bfseries boomerang\+Script}
+\item 
+\hypertarget{class_multi_boomerang_buff_a0a0022ba4cfd58ab7818e367abd3e92c}{}\label{class_multi_boomerang_buff_a0a0022ba4cfd58ab7818e367abd3e92c} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries buff}
+\item 
+\hypertarget{class_multi_boomerang_buff_a3308518614680660ac579402313b2d9d}{}\label{class_multi_boomerang_buff_a3308518614680660ac579402313b2d9d} 
+Game\+Object \mbox{[}$\,$\mbox{]} {\bfseries other\+Boomerang\+Visuals}
+\item 
+\hypertarget{class_multi_boomerang_buff_a29b1547db955af4ff8ceeb6b4f267217}{}\label{class_multi_boomerang_buff_a29b1547db955af4ff8ceeb6b4f267217} 
+Animator {\bfseries boomerang\+Animator}
+\item 
+\hypertarget{class_multi_boomerang_buff_a63c750c7211b7f31fbbb08ecf8d0269b}{}\label{class_multi_boomerang_buff_a63c750c7211b7f31fbbb08ecf8d0269b} 
+Animation\+Clip {\bfseries boomerang\+Animation\+Clip}
+\item 
+\hypertarget{class_multi_boomerang_buff_a7e4a0b5c647612903e622642f8528068}{}\label{class_multi_boomerang_buff_a7e4a0b5c647612903e622642f8528068} 
+string {\bfseries animation\+Trigger}
+\item 
+\hypertarget{class_multi_boomerang_buff_a99dbbe980d35fa39d800896c0e94fe26}{}\label{class_multi_boomerang_buff_a99dbbe980d35fa39d800896c0e94fe26} 
+bool {\bfseries buff\+Active} = false
+\item 
+\hypertarget{class_multi_boomerang_buff_a4c6c5f036c0c9385ba36380fb1c804f7}{}\label{class_multi_boomerang_buff_a4c6c5f036c0c9385ba36380fb1c804f7} 
+bool {\bfseries buff\+Applied} = false
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_multi_boomerang_buff_ae7f8d7ceb8511f4a0c4af037f7f126ef}{}\label{class_multi_boomerang_buff_ae7f8d7ceb8511f4a0c4af037f7f126ef} 
+\index{Multi\+Boomerang\+Buff@{Multi\+Boomerang\+Buff}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Multi\+Boomerang\+Buff@{Multi\+Boomerang\+Buff}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Multi\+Boomerang\+Buff.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability does locally when its associated button is pressed 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_multi_boomerang_buff_aee200dc6740f74b977090e63cd0c44da}{}\label{class_multi_boomerang_buff_aee200dc6740f74b977090e63cd0c44da} 
+\index{Multi\+Boomerang\+Buff@{Multi\+Boomerang\+Buff}!Reset\+Buff@{Reset\+Buff}}
+\index{Reset\+Buff@{Reset\+Buff}!Multi\+Boomerang\+Buff@{Multi\+Boomerang\+Buff}}
+\subsubsection{\texorpdfstring{Reset\+Buff()}{ResetBuff()}}
+{\footnotesize\ttfamily I\+Enumerator Multi\+Boomerang\+Buff.\+Reset\+Buff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Coroutine used for resetting any visuals to default state. It waits for the end of the deactivation animation before doing anything. 
+
+\hypertarget{class_multi_boomerang_buff_a40111507e750be94b8f48acd57878d60}{}\label{class_multi_boomerang_buff_a40111507e750be94b8f48acd57878d60} 
+\index{Multi\+Boomerang\+Buff@{Multi\+Boomerang\+Buff}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Multi\+Boomerang\+Buff@{Multi\+Boomerang\+Buff}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Multi\+Boomerang\+Buff.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+\hypertarget{class_multi_boomerang_buff_a0c48dc1b79b214c087a53c2114b18c50}{}\label{class_multi_boomerang_buff_a0c48dc1b79b214c087a53c2114b18c50} 
+\index{Multi\+Boomerang\+Buff@{Multi\+Boomerang\+Buff}!Set\+Modifier@{Set\+Modifier}}
+\index{Set\+Modifier@{Set\+Modifier}!Multi\+Boomerang\+Buff@{Multi\+Boomerang\+Buff}}
+\subsubsection{\texorpdfstring{Set\+Modifier()}{SetModifier()}}
+{\footnotesize\ttfamily override void Multi\+Boomerang\+Buff.\+Set\+Modifier (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability is supposed to do when a modifier state changes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new modifier state\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_a18f5361c45dc334b541892880382c098}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Boomerang\+Kit/Multi\+Boomerang\+Buff.\+cs\end{DoxyCompactItemize}

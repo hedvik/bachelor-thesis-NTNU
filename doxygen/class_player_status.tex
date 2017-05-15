@@ -1,0 +1,146 @@
+\hypertarget{class_player_status}{}\section{Player\+Status Class Reference}
+\label{class_player_status}\index{Player\+Status@{Player\+Status}}
+
+
+Handles the modifiers and status effects for the player.  
+
+
+Inheritance diagram for Player\+Status\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_status}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_player_status_ab8756b7695fdb92d6e1bfb41136e9e64}{Apply\+Modifier} (\hyperlink{struct_modifier_info}{Modifier\+Info} modifier\+Info, int ability\+Id=-\/1)
+\begin{DoxyCompactList}\small\item\em Server\+Callback for applying a modifier. Searches through list of current modifiers if the modifier is unique. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_status_a8be77a700782937b7e3a65c00e33ef2c}{Remove\+Modifier} (\hyperlink{class_modifier_instance_server}{Modifier\+Instance\+Server} instance, bool sync=true)
+\begin{DoxyCompactList}\small\item\em Removes the modifier instance passed to it. Called by the Modifier\+Instance when the modifier has ended. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_status_a04fbcb133455c0416c9fd7e7dbc974e2}{Remove\+Modifier} (\hyperlink{class_modifier}{Modifier} modifier)
+\begin{DoxyCompactList}\small\item\em Removes the first instance equal to the modifier passed in. Used by abilities through the \hyperlink{class_docking}{Docking}. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_status_a72dff84382f4ede50e529a80e44c98ac}{Remove\+All\+Modifiers} ()
+\begin{DoxyCompactList}\small\item\em Iterates through modifier list and stops everything. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_status_af6f61e3ea4794da66e0df905ec02ccf7}{Remove\+All\+Ability\+Modifiers} ()
+\begin{DoxyCompactList}\small\item\em Iterates through modifier list and stops ability (self applied) modifiers. (Modifiers with a valid ability\+Id). \end{DoxyCompactList}\item 
+void \hyperlink{class_player_status_a35a67a9226a36c964004b7feb0fa8dd1}{Target\+Set\+U\+I\+Duration} (Network\+Connection connection, int modifier\+Id, float new\+Duration)
+\begin{DoxyCompactList}\small\item\em Target\+Rpc for updating UI elements duration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_player_status_a7b5dc81e094339f19683136ff2e2e13d}{}\label{class_player_status_a7b5dc81e094339f19683136ff2e2e13d} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries stun}
+\item 
+\hypertarget{class_player_status_af22a19b3d69ef7d6419a4174950431a0}{}\label{class_player_status_af22a19b3d69ef7d6419a4174950431a0} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries root}
+\item 
+\hypertarget{class_player_status_aac3ecdaa7339383b206afc0b18e3969a}{}\label{class_player_status_aac3ecdaa7339383b206afc0b18e3969a} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries silence}
+\item 
+\hypertarget{class_player_status_af9f83ad817a9ff167fff3ff9f1869b74}{}\label{class_player_status_af9f83ad817a9ff167fff3ff9f1869b74} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries dot}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles the modifiers and status effects for the player. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_player_status_ab8756b7695fdb92d6e1bfb41136e9e64}{}\label{class_player_status_ab8756b7695fdb92d6e1bfb41136e9e64} 
+\index{Player\+Status@{Player\+Status}!Apply\+Modifier@{Apply\+Modifier}}
+\index{Apply\+Modifier@{Apply\+Modifier}!Player\+Status@{Player\+Status}}
+\subsubsection{\texorpdfstring{Apply\+Modifier()}{ApplyModifier()}}
+{\footnotesize\ttfamily void Player\+Status.\+Apply\+Modifier (\begin{DoxyParamCaption}\item[{\hyperlink{struct_modifier_info}{Modifier\+Info}}]{modifier\+Info,  }\item[{int}]{ability\+Id = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Server\+Callback for applying a modifier. Searches through list of current modifiers if the modifier is unique. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modifier\+Info} & The information needed to apply the modifier.\\
+\hline
+{\em ability\+Id} & The Id of the ability that applied the modifier if any, -\/1 otherwise.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_status_af6f61e3ea4794da66e0df905ec02ccf7}{}\label{class_player_status_af6f61e3ea4794da66e0df905ec02ccf7} 
+\index{Player\+Status@{Player\+Status}!Remove\+All\+Ability\+Modifiers@{Remove\+All\+Ability\+Modifiers}}
+\index{Remove\+All\+Ability\+Modifiers@{Remove\+All\+Ability\+Modifiers}!Player\+Status@{Player\+Status}}
+\subsubsection{\texorpdfstring{Remove\+All\+Ability\+Modifiers()}{RemoveAllAbilityModifiers()}}
+{\footnotesize\ttfamily void Player\+Status.\+Remove\+All\+Ability\+Modifiers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Iterates through modifier list and stops ability (self applied) modifiers. (Modifiers with a valid ability\+Id). 
+
+\hypertarget{class_player_status_a72dff84382f4ede50e529a80e44c98ac}{}\label{class_player_status_a72dff84382f4ede50e529a80e44c98ac} 
+\index{Player\+Status@{Player\+Status}!Remove\+All\+Modifiers@{Remove\+All\+Modifiers}}
+\index{Remove\+All\+Modifiers@{Remove\+All\+Modifiers}!Player\+Status@{Player\+Status}}
+\subsubsection{\texorpdfstring{Remove\+All\+Modifiers()}{RemoveAllModifiers()}}
+{\footnotesize\ttfamily void Player\+Status.\+Remove\+All\+Modifiers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Iterates through modifier list and stops everything. 
+
+\hypertarget{class_player_status_a8be77a700782937b7e3a65c00e33ef2c}{}\label{class_player_status_a8be77a700782937b7e3a65c00e33ef2c} 
+\index{Player\+Status@{Player\+Status}!Remove\+Modifier@{Remove\+Modifier}}
+\index{Remove\+Modifier@{Remove\+Modifier}!Player\+Status@{Player\+Status}}
+\subsubsection{\texorpdfstring{Remove\+Modifier()}{RemoveModifier()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Player\+Status.\+Remove\+Modifier (\begin{DoxyParamCaption}\item[{\hyperlink{class_modifier_instance_server}{Modifier\+Instance\+Server}}]{instance,  }\item[{bool}]{sync = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Removes the modifier instance passed to it. Called by the Modifier\+Instance when the modifier has ended. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & The Modifier\+Instance that should be removed.\\
+\hline
+{\em sync} & Should this be synced to the clients.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_status_a04fbcb133455c0416c9fd7e7dbc974e2}{}\label{class_player_status_a04fbcb133455c0416c9fd7e7dbc974e2} 
+\index{Player\+Status@{Player\+Status}!Remove\+Modifier@{Remove\+Modifier}}
+\index{Remove\+Modifier@{Remove\+Modifier}!Player\+Status@{Player\+Status}}
+\subsubsection{\texorpdfstring{Remove\+Modifier()}{RemoveModifier()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Player\+Status.\+Remove\+Modifier (\begin{DoxyParamCaption}\item[{\hyperlink{class_modifier}{Modifier}}]{modifier }\end{DoxyParamCaption})}
+
+
+
+Removes the first instance equal to the modifier passed in. Used by abilities through the \hyperlink{class_docking}{Docking}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modifier} & The modifier to remove.\\
+\hline
+\end{DoxyParams}
+
+
+Works as long as abilities only self apply unique instances of modifiers, as this only removes based on modifier type (not unique id).\hypertarget{class_player_status_a35a67a9226a36c964004b7feb0fa8dd1}{}\label{class_player_status_a35a67a9226a36c964004b7feb0fa8dd1} 
+\index{Player\+Status@{Player\+Status}!Target\+Set\+U\+I\+Duration@{Target\+Set\+U\+I\+Duration}}
+\index{Target\+Set\+U\+I\+Duration@{Target\+Set\+U\+I\+Duration}!Player\+Status@{Player\+Status}}
+\subsubsection{\texorpdfstring{Target\+Set\+U\+I\+Duration()}{TargetSetUIDuration()}}
+{\footnotesize\ttfamily void Player\+Status.\+Target\+Set\+U\+I\+Duration (\begin{DoxyParamCaption}\item[{Network\+Connection}]{connection,  }\item[{int}]{modifier\+Id,  }\item[{float}]{new\+Duration }\end{DoxyParamCaption})}
+
+
+
+Target\+Rpc for updating UI elements duration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & Needed so Target\+Rpc finds the correct client.\\
+\hline
+{\em modifier\+Id} & Used to find correct modifier instance.\\
+\hline
+{\em new\+Duration} & The new duration.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Player/Player\+Status.\+cs\end{DoxyCompactItemize}

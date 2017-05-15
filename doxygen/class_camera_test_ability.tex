@@ -1,0 +1,107 @@
+\hypertarget{class_camera_test_ability}{}\section{Camera\+Test\+Ability Class Reference}
+\label{class_camera_test_ability}\index{Camera\+Test\+Ability@{Camera\+Test\+Ability}}
+Inheritance diagram for Camera\+Test\+Ability\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_camera_test_ability}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_camera_test_ability_ad60de19016609c34f802f6d7eff6b7c8}{Initialize\+Local\+Player} (\hyperlink{class_ability_u_i}{Ability\+UI} ability\+UI)
+\begin{DoxyCompactList}\small\item\em Initialization that only happens for the local player (\hyperlink{class_player}{Player} controlling this ability). Called after Initialize, so the references are already set up. \end{DoxyCompactList}\item 
+override void \hyperlink{class_camera_test_ability_a27225856d48b83c5b86d2ebdfbd401d1}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_camera_test_ability_ac3a251d3757f6d45f96668631b26ff7d}{Cancel\+Ability} ()
+\begin{DoxyCompactList}\small\item\em Call for cancelling abilities. Override in abilities that may be interrupted. \end{DoxyCompactList}\item 
+override void \hyperlink{class_camera_test_ability_ac0e1ec197c4123a84508d5cfb209336c}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_camera_test_ability_a29d763143c6d4be2df7796bcb6dffd60}{}\label{class_camera_test_ability_a29d763143c6d4be2df7796bcb6dffd60} 
+Transform {\bfseries target}
+\item 
+\hypertarget{class_camera_test_ability_a3882d52ab0661973e044c4bcbb447082}{}\label{class_camera_test_ability_a3882d52ab0661973e044c4bcbb447082} 
+float {\bfseries target\+Ortho\+Size}
+\item 
+\hypertarget{class_camera_test_ability_af7bb52d12b52e445df775667ba2d0fce}{}\label{class_camera_test_ability_af7bb52d12b52e445df775667ba2d0fce} 
+float {\bfseries target\+View\+Angle}
+\item 
+\hypertarget{class_camera_test_ability_a84b42bb1bd436fb6e467cfb1bfb743a7}{}\label{class_camera_test_ability_a84b42bb1bd436fb6e467cfb1bfb743a7} 
+float {\bfseries target\+View\+Radius}
+\item 
+\hypertarget{class_camera_test_ability_ad4a3364984769d8daf4b6035bd8776ee}{}\label{class_camera_test_ability_ad4a3364984769d8daf4b6035bd8776ee} 
+float {\bfseries lerp\+Speed}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_camera_test_ability_a27225856d48b83c5b86d2ebdfbd401d1}{}\label{class_camera_test_ability_a27225856d48b83c5b86d2ebdfbd401d1} 
+\index{Camera\+Test\+Ability@{Camera\+Test\+Ability}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Camera\+Test\+Ability@{Camera\+Test\+Ability}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Camera\+Test\+Ability.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_camera_test_ability_ac3a251d3757f6d45f96668631b26ff7d}{}\label{class_camera_test_ability_ac3a251d3757f6d45f96668631b26ff7d} 
+\index{Camera\+Test\+Ability@{Camera\+Test\+Ability}!Cancel\+Ability@{Cancel\+Ability}}
+\index{Cancel\+Ability@{Cancel\+Ability}!Camera\+Test\+Ability@{Camera\+Test\+Ability}}
+\subsubsection{\texorpdfstring{Cancel\+Ability()}{CancelAbility()}}
+{\footnotesize\ttfamily override void Camera\+Test\+Ability.\+Cancel\+Ability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Call for cancelling abilities. Override in abilities that may be interrupted. 
+
+
+
+Reimplemented from \hyperlink{class_ability_ab0eaf1ad670e0624a5534c50b10c002f}{Ability}.
+
+\hypertarget{class_camera_test_ability_ad60de19016609c34f802f6d7eff6b7c8}{}\label{class_camera_test_ability_ad60de19016609c34f802f6d7eff6b7c8} 
+\index{Camera\+Test\+Ability@{Camera\+Test\+Ability}!Initialize\+Local\+Player@{Initialize\+Local\+Player}}
+\index{Initialize\+Local\+Player@{Initialize\+Local\+Player}!Camera\+Test\+Ability@{Camera\+Test\+Ability}}
+\subsubsection{\texorpdfstring{Initialize\+Local\+Player()}{InitializeLocalPlayer()}}
+{\footnotesize\ttfamily override void Camera\+Test\+Ability.\+Initialize\+Local\+Player (\begin{DoxyParamCaption}\item[{\hyperlink{class_ability_u_i}{Ability\+UI}}]{ability\+UI }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that only happens for the local player (\hyperlink{class_player}{Player} controlling this ability). Called after Initialize, so the references are already set up. 
+
+
+
+Reimplemented from \hyperlink{class_ability_ae8217a23a940c9ce450e827856d7020b}{Ability}.
+
+\hypertarget{class_camera_test_ability_ac0e1ec197c4123a84508d5cfb209336c}{}\label{class_camera_test_ability_ac0e1ec197c4123a84508d5cfb209336c} 
+\index{Camera\+Test\+Ability@{Camera\+Test\+Ability}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Camera\+Test\+Ability@{Camera\+Test\+Ability}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Camera\+Test\+Ability.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Test\+Abilities/Camera\+Test\+Ability.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\hypertarget{class_dash}{}\section{Dash Class Reference}
+\label{class_dash}\index{Dash@{Dash}}
+Inheritance diagram for Dash\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_dash}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_dash_a20f3651241a3bd4b1fd29c00eef4b8f6}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+override void \hyperlink{class_dash_ac959b32bf45d10a19da6d3ca363a220c}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_dash_a8eae582cfefa94fe254aeaca07d55674}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_dash_ac959b32bf45d10a19da6d3ca363a220c}{}\label{class_dash_ac959b32bf45d10a19da6d3ca363a220c} 
+\index{Dash@{Dash}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Dash@{Dash}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Dash.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_dash_a20f3651241a3bd4b1fd29c00eef4b8f6}{}\label{class_dash_a20f3651241a3bd4b1fd29c00eef4b8f6} 
+\index{Dash@{Dash}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Dash@{Dash}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Dash.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Ability}.
+
+\hypertarget{class_dash_a8eae582cfefa94fe254aeaca07d55674}{}\label{class_dash_a8eae582cfefa94fe254aeaca07d55674} 
+\index{Dash@{Dash}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Dash@{Dash}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Dash.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Marksman\+Kit/Dash.\+cs\end{DoxyCompactItemize}

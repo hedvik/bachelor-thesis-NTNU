@@ -1,0 +1,153 @@
+\hypertarget{class_stealth}{}\section{Stealth Class Reference}
+\label{class_stealth}\index{Stealth@{Stealth}}
+Inheritance diagram for Stealth\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_stealth}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_stealth_a3483f2663cee9ce06b7a6cd2675b6fc9}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+override void \hyperlink{class_stealth_aae7d450018e62c03c909694ceef22511}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_stealth_a90167c557e62b3cc2a0a0d5c2c57720e}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\item 
+override void \hyperlink{class_stealth_a2f3bf9001b860f4b3935a83d8b085f63}{Set\+Modifier} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Called by the \hyperlink{class_modifier}{Modifier}. Appropriate place for doing local changes. \end{DoxyCompactList}\item 
+void \hyperlink{class_stealth_a94c470c41f796ad0079ae50f82f76fe5}{Find\+Player\+Sprite\+Renderers} (List$<$ string $>$ names)
+\begin{DoxyCompactList}\small\item\em Function to find the sprite rendererers relevant to fading into stealth \end{DoxyCompactList}\item 
+\hypertarget{class_stealth_a3e3c0e9e57052078b7c92bc63467a0d9}{}\label{class_stealth_a3e3c0e9e57052078b7c92bc63467a0d9} 
+bool {\bfseries Is\+Stealthed} ()
+\item 
+\hypertarget{class_stealth_a75c971c5acc0c848c5b88ece435a1b8f}{}\label{class_stealth_a75c971c5acc0c848c5b88ece435a1b8f} 
+int {\bfseries Get\+Ability\+Id} ()
+\item 
+\hypertarget{class_stealth_a4a73443083ee4e4a3d9e426e83e2664f}{}\label{class_stealth_a4a73443083ee4e4a3d9e426e83e2664f} 
+int {\bfseries Get\+Buff\+Id} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_stealth_a147d8f8844df5085437643a87ae048ff}{}\label{class_stealth_a147d8f8844df5085437643a87ae048ff} 
+float {\bfseries stealth\+Damage\+Bonus}
+\item 
+\hypertarget{class_stealth_a7f44ee9e0cba7f514c160f258168012e}{}\label{class_stealth_a7f44ee9e0cba7f514c160f258168012e} 
+List$<$ string $>$ {\bfseries names\+Of\+Visuals}
+\item 
+\hypertarget{class_stealth_aa5f7d01028a63e6820d520e231beed09}{}\label{class_stealth_aa5f7d01028a63e6820d520e231beed09} 
+List$<$ Sprite\+Renderer $>$ {\bfseries visuals}
+\item 
+\hypertarget{class_stealth_af1149956df5ee6e656393db80cce39a1}{}\label{class_stealth_af1149956df5ee6e656393db80cce39a1} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries buff\+Info}
+\item 
+\hypertarget{class_stealth_a9ca03d60a4f9bb2ff4b12d4b3ef7e2ce}{}\label{class_stealth_a9ca03d60a4f9bb2ff4b12d4b3ef7e2ce} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} \mbox{[}$\,$\mbox{]} {\bfseries modifier\+Infos}
+\item 
+\hypertarget{class_stealth_a3d34c61bc304be9212b0544e1e30de06}{}\label{class_stealth_a3d34c61bc304be9212b0544e1e30de06} 
+float {\bfseries fade\+Time}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_stealth_aae7d450018e62c03c909694ceef22511}{}\label{class_stealth_aae7d450018e62c03c909694ceef22511} 
+\index{Stealth@{Stealth}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Stealth@{Stealth}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Stealth.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_stealth_a94c470c41f796ad0079ae50f82f76fe5}{}\label{class_stealth_a94c470c41f796ad0079ae50f82f76fe5} 
+\index{Stealth@{Stealth}!Find\+Player\+Sprite\+Renderers@{Find\+Player\+Sprite\+Renderers}}
+\index{Find\+Player\+Sprite\+Renderers@{Find\+Player\+Sprite\+Renderers}!Stealth@{Stealth}}
+\subsubsection{\texorpdfstring{Find\+Player\+Sprite\+Renderers()}{FindPlayerSpriteRenderers()}}
+{\footnotesize\ttfamily void Stealth.\+Find\+Player\+Sprite\+Renderers (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{names }\end{DoxyParamCaption})}
+
+
+
+Function to find the sprite rendererers relevant to fading into stealth 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the parent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_stealth_a3483f2663cee9ce06b7a6cd2675b6fc9}{}\label{class_stealth_a3483f2663cee9ce06b7a6cd2675b6fc9} 
+\index{Stealth@{Stealth}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Stealth@{Stealth}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Stealth.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Ability}.
+
+\hypertarget{class_stealth_a90167c557e62b3cc2a0a0d5c2c57720e}{}\label{class_stealth_a90167c557e62b3cc2a0a0d5c2c57720e} 
+\index{Stealth@{Stealth}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Stealth@{Stealth}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Stealth.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+\hypertarget{class_stealth_a2f3bf9001b860f4b3935a83d8b085f63}{}\label{class_stealth_a2f3bf9001b860f4b3935a83d8b085f63} 
+\index{Stealth@{Stealth}!Set\+Modifier@{Set\+Modifier}}
+\index{Set\+Modifier@{Set\+Modifier}!Stealth@{Stealth}}
+\subsubsection{\texorpdfstring{Set\+Modifier()}{SetModifier()}}
+{\footnotesize\ttfamily override void Stealth.\+Set\+Modifier (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called by the \hyperlink{class_modifier}{Modifier}. Appropriate place for doing local changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the modifier should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_a18f5361c45dc334b541892880382c098}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Marksman\+Kit/Stealth.\+cs\end{DoxyCompactItemize}

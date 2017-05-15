@@ -1,0 +1,150 @@
+\hypertarget{class_slingshot}{}\section{Slingshot Class Reference}
+\label{class_slingshot}\index{Slingshot@{Slingshot}}
+Inheritance diagram for Slingshot\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.181435cm]{class_slingshot}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_slingshot_a449e53a29fab847e65cb55fc3ee4490e}{Initialize\+Local\+Player} (\hyperlink{class_ability_u_i}{Ability\+UI} ability\+UI)
+\begin{DoxyCompactList}\small\item\em Initialization that only happens for the local player (\hyperlink{class_player}{Player} controlling this ability). Called after Initialize, so the references are already set up. \end{DoxyCompactList}\item 
+override void \hyperlink{class_slingshot_a99edcb4d23f3b610620256ed5da498e5}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Start the firing process if cooldown is ready. \end{DoxyCompactList}\item 
+override void \hyperlink{class_slingshot_a6d052ffbe09939626984fb9af095be54}{Button\+Up} ()
+\begin{DoxyCompactList}\small\item\em Fires the projectile if the ability is active. \end{DoxyCompactList}\item 
+override void \hyperlink{class_slingshot_a53b90ca543630d2a799da52e0ba7684c}{Cancel\+Ability} ()
+\begin{DoxyCompactList}\small\item\em Cancel the firing process if active. \end{DoxyCompactList}\item 
+override void \hyperlink{class_slingshot_a98ea94317e1fe4e56cf8e08d5b892f30}{Set\+Active} (bool fire)
+\begin{DoxyCompactList}\small\item\em Synchronizing states, either fires or resets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_slingshot_a4c84db71437e8fba09732f8bc73a4c80}{}\label{class_slingshot_a4c84db71437e8fba09732f8bc73a4c80} 
+Game\+Object {\bfseries projectile\+Prefab}
+\item 
+\hypertarget{class_slingshot_a8a1c9bb20e939df7822305ea7a819640}{}\label{class_slingshot_a8a1c9bb20e939df7822305ea7a819640} 
+Transform {\bfseries projectile\+Spawn\+Point}
+\item 
+\hypertarget{class_slingshot_a78d975c4344951550af71ca64e382417}{}\label{class_slingshot_a78d975c4344951550af71ca64e382417} 
+Transform {\bfseries left\+Fire\+Indicator}
+\item 
+\hypertarget{class_slingshot_ab150fb4197b2d055ea8137f96d5d2ee8}{}\label{class_slingshot_ab150fb4197b2d055ea8137f96d5d2ee8} 
+Transform {\bfseries right\+Fire\+Indicator}
+\item 
+\hypertarget{class_slingshot_a5334002ee993f7edae136b5db5e42300}{}\label{class_slingshot_a5334002ee993f7edae136b5db5e42300} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries sniping\+Slow}
+\item 
+\hypertarget{class_slingshot_a282740cdda226846211c0e173f76c8fa}{}\label{class_slingshot_a282740cdda226846211c0e173f76c8fa} 
+Transform {\bfseries projectile\+Visuals}
+\item 
+\hypertarget{class_slingshot_ad0149b5247102c568d5ff8e3349cc1a8}{}\label{class_slingshot_ad0149b5247102c568d5ff8e3349cc1a8} 
+float {\bfseries projectile\+Max\+PrecisionY} = -\/1.\+5f
+\item 
+\hypertarget{class_slingshot_a115a5b40962f64c3442ad49a47e2899f}{}\label{class_slingshot_a115a5b40962f64c3442ad49a47e2899f} 
+Line\+Renderer {\bfseries sling\+Renderer}
+\item 
+\hypertarget{class_slingshot_a24f813a0a5ae2507b01c0003b3765ba7}{}\label{class_slingshot_a24f813a0a5ae2507b01c0003b3765ba7} 
+float {\bfseries start\+Curve\+Modifier} = 0.\+5f
+\item 
+\hypertarget{class_slingshot_a9cf4327e9ab4c50416fe468014de81ef}{}\label{class_slingshot_a9cf4327e9ab4c50416fe468014de81ef} 
+float {\bfseries hold\+Curve\+Modifier} = 0.\+125f
+\item 
+\hypertarget{class_slingshot_a864ec5b4cee36b5f5c7687d9b9fb73a3}{}\label{class_slingshot_a864ec5b4cee36b5f5c7687d9b9fb73a3} 
+float {\bfseries reset\+Speed} = 2f
+\item 
+\hypertarget{class_slingshot_a94f25a2e95d5880652d392a33e764015}{}\label{class_slingshot_a94f25a2e95d5880652d392a33e764015} 
+Animation\+Curve {\bfseries start\+Curve}
+\item 
+\hypertarget{class_slingshot_a444f0da3951c2b82807da28138b33594}{}\label{class_slingshot_a444f0da3951c2b82807da28138b33594} 
+Animation\+Curve {\bfseries hold\+Curve}
+\item 
+\hypertarget{class_slingshot_a78f0f329943fd59ba5d7794a8db98b53}{}\label{class_slingshot_a78f0f329943fd59ba5d7794a8db98b53} 
+Animation\+Curve {\bfseries projectile\+Fire\+Animation}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_slingshot_a99edcb4d23f3b610620256ed5da498e5}{}\label{class_slingshot_a99edcb4d23f3b610620256ed5da498e5} 
+\index{Slingshot@{Slingshot}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Slingshot@{Slingshot}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Slingshot.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Start the firing process if cooldown is ready. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_slingshot_a6d052ffbe09939626984fb9af095be54}{}\label{class_slingshot_a6d052ffbe09939626984fb9af095be54} 
+\index{Slingshot@{Slingshot}!Button\+Up@{Button\+Up}}
+\index{Button\+Up@{Button\+Up}!Slingshot@{Slingshot}}
+\subsubsection{\texorpdfstring{Button\+Up()}{ButtonUp()}}
+{\footnotesize\ttfamily override void Slingshot.\+Button\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fires the projectile if the ability is active. 
+
+
+
+Reimplemented from \hyperlink{class_ability_ad13b45ac8d2205494b2c12d16677fe26}{Ability}.
+
+\hypertarget{class_slingshot_a53b90ca543630d2a799da52e0ba7684c}{}\label{class_slingshot_a53b90ca543630d2a799da52e0ba7684c} 
+\index{Slingshot@{Slingshot}!Cancel\+Ability@{Cancel\+Ability}}
+\index{Cancel\+Ability@{Cancel\+Ability}!Slingshot@{Slingshot}}
+\subsubsection{\texorpdfstring{Cancel\+Ability()}{CancelAbility()}}
+{\footnotesize\ttfamily override void Slingshot.\+Cancel\+Ability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cancel the firing process if active. 
+
+
+
+Reimplemented from \hyperlink{class_ability_ab0eaf1ad670e0624a5534c50b10c002f}{Ability}.
+
+\hypertarget{class_slingshot_a449e53a29fab847e65cb55fc3ee4490e}{}\label{class_slingshot_a449e53a29fab847e65cb55fc3ee4490e} 
+\index{Slingshot@{Slingshot}!Initialize\+Local\+Player@{Initialize\+Local\+Player}}
+\index{Initialize\+Local\+Player@{Initialize\+Local\+Player}!Slingshot@{Slingshot}}
+\subsubsection{\texorpdfstring{Initialize\+Local\+Player()}{InitializeLocalPlayer()}}
+{\footnotesize\ttfamily override void Slingshot.\+Initialize\+Local\+Player (\begin{DoxyParamCaption}\item[{\hyperlink{class_ability_u_i}{Ability\+UI}}]{ability\+UI }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that only happens for the local player (\hyperlink{class_player}{Player} controlling this ability). Called after Initialize, so the references are already set up. 
+
+
+
+Reimplemented from \hyperlink{class_ability_ae8217a23a940c9ce450e827856d7020b}{Ability}.
+
+\hypertarget{class_slingshot_a98ea94317e1fe4e56cf8e08d5b892f30}{}\label{class_slingshot_a98ea94317e1fe4e56cf8e08d5b892f30} 
+\index{Slingshot@{Slingshot}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Slingshot@{Slingshot}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Slingshot.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{fire }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronizing states, either fires or resets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fire} & If true fire, otherwise reset.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Sniper\+Kit/Slingshot.\+cs\end{DoxyCompactItemize}

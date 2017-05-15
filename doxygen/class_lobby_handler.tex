@@ -1,0 +1,136 @@
+\hypertarget{class_lobby_handler}{}\section{Lobby\+Handler Class Reference}
+\label{class_lobby_handler}\index{Lobby\+Handler@{Lobby\+Handler}}
+Inheritance diagram for Lobby\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_lobby_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_lobby_handler_adc9450a1e7af2b7ed8b643510c960afa}{Get\+Player\+Count} ()
+\begin{DoxyCompactList}\small\item\em Gets the amount of connected players to the lobby \end{DoxyCompactList}\item 
+void \hyperlink{class_lobby_handler_ad86ccc3fc2d147aedddd75c5df056c5c}{Add\+Player} (\hyperlink{class_d_l_network_lobby_player}{D\+L\+Network\+Lobby\+Player} player)
+\begin{DoxyCompactList}\small\item\em Adds a player to the connected\+Players list and then calls Decide\+Entry\+Team(player) \end{DoxyCompactList}\item 
+void \hyperlink{class_lobby_handler_ab08c8184e14aca2579503c6201af7e10}{Set\+Player\+Team} (\hyperlink{class_d_l_network_lobby_player}{D\+L\+Network\+Lobby\+Player} player)
+\begin{DoxyCompactList}\small\item\em Adds the player to the correct team list and puts sets the parent of the player\textquotesingle{}s visuals to the correct team panel \end{DoxyCompactList}\item 
+void \hyperlink{class_lobby_handler_a93e035e5597d004874101d1f5cdccddb}{Display\+Lobby} ()
+\begin{DoxyCompactList}\small\item\em Displays the lobby on the client and hides the \char`\"{}please wait while connecting\char`\"{} text \end{DoxyCompactList}\item 
+void \hyperlink{class_lobby_handler_a76a6047c9ac78dd317f5d01ce8b6c465}{Reset\+Local\+Lobby} ()
+\begin{DoxyCompactList}\small\item\em Does the opposite of \hyperlink{class_lobby_handler_a93e035e5597d004874101d1f5cdccddb}{Display\+Lobby()} \end{DoxyCompactList}\item 
+void \hyperlink{class_lobby_handler_a45ff185cbc0d3df476f940c29a601720}{Remove\+Player} (\hyperlink{class_d_l_network_lobby_player}{D\+L\+Network\+Lobby\+Player} player)
+\begin{DoxyCompactList}\small\item\em Removes a disconnecting player from the correct team and destroys the visuals of that player. \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_d_l_network_lobby_player}{D\+L\+Network\+Lobby\+Player} $>$ \hyperlink{class_lobby_handler_ac928e312ab0287895f609e3f1785602c}{Get\+Connected\+Players} ()
+\begin{DoxyCompactList}\small\item\em Returns a list of connected players \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_lobby_handler_a8c1fd60ff77f3483237ab111ce9bdd54}{}\label{class_lobby_handler_a8c1fd60ff77f3483237ab111ce9bdd54} 
+Rect\+Transform {\bfseries red\+Team\+Panel}
+\item 
+\hypertarget{class_lobby_handler_a7e155e5d1e5543726129c85aeb8955fd}{}\label{class_lobby_handler_a7e155e5d1e5543726129c85aeb8955fd} 
+Rect\+Transform {\bfseries blue\+Team\+Panel}
+\item 
+\hypertarget{class_lobby_handler_ad539563e57aa10019272581b7e17ca9a}{}\label{class_lobby_handler_ad539563e57aa10019272581b7e17ca9a} 
+Game\+Object {\bfseries waiting\+Screen\+Obj}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_lobby_handler_ad86ccc3fc2d147aedddd75c5df056c5c}{}\label{class_lobby_handler_ad86ccc3fc2d147aedddd75c5df056c5c} 
+\index{Lobby\+Handler@{Lobby\+Handler}!Add\+Player@{Add\+Player}}
+\index{Add\+Player@{Add\+Player}!Lobby\+Handler@{Lobby\+Handler}}
+\subsubsection{\texorpdfstring{Add\+Player()}{AddPlayer()}}
+{\footnotesize\ttfamily void Lobby\+Handler.\+Add\+Player (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_l_network_lobby_player}{D\+L\+Network\+Lobby\+Player}}]{player }\end{DoxyParamCaption})}
+
+
+
+Adds a player to the connected\+Players list and then calls Decide\+Entry\+Team(player) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player that we are adding\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_lobby_handler_a93e035e5597d004874101d1f5cdccddb}{}\label{class_lobby_handler_a93e035e5597d004874101d1f5cdccddb} 
+\index{Lobby\+Handler@{Lobby\+Handler}!Display\+Lobby@{Display\+Lobby}}
+\index{Display\+Lobby@{Display\+Lobby}!Lobby\+Handler@{Lobby\+Handler}}
+\subsubsection{\texorpdfstring{Display\+Lobby()}{DisplayLobby()}}
+{\footnotesize\ttfamily void Lobby\+Handler.\+Display\+Lobby (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the lobby on the client and hides the \char`\"{}please wait while connecting\char`\"{} text 
+
+\hypertarget{class_lobby_handler_ac928e312ab0287895f609e3f1785602c}{}\label{class_lobby_handler_ac928e312ab0287895f609e3f1785602c} 
+\index{Lobby\+Handler@{Lobby\+Handler}!Get\+Connected\+Players@{Get\+Connected\+Players}}
+\index{Get\+Connected\+Players@{Get\+Connected\+Players}!Lobby\+Handler@{Lobby\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Connected\+Players()}{GetConnectedPlayers()}}
+{\footnotesize\ttfamily List$<$\hyperlink{class_d_l_network_lobby_player}{D\+L\+Network\+Lobby\+Player}$>$ Lobby\+Handler.\+Get\+Connected\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a list of connected players 
+
+\begin{DoxyReturn}{Returns}
+A list of connected players
+\end{DoxyReturn}
+\hypertarget{class_lobby_handler_adc9450a1e7af2b7ed8b643510c960afa}{}\label{class_lobby_handler_adc9450a1e7af2b7ed8b643510c960afa} 
+\index{Lobby\+Handler@{Lobby\+Handler}!Get\+Player\+Count@{Get\+Player\+Count}}
+\index{Get\+Player\+Count@{Get\+Player\+Count}!Lobby\+Handler@{Lobby\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Player\+Count()}{GetPlayerCount()}}
+{\footnotesize\ttfamily int Lobby\+Handler.\+Get\+Player\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the amount of connected players to the lobby 
+
+\begin{DoxyReturn}{Returns}
+The number of connected players
+\end{DoxyReturn}
+\hypertarget{class_lobby_handler_a45ff185cbc0d3df476f940c29a601720}{}\label{class_lobby_handler_a45ff185cbc0d3df476f940c29a601720} 
+\index{Lobby\+Handler@{Lobby\+Handler}!Remove\+Player@{Remove\+Player}}
+\index{Remove\+Player@{Remove\+Player}!Lobby\+Handler@{Lobby\+Handler}}
+\subsubsection{\texorpdfstring{Remove\+Player()}{RemovePlayer()}}
+{\footnotesize\ttfamily void Lobby\+Handler.\+Remove\+Player (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_l_network_lobby_player}{D\+L\+Network\+Lobby\+Player}}]{player }\end{DoxyParamCaption})}
+
+
+
+Removes a disconnecting player from the correct team and destroys the visuals of that player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player that just disconnected\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_lobby_handler_a76a6047c9ac78dd317f5d01ce8b6c465}{}\label{class_lobby_handler_a76a6047c9ac78dd317f5d01ce8b6c465} 
+\index{Lobby\+Handler@{Lobby\+Handler}!Reset\+Local\+Lobby@{Reset\+Local\+Lobby}}
+\index{Reset\+Local\+Lobby@{Reset\+Local\+Lobby}!Lobby\+Handler@{Lobby\+Handler}}
+\subsubsection{\texorpdfstring{Reset\+Local\+Lobby()}{ResetLocalLobby()}}
+{\footnotesize\ttfamily void Lobby\+Handler.\+Reset\+Local\+Lobby (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Does the opposite of \hyperlink{class_lobby_handler_a93e035e5597d004874101d1f5cdccddb}{Display\+Lobby()} 
+
+\hypertarget{class_lobby_handler_ab08c8184e14aca2579503c6201af7e10}{}\label{class_lobby_handler_ab08c8184e14aca2579503c6201af7e10} 
+\index{Lobby\+Handler@{Lobby\+Handler}!Set\+Player\+Team@{Set\+Player\+Team}}
+\index{Set\+Player\+Team@{Set\+Player\+Team}!Lobby\+Handler@{Lobby\+Handler}}
+\subsubsection{\texorpdfstring{Set\+Player\+Team()}{SetPlayerTeam()}}
+{\footnotesize\ttfamily void Lobby\+Handler.\+Set\+Player\+Team (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_l_network_lobby_player}{D\+L\+Network\+Lobby\+Player}}]{player }\end{DoxyParamCaption})}
+
+
+
+Adds the player to the correct team list and puts sets the parent of the player\textquotesingle{}s visuals to the correct team panel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player that we are adding\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+U\+I/Lobby\+Handler.\+cs\end{DoxyCompactItemize}

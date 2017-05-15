@@ -1,0 +1,273 @@
+\hypertarget{class_ability}{}\section{Ability Class Reference}
+\label{class_ability}\index{Ability@{Ability}}
+
+
+Base class for all abilities.  
+
+
+Inheritance diagram for Ability\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_ability}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_ability_ae8217a23a940c9ce450e827856d7020b}{Initialize\+Local\+Player} (\hyperlink{class_ability_u_i}{Ability\+UI} ability\+UI)
+\begin{DoxyCompactList}\small\item\em Initialization that only happens for the local player (\hyperlink{class_player}{Player} controlling this ability). Called after Initialize, so the references are already set up. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_ability_af5abb620807086a1752b17b276c76a2e}{Cooldown\+Ready} ()
+\begin{DoxyCompactList}\small\item\em Called by the cooldown whenever its ready. \end{DoxyCompactList}\item 
+abstract void \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_ability_ad13b45ac8d2205494b2c12d16677fe26}{Button\+Up} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is released. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_ability_ab0eaf1ad670e0624a5534c50b10c002f}{Cancel\+Ability} ()
+\begin{DoxyCompactList}\small\item\em Call for cancelling abilities. Override in abilities that may be interrupted. \end{DoxyCompactList}\item 
+abstract void \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Set\+Active} (bool state)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_ability_a18f5361c45dc334b541892880382c098}{Set\+Modifier} (bool state)
+\begin{DoxyCompactList}\small\item\em Called by the \hyperlink{class_modifier}{Modifier}. Appropriate place for doing local changes. \end{DoxyCompactList}\item 
+void \hyperlink{class_ability_ad16a83f1ae0811435b1ab91cf954ece9}{Reduce\+Cooldown} (float reduction\+Amount)
+\begin{DoxyCompactList}\small\item\em Reduces the current cooldown for the ability. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_ability_ad01c565b443fdca24556f1d7c054da3f}{Set\+Element} (Elemental\+Container.\+Comboable\+Elements element)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ability_a0988ba1c0a8584cb6fda07d0e41f6b2c}{}\label{class_ability_a0988ba1c0a8584cb6fda07d0e41f6b2c} 
+float {\bfseries cooldown\+Duration}
+\item 
+\hypertarget{class_ability_a3511b54a419a0a55945f81a4f79fe15c}{}\label{class_ability_a3511b54a419a0a55945f81a4f79fe15c} 
+Sprite {\bfseries icon}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_ability_a88d799f38be464be5f0a9a315efb2d0b}{Update} ()
+\begin{DoxyCompactList}\small\item\em Runs on every client, but only the local player has cooldown initialized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ability_a2490756d6bc0af64a746bd50151b714d}{}\label{class_ability_a2490756d6bc0af64a746bd50151b714d} 
+\hyperlink{class_docking}{Docking} {\bfseries docking}
+\item 
+\hypertarget{class_ability_a2f557812a0519c7b0dd983bbf96fa0ba}{}\label{class_ability_a2f557812a0519c7b0dd983bbf96fa0ba} 
+Animator {\bfseries animator}
+\item 
+\hypertarget{class_ability_adbb00fc8d6f071d01d9211dccdea907b}{}\label{class_ability_adbb00fc8d6f071d01d9211dccdea907b} 
+int {\bfseries ability\+Id}
+\item 
+\hypertarget{class_ability_a0dc80ce2547cec495a453fbe01aa1724}{}\label{class_ability_a0dc80ce2547cec495a453fbe01aa1724} 
+\hyperlink{class_ability_cooldown}{Ability\+Cooldown} {\bfseries cooldown}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_ability_a0fbbf8eda910cd9463db7ef474da6019}{Ability\+Lock}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get and Set ability lock. Lock prevents the player from using abilities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for all abilities. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_ability_a7722265862f8b29828315725415ce266}{}\label{class_ability_a7722265862f8b29828315725415ce266} 
+\index{Ability@{Ability}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Ability@{Ability}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily abstract void Ability.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implemented in \hyperlink{class_boomerang_throw_a69416792bf4c3cb495d6d99ef4341fd3}{Boomerang\+Throw}, \hyperlink{class_slingshot_a99edcb4d23f3b610620256ed5da498e5}{Slingshot}, \hyperlink{class_basic_slash_a83d162978fe54d3c4fffc283d8efcde3}{Basic\+Slash}, \hyperlink{class_boomerang_root_a24efe6d7fc4691ad985c05c649a8b7d8}{Boomerang\+Root}, \hyperlink{class_player_input_test_ability_a061fe838c77962560b24ff59f2a3dab8}{Player\+Input\+Test\+Ability}, \hyperlink{class_projectile_reflect_a2a01121d450348b198cac9cef206fa29}{Projectile\+Reflect}, \hyperlink{class_focus_a607e4f36f1abef12e7a4966f95bc8616}{Focus}, \hyperlink{class_boomerang_vision_ad267dac2d41e6069e922cf35cd3a0814}{Boomerang\+Vision}, \hyperlink{class_hook_shot_a73e3191ef5ef7910106a40e2fa508503}{Hook\+Shot}, \hyperlink{class_camera_test_ability_a27225856d48b83c5b86d2ebdfbd401d1}{Camera\+Test\+Ability}, \hyperlink{class_life_steal_buff_a22a12c1a3e2dff97bf739a0488001000}{Life\+Steal\+Buff}, \hyperlink{class_power_saw_a7709f4f49760b8052c45648a1a13ee83}{Power\+Saw}, \hyperlink{class_multi_boomerang_buff_ae7f8d7ceb8511f4a0c4af037f7f126ef}{Multi\+Boomerang\+Buff}, \hyperlink{class_stealth_aae7d450018e62c03c909694ceef22511}{Stealth}, \hyperlink{class_zipline_gun_a11ed4eefae3e92c15b66c0869ff75e92}{Zipline\+Gun}, \hyperlink{class_tank_reflect_shield_a1f71fd2db71f237e13ff9e0121230f61}{Tank\+Reflect\+Shield}, \hyperlink{class_buff_test_ability_a45e7ab9bd436078b50ed112b75e97508}{Buff\+Test\+Ability}, \hyperlink{class_flamethrower_ad41102fce610be1bae9c795f4d720df5}{Flamethrower}, \hyperlink{class_force_field_a12dc77bd7d829070d67f182675ff49d1}{Force\+Field}, \hyperlink{class_blast_ab6e8d7899a858bc2da1978d40d266a63}{Blast}, \hyperlink{class_dash_ac959b32bf45d10a19da6d3ca363a220c}{Dash}, \hyperlink{class_track_a3f8061a940df45c78ce92a81abde7af5}{Track}, \hyperlink{class_trap_spawner_ac214a69bf4c841b0c74bb159ceb912b9}{Trap\+Spawner}, \hyperlink{class_explosive_mine_spawner_a564b8d5b2b851dd2de186d4375c579fb}{Explosive\+Mine\+Spawner}, \hyperlink{class_standard_spawnable_spawner_a1762d2f6a8bf3264b7316462648729a1}{Standard\+Spawnable\+Spawner}, \hyperlink{class_flash_grenade_spawner_a9f578f3c3fcb0ed1be466f37b5b401c5}{Flash\+Grenade\+Spawner}, \hyperlink{class_spawn_test_ability_ab6b09e46c9915a7980ac533a7162ea48}{Spawn\+Test\+Ability}, \hyperlink{class_remote_mine_spawner_afc0682db95d366cbcb7db54fc4c192fa}{Remote\+Mine\+Spawner}, \hyperlink{class_grenade_launcher_aad701030a96f84c21b002276247b5b9b}{Grenade\+Launcher}, \hyperlink{class_projectile_spawner_a9495a0da1b27877198ccd1d7f7153743}{Projectile\+Spawner}, \hyperlink{class_basic_ability_aec13c3d43d6690106f150026c59b63f0}{Basic\+Ability}, and \hyperlink{class_shackle_a19ae419f51b201f85310105c4fb2ca87}{Shackle}.
+
+\hypertarget{class_ability_ad13b45ac8d2205494b2c12d16677fe26}{}\label{class_ability_ad13b45ac8d2205494b2c12d16677fe26} 
+\index{Ability@{Ability}!Button\+Up@{Button\+Up}}
+\index{Button\+Up@{Button\+Up}!Ability@{Ability}}
+\subsubsection{\texorpdfstring{Button\+Up()}{ButtonUp()}}
+{\footnotesize\ttfamily virtual void Ability.\+Button\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is released. 
+
+
+
+Reimplemented in \hyperlink{class_boomerang_throw_a058894b26dc8d46886d79faefa4e36aa}{Boomerang\+Throw}, \hyperlink{class_slingshot_a6d052ffbe09939626984fb9af095be54}{Slingshot}, and \hyperlink{class_zipline_gun_a9ce4103f03cae60f268a652c67ae0b7d}{Zipline\+Gun}.
+
+\hypertarget{class_ability_ab0eaf1ad670e0624a5534c50b10c002f}{}\label{class_ability_ab0eaf1ad670e0624a5534c50b10c002f} 
+\index{Ability@{Ability}!Cancel\+Ability@{Cancel\+Ability}}
+\index{Cancel\+Ability@{Cancel\+Ability}!Ability@{Ability}}
+\subsubsection{\texorpdfstring{Cancel\+Ability()}{CancelAbility()}}
+{\footnotesize\ttfamily virtual void Ability.\+Cancel\+Ability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Call for cancelling abilities. Override in abilities that may be interrupted. 
+
+
+
+Reimplemented in \hyperlink{class_slingshot_a53b90ca543630d2a799da52e0ba7684c}{Slingshot}, \hyperlink{class_player_input_test_ability_adc59dfeabbb2e1cdff7b81797c9f3946}{Player\+Input\+Test\+Ability}, \hyperlink{class_camera_test_ability_ac3a251d3757f6d45f96668631b26ff7d}{Camera\+Test\+Ability}, and \hyperlink{class_focus_ae3bec489a21cdf93bd302eaf01c86b4b}{Focus}.
+
+\hypertarget{class_ability_af5abb620807086a1752b17b276c76a2e}{}\label{class_ability_af5abb620807086a1752b17b276c76a2e} 
+\index{Ability@{Ability}!Cooldown\+Ready@{Cooldown\+Ready}}
+\index{Cooldown\+Ready@{Cooldown\+Ready}!Ability@{Ability}}
+\subsubsection{\texorpdfstring{Cooldown\+Ready()}{CooldownReady()}}
+{\footnotesize\ttfamily virtual void Ability.\+Cooldown\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called by the cooldown whenever its ready. 
+
+
+
+Reimplemented in \hyperlink{class_power_saw_af94a6750bc9f283d35c967f38717084d}{Power\+Saw}, and \hyperlink{class_shackle_a81c2ef10a06ceab879574d3162dd7580}{Shackle}.
+
+\hypertarget{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{}\label{class_ability_ae659b58f49f07191c1d269fc3ba59c7e} 
+\index{Ability@{Ability}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Ability@{Ability}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily virtual void Ability.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_boomerang_throw_a757453f2578bc791773b5767eb80f39d}{Boomerang\+Throw}, \hyperlink{class_projectile_reflect_a5381a035271121930793086fc05f86c4}{Projectile\+Reflect}, \hyperlink{class_boomerang_vision_ab7ad2e1f439267cfdb0aeedcc749c06e}{Boomerang\+Vision}, \hyperlink{class_life_steal_buff_abdd7a4fb4aaceaae6eaae37c29de24cc}{Life\+Steal\+Buff}, \hyperlink{class_stealth_a3483f2663cee9ce06b7a6cd2675b6fc9}{Stealth}, \hyperlink{class_power_saw_ac695198ffe590b908e1c0c85f63fb792}{Power\+Saw}, \hyperlink{class_basic_slash_afc9c8ccb32b322317f157f9a5d06e925}{Basic\+Slash}, \hyperlink{class_flamethrower_a825b0e637ff46bd9b75c9d4705d194de}{Flamethrower}, \hyperlink{class_tank_reflect_shield_a3e2249b4918a8b93ac770d74adf03044}{Tank\+Reflect\+Shield}, \hyperlink{class_buff_test_ability_a205cdf654967c0884499c1cf15a92c7c}{Buff\+Test\+Ability}, \hyperlink{class_blast_a1c0b1bd2d101c05fdbe09d32a5c5c44a}{Blast}, \hyperlink{class_track_a87f3127370608a55c44203b8551e01e4}{Track}, \hyperlink{class_force_field_aed1ced1b7f1ddb9b0a8f0b8322b2eda1}{Force\+Field}, and \hyperlink{class_dash_a20f3651241a3bd4b1fd29c00eef4b8f6}{Dash}.
+
+\hypertarget{class_ability_ae8217a23a940c9ce450e827856d7020b}{}\label{class_ability_ae8217a23a940c9ce450e827856d7020b} 
+\index{Ability@{Ability}!Initialize\+Local\+Player@{Initialize\+Local\+Player}}
+\index{Initialize\+Local\+Player@{Initialize\+Local\+Player}!Ability@{Ability}}
+\subsubsection{\texorpdfstring{Initialize\+Local\+Player()}{InitializeLocalPlayer()}}
+{\footnotesize\ttfamily virtual void Ability.\+Initialize\+Local\+Player (\begin{DoxyParamCaption}\item[{\hyperlink{class_ability_u_i}{Ability\+UI}}]{ability\+UI }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that only happens for the local player (\hyperlink{class_player}{Player} controlling this ability). Called after Initialize, so the references are already set up. 
+
+
+
+Reimplemented in \hyperlink{class_slingshot_a449e53a29fab847e65cb55fc3ee4490e}{Slingshot}, \hyperlink{class_focus_a5f64f51f4074500f2572dea35eec1610}{Focus}, \hyperlink{class_camera_test_ability_ad60de19016609c34f802f6d7eff6b7c8}{Camera\+Test\+Ability}, \hyperlink{class_player_input_test_ability_a8ac71832a1fd267f30881d969767ca16}{Player\+Input\+Test\+Ability}, and \hyperlink{class_zipline_gun_a6f753a0b89e7fd852b5a81b041f64ac1}{Zipline\+Gun}.
+
+\hypertarget{class_ability_ad16a83f1ae0811435b1ab91cf954ece9}{}\label{class_ability_ad16a83f1ae0811435b1ab91cf954ece9} 
+\index{Ability@{Ability}!Reduce\+Cooldown@{Reduce\+Cooldown}}
+\index{Reduce\+Cooldown@{Reduce\+Cooldown}!Ability@{Ability}}
+\subsubsection{\texorpdfstring{Reduce\+Cooldown()}{ReduceCooldown()}}
+{\footnotesize\ttfamily void Ability.\+Reduce\+Cooldown (\begin{DoxyParamCaption}\item[{float}]{reduction\+Amount }\end{DoxyParamCaption})}
+
+
+
+Reduces the current cooldown for the ability. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reduction\+Amount} & The amount deducted for the current cooldown.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{}\label{class_ability_a10f7f3c2b63eeef6e352aee48d246384} 
+\index{Ability@{Ability}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Ability@{Ability}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily abstract void Ability.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_boomerang_throw_a29ac29357a95847a547321b091b2c8b3}{Boomerang\+Throw}, \hyperlink{class_slingshot_a98ea94317e1fe4e56cf8e08d5b892f30}{Slingshot}, \hyperlink{class_player_input_test_ability_a41b2128e36247c96b00df0c1052873f3}{Player\+Input\+Test\+Ability}, \hyperlink{class_basic_slash_abdc12ca8455ffa035c0a5b395d79b2ba}{Basic\+Slash}, \hyperlink{class_camera_test_ability_ac0e1ec197c4123a84508d5cfb209336c}{Camera\+Test\+Ability}, \hyperlink{class_boomerang_root_ada0fc97c2ae52051df846fe6434f33aa}{Boomerang\+Root}, \hyperlink{class_power_saw_ae83e556ce348e2fe51eb96f42f84c524}{Power\+Saw}, \hyperlink{class_track_a1eed16343757a39e2e00c23bb4b119da}{Track}, \hyperlink{class_focus_a18fae926f032d411999b668df6ee1d01}{Focus}, \hyperlink{class_projectile_reflect_a8e25ce526f99de5980cb0bac20dc634c}{Projectile\+Reflect}, \hyperlink{class_tank_reflect_shield_afb401bdb8593e86b44b70bc3eb369a47}{Tank\+Reflect\+Shield}, \hyperlink{class_stealth_a90167c557e62b3cc2a0a0d5c2c57720e}{Stealth}, \hyperlink{class_zipline_gun_a4783d4ac1e4b5332c070fbb57d5d7b69}{Zipline\+Gun}, \hyperlink{class_hook_shot_a0b3f1e1b2b5bd9e75ba533c5a477fe7f}{Hook\+Shot}, \hyperlink{class_boomerang_vision_a57466383cc537a290ddc4e4fcf7a4c35}{Boomerang\+Vision}, \hyperlink{class_life_steal_buff_ab5f0d975e5b0e2c0125649c395f20ead}{Life\+Steal\+Buff}, \hyperlink{class_multi_boomerang_buff_a40111507e750be94b8f48acd57878d60}{Multi\+Boomerang\+Buff}, \hyperlink{class_remote_mine_spawner_a187f725c8c3246bd9de8b4be05143a8e}{Remote\+Mine\+Spawner}, \hyperlink{class_buff_test_ability_ad69d427a9797a40716e11a0a5acd7f31}{Buff\+Test\+Ability}, \hyperlink{class_shackle_ac8715fddd58c3d0dd0b22cd31820ace4}{Shackle}, \hyperlink{class_flamethrower_acda546d1011d10da7b0574726a2408fe}{Flamethrower}, \hyperlink{class_trap_spawner_af9de8164ae685cef7e8f4349384f5e45}{Trap\+Spawner}, \hyperlink{class_blast_a65e2759005f4f28df38ab5a5287ff548}{Blast}, \hyperlink{class_force_field_a9d2cfa783bc8341a7d7ac6035ab8f587}{Force\+Field}, \hyperlink{class_explosive_mine_spawner_acef27903b71a80e7dffb8262b92b0b69}{Explosive\+Mine\+Spawner}, \hyperlink{class_spawn_test_ability_a238beca9f6296b80e950525108b97193}{Spawn\+Test\+Ability}, \hyperlink{class_standard_spawnable_spawner_a1c26d78c619871c3edb8d3febeb16e5f}{Standard\+Spawnable\+Spawner}, \hyperlink{class_flash_grenade_spawner_a704b6a24aae16c35578a5469f1773bbc}{Flash\+Grenade\+Spawner}, \hyperlink{class_dash_a8eae582cfefa94fe254aeaca07d55674}{Dash}, \hyperlink{class_projectile_spawner_a9896d21e1871b84380b473e90e1c8640}{Projectile\+Spawner}, \hyperlink{class_grenade_launcher_a4886ca94e7f3d8e3b0ddf23b0d8aaffe}{Grenade\+Launcher}, and \hyperlink{class_basic_ability_a5aa77734c675136e256cab6ba16b850a}{Basic\+Ability}.
+
+\hypertarget{class_ability_ad01c565b443fdca24556f1d7c054da3f}{}\label{class_ability_ad01c565b443fdca24556f1d7c054da3f} 
+\index{Ability@{Ability}!Set\+Element@{Set\+Element}}
+\index{Set\+Element@{Set\+Element}!Ability@{Ability}}
+\subsubsection{\texorpdfstring{Set\+Element()}{SetElement()}}
+{\footnotesize\ttfamily virtual void Ability.\+Set\+Element (\begin{DoxyParamCaption}\item[{Elemental\+Container.\+Comboable\+Elements}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Used for local spawning of elemental effect prefabs 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & The element we want to set\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_boomerang_throw_aec0765805c6cbbb18eb8ab37395b52f5}{Boomerang\+Throw}, and \hyperlink{class_basic_slash_ae5dd6639a4e305717f5e3344b1cec143}{Basic\+Slash}.
+
+\hypertarget{class_ability_a18f5361c45dc334b541892880382c098}{}\label{class_ability_a18f5361c45dc334b541892880382c098} 
+\index{Ability@{Ability}!Set\+Modifier@{Set\+Modifier}}
+\index{Set\+Modifier@{Set\+Modifier}!Ability@{Ability}}
+\subsubsection{\texorpdfstring{Set\+Modifier()}{SetModifier()}}
+{\footnotesize\ttfamily virtual void Ability.\+Set\+Modifier (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called by the \hyperlink{class_modifier}{Modifier}. Appropriate place for doing local changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the modifier should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_boomerang_throw_abd3070a4e57ae10d7578d6de618b5c2e}{Boomerang\+Throw}, \hyperlink{class_basic_slash_af42d098906ac33974f266ccc3b2aba6d}{Basic\+Slash}, \hyperlink{class_projectile_reflect_a13bdedc65cb8eed7f5d8a6a733feebe8}{Projectile\+Reflect}, \hyperlink{class_boomerang_vision_a3fff30008efe643eeee867fad5c68b06}{Boomerang\+Vision}, \hyperlink{class_stealth_a2f3bf9001b860f4b3935a83d8b085f63}{Stealth}, \hyperlink{class_life_steal_buff_a15b4e957b0023ccc3fe6349b721ed822}{Life\+Steal\+Buff}, \hyperlink{class_multi_boomerang_buff_a0c48dc1b79b214c087a53c2114b18c50}{Multi\+Boomerang\+Buff}, \hyperlink{class_buff_test_ability_a24f2ac23a4f1644af087c1e4162f4267}{Buff\+Test\+Ability}, and \hyperlink{class_flamethrower_a839995136fda8bb0ea556f3a1443253b}{Flamethrower}.
+
+\hypertarget{class_ability_a88d799f38be464be5f0a9a315efb2d0b}{}\label{class_ability_a88d799f38be464be5f0a9a315efb2d0b} 
+\index{Ability@{Ability}!Update@{Update}}
+\index{Update@{Update}!Ability@{Ability}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Ability.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Runs on every client, but only the local player has cooldown initialized. 
+
+
+
+Reimplemented in \hyperlink{class_boomerang_throw_a2388db1d5710a58189134f8359da2bc1}{Boomerang\+Throw}, \hyperlink{class_projectile_reflect_a81fc744408af168fb772d1c1f70d6f74}{Projectile\+Reflect}, \hyperlink{class_boomerang_root_ae237190bc2d4dbddcf21a25ee3c96dc9}{Boomerang\+Root}, and \hyperlink{class_basic_slash_a9bea8e187ba9a52f3a6ab0b48a218f60}{Basic\+Slash}.
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_ability_a0fbbf8eda910cd9463db7ef474da6019}{}\label{class_ability_a0fbbf8eda910cd9463db7ef474da6019} 
+\index{Ability@{Ability}!Ability\+Lock@{Ability\+Lock}}
+\index{Ability\+Lock@{Ability\+Lock}!Ability@{Ability}}
+\subsubsection{\texorpdfstring{Ability\+Lock}{AbilityLock}}
+{\footnotesize\ttfamily bool Ability.\+Ability\+Lock\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Get and Set ability lock. Lock prevents the player from using abilities. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/Ability.\+cs\end{DoxyCompactItemize}

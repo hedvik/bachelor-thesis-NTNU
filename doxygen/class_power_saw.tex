@@ -1,0 +1,119 @@
+\hypertarget{class_power_saw}{}\section{Power\+Saw Class Reference}
+\label{class_power_saw}\index{Power\+Saw@{Power\+Saw}}
+Inheritance diagram for Power\+Saw\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_power_saw}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_power_saw_ac695198ffe590b908e1c0c85f63fb792}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+override void \hyperlink{class_power_saw_a7709f4f49760b8052c45648a1a13ee83}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_power_saw_af94a6750bc9f283d35c967f38717084d}{Cooldown\+Ready} ()
+\begin{DoxyCompactList}\small\item\em Called from \hyperlink{class_ability_cooldown}{Ability\+Cooldown} when the ability is ready. Setting active to false returns the sawblades to the docking kit visuals. \end{DoxyCompactList}\item 
+override void \hyperlink{class_power_saw_ae83e556ce348e2fe51eb96f42f84c524}{Set\+Active} (bool state)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_power_saw_ad2f629e635babbc6bbebfbf52cf06b1b}{}\label{class_power_saw_ad2f629e635babbc6bbebfbf52cf06b1b} 
+float {\bfseries trigger\+To\+Spawn\+Time}
+\item 
+\hypertarget{class_power_saw_acdaae6aa2a2b32d4aeba26a67ef7f993}{}\label{class_power_saw_acdaae6aa2a2b32d4aeba26a67ef7f993} 
+float {\bfseries saw\+Damage}
+\item 
+\hypertarget{class_power_saw_acf603f3ab5e3226cbd2fe8ce6fa034ca}{}\label{class_power_saw_acf603f3ab5e3226cbd2fe8ce6fa034ca} 
+string {\bfseries animator\+Bool}
+\item 
+\hypertarget{class_power_saw_acfef49bdac2cd6562302c1548052cf75}{}\label{class_power_saw_acfef49bdac2cd6562302c1548052cf75} 
+Collider {\bfseries left\+Blade}
+\item 
+\hypertarget{class_power_saw_a4417aae741d4e2de1ad085d4c74cb52c}{}\label{class_power_saw_a4417aae741d4e2de1ad085d4c74cb52c} 
+Collider {\bfseries right\+Blade}
+\item 
+\hypertarget{class_power_saw_aded3502a1bcb4c98a9bdc3d4a28e85d0}{}\label{class_power_saw_aded3502a1bcb4c98a9bdc3d4a28e85d0} 
+Game\+Object {\bfseries blade\+Prefab}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_power_saw_a7709f4f49760b8052c45648a1a13ee83}{}\label{class_power_saw_a7709f4f49760b8052c45648a1a13ee83} 
+\index{Power\+Saw@{Power\+Saw}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Power\+Saw@{Power\+Saw}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Power\+Saw.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_power_saw_af94a6750bc9f283d35c967f38717084d}{}\label{class_power_saw_af94a6750bc9f283d35c967f38717084d} 
+\index{Power\+Saw@{Power\+Saw}!Cooldown\+Ready@{Cooldown\+Ready}}
+\index{Cooldown\+Ready@{Cooldown\+Ready}!Power\+Saw@{Power\+Saw}}
+\subsubsection{\texorpdfstring{Cooldown\+Ready()}{CooldownReady()}}
+{\footnotesize\ttfamily override void Power\+Saw.\+Cooldown\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called from \hyperlink{class_ability_cooldown}{Ability\+Cooldown} when the ability is ready. Setting active to false returns the sawblades to the docking kit visuals. 
+
+
+
+Reimplemented from \hyperlink{class_ability_af5abb620807086a1752b17b276c76a2e}{Ability}.
+
+\hypertarget{class_power_saw_ac695198ffe590b908e1c0c85f63fb792}{}\label{class_power_saw_ac695198ffe590b908e1c0c85f63fb792} 
+\index{Power\+Saw@{Power\+Saw}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Power\+Saw@{Power\+Saw}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Power\+Saw.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Ability}.
+
+\hypertarget{class_power_saw_ae83e556ce348e2fe51eb96f42f84c524}{}\label{class_power_saw_ae83e556ce348e2fe51eb96f42f84c524} 
+\index{Power\+Saw@{Power\+Saw}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Power\+Saw@{Power\+Saw}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Power\+Saw.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Tank\+Kit/Power\+Saw.\+cs\end{DoxyCompactItemize}

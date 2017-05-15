@@ -1,0 +1,138 @@
+\hypertarget{class_flamethrower}{}\section{Flamethrower Class Reference}
+\label{class_flamethrower}\index{Flamethrower@{Flamethrower}}
+Inheritance diagram for Flamethrower\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_flamethrower}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_flamethrower_a825b0e637ff46bd9b75c9d4705d194de}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+override void \hyperlink{class_flamethrower_ad41102fce610be1bae9c795f4d720df5}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_flamethrower_acda546d1011d10da7b0574726a2408fe}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\item 
+override void \hyperlink{class_flamethrower_a839995136fda8bb0ea556f3a1443253b}{Set\+Modifier} (bool state)
+\begin{DoxyCompactList}\small\item\em Called by the \hyperlink{class_modifier}{Modifier}. Appropriate place for doing local changes. \end{DoxyCompactList}\item 
+void \hyperlink{class_flamethrower_a5cdec1a136398627fb280f251834ff54}{Set\+Buff\+State} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets the visual state of the flamethrower to the given parameter state \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_flamethrower_a6c196f6a84dafd9bcd72a0f5052d1115}{}\label{class_flamethrower_a6c196f6a84dafd9bcd72a0f5052d1115} 
+Sprite\+Renderer {\bfseries head}
+\item 
+\hypertarget{class_flamethrower_a18ebe86d2a0bceb7e04a2cc2ecd26dae}{}\label{class_flamethrower_a18ebe86d2a0bceb7e04a2cc2ecd26dae} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries buff}
+\item 
+\hypertarget{class_flamethrower_a075917eb3ffab80a06f8b5bc34ccf583}{}\label{class_flamethrower_a075917eb3ffab80a06f8b5bc34ccf583} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries dot}
+\item 
+\hypertarget{class_flamethrower_a6c50e2b5a5767205740defb3c6c86db2}{}\label{class_flamethrower_a6c50e2b5a5767205740defb3c6c86db2} 
+Game\+Object {\bfseries flamethrower\+Container}
+\item 
+\hypertarget{class_flamethrower_a245677e02bdb4a097e44fa6cfe350f87}{}\label{class_flamethrower_a245677e02bdb4a097e44fa6cfe350f87} 
+Color {\bfseries head\+Color\+While\+Active}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_flamethrower_ad41102fce610be1bae9c795f4d720df5}{}\label{class_flamethrower_ad41102fce610be1bae9c795f4d720df5} 
+\index{Flamethrower@{Flamethrower}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Flamethrower@{Flamethrower}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Flamethrower.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_flamethrower_a825b0e637ff46bd9b75c9d4705d194de}{}\label{class_flamethrower_a825b0e637ff46bd9b75c9d4705d194de} 
+\index{Flamethrower@{Flamethrower}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Flamethrower@{Flamethrower}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Flamethrower.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Ability}.
+
+\hypertarget{class_flamethrower_acda546d1011d10da7b0574726a2408fe}{}\label{class_flamethrower_acda546d1011d10da7b0574726a2408fe} 
+\index{Flamethrower@{Flamethrower}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Flamethrower@{Flamethrower}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Flamethrower.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+\hypertarget{class_flamethrower_a5cdec1a136398627fb280f251834ff54}{}\label{class_flamethrower_a5cdec1a136398627fb280f251834ff54} 
+\index{Flamethrower@{Flamethrower}!Set\+Buff\+State@{Set\+Buff\+State}}
+\index{Set\+Buff\+State@{Set\+Buff\+State}!Flamethrower@{Flamethrower}}
+\subsubsection{\texorpdfstring{Set\+Buff\+State()}{SetBuffState()}}
+{\footnotesize\ttfamily void Flamethrower.\+Set\+Buff\+State (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Sets the visual state of the flamethrower to the given parameter state 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The state of the flamethrower\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_flamethrower_a839995136fda8bb0ea556f3a1443253b}{}\label{class_flamethrower_a839995136fda8bb0ea556f3a1443253b} 
+\index{Flamethrower@{Flamethrower}!Set\+Modifier@{Set\+Modifier}}
+\index{Set\+Modifier@{Set\+Modifier}!Flamethrower@{Flamethrower}}
+\subsubsection{\texorpdfstring{Set\+Modifier()}{SetModifier()}}
+{\footnotesize\ttfamily override void Flamethrower.\+Set\+Modifier (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called by the \hyperlink{class_modifier}{Modifier}. Appropriate place for doing local changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the modifier should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_a18f5361c45dc334b541892880382c098}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Trapper\+Kit/Flamethrower.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,85 @@
+\hypertarget{class_shackle}{}\section{Shackle Class Reference}
+\label{class_shackle}\index{Shackle@{Shackle}}
+Inheritance diagram for Shackle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_shackle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_shackle_a19ae419f51b201f85310105c4fb2ca87}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_shackle_a81c2ef10a06ceab879574d3162dd7580}{Cooldown\+Ready} ()
+\begin{DoxyCompactList}\small\item\em Called from \hyperlink{class_ability_cooldown}{Ability\+Cooldown} when the ability is ready. Setting active to true returns the bola to the docking kit visuals. \end{DoxyCompactList}\item 
+override void \hyperlink{class_shackle_ac8715fddd58c3d0dd0b22cd31820ace4}{Set\+Active} (bool state)
+\begin{DoxyCompactList}\small\item\em State is here the active of the bola visuals (Opposite of normal). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_shackle_a00f592608de2d590fe2ce569e35a4ea8}{}\label{class_shackle_a00f592608de2d590fe2ce569e35a4ea8} 
+string {\bfseries animator\+Trigger}
+\item 
+\hypertarget{class_shackle_a79dd6bf230e5acb534b9d33743cea17e}{}\label{class_shackle_a79dd6bf230e5acb534b9d33743cea17e} 
+Game\+Object {\bfseries spawnable\+Prefab}
+\item 
+\hypertarget{class_shackle_add0abd65e4f4212b13914806c83e47f4}{}\label{class_shackle_add0abd65e4f4212b13914806c83e47f4} 
+Transform {\bfseries spawn\+Point}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_shackle_a19ae419f51b201f85310105c4fb2ca87}{}\label{class_shackle_a19ae419f51b201f85310105c4fb2ca87} 
+\index{Shackle@{Shackle}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Shackle@{Shackle}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Shackle.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_shackle_a81c2ef10a06ceab879574d3162dd7580}{}\label{class_shackle_a81c2ef10a06ceab879574d3162dd7580} 
+\index{Shackle@{Shackle}!Cooldown\+Ready@{Cooldown\+Ready}}
+\index{Cooldown\+Ready@{Cooldown\+Ready}!Shackle@{Shackle}}
+\subsubsection{\texorpdfstring{Cooldown\+Ready()}{CooldownReady()}}
+{\footnotesize\ttfamily override void Shackle.\+Cooldown\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called from \hyperlink{class_ability_cooldown}{Ability\+Cooldown} when the ability is ready. Setting active to true returns the bola to the docking kit visuals. 
+
+
+
+Reimplemented from \hyperlink{class_ability_af5abb620807086a1752b17b276c76a2e}{Ability}.
+
+\hypertarget{class_shackle_ac8715fddd58c3d0dd0b22cd31820ace4}{}\label{class_shackle_ac8715fddd58c3d0dd0b22cd31820ace4} 
+\index{Shackle@{Shackle}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Shackle@{Shackle}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Shackle.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+State is here the active of the bola visuals (Opposite of normal). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Visual state of the bola.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Sniper\+Kit/Shackle.\+cs\end{DoxyCompactItemize}

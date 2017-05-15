@@ -1,0 +1,125 @@
+\hypertarget{class_focus}{}\section{Focus Class Reference}
+\label{class_focus}\index{Focus@{Focus}}
+Inheritance diagram for Focus\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_focus}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_focus_a5f64f51f4074500f2572dea35eec1610}{Initialize\+Local\+Player} (\hyperlink{class_ability_u_i}{Ability\+UI} ability\+UI)
+\begin{DoxyCompactList}\small\item\em Initialization that only happens for the local player (\hyperlink{class_player}{Player} controlling this ability). Called after Initialize, so the references are already set up. \end{DoxyCompactList}\item 
+override void \hyperlink{class_focus_a607e4f36f1abef12e7a4966f95bc8616}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_focus_ae3bec489a21cdf93bd302eaf01c86b4b}{Cancel\+Ability} ()
+\begin{DoxyCompactList}\small\item\em Call for cancelling abilities. Override in abilities that may be interrupted. \end{DoxyCompactList}\item 
+override void \hyperlink{class_focus_a18fae926f032d411999b668df6ee1d01}{Set\+Active} (bool state)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_focus_a4b492f7d26063fc082756c7c46958944}{}\label{class_focus_a4b492f7d26063fc082756c7c46958944} 
+string {\bfseries animator\+Bool}
+\item 
+\hypertarget{class_focus_a975bc7b52fe72cc7236cc7074417ccfd}{}\label{class_focus_a975bc7b52fe72cc7236cc7074417ccfd} 
+float {\bfseries max\+Duration} = 15f
+\item 
+\hypertarget{class_focus_a6fbcdfca56bdee21102edf139259080e}{}\label{class_focus_a6fbcdfca56bdee21102edf139259080e} 
+Transform {\bfseries target}
+\item 
+\hypertarget{class_focus_a01be8fddc7e6a68cce6ce14cbce9ee4d}{}\label{class_focus_a01be8fddc7e6a68cce6ce14cbce9ee4d} 
+float {\bfseries target\+Ortho\+Size}
+\item 
+\hypertarget{class_focus_aec8ebf92234333f33b8f19ba564dc419}{}\label{class_focus_aec8ebf92234333f33b8f19ba564dc419} 
+\hyperlink{class_slingshot}{Slingshot} {\bfseries slingshot}
+\item 
+\hypertarget{class_focus_a393cb07caebdffab1516cdc16c0b979c}{}\label{class_focus_a393cb07caebdffab1516cdc16c0b979c} 
+Transform {\bfseries left\+Sling\+Handle}
+\item 
+\hypertarget{class_focus_a37594881ba505215fa10b2ee833b1146}{}\label{class_focus_a37594881ba505215fa10b2ee833b1146} 
+Transform {\bfseries right\+Sling\+Handle}
+\item 
+\hypertarget{class_focus_acb6140d7aa3a2a8fd5166a3f8637ca96}{}\label{class_focus_acb6140d7aa3a2a8fd5166a3f8637ca96} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries focus\+Modifier}
+\item 
+\hypertarget{class_focus_aa44c68e9dad6332d2e5460dc4d0554a0}{}\label{class_focus_aa44c68e9dad6332d2e5460dc4d0554a0} 
+float {\bfseries target\+View\+Angle}
+\item 
+\hypertarget{class_focus_a710fda41d9989c97c074b13f43e23ae7}{}\label{class_focus_a710fda41d9989c97c074b13f43e23ae7} 
+float {\bfseries target\+View\+Radius}
+\item 
+\hypertarget{class_focus_ae8beb5d31eaea81208a8b431933ee6c0}{}\label{class_focus_ae8beb5d31eaea81208a8b431933ee6c0} 
+float {\bfseries lerp\+Speed}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_focus_a607e4f36f1abef12e7a4966f95bc8616}{}\label{class_focus_a607e4f36f1abef12e7a4966f95bc8616} 
+\index{Focus@{Focus}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Focus@{Focus}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Focus.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_focus_ae3bec489a21cdf93bd302eaf01c86b4b}{}\label{class_focus_ae3bec489a21cdf93bd302eaf01c86b4b} 
+\index{Focus@{Focus}!Cancel\+Ability@{Cancel\+Ability}}
+\index{Cancel\+Ability@{Cancel\+Ability}!Focus@{Focus}}
+\subsubsection{\texorpdfstring{Cancel\+Ability()}{CancelAbility()}}
+{\footnotesize\ttfamily override void Focus.\+Cancel\+Ability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Call for cancelling abilities. Override in abilities that may be interrupted. 
+
+
+
+Reimplemented from \hyperlink{class_ability_ab0eaf1ad670e0624a5534c50b10c002f}{Ability}.
+
+\hypertarget{class_focus_a5f64f51f4074500f2572dea35eec1610}{}\label{class_focus_a5f64f51f4074500f2572dea35eec1610} 
+\index{Focus@{Focus}!Initialize\+Local\+Player@{Initialize\+Local\+Player}}
+\index{Initialize\+Local\+Player@{Initialize\+Local\+Player}!Focus@{Focus}}
+\subsubsection{\texorpdfstring{Initialize\+Local\+Player()}{InitializeLocalPlayer()}}
+{\footnotesize\ttfamily override void Focus.\+Initialize\+Local\+Player (\begin{DoxyParamCaption}\item[{\hyperlink{class_ability_u_i}{Ability\+UI}}]{ability\+UI }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that only happens for the local player (\hyperlink{class_player}{Player} controlling this ability). Called after Initialize, so the references are already set up. 
+
+
+
+Reimplemented from \hyperlink{class_ability_ae8217a23a940c9ce450e827856d7020b}{Ability}.
+
+\hypertarget{class_focus_a18fae926f032d411999b668df6ee1d01}{}\label{class_focus_a18fae926f032d411999b668df6ee1d01} 
+\index{Focus@{Focus}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Focus@{Focus}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Focus.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Sniper\+Kit/Focus.\+cs\end{DoxyCompactItemize}

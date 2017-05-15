@@ -1,0 +1,161 @@
+\hypertarget{class_basic_slash}{}\section{Basic\+Slash Class Reference}
+\label{class_basic_slash}\index{Basic\+Slash@{Basic\+Slash}}
+Inheritance diagram for Basic\+Slash\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_basic_slash}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_basic_slash_afc9c8ccb32b322317f157f9a5d06e925}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+override void \hyperlink{class_basic_slash_a83d162978fe54d3c4fffc283d8efcde3}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Callback for what this ability should do once its associated button has been pressed \end{DoxyCompactList}\item 
+override void \hyperlink{class_basic_slash_abdc12ca8455ffa035c0a5b395d79b2ba}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Callback for what this ability is supposed to do depending on given state. State is always false here \end{DoxyCompactList}\item 
+override void \hyperlink{class_basic_slash_af42d098906ac33974f266ccc3b2aba6d}{Set\+Modifier} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Called by the \hyperlink{class_modifier}{Modifier}. Appropriate place for doing local changes. \end{DoxyCompactList}\item 
+override void \hyperlink{class_basic_slash_ae5dd6639a4e305717f5e3344b1cec143}{Set\+Element} (Elemental\+Container.\+Comboable\+Elements element)
+\begin{DoxyCompactList}\small\item\em Callback for what this ability is supposed to do locally when applying a element \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_basic_slash_aba2550a9ded380921589154c431b2d5d}{}\label{class_basic_slash_aba2550a9ded380921589154c431b2d5d} 
+float {\bfseries damage\+Dealt} = 20f
+\item 
+\hypertarget{class_basic_slash_aa2aaca16e21f9b1ae4e60351645daf5f}{}\label{class_basic_slash_aa2aaca16e21f9b1ae4e60351645daf5f} 
+string {\bfseries animator\+Trigger}
+\item 
+\hypertarget{class_basic_slash_a64ce8278c7bccbca3114a7128817cfcb}{}\label{class_basic_slash_a64ce8278c7bccbca3114a7128817cfcb} 
+\hyperlink{class_life_steal_buff}{Life\+Steal\+Buff} {\bfseries life\+Steal\+Buff}
+\item 
+\hypertarget{class_basic_slash_ab20e78df0bfb0c598270537bc1864502}{}\label{class_basic_slash_ab20e78df0bfb0c598270537bc1864502} 
+\hyperlink{class_elemental_modifiers}{Elemental\+Modifiers} {\bfseries elemental\+Modifiers} = new \hyperlink{class_elemental_modifiers}{Elemental\+Modifiers}()
+\item 
+\hypertarget{class_basic_slash_a8bc792497affb3acf2cf59f34aa6afc3}{}\label{class_basic_slash_a8bc792497affb3acf2cf59f34aa6afc3} 
+bool {\bfseries swing\+Active}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_basic_slash_a9bea8e187ba9a52f3a6ab0b48a218f60}{Update} ()
+\begin{DoxyCompactList}\small\item\em Runs on every client, but only the local player has cooldown initialized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_basic_slash_a83d162978fe54d3c4fffc283d8efcde3}{}\label{class_basic_slash_a83d162978fe54d3c4fffc283d8efcde3} 
+\index{Basic\+Slash@{Basic\+Slash}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Basic\+Slash@{Basic\+Slash}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Basic\+Slash.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability should do once its associated button has been pressed 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_basic_slash_afc9c8ccb32b322317f157f9a5d06e925}{}\label{class_basic_slash_afc9c8ccb32b322317f157f9a5d06e925} 
+\index{Basic\+Slash@{Basic\+Slash}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Basic\+Slash@{Basic\+Slash}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Basic\+Slash.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Ability}.
+
+\hypertarget{class_basic_slash_abdc12ca8455ffa035c0a5b395d79b2ba}{}\label{class_basic_slash_abdc12ca8455ffa035c0a5b395d79b2ba} 
+\index{Basic\+Slash@{Basic\+Slash}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Basic\+Slash@{Basic\+Slash}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Basic\+Slash.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability is supposed to do depending on given state. State is always false here 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Whether the ability is to be active or now\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+\hypertarget{class_basic_slash_ae5dd6639a4e305717f5e3344b1cec143}{}\label{class_basic_slash_ae5dd6639a4e305717f5e3344b1cec143} 
+\index{Basic\+Slash@{Basic\+Slash}!Set\+Element@{Set\+Element}}
+\index{Set\+Element@{Set\+Element}!Basic\+Slash@{Basic\+Slash}}
+\subsubsection{\texorpdfstring{Set\+Element()}{SetElement()}}
+{\footnotesize\ttfamily override void Basic\+Slash.\+Set\+Element (\begin{DoxyParamCaption}\item[{Elemental\+Container.\+Comboable\+Elements}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability is supposed to do locally when applying a element 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ad01c565b443fdca24556f1d7c054da3f}{Ability}.
+
+\hypertarget{class_basic_slash_af42d098906ac33974f266ccc3b2aba6d}{}\label{class_basic_slash_af42d098906ac33974f266ccc3b2aba6d} 
+\index{Basic\+Slash@{Basic\+Slash}!Set\+Modifier@{Set\+Modifier}}
+\index{Set\+Modifier@{Set\+Modifier}!Basic\+Slash@{Basic\+Slash}}
+\subsubsection{\texorpdfstring{Set\+Modifier()}{SetModifier()}}
+{\footnotesize\ttfamily override void Basic\+Slash.\+Set\+Modifier (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called by the \hyperlink{class_modifier}{Modifier}. Appropriate place for doing local changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the modifier should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_a18f5361c45dc334b541892880382c098}{Ability}.
+
+\hypertarget{class_basic_slash_a9bea8e187ba9a52f3a6ab0b48a218f60}{}\label{class_basic_slash_a9bea8e187ba9a52f3a6ab0b48a218f60} 
+\index{Basic\+Slash@{Basic\+Slash}!Update@{Update}}
+\index{Update@{Update}!Basic\+Slash@{Basic\+Slash}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily override void Basic\+Slash.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Runs on every client, but only the local player has cooldown initialized. 
+
+
+
+Reimplemented from \hyperlink{class_ability_a88d799f38be464be5f0a9a315efb2d0b}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Brawler\+Kit/Basic\+Slash.\+cs\end{DoxyCompactItemize}

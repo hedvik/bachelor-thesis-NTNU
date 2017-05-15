@@ -1,0 +1,94 @@
+\hypertarget{class_track}{}\section{Track Class Reference}
+\label{class_track}\index{Track@{Track}}
+Inheritance diagram for Track\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_track}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_track_a87f3127370608a55c44203b8551e01e4}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+override void \hyperlink{class_track_a3f8061a940df45c78ce92a81abde7af5}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_track_a1eed16343757a39e2e00c23bb4b119da}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_track_a17804c52c91aeb0228e837b6e31c950d}{}\label{class_track_a17804c52c91aeb0228e837b6e31c950d} 
+float {\bfseries cast\+Range}
+\item 
+\hypertarget{class_track_addd810a1cef17f4a983aa4c35be2fb28}{}\label{class_track_addd810a1cef17f4a983aa4c35be2fb28} 
+Layer\+Mask {\bfseries layer\+Mask}
+\item 
+\hypertarget{class_track_a2c1676d7c01b64a7427260e8376dafa3}{}\label{class_track_a2c1676d7c01b64a7427260e8376dafa3} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries track\+Info}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_track_a3f8061a940df45c78ce92a81abde7af5}{}\label{class_track_a3f8061a940df45c78ce92a81abde7af5} 
+\index{Track@{Track}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Track@{Track}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Track.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_track_a87f3127370608a55c44203b8551e01e4}{}\label{class_track_a87f3127370608a55c44203b8551e01e4} 
+\index{Track@{Track}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Track@{Track}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Track.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Ability}.
+
+\hypertarget{class_track_a1eed16343757a39e2e00c23bb4b119da}{}\label{class_track_a1eed16343757a39e2e00c23bb4b119da} 
+\index{Track@{Track}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Track@{Track}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Track.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Marksman\+Kit/Track.\+cs\end{DoxyCompactItemize}

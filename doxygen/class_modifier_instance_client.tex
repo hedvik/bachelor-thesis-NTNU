@@ -1,0 +1,129 @@
+\hypertarget{class_modifier_instance_client}{}\section{Modifier\+Instance\+Client Class Reference}
+\label{class_modifier_instance_client}\index{Modifier\+Instance\+Client@{Modifier\+Instance\+Client}}
+
+
+The instance used when a modifier is active. Only exists on the clients.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_modifier_instance_client_afbdbe5c786c135f6ac463412c34d4dbe}{Modifier\+Instance\+Client} (\hyperlink{class_modifier}{Modifier} mod, \hyperlink{class_player_status}{Player\+Status} pl\+Status, \hyperlink{class_player_u_i_handler}{Player\+U\+I\+Handler} player\+U\+I\+Handler, int mod\+Id, int ab\+Id, float duration)
+\begin{DoxyCompactList}\small\item\em Constructor that instantiates effect objects and calls the correct modifier functions. \end{DoxyCompactList}\item 
+void \hyperlink{class_modifier_instance_client_a07c777977dc78d7a0ec1d3519b76d5f6}{On\+End} ()
+\begin{DoxyCompactList}\small\item\em Called when the modifier effect has ended. \end{DoxyCompactList}\item 
+void \hyperlink{class_modifier_instance_client_a1dc19ff93cf2053c841588a689a081dc}{Set\+New\+Duration} (float new\+Duration)
+\begin{DoxyCompactList}\small\item\em Updates the UI elements with the new duration. \end{DoxyCompactList}\item 
+\hyperlink{class_modifier}{Modifier} \hyperlink{class_modifier_instance_client_a2faa7a2a46489610c86759d4b57d19ac}{Get\+Modifier} ()
+\begin{DoxyCompactList}\small\item\em Returns the modifier used by this instance. \end{DoxyCompactList}\item 
+int \hyperlink{class_modifier_instance_client_abbe31055b1201afce4372df1a1d1e10a}{Get\+Ability\+Id} ()
+\begin{DoxyCompactList}\small\item\em Returns the ability ID in this instance, equal to or above 0 means this modifier was applied by an ability, -\/1 otherwise. \end{DoxyCompactList}\item 
+int \hyperlink{class_modifier_instance_client_ae6f8817f0de275a92204d1595d26e731}{Get\+Modifier\+Id} ()
+\begin{DoxyCompactList}\small\item\em Returns the unique modifier ID for this instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The instance used when a modifier is active. Only exists on the clients. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_modifier_instance_client_afbdbe5c786c135f6ac463412c34d4dbe}{}\label{class_modifier_instance_client_afbdbe5c786c135f6ac463412c34d4dbe} 
+\index{Modifier\+Instance\+Client@{Modifier\+Instance\+Client}!Modifier\+Instance\+Client@{Modifier\+Instance\+Client}}
+\index{Modifier\+Instance\+Client@{Modifier\+Instance\+Client}!Modifier\+Instance\+Client@{Modifier\+Instance\+Client}}
+\subsubsection{\texorpdfstring{Modifier\+Instance\+Client()}{ModifierInstanceClient()}}
+{\footnotesize\ttfamily Modifier\+Instance\+Client.\+Modifier\+Instance\+Client (\begin{DoxyParamCaption}\item[{\hyperlink{class_modifier}{Modifier}}]{mod,  }\item[{\hyperlink{class_player_status}{Player\+Status}}]{pl\+Status,  }\item[{\hyperlink{class_player_u_i_handler}{Player\+U\+I\+Handler}}]{player\+U\+I\+Handler,  }\item[{int}]{mod\+Id,  }\item[{int}]{ab\+Id,  }\item[{float}]{duration }\end{DoxyParamCaption})}
+
+
+
+Constructor that instantiates effect objects and calls the correct modifier functions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mod} & The modifier for this instance.\\
+\hline
+{\em pl\+Status} & The player\+Status the modifier is applied to.\\
+\hline
+{\em player\+U\+I\+Handler} & Reference to the U\+I\+Handler, used by the local client to add modifier UI.\\
+\hline
+{\em mod\+Id} & Unique identifier for this modifier instance.\\
+\hline
+{\em ab\+Id} & The Id of the ability that applied the modifier if any, -\/1 otherwise.\\
+\hline
+{\em duration} & The initial modifier duration.\\
+\hline
+{\em effect\+Parent} & Either null or the transform we want to put as parent for this modifier\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_modifier_instance_client_abbe31055b1201afce4372df1a1d1e10a}{}\label{class_modifier_instance_client_abbe31055b1201afce4372df1a1d1e10a} 
+\index{Modifier\+Instance\+Client@{Modifier\+Instance\+Client}!Get\+Ability\+Id@{Get\+Ability\+Id}}
+\index{Get\+Ability\+Id@{Get\+Ability\+Id}!Modifier\+Instance\+Client@{Modifier\+Instance\+Client}}
+\subsubsection{\texorpdfstring{Get\+Ability\+Id()}{GetAbilityId()}}
+{\footnotesize\ttfamily int Modifier\+Instance\+Client.\+Get\+Ability\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the ability ID in this instance, equal to or above 0 means this modifier was applied by an ability, -\/1 otherwise. 
+
+\begin{DoxyReturn}{Returns}
+The ability ID.
+\end{DoxyReturn}
+\hypertarget{class_modifier_instance_client_a2faa7a2a46489610c86759d4b57d19ac}{}\label{class_modifier_instance_client_a2faa7a2a46489610c86759d4b57d19ac} 
+\index{Modifier\+Instance\+Client@{Modifier\+Instance\+Client}!Get\+Modifier@{Get\+Modifier}}
+\index{Get\+Modifier@{Get\+Modifier}!Modifier\+Instance\+Client@{Modifier\+Instance\+Client}}
+\subsubsection{\texorpdfstring{Get\+Modifier()}{GetModifier()}}
+{\footnotesize\ttfamily \hyperlink{class_modifier}{Modifier} Modifier\+Instance\+Client.\+Get\+Modifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the modifier used by this instance. 
+
+\begin{DoxyReturn}{Returns}
+The active modifier.
+\end{DoxyReturn}
+\hypertarget{class_modifier_instance_client_ae6f8817f0de275a92204d1595d26e731}{}\label{class_modifier_instance_client_ae6f8817f0de275a92204d1595d26e731} 
+\index{Modifier\+Instance\+Client@{Modifier\+Instance\+Client}!Get\+Modifier\+Id@{Get\+Modifier\+Id}}
+\index{Get\+Modifier\+Id@{Get\+Modifier\+Id}!Modifier\+Instance\+Client@{Modifier\+Instance\+Client}}
+\subsubsection{\texorpdfstring{Get\+Modifier\+Id()}{GetModifierId()}}
+{\footnotesize\ttfamily int Modifier\+Instance\+Client.\+Get\+Modifier\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the unique modifier ID for this instance. 
+
+\begin{DoxyReturn}{Returns}
+The modifier ID.
+\end{DoxyReturn}
+\hypertarget{class_modifier_instance_client_a07c777977dc78d7a0ec1d3519b76d5f6}{}\label{class_modifier_instance_client_a07c777977dc78d7a0ec1d3519b76d5f6} 
+\index{Modifier\+Instance\+Client@{Modifier\+Instance\+Client}!On\+End@{On\+End}}
+\index{On\+End@{On\+End}!Modifier\+Instance\+Client@{Modifier\+Instance\+Client}}
+\subsubsection{\texorpdfstring{On\+End()}{OnEnd()}}
+{\footnotesize\ttfamily void Modifier\+Instance\+Client.\+On\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when the modifier effect has ended. 
+
+\hypertarget{class_modifier_instance_client_a1dc19ff93cf2053c841588a689a081dc}{}\label{class_modifier_instance_client_a1dc19ff93cf2053c841588a689a081dc} 
+\index{Modifier\+Instance\+Client@{Modifier\+Instance\+Client}!Set\+New\+Duration@{Set\+New\+Duration}}
+\index{Set\+New\+Duration@{Set\+New\+Duration}!Modifier\+Instance\+Client@{Modifier\+Instance\+Client}}
+\subsubsection{\texorpdfstring{Set\+New\+Duration()}{SetNewDuration()}}
+{\footnotesize\ttfamily void Modifier\+Instance\+Client.\+Set\+New\+Duration (\begin{DoxyParamCaption}\item[{float}]{new\+Duration }\end{DoxyParamCaption})}
+
+
+
+Updates the UI elements with the new duration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Duration} & The new duration.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Modifiers/Modifier\+Instance\+Client.\+cs\end{DoxyCompactItemize}

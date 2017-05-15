@@ -1,0 +1,115 @@
+\hypertarget{class_buff_test_ability}{}\section{Buff\+Test\+Ability Class Reference}
+\label{class_buff_test_ability}\index{Buff\+Test\+Ability@{Buff\+Test\+Ability}}
+Inheritance diagram for Buff\+Test\+Ability\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_buff_test_ability}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_buff_test_ability_a205cdf654967c0884499c1cf15a92c7c}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+override void \hyperlink{class_buff_test_ability_a45e7ab9bd436078b50ed112b75e97508}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_buff_test_ability_ad69d427a9797a40716e11a0a5acd7f31}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\item 
+override void \hyperlink{class_buff_test_ability_a24f2ac23a4f1644af087c1e4162f4267}{Set\+Modifier} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Called by the \hyperlink{class_modifier}{Modifier}. Appropriate place for doing local changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_buff_test_ability_a6e5ae7a8636205d06eedcf51fee89d55}{}\label{class_buff_test_ability_a6e5ae7a8636205d06eedcf51fee89d55} 
+Sprite\+Renderer \mbox{[}$\,$\mbox{]} {\bfseries visuals}
+\item 
+\hypertarget{class_buff_test_ability_a8ba92ecd4b93dc6f12b5b4c6caa3ce24}{}\label{class_buff_test_ability_a8ba92ecd4b93dc6f12b5b4c6caa3ce24} 
+Color {\bfseries active\+Color}
+\item 
+\hypertarget{class_buff_test_ability_a2267dd4c3ef91b736de18e7d7e436aa3}{}\label{class_buff_test_ability_a2267dd4c3ef91b736de18e7d7e436aa3} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries buff}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_buff_test_ability_a45e7ab9bd436078b50ed112b75e97508}{}\label{class_buff_test_ability_a45e7ab9bd436078b50ed112b75e97508} 
+\index{Buff\+Test\+Ability@{Buff\+Test\+Ability}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Buff\+Test\+Ability@{Buff\+Test\+Ability}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Buff\+Test\+Ability.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_buff_test_ability_a205cdf654967c0884499c1cf15a92c7c}{}\label{class_buff_test_ability_a205cdf654967c0884499c1cf15a92c7c} 
+\index{Buff\+Test\+Ability@{Buff\+Test\+Ability}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Buff\+Test\+Ability@{Buff\+Test\+Ability}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Buff\+Test\+Ability.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Ability}.
+
+\hypertarget{class_buff_test_ability_ad69d427a9797a40716e11a0a5acd7f31}{}\label{class_buff_test_ability_ad69d427a9797a40716e11a0a5acd7f31} 
+\index{Buff\+Test\+Ability@{Buff\+Test\+Ability}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Buff\+Test\+Ability@{Buff\+Test\+Ability}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Buff\+Test\+Ability.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+\hypertarget{class_buff_test_ability_a24f2ac23a4f1644af087c1e4162f4267}{}\label{class_buff_test_ability_a24f2ac23a4f1644af087c1e4162f4267} 
+\index{Buff\+Test\+Ability@{Buff\+Test\+Ability}!Set\+Modifier@{Set\+Modifier}}
+\index{Set\+Modifier@{Set\+Modifier}!Buff\+Test\+Ability@{Buff\+Test\+Ability}}
+\subsubsection{\texorpdfstring{Set\+Modifier()}{SetModifier()}}
+{\footnotesize\ttfamily override void Buff\+Test\+Ability.\+Set\+Modifier (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called by the \hyperlink{class_modifier}{Modifier}. Appropriate place for doing local changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the modifier should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_a18f5361c45dc334b541892880382c098}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Test\+Abilities/Buff\+Test\+Ability.\+cs\end{DoxyCompactItemize}

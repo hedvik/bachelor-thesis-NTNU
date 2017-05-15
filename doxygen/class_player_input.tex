@@ -1,0 +1,114 @@
+\hypertarget{class_player_input}{}\section{Player\+Input Class Reference}
+\label{class_player_input}\index{Player\+Input@{Player\+Input}}
+
+
+Handles all player inputs.  
+
+
+Inheritance diagram for Player\+Input\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_input}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \hyperlink{class_player_input_a2e54d5137932455e223719b97faee11e}{Get\+Direction\+Vector} ()
+\begin{DoxyCompactList}\small\item\em direction\+Vector is set every frame based on the movement axis from player input. \end{DoxyCompactList}\item 
+Vector2 \hyperlink{class_player_input_ab3fdfb50d2249378777418c368c88ab1}{Get\+Rotation\+Vector} ()
+\begin{DoxyCompactList}\small\item\em rotation\+Vector is set every frame based on the rotation axis from player input. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_input_a36250201429a47f8d4e9c6e814257324}{Set\+Input\+Restrictions} (bool state, Input\+Type\mbox{[}$\,$\mbox{]} input\+Types)
+\begin{DoxyCompactList}\small\item\em Used by the local player to self restrict input type. Using int stacks for situations where one modifier removes the restriction, but the restriction is still active by another. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_player_input_a8df39b968b294624b7d810775c03ab2c}{}\label{class_player_input_a8df39b968b294624b7d810775c03ab2c} 
+string {\bfseries move\+Horizontal} = \char`\"{}Horizontal\char`\"{}
+\item 
+\hypertarget{class_player_input_ae80b2c0fa49c2fbedfb8a39e6f0b0954}{}\label{class_player_input_ae80b2c0fa49c2fbedfb8a39e6f0b0954} 
+string {\bfseries move\+Vertical} = \char`\"{}Vertical\char`\"{}
+\item 
+\hypertarget{class_player_input_aadd82c8c3d8000be9868b331337c332e}{}\label{class_player_input_aadd82c8c3d8000be9868b331337c332e} 
+string {\bfseries rotate\+Horizontal} = \char`\"{}Horizontal\+Rotation\char`\"{}
+\item 
+\hypertarget{class_player_input_a8886c46c6799204fc8641eca2fcae258}{}\label{class_player_input_a8886c46c6799204fc8641eca2fcae258} 
+string {\bfseries rotate\+Vertical} = \char`\"{}Vertical\+Rotation\char`\"{}
+\item 
+\hypertarget{class_player_input_aab5e1a738d5628758c4ca36bde29d31f}{}\label{class_player_input_aab5e1a738d5628758c4ca36bde29d31f} 
+string {\bfseries dock} = \char`\"{}Dock\char`\"{}
+\item 
+\hypertarget{class_player_input_ab60d2e0f5e8e696c13ef34c5bfb0353f}{}\label{class_player_input_ab60d2e0f5e8e696c13ef34c5bfb0353f} 
+string {\bfseries undock} = \char`\"{}Undock\char`\"{}
+\item 
+\hypertarget{class_player_input_a0f97a53f610ac728481465f7b1b476ea}{}\label{class_player_input_a0f97a53f610ac728481465f7b1b476ea} 
+string {\bfseries interact} = \char`\"{}Interact\char`\"{}
+\item 
+\hypertarget{class_player_input_a7b1022ac1c3df0273268869d226386e0}{}\label{class_player_input_a7b1022ac1c3df0273268869d226386e0} 
+string \mbox{[}$\,$\mbox{]} {\bfseries ability\+Buttons}
+\item 
+\hypertarget{class_player_input_a7aa3563a9e426c51b037453a0da69410}{}\label{class_player_input_a7aa3563a9e426c51b037453a0da69410} 
+float {\bfseries move\+Speed}
+\item 
+\hypertarget{class_player_input_aa7dda4401fa456881b35ca7e83db1f75}{}\label{class_player_input_aa7dda4401fa456881b35ca7e83db1f75} 
+float {\bfseries rotation\+Speed}
+\item 
+\hypertarget{class_player_input_a20a8e9966d7d450161e6bf30336f7818}{}\label{class_player_input_a20a8e9966d7d450161e6bf30336f7818} 
+\hyperlink{class_ingame_menu_handler}{Ingame\+Menu\+Handler} {\bfseries menu\+Handler}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles all player inputs. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_player_input_a2e54d5137932455e223719b97faee11e}{}\label{class_player_input_a2e54d5137932455e223719b97faee11e} 
+\index{Player\+Input@{Player\+Input}!Get\+Direction\+Vector@{Get\+Direction\+Vector}}
+\index{Get\+Direction\+Vector@{Get\+Direction\+Vector}!Player\+Input@{Player\+Input}}
+\subsubsection{\texorpdfstring{Get\+Direction\+Vector()}{GetDirectionVector()}}
+{\footnotesize\ttfamily Vector3 Player\+Input.\+Get\+Direction\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+direction\+Vector is set every frame based on the movement axis from player input. 
+
+\begin{DoxyReturn}{Returns}
+The direction vector.
+\end{DoxyReturn}
+\hypertarget{class_player_input_ab3fdfb50d2249378777418c368c88ab1}{}\label{class_player_input_ab3fdfb50d2249378777418c368c88ab1} 
+\index{Player\+Input@{Player\+Input}!Get\+Rotation\+Vector@{Get\+Rotation\+Vector}}
+\index{Get\+Rotation\+Vector@{Get\+Rotation\+Vector}!Player\+Input@{Player\+Input}}
+\subsubsection{\texorpdfstring{Get\+Rotation\+Vector()}{GetRotationVector()}}
+{\footnotesize\ttfamily Vector2 Player\+Input.\+Get\+Rotation\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+rotation\+Vector is set every frame based on the rotation axis from player input. 
+
+\begin{DoxyReturn}{Returns}
+The rotation vector.
+\end{DoxyReturn}
+\hypertarget{class_player_input_a36250201429a47f8d4e9c6e814257324}{}\label{class_player_input_a36250201429a47f8d4e9c6e814257324} 
+\index{Player\+Input@{Player\+Input}!Set\+Input\+Restrictions@{Set\+Input\+Restrictions}}
+\index{Set\+Input\+Restrictions@{Set\+Input\+Restrictions}!Player\+Input@{Player\+Input}}
+\subsubsection{\texorpdfstring{Set\+Input\+Restrictions()}{SetInputRestrictions()}}
+{\footnotesize\ttfamily void Player\+Input.\+Set\+Input\+Restrictions (\begin{DoxyParamCaption}\item[{bool}]{state,  }\item[{Input\+Type \mbox{[}$\,$\mbox{]}}]{input\+Types }\end{DoxyParamCaption})}
+
+
+
+Used by the local player to self restrict input type. Using int stacks for situations where one modifier removes the restriction, but the restriction is still active by another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state of the input restriction.\\
+\hline
+{\em types} & The types to set restriction for.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Player/Player\+Input.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,91 @@
+\hypertarget{class_force_field}{}\section{Force\+Field Class Reference}
+\label{class_force_field}\index{Force\+Field@{Force\+Field}}
+Inheritance diagram for Force\+Field\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_force_field}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_force_field_aed1ced1b7f1ddb9b0a8f0b8322b2eda1}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+override void \hyperlink{class_force_field_a12dc77bd7d829070d67f182675ff49d1}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_force_field_a9d2cfa783bc8341a7d7ac6035ab8f587}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_force_field_a0efab549884baec0a9d4d1e279edcac6}{}\label{class_force_field_a0efab549884baec0a9d4d1e279edcac6} 
+float {\bfseries player\+Force} = 10f
+\item 
+\hypertarget{class_force_field_a2fdcc66cd476687d9654b27816a63030}{}\label{class_force_field_a2fdcc66cd476687d9654b27816a63030} 
+string {\bfseries animator\+Trigger}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_force_field_a12dc77bd7d829070d67f182675ff49d1}{}\label{class_force_field_a12dc77bd7d829070d67f182675ff49d1} 
+\index{Force\+Field@{Force\+Field}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Force\+Field@{Force\+Field}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Force\+Field.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_force_field_aed1ced1b7f1ddb9b0a8f0b8322b2eda1}{}\label{class_force_field_aed1ced1b7f1ddb9b0a8f0b8322b2eda1} 
+\index{Force\+Field@{Force\+Field}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Force\+Field@{Force\+Field}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Force\+Field.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Ability}.
+
+\hypertarget{class_force_field_a9d2cfa783bc8341a7d7ac6035ab8f587}{}\label{class_force_field_a9d2cfa783bc8341a7d7ac6035ab8f587} 
+\index{Force\+Field@{Force\+Field}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Force\+Field@{Force\+Field}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Force\+Field.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Tank\+Kit/Force\+Field.\+cs\end{DoxyCompactItemize}

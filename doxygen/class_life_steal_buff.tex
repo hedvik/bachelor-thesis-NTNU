@@ -1,0 +1,145 @@
+\hypertarget{class_life_steal_buff}{}\section{Life\+Steal\+Buff Class Reference}
+\label{class_life_steal_buff}\index{Life\+Steal\+Buff@{Life\+Steal\+Buff}}
+Inheritance diagram for Life\+Steal\+Buff\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_life_steal_buff}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_life_steal_buff_abdd7a4fb4aaceaae6eaae37c29de24cc}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+override void \hyperlink{class_life_steal_buff_a22a12c1a3e2dff97bf739a0488001000}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Callback for what this ability should do once its associated button has been pressed \end{DoxyCompactList}\item 
+override void \hyperlink{class_life_steal_buff_ab5f0d975e5b0e2c0125649c395f20ead}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\item 
+override void \hyperlink{class_life_steal_buff_a15b4e957b0023ccc3fe6349b721ed822}{Set\+Modifier} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Callback for what this ability should do when a new modifier state is set \end{DoxyCompactList}\item 
+bool \hyperlink{class_life_steal_buff_ab61088040af2622106129e15d1a6b047}{Is\+Buff\+Active} ()
+\begin{DoxyCompactList}\small\item\em A simple getter function for whether the life steal buff is currently active \end{DoxyCompactList}\item 
+\hypertarget{class_life_steal_buff_aab07985ca1d8381a0f700205d1f79072}{}\label{class_life_steal_buff_aab07985ca1d8381a0f700205d1f79072} 
+int {\bfseries Get\+Ability\+Id} ()
+\item 
+\hypertarget{class_life_steal_buff_a95bf8dd9e522825a71bd53a5f2a2130e}{}\label{class_life_steal_buff_a95bf8dd9e522825a71bd53a5f2a2130e} 
+int {\bfseries Get\+Buff\+Modifier\+Id} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_life_steal_buff_a37d7524d5a104452c10c79d33d9bea40}{}\label{class_life_steal_buff_a37d7524d5a104452c10c79d33d9bea40} 
+float {\bfseries damage\+Multiplier} = 1.\+5f
+\item 
+\hypertarget{class_life_steal_buff_afafc61bf6f5e04749ba4a4dc6c345c0f}{}\label{class_life_steal_buff_afafc61bf6f5e04749ba4a4dc6c345c0f} 
+float {\bfseries heal\+Percentage} = 0.\+5f
+\item 
+\hypertarget{class_life_steal_buff_ae5d24df046935c905e533fc044d9ed98}{}\label{class_life_steal_buff_ae5d24df046935c905e533fc044d9ed98} 
+Sprite\+Renderer \mbox{[}$\,$\mbox{]} {\bfseries axe\+Visuals}
+\item 
+\hypertarget{class_life_steal_buff_a42e8781116deefe00fa1de7c8e933146}{}\label{class_life_steal_buff_a42e8781116deefe00fa1de7c8e933146} 
+Particle\+System {\bfseries active\+Particles}
+\item 
+\hypertarget{class_life_steal_buff_a3a9d75978476750aa39972f2f808e88d}{}\label{class_life_steal_buff_a3a9d75978476750aa39972f2f808e88d} 
+Color {\bfseries axe\+Color\+While\+Active}
+\item 
+\hypertarget{class_life_steal_buff_a3d574d51cf1b079e457412259da92ef5}{}\label{class_life_steal_buff_a3d574d51cf1b079e457412259da92ef5} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries buff}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_life_steal_buff_a22a12c1a3e2dff97bf739a0488001000}{}\label{class_life_steal_buff_a22a12c1a3e2dff97bf739a0488001000} 
+\index{Life\+Steal\+Buff@{Life\+Steal\+Buff}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Life\+Steal\+Buff@{Life\+Steal\+Buff}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Life\+Steal\+Buff.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability should do once its associated button has been pressed 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_life_steal_buff_abdd7a4fb4aaceaae6eaae37c29de24cc}{}\label{class_life_steal_buff_abdd7a4fb4aaceaae6eaae37c29de24cc} 
+\index{Life\+Steal\+Buff@{Life\+Steal\+Buff}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Life\+Steal\+Buff@{Life\+Steal\+Buff}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Life\+Steal\+Buff.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Ability}.
+
+\hypertarget{class_life_steal_buff_ab61088040af2622106129e15d1a6b047}{}\label{class_life_steal_buff_ab61088040af2622106129e15d1a6b047} 
+\index{Life\+Steal\+Buff@{Life\+Steal\+Buff}!Is\+Buff\+Active@{Is\+Buff\+Active}}
+\index{Is\+Buff\+Active@{Is\+Buff\+Active}!Life\+Steal\+Buff@{Life\+Steal\+Buff}}
+\subsubsection{\texorpdfstring{Is\+Buff\+Active()}{IsBuffActive()}}
+{\footnotesize\ttfamily bool Life\+Steal\+Buff.\+Is\+Buff\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A simple getter function for whether the life steal buff is currently active 
+
+\begin{DoxyReturn}{Returns}
+Whether the buff is currently active
+\end{DoxyReturn}
+\hypertarget{class_life_steal_buff_ab5f0d975e5b0e2c0125649c395f20ead}{}\label{class_life_steal_buff_ab5f0d975e5b0e2c0125649c395f20ead} 
+\index{Life\+Steal\+Buff@{Life\+Steal\+Buff}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Life\+Steal\+Buff@{Life\+Steal\+Buff}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Life\+Steal\+Buff.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+\hypertarget{class_life_steal_buff_a15b4e957b0023ccc3fe6349b721ed822}{}\label{class_life_steal_buff_a15b4e957b0023ccc3fe6349b721ed822} 
+\index{Life\+Steal\+Buff@{Life\+Steal\+Buff}!Set\+Modifier@{Set\+Modifier}}
+\index{Set\+Modifier@{Set\+Modifier}!Life\+Steal\+Buff@{Life\+Steal\+Buff}}
+\subsubsection{\texorpdfstring{Set\+Modifier()}{SetModifier()}}
+{\footnotesize\ttfamily override void Life\+Steal\+Buff.\+Set\+Modifier (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability should do when a new modifier state is set 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The modifier state\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_a18f5361c45dc334b541892880382c098}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Brawler\+Kit/Life\+Steal\+Buff.\+cs\end{DoxyCompactItemize}

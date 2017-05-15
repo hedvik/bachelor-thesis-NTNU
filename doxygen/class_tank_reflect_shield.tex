@@ -1,0 +1,94 @@
+\hypertarget{class_tank_reflect_shield}{}\section{Tank\+Reflect\+Shield Class Reference}
+\label{class_tank_reflect_shield}\index{Tank\+Reflect\+Shield@{Tank\+Reflect\+Shield}}
+Inheritance diagram for Tank\+Reflect\+Shield\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tank_reflect_shield}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_tank_reflect_shield_a3e2249b4918a8b93ac770d74adf03044}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tank_reflect_shield_a1f71fd2db71f237e13ff9e0121230f61}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated ability button is pressed. Must be overriden. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tank_reflect_shield_afb401bdb8593e86b44b70bc3eb369a47}{Set\+Active} (bool state)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_tank_reflect_shield_a02d67f0336ccf90f05c42cac26230df4}{}\label{class_tank_reflect_shield_a02d67f0336ccf90f05c42cac26230df4} 
+float {\bfseries duration}
+\item 
+\hypertarget{class_tank_reflect_shield_a9eca051ee20999b021f58d4a381b61b9}{}\label{class_tank_reflect_shield_a9eca051ee20999b021f58d4a381b61b9} 
+string {\bfseries animator\+Bool}
+\item 
+\hypertarget{class_tank_reflect_shield_ac0450aa6b0d1303dcab801ede7bbf00a}{}\label{class_tank_reflect_shield_ac0450aa6b0d1303dcab801ede7bbf00a} 
+Game\+Object {\bfseries shield\+Collider}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tank_reflect_shield_a1f71fd2db71f237e13ff9e0121230f61}{}\label{class_tank_reflect_shield_a1f71fd2db71f237e13ff9e0121230f61} 
+\index{Tank\+Reflect\+Shield@{Tank\+Reflect\+Shield}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Tank\+Reflect\+Shield@{Tank\+Reflect\+Shield}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Tank\+Reflect\+Shield.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the associated ability button is pressed. Must be overriden. 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_tank_reflect_shield_a3e2249b4918a8b93ac770d74adf03044}{}\label{class_tank_reflect_shield_a3e2249b4918a8b93ac770d74adf03044} 
+\index{Tank\+Reflect\+Shield@{Tank\+Reflect\+Shield}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Tank\+Reflect\+Shield@{Tank\+Reflect\+Shield}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Tank\+Reflect\+Shield.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Ability}.
+
+\hypertarget{class_tank_reflect_shield_afb401bdb8593e86b44b70bc3eb369a47}{}\label{class_tank_reflect_shield_afb401bdb8593e86b44b70bc3eb369a47} 
+\index{Tank\+Reflect\+Shield@{Tank\+Reflect\+Shield}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Tank\+Reflect\+Shield@{Tank\+Reflect\+Shield}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Tank\+Reflect\+Shield.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Tank\+Kit/Tank\+Reflect\+Shield.\+cs\end{DoxyCompactItemize}

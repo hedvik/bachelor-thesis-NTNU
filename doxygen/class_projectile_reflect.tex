@@ -1,0 +1,137 @@
+\hypertarget{class_projectile_reflect}{}\section{Projectile\+Reflect Class Reference}
+\label{class_projectile_reflect}\index{Projectile\+Reflect@{Projectile\+Reflect}}
+Inheritance diagram for Projectile\+Reflect\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_projectile_reflect}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_projectile_reflect_a5381a035271121930793086fc05f86c4}{Initialize} (\hyperlink{class_docking}{Docking} dock, Animator anim, int ab\+Id)
+\begin{DoxyCompactList}\small\item\em Initialization that happens locally on every client. \end{DoxyCompactList}\item 
+override void \hyperlink{class_projectile_reflect_a2a01121d450348b198cac9cef206fa29}{Button\+Down} ()
+\begin{DoxyCompactList}\small\item\em Callback for what this ability should do once its associated button has been pressed \end{DoxyCompactList}\item 
+override void \hyperlink{class_projectile_reflect_a8e25ce526f99de5980cb0bac20dc634c}{Set\+Active} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Synchronized state call between clients. Appropriate place for starting local animations and sounds. \end{DoxyCompactList}\item 
+override void \hyperlink{class_projectile_reflect_a13bdedc65cb8eed7f5d8a6a733feebe8}{Set\+Modifier} (bool state=false)
+\begin{DoxyCompactList}\small\item\em Callback for what this ability is supposed to do depending on given state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_projectile_reflect_a0f3974526bc7cd1d0d7135ad96c9c6e5}{}\label{class_projectile_reflect_a0f3974526bc7cd1d0d7135ad96c9c6e5} 
+Transform {\bfseries shield\+Transform}
+\item 
+\hypertarget{class_projectile_reflect_aa2d2a31f34dfd81a56ce4e7b3778ca47}{}\label{class_projectile_reflect_aa2d2a31f34dfd81a56ce4e7b3778ca47} 
+float {\bfseries fade\+Speed} = 5f
+\item 
+\hypertarget{class_projectile_reflect_a25e23eadf1b9913794a0f7be63e98ddd}{}\label{class_projectile_reflect_a25e23eadf1b9913794a0f7be63e98ddd} 
+float {\bfseries fade\+Out\+Time\+Offset} = 0.\+5f
+\item 
+\hypertarget{class_projectile_reflect_a704f7eea0e2d21ce1d05e21174d6d70e}{}\label{class_projectile_reflect_a704f7eea0e2d21ce1d05e21174d6d70e} 
+\hyperlink{struct_modifier_info}{Modifier\+Info} {\bfseries buff}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_projectile_reflect_a81fc744408af168fb772d1c1f70d6f74}{Update} ()
+\begin{DoxyCompactList}\small\item\em Runs on every client, but only the local player has cooldown initialized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_projectile_reflect_a2a01121d450348b198cac9cef206fa29}{}\label{class_projectile_reflect_a2a01121d450348b198cac9cef206fa29} 
+\index{Projectile\+Reflect@{Projectile\+Reflect}!Button\+Down@{Button\+Down}}
+\index{Button\+Down@{Button\+Down}!Projectile\+Reflect@{Projectile\+Reflect}}
+\subsubsection{\texorpdfstring{Button\+Down()}{ButtonDown()}}
+{\footnotesize\ttfamily override void Projectile\+Reflect.\+Button\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability should do once its associated button has been pressed 
+
+
+
+Implements \hyperlink{class_ability_a7722265862f8b29828315725415ce266}{Ability}.
+
+\hypertarget{class_projectile_reflect_a5381a035271121930793086fc05f86c4}{}\label{class_projectile_reflect_a5381a035271121930793086fc05f86c4} 
+\index{Projectile\+Reflect@{Projectile\+Reflect}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Projectile\+Reflect@{Projectile\+Reflect}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Projectile\+Reflect.\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_docking}{Docking}}]{dock,  }\item[{Animator}]{anim,  }\item[{int}]{ab\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization that happens locally on every client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dock} & Reference to the associated \hyperlink{class_docking}{Docking}.\\
+\hline
+{\em anim} & Reference to the \hyperlink{class_docking_kit}{Docking\+Kit} animator.\\
+\hline
+{\em ab\+Id} & The ability\textquotesingle{}s id in \hyperlink{class_docking_kit}{Docking\+Kit} abilities list.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_ae659b58f49f07191c1d269fc3ba59c7e}{Ability}.
+
+\hypertarget{class_projectile_reflect_a8e25ce526f99de5980cb0bac20dc634c}{}\label{class_projectile_reflect_a8e25ce526f99de5980cb0bac20dc634c} 
+\index{Projectile\+Reflect@{Projectile\+Reflect}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Projectile\+Reflect@{Projectile\+Reflect}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily override void Projectile\+Reflect.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronized state call between clients. Appropriate place for starting local animations and sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & If the ability should be activated or deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_ability_a10f7f3c2b63eeef6e352aee48d246384}{Ability}.
+
+\hypertarget{class_projectile_reflect_a13bdedc65cb8eed7f5d8a6a733feebe8}{}\label{class_projectile_reflect_a13bdedc65cb8eed7f5d8a6a733feebe8} 
+\index{Projectile\+Reflect@{Projectile\+Reflect}!Set\+Modifier@{Set\+Modifier}}
+\index{Set\+Modifier@{Set\+Modifier}!Projectile\+Reflect@{Projectile\+Reflect}}
+\subsubsection{\texorpdfstring{Set\+Modifier()}{SetModifier()}}
+{\footnotesize\ttfamily override void Projectile\+Reflect.\+Set\+Modifier (\begin{DoxyParamCaption}\item[{bool}]{state = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for what this ability is supposed to do depending on given state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Whether the ability is to be active or now\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_ability_a18f5361c45dc334b541892880382c098}{Ability}.
+
+\hypertarget{class_projectile_reflect_a81fc744408af168fb772d1c1f70d6f74}{}\label{class_projectile_reflect_a81fc744408af168fb772d1c1f70d6f74} 
+\index{Projectile\+Reflect@{Projectile\+Reflect}!Update@{Update}}
+\index{Update@{Update}!Projectile\+Reflect@{Projectile\+Reflect}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily override void Projectile\+Reflect.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Runs on every client, but only the local player has cooldown initialized. 
+
+
+
+Reimplemented from \hyperlink{class_ability_a88d799f38be464be5f0a9a315efb2d0b}{Ability}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andreas/\+Git Repos/dockitleague/\+Assets/\+Scripts/\+Abilities/\+Brawler\+Kit/Projectile\+Reflect.\+cs\end{DoxyCompactItemize}
