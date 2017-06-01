@@ -1,7 +1,7 @@
 \chapter{Deployment}
 \label{chap:deployment}
 
-\section{Automated Unity Builds using Unity Cloud Build}
+\section{Automated Unity Builds}
 While Unity and Git don't necessarily work too well together out of the box as mentioned in Section~\ref{sec:unityGit} one might start to wonder whether automatic build processing is possible. Having a central hub with automatically built binaries can be quite useful for testing the game and providing the correct binaries for testers. Unity offers a free service called \emph{Unity Cloud Build} which provides this functionality. 
 
 \begin{figure}[tbph]  %t top, b bottom, p page | you can also use h to try to get the figure to appear at the current location
@@ -16,7 +16,7 @@ Unity Cloud Build allows the developer to set up automatic builds for different 
 We have integrated our BitBucket repository with Unity Cloud Build to make sure that we always have an up to date build available for Windows, MacOS and Linux. 
 
 \subsection{Dockit League binaries}
-This Section contains the binaries for the game which are built at the time of thesis hand in through the use of Unity Cloud Build's shared links. In order to download the latest build of \emph{Dockit League} we recommend visiting the BitBucket repository~\cite{bitbucketRepo} and downloading the binaries from the links on the front page. There is no necessary installation needed when downloading the game as the downloaded folder includes all the files for the game. 
+This section contains the binaries for the game which are built at the time of thesis hand in through the use of Unity Cloud Build's shared links. In order to download the latest build of \emph{Dockit League} we recommend visiting the BitBucket repository~\cite{bitbucketRepo} and download the binaries from the links on the front page. There is no necessary installation needed when downloading the game as the downloaded folder includes all the files for the game. 
 
 These are the links to the different builds:
 \begin{itemize}

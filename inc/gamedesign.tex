@@ -25,7 +25,7 @@ The initial design of the game included three different game modes:
     \item 1vX. 
 \end{enumerate}
 
-The standard game mode would be inspired by Counter-Strike: Global Offensive~\cite{csGO} and alternate two teams between defending and attacking objectives. The teams would play 10 rounds with each round taking a maximum of 4 minutes before switching positions and playing 10 new rounds. Docking kits would be available for purchase at the start of each round. Docking kits would end up being dropped on death while surviving players keep their kit for the next round.
+The standard game mode would be inspired by Counter-Strike: Global Offensive~\cite{csGO} and alternate two teams between defending and attacking objectives. The teams would play 10 rounds with each round taking a maximum of 4 minutes before switching positions and playing 10 new rounds. Docking kits would be available for purchase at the start of each round. Docking kits would end up being dropped on death while surviving players keep their kit for the next round. Having this type of asymmetric gameplay allows using time as a win condition for one of the teams, as the time running out benefits the defending team. A game where every round needs a winner could in theory go on forever without that kind of restriction.
 
 The king of the hill mode would only include one objective that all teams fought over. Holding the objective would tick a team timer downwards and letting the timer tick to zero meant victory. Docking kits would not be purchasable contrary to the standard game mode, but rather spawn randomly on different map locations. 
     
@@ -87,7 +87,7 @@ The initial design included some rough ideas for eight different docking kits:
 
 \section{Changes from the initial design}
 \subsection{General changes}
-This Section will take a look at the general changes from the initial design. 
+This section will take a look at the general changes from the initial design. 
 
 One of the major differences was that we ended up implementing two simpler game modes compared to the original ones we designed. We implemented a "free for all" as well as a team based deathmatch game mode due to limited time towards the end of the development period. In the case of the "free for all" deathmatch mode, the last remaining player is the winner of the round while on the team deathmatch mode, one team wins whenever all players of the opposing team have been defeated. 
 
@@ -96,12 +96,12 @@ Player bots and replay AI functionalities were cut, but weren't necessary featur
 \subsection{Docking kit changes}
 Several of the kits ended up receiving redesigns during the development of \emph{Dockit League}. The finalized design for each docking kit can be found in Section~\ref{sec:dockingKits} while this Section will take a look at how the current docking kits differ from their original designs. 
 
-The marksman and sniper kits ended up being somewhat similar in design as we worked on them so we tried to differentiate their abilities. The marksman kit ended up more stealth oriented while the sniper kit had far less mobility in general with a playstyle that requires the player to slowly focus and aim before firing. Looking at the current abilities of the marksman kit it would probably be better to rename it to the "Rogue" kit given its current tools. 
+The marksman and sniper kits ended up being somewhat similar in design as we worked on them, so we tried to differentiate their abilities. The marksman kit ended up more stealth oriented, while the sniper kit had far less mobility in general with a playstyle that requires the player to slowly focus and aim before firing. Looking at the current abilities of the marksman kit, the "Rogue" kit would be a less deceiving name given its current tools. 
 
-The tank kit was originally planned to be melee oriented, but we wanted to make it less similar to the brawler kit so we introduced the ranged saw blades to the tank kit. The brawler and tank kits still share some similarities as both are capable of reflecting projectiles. 
+The tank kit was originally planned to be melee oriented, but we wanted to make it less similar to the brawler kit so we introduced the ranged saw blades to the kit. The brawler and tank kits still share some similarities as both are capable of reflecting projectiles. 
 
-The support, trapper, bomb and brawler kit generally stayed fairly close to their original designs although there were some changes. The trapper kit was given a flamethrower ability to provide some other means of doing damage rather than having four traps. The original plan for the bomber kit was to have more trap like bombs/mines, but given that the trapper kit already focused on this we tried to differentiate the two by giving the bomber kit a remote controlled mine that had to be triggered manually.
+The support, trapper, bomber and brawler kit generally stayed fairly close to their original designs, although there were some changes done. The trapper kit was given a flamethrower ability to provide some other means of doing damage rather than having four traps. The original plan for the bomber kit was to have more trap like bombs/mines, but given that the trapper kit already focused on this we tried to differentiate the two by giving the bomber kit a remote controlled mine that had to be triggered manually.
 
 The crowd control ability of the brawler kit also ended up being somewhat different as we had originally planned for it to be a close range ability. We realized throughout development that the kit would struggle fighting the others as the majority are ranged attackers so we gave the brawler kit a ranged stun grenade as a means of coping with this. 
     
-The scout kit was completely redesigned into the boomerang kit. It still retains the low health and high speed with a hit and run playstyle, but we changed the kit from being melee oriented to using the ranged boomerangs instead. The reason for this is that the low health of the kit made it very hard to stay alive as a melee attacker and the idea of using boomerangs felt more novel. 
+The scout kit was completely redesigned into the boomerang kit. It still retains the low health and high speed with a hit and run playstyle, but we changed the kit from being melee oriented to using the ranged boomerangs instead. The reason for this is that the low health of the kit made it very hard to stay alive as a melee attacker and the idea of using boomerangs felt more novel compared to the rest of the kits. 

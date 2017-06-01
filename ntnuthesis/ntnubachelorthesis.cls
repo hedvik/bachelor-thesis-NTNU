@@ -42,8 +42,12 @@
 \RequirePackage{lastpage}
 \RequirePackage{babel}
 \RequirePackage{enumitem}
+\RequirePackage{listings}
+
 \RequirePackage[utf8]{inputenc}     % For utf8 encoded .tex files  % For cross references in pdf
-\RequirePackage[pdftex]{graphicx, hyperref} 
+%\RequirePackage[pdftex]{graphicx, hyperref}
+\RequirePackage{graphicx}
+\RequirePackage{hyperref}
 \RequirePackage{color}              % For colouring text  
 
 \hypersetup{colorlinks=true,     
@@ -401,8 +405,8 @@ Use $\backslash$useyear\{<year>\} to set year.
 		}
 	
 	\newcommand\nmt@DegreeNameText{}
-  \newcommand\nmt@BSP{Bachelor in Game Programmering}
-  \newcommand\nmt@BPROG{Bachelor in Programmering [Games|Applications]}
+  \newcommand\nmt@BSP{Bachelor in Game Programming}
+  \newcommand\nmt@BPROG{Bachelor in Programming [Games|Applications]}
   \newcommand\nmt@BRD{Bachelor of Science in Network and System Administration}
   \newcommand\nmt@BIS{Bachelor in Information Security}
   \newcommand\nmt@BPU{Bachelor in Software Engineering}
@@ -412,7 +416,7 @@ Use $\backslash$useyear\{<year>\} to set year.
   \newcommand\nmt@BABED{IT-supported Business Architecture}
   \newcommand\nmt@AuthorText{Author(s)}
 	\newcommand\nmt@SupervisorText{Supervisor(s)}
-	
+\newcommand\thesis@titlehead{\thesis@title}	
 
 
 \DeclareOption{norsk}{
@@ -439,6 +443,8 @@ Use $\backslash$useyear\{<year>\} to set year.
 
   \renewcommand\nmt@AuthorText{Forfattere}
 	\renewcommand\nmt@SupervisorText{Veileder}
+	
+	\renewcommand\thesis@titlehead{\thesis@titleNOR}
 
    \@norsktrue 
    \@nynorskfalse 
@@ -593,7 +599,7 @@ Use $\backslash$useyear\{<year>\} to set year.
     \includegraphics[width=200pt]{ntnuthesis/hovedlogo_eng} \\    
     \vskip 75\p@
     \begin{center}%
-      {\fontsize{22}{25}\selectfont \thesis@title}%
+      {\fontsize{22}{25}\selectfont \thesis@titlehead}%
 \vskip 3em%
 {\large
 	\lineskip .75em%
@@ -601,7 +607,7 @@ Use $\backslash$useyear\{<year>\} to set year.
      \nmt@AuthorText}\\
    \begin{tabular}[10cm]{p{1.5cm}l}%
           \rule[-4cm]{0cm}{4cm}&{\fontsize{14}{16}\selectfont 
-          \parbox{6cm}{
+          \parbox{8cm}{
 					\thesis@author \\
           \thesis@authorA \\
           \thesis@authorB \\
